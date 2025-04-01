@@ -1,0 +1,240 @@
+[
+    {
+        "context": "desktop video capture",
+        "technique": "T1113",
+        "metadata": {
+            "page_number": 2,
+            "id": "005",
+            "source": "TEXT",
+            "tactic_name": [
+                "COLLECTION"
+            ],
+            "tactic": [
+                "TA0009"
+            ],
+            "technique_name": "SCREEN CAPTURE",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may attempt to take screen captures of the desktop to gather information over the course of an operation.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "VNC,",
+        "technique": "T1021",
+        "metadata": {
+            "page_number": 2,
+            "id": "006",
+            "source": "TEXT",
+            "tactic_name": [
+                "LATERAL MOVEMENT"
+            ],
+            "tactic": [
+                "TA0008"
+            ],
+            "technique_name": "REMOTE SERVICES",
+            "sub_technique_name": "VNC",
+            "sub_technique": "T1021.005",
+            "description": "Some of its capabilities include VNC.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "Logs key strokes for Key con#gured processes and logger sends them to the command and control (C2) server",
+        "technique": "T1056",
+        "metadata": {
+            "page_number": 3,
+            "id": "004",
+            "source": "TEXT",
+            "tactic_name": [
+                "COLLECTION",
+                "CREDENTIAL ACCESS"
+            ],
+            "tactic": [
+                "TA0009",
+                "TA0006"
+            ],
+            "technique_name": "INPUT CAPTURE",
+            "sub_technique_name": "KEYLOGGING",
+            "sub_technique": "T1056.001",
+            "description": "Adversaries may log user keystrokes to intercept credentials as the user types them.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "CARBANAK communicates to its C2 servers via pseudo-HTTP or a custom binary protocol.",
+        "technique": "T1095",
+        "metadata": {
+            "page_number": 11,
+            "id": "008",
+            "source": "TEXT",
+            "tactic_name": [
+                "COMMAND AND CONTROL"
+            ],
+            "tactic": [
+                "TA0011"
+            ],
+            "technique_name": "NON-APPLICATION LAYER PROTOCOL",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may use an OSI non-application layer protocol for communication between host and C2 server or among infected hosts within a network.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "Messages are encrypted using Microso$'s implementation of RC2 in CBC mode with PKCS#5 padding. The encrypted message is then Base64 encoded",
+        "technique": "T1027",
+        "metadata": {
+            "page_number": 12,
+            "id": "009",
+            "source": "TEXT",
+            "tactic_name": [
+                "DEFENSE EVASION"
+            ],
+            "tactic": [
+                "TA0005"
+            ],
+            "technique_name": "OBFUSCATED FILES OR INFORMATION",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Most of CARBANAK's strings are encrypted in order to make analysis more difficult.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "A 256-bit AES session key is generated and used to encrypt both message headers and bodies separately. Initially, the key is sent to the C2 server with the entire message and headers encrypted with the RSA key exchange algorithm. All subsequent messages are encrypted with AES in CBC mode.",
+        "technique": "T1573",
+        "metadata": {
+            "page_number": 16,
+            "id": "007",
+            "source": "TEXT",
+            "tactic_name": [
+                "COMMAND AND CONTROL"
+            ],
+            "tactic": [
+                "TA0011"
+            ],
+            "technique_name": "ENCRYPTED CHANNEL",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may employ an encryption algorithm to conceal command and control traffic rather than relying on any inherent protections provided by a communication protocol.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "This command downloads an executable from the C2 and directly runs it in memory.",
+        "technique": "T1055",
+        "metadata": {
+            "page_number": 19,
+            "id": "010",
+            "source": "TEXT",
+            "tactic_name": [
+                "DEFENSE EVASION",
+                "PRIVILEGE ESCALATION"
+            ],
+            "tactic": [
+                "TA0005",
+                "TA0004"
+            ],
+            "technique_name": "PROCESS INJECTION",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may inject code into processes in order to evade process-based defenses as well as possibly elevate privileges.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "FIN7 uses CARBANAK as a post-exploitation tool in later phases of an intrusion to cement their foothold in a network and maintain access, frequently using the video command to monitor users and learn about the victim network, as well as the tunnel command to proxy connections into isolated po%ions of the victim environment",
+        "technique": "T1071",
+        "metadata": {
+            "page_number": 22,
+            "id": "001",
+            "source": "TEXT",
+            "tactic_name": [
+                "COMMAND AND CONTROL"
+            ],
+            "tactic": [
+                "TA0011"
+            ],
+            "technique_name": "APPLICATION LAYER PROTOCOL",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "FIN7 uses CARBANAK, specifically its video and tunnel commands, to maintain access and monitor the network.",
+            "tool_name": [
+                "CARBANAK"
+            ],
+            "tool": [
+                "S0030"
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "FIN7 has consistently utilized legally purchased code signing ce%i#cates to sign their CARBANAK payloads.",
+        "technique": "T1218",
+        "metadata": {
+            "page_number": 22,
+            "id": "003",
+            "source": "TEXT",
+            "tactic_name": [
+                "DEFENSE EVASION"
+            ],
+            "tactic": [
+                "TA0005"
+            ],
+            "technique_name": "SYSTEM BINARY PROXY EXECUTION",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may bypass process and/or signature-based defenses by proxying execution of malicious content with signed, or otherwise trusted, binaries.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "FIN7 Spear Phishing Campaign Targets Personnel Involved in SEC Filings",
+        "technique": "T1566",
+        "metadata": {
+            "page_number": 23,
+            "id": "002",
+            "source": "TEXT",
+            "tactic_name": [
+                "INITIAL ACCESS"
+            ],
+            "tactic": [
+                "TA0002"
+            ],
+            "technique_name": "PHISHING",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "FIN7 uses spear phishing emails",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    }
+]

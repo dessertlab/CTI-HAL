@@ -1,0 +1,1152 @@
+[
+    {
+        "context": "the initial infections were achieved using spear phishing emails that appeared to be legitimate banking communications, with Microsoft Word 97 \u2013 2003 (.doc) and Control Panel Applet (.CPL) files attached.",
+        "technique": "T1566",
+        "metadata": {
+            "page_number": 3,
+            "id": "001",
+            "source": "TEXT",
+            "tactic_name": [
+                "INITIAL ACCESS"
+            ],
+            "tactic": [
+                "TA0001"
+            ],
+            "technique_name": "PHISHING",
+            "sub_technique_name": "SPEARPHISHING ATTACHMENT",
+            "sub_technique": "T1566.001",
+            "description": "Sending phishing emails with malicious attachments to compromise the victim's system.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "002"
+            ]
+        }
+    },
+    {
+        "context": "The email attachments exploit vulnerabilities in Microsoft Office 2003, 2007 and 2010 (CVE-2012-0158 and CVE-2013-3906) and Microsoft Word (CVE-2014- 1761). Once the vulnerability is successfully exploited, the shellcode decrypts and executes the backdoor known as Carbanak.",
+        "technique": "T1204",
+        "metadata": {
+            "page_number": 3,
+            "id": "039",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXECUTION"
+            ],
+            "tactic": [
+                "TA0002"
+            ],
+            "technique_name": "USER EXECUTION",
+            "sub_technique_name": "MALICIOUS FILE",
+            "sub_technique": "T1204.002",
+            "description": "the shellcode  executes the backdoor Carbanak",
+            "tool_name": [
+                "CARBANAK"
+            ],
+            "tool": [
+                "S0030"
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "The email attachments exploit vulnerabilities in Microsoft Office 2003, 2007 and 2010 (CVE-2012-0158 and CVE-2013-3906) and Microsoft Word (CVE-2014- 1761)",
+        "technique": "T1203",
+        "metadata": {
+            "page_number": 3,
+            "id": "002",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXECUTION"
+            ],
+            "tactic": [
+                "TA0002"
+            ],
+            "technique_name": "EXPLOITATION FOR CLIENT EXECUTION",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Exploitation of vulnerabilities in client software (e.g., document reader) to execute arbitrary code.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "001",
+                "003"
+            ]
+        }
+    },
+    {
+        "context": "the shellcode decrypts and executes the backdoor known as Carbanak",
+        "technique": "T1059",
+        "metadata": {
+            "page_number": 3,
+            "id": "003",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXECUTION"
+            ],
+            "tactic": [
+                "TA0002"
+            ],
+            "technique_name": "COMMAND AND SCRIPTING INTERPRETER",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Using command and script interpreters to execute malicious commands and scripts.",
+            "tool_name": [
+                "CARBANAK"
+            ],
+            "tool": [
+                "S0030"
+            ],
+            "note": null,
+            "link": [
+                "002"
+            ]
+        }
+    },
+    {
+        "context": "Carbanak is a remote backdoor (initially based on Carberp), designed for espionage, data exfiltration and to provide remote access to infected machines",
+        "technique": null,
+        "metadata": {
+            "page_number": 3,
+            "id": "004",
+            "source": null,
+            "tactic_name": [],
+            "tactic": [],
+            "technique_name": null,
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": null,
+            "tool_name": [
+                "CARBANAK"
+            ],
+            "tool": [
+                "S0030"
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "They then install additional software such as the Ammyy Remote Administration Tool, or even compromise SSH servers",
+        "technique": "T1021",
+        "metadata": {
+            "page_number": 3,
+            "id": "005",
+            "source": "TEXT",
+            "tactic_name": [
+                "LATERAL MOVEMENT"
+            ],
+            "tactic": [
+                "TA0008"
+            ],
+            "technique_name": "REMOTE SERVICES",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Attackers use remote services to move laterally in the compromised network.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "video recordings of the activities of bank employees, particularly system administrators, were made",
+        "technique": "T1125",
+        "metadata": {
+            "page_number": 4,
+            "id": "006",
+            "source": "TEXT",
+            "tactic_name": [
+                "COLLECTION"
+            ],
+            "tactic": [
+                "TA0009"
+            ],
+            "technique_name": "VIDEO CAPTURE",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Attackers capture video of the victim's system, often for surveillance or to collect credentials and other sensitive information.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "007"
+            ]
+        }
+    },
+    {
+        "context": "The videos were sent to the C2 server",
+        "technique": "T1071",
+        "metadata": {
+            "page_number": 4,
+            "id": "007",
+            "source": "TEXT",
+            "tactic_name": [
+                "COMMAND AND CONTROL"
+            ],
+            "tactic": [
+                "TA0011"
+            ],
+            "technique_name": "APPLICATION LAYER PROTOCOL",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Communications with the command and control server (C2)",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "006"
+            ]
+        }
+    },
+    {
+        "context": "the attackers abused the aforementioned services by impersonating legitimate local users who had the permissions to perform the actions later reproduced by the cybercriminals",
+        "technique": "T1134",
+        "metadata": {
+            "page_number": 4,
+            "id": "040",
+            "source": "TEXT",
+            "tactic_name": [
+                "DEFENSE EVASION",
+                "PRIVILEGE ESCALATION"
+            ],
+            "tactic": [
+                "TA0005",
+                "TA0004"
+            ],
+            "technique_name": "ACCESS TOKEN MANIPULATION",
+            "sub_technique_name": "TOKEN IMPERSONATION/THEFT",
+            "sub_technique": "T1134.001",
+            "description": "The attackers abused the aforementioned services by impersonating legitimate local users",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "spear phishing emails with CPL files attached",
+        "technique": "T1566",
+        "metadata": {
+            "page_number": 5,
+            "id": "008",
+            "source": "TEXT",
+            "tactic_name": [
+                "INITIAL ACCESS"
+            ],
+            "tactic": [
+                "TA0001"
+            ],
+            "technique_name": "PHISHING",
+            "sub_technique_name": "SPEARPHISHING ATTACHMENT",
+            "sub_technique": "T1566.001",
+            "description": "Sending phishing emails with malicious attachments to compromise the victim's system.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "009"
+            ]
+        }
+    },
+    {
+        "context": "install the same Carberp-like malware",
+        "technique": "T1105",
+        "metadata": {
+            "page_number": 5,
+            "id": "009",
+            "source": "TEXT",
+            "tactic_name": [
+                "COMMAND AND CONTROL"
+            ],
+            "tactic": [
+                "TA0011"
+            ],
+            "technique_name": "INGRESS TOOL TRANSFER",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Transfer of tools or files from outside to the compromised system.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "Carbanak contains an espionage component that allows the attackers to take control of video capabilities on the victim systems",
+        "technique": "T1125",
+        "metadata": {
+            "page_number": 5,
+            "id": "010",
+            "source": "TEXT",
+            "tactic_name": [
+                "COLLECTION"
+            ],
+            "tactic": [
+                "TA0009"
+            ],
+            "technique_name": "VIDEO CAPTURE",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Carbanak uses espionage components to control the video capabilities of victim systems.",
+            "tool_name": [
+                "CARBANAK"
+            ],
+            "tool": [
+                "S0030"
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "spear phishing emails with Microsoft Word 97 \u2013 2003 (.doc) files attached or CPL files",
+        "technique": "T1566",
+        "metadata": {
+            "page_number": 5,
+            "id": "011",
+            "source": "TEXT",
+            "tactic_name": [
+                "INITIAL ACCESS"
+            ],
+            "tactic": [
+                "TA0001"
+            ],
+            "technique_name": "PHISHING",
+            "sub_technique_name": "SPEARPHISHING ATTACHMENT",
+            "sub_technique": "T1566.001",
+            "description": "Sending phishing emails with malicious attachments to compromise the victim's system.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "012",
+                "013"
+            ]
+        }
+    },
+    {
+        "context": "The doc files exploit both Microsoft Office (CVE- 2012-0158 and CVE-2013-3906) and Microsoft Word (CVE- 2014-1761).",
+        "technique": "T1203",
+        "metadata": {
+            "page_number": 5,
+            "id": "012",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXECUTION"
+            ],
+            "tactic": [
+                "TA0002"
+            ],
+            "technique_name": "EXPLOITATION FOR CLIENT EXECUTION",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Exploitation of software vulnerabilities to execute arbitrary code on the victim system.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "011",
+                "014"
+            ]
+        }
+    },
+    {
+        "context": "Once the remote code execution vulnerability is successfully exploited, it installs Carbanak on the victim's system",
+        "technique": "T1105",
+        "metadata": {
+            "page_number": 6,
+            "id": "014",
+            "source": "TEXT",
+            "tactic_name": [
+                "COMMAND AND CONTROL"
+            ],
+            "tactic": [
+                "TA0011"
+            ],
+            "technique_name": "INGRESS TOOL TRANSFER",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Transfer of tools or files from an external system to a system within the victim's environment.",
+            "tool_name": [
+                "CARBANAK"
+            ],
+            "tool": [
+                "S0030"
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "The spear phishing email messages appeared legitimate and in some cases were sent from compromised coworkers\u00b4 accounts",
+        "technique": "T1078",
+        "metadata": {
+            "page_number": 6,
+            "id": "013",
+            "source": "TEXT",
+            "tactic_name": [
+                "INITAL ACCESS",
+                "DEFENSE EVASION"
+            ],
+            "tactic": [
+                "TA0001",
+                "TA0005"
+            ],
+            "technique_name": "VALID ACCOUNTS",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Using valid accounts to gain unauthorized access to systems.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "011"
+            ]
+        }
+    },
+    {
+        "context": "Carbanak is a backdoor used by the attackers to compromise the victim's machine once the exploit, either in the spear phishing email or exploit kit, successfully executes its payload",
+        "technique": null,
+        "metadata": {
+            "page_number": 7,
+            "id": "015",
+            "source": null,
+            "tactic_name": [],
+            "tactic": [],
+            "technique_name": null,
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": null,
+            "tool_name": [
+                "CARBANAK"
+            ],
+            "tool": [
+                "S0030"
+            ],
+            "note": null,
+            "link": [
+                "016",
+                "017",
+                "018",
+                "019",
+                "020",
+                "021",
+                "022",
+                "023",
+                "024",
+                "025",
+                "026",
+                "027",
+                "028",
+                "029",
+                "030",
+                "031",
+                "032"
+            ]
+        }
+    },
+    {
+        "context": "Carbanak copies itself into \"%system32%\\com\" with the name \"svchost.exe\"",
+        "technique": "T1036",
+        "metadata": {
+            "page_number": 7,
+            "id": "016",
+            "source": "TEXT",
+            "tactic_name": [
+                "DEFENSE EVASION"
+            ],
+            "tactic": [
+                "TA0005"
+            ],
+            "technique_name": "MASQUERADING",
+            "sub_technique_name": "MATCH LEGITIMATE NAME OR LOCATION",
+            "sub_technique": "T1036.005",
+            "description": "The attacker renames a malicious file with a legitimate name to avoid detection.",
+            "tool_name": [
+                "CARBANAK"
+            ],
+            "tool": [
+                "S0030"
+            ],
+            "note": null,
+            "link": [
+                "015",
+                "017"
+            ]
+        }
+    },
+    {
+        "context": "with the file attributes: system, hidden and read-only.",
+        "technique": "T1564",
+        "metadata": {
+            "page_number": 7,
+            "id": "017",
+            "source": "TEXT",
+            "tactic_name": [
+                "DEFENSE EVASION"
+            ],
+            "tactic": [
+                "TA0005"
+            ],
+            "technique_name": "HIDE ARTIFACTS",
+            "sub_technique_name": "HIDDEN FILES AND DIRECTORIES",
+            "sub_technique": "T1564.001",
+            "description": "The attacker hides files and directories by making them invisible to users and security tools.",
+            "tool_name": [
+                "CARBANAK"
+            ],
+            "tool": [
+                "S0030"
+            ],
+            "note": null,
+            "link": [
+                "016",
+                "018"
+            ]
+        }
+    },
+    {
+        "context": "The original file created by the exploit payload is then deleted.",
+        "technique": "T1070",
+        "metadata": {
+            "page_number": 7,
+            "id": "018",
+            "source": "TEXT",
+            "tactic_name": [
+                "DEFENSE EVASION"
+            ],
+            "tactic": [
+                "TA0005"
+            ],
+            "technique_name": "INDICATOR REMOVAL ON HOST",
+            "sub_technique_name": "FILE DELETION",
+            "sub_technique": "T1070.004",
+            "description": "The attacker deletes files to eliminate traces of his activity and obstruct investigations.",
+            "tool_name": [
+                "CARBANAK"
+            ],
+            "tool": [
+                "S0030"
+            ],
+            "note": null,
+            "link": [
+                "017"
+            ]
+        }
+    },
+    {
+        "context": "To ensure that Carbanak has autorun privileges the malware creates a new service",
+        "technique": "T1543",
+        "metadata": {
+            "page_number": 7,
+            "id": "019",
+            "source": "TEXT",
+            "tactic_name": [
+                ""
+            ],
+            "tactic": [
+                null
+            ],
+            "technique_name": "CREATE OR MODIFY SYSTEM PROCESS",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Creation or modification of a service to achieve persistence and automatic execution.",
+            "tool_name": [
+                "CARBANAK"
+            ],
+            "tool": [
+                "S0030"
+            ],
+            "note": null,
+            "link": [
+                "015",
+                "020"
+            ]
+        }
+    },
+    {
+        "context": "The naming syntax is \"<ServiceName>Sys\" where ServiceName is any existing service randomly chosen, with the first character deleted.",
+        "technique": "T1036",
+        "metadata": {
+            "page_number": 7,
+            "id": "020",
+            "source": "TEXT",
+            "tactic_name": [
+                "DEFENSE EVASION"
+            ],
+            "tactic": [
+                "TA0005"
+            ],
+            "technique_name": "MASQUERADING",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Changing the names of files or processes to make them look legitimate.",
+            "tool_name": [
+                "CARBANAK"
+            ],
+            "tool": [
+                "S0030"
+            ],
+            "note": null,
+            "link": [
+                "019"
+            ]
+        }
+    },
+    {
+        "context": "Carbanak determines if either the avp.exe or avpui.exe processes (components of Kaspersky Internet Security) is running.",
+        "technique": "T1057",
+        "metadata": {
+            "page_number": 8,
+            "id": "021",
+            "source": "TEXT",
+            "tactic_name": [
+                "DISCOVERY"
+            ],
+            "tactic": [
+                "TA0007"
+            ],
+            "technique_name": "PROCESS DISCOVERY",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Carbanak performs process discovery to identify specific processes associated with Kaspersky Internet Security (avp.exe or avpui.exe).",
+            "tool_name": [
+                "CARBANAK"
+            ],
+            "tool": [
+                "S0030"
+            ],
+            "note": null,
+            "link": [
+                "015"
+            ]
+        }
+    },
+    {
+        "context": "the malware gets the proxy configuration from the registry entry: [HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings]",
+        "technique": "T1060",
+        "metadata": {
+            "page_number": 8,
+            "id": "022",
+            "source": "TEXT",
+            "tactic_name": [
+                "PERSISTENCE",
+                "PRIVILEGE ESCALATION"
+            ],
+            "tactic": [
+                "TA0003",
+                "TA0004"
+            ],
+            "technique_name": "REGISTRY RUN KEYS / STARTUP FOLDER",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "The malware use registry keys to execute commands or to configure automatic loading at system startup.",
+            "tool_name": [
+                "CARBANAK"
+            ],
+            "tool": [
+                "S0030"
+            ],
+            "note": null,
+            "link": [
+                "015"
+            ]
+        }
+    },
+    {
+        "context": "Carbanak injects its code into svchost.exe.",
+        "technique": "T1055",
+        "metadata": {
+            "page_number": 8,
+            "id": "023",
+            "source": "TEXT",
+            "tactic_name": [
+                "PRIVILEGE ESCALATION",
+                "DEFENSE EVASION"
+            ],
+            "tactic": [
+                "TA0004",
+                "TA0005"
+            ],
+            "technique_name": "PROCESS INJECTION",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Carbanak injects its code into the svchost.exe process to mask its activities within the legitimate Windows process.",
+            "tool_name": [
+                "CARBANAK"
+            ],
+            "tool": [
+                "S0030"
+            ],
+            "note": null,
+            "link": [
+                "015"
+            ]
+        }
+    },
+    {
+        "context": "Carbanak downloads the file kldconfig.plug from its C2 server.",
+        "technique": "T1041",
+        "metadata": {
+            "page_number": 8,
+            "id": "024",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXFILTRATION"
+            ],
+            "tactic": [
+                "TA0010"
+            ],
+            "technique_name": "EXFILTRATION OVER C2 CHANNEL",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Carbanak communicates with its C2 server to download the file kldconfig.plug, which includes the names of the processes to be monitored.",
+            "tool_name": [
+                "CARBANAK"
+            ],
+            "tool": [
+                "S0030"
+            ],
+            "note": null,
+            "link": [
+                "015"
+            ]
+        }
+    },
+    {
+        "context": "takes screenshots every 20 seconds",
+        "technique": "T1113",
+        "metadata": {
+            "page_number": 8,
+            "id": "026",
+            "source": "TEXT",
+            "tactic_name": [
+                "COLLECTION"
+            ],
+            "tactic": [
+                "TA0009"
+            ],
+            "technique_name": "SCREEN CAPTURE",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Carbanak captures desktop screenshots every 20 seconds to monitor user activity and collect additional sensitive information.",
+            "tool_name": [
+                "CARBANAK"
+            ],
+            "tool": [
+                "S0030"
+            ],
+            "note": null,
+            "link": [
+                "015"
+            ]
+        }
+    },
+    {
+        "context": "Carbanak logs keystrokes",
+        "technique": "T1056",
+        "metadata": {
+            "page_number": 8,
+            "id": "025",
+            "source": "TEXT",
+            "tactic_name": [
+                "COLLECTION"
+            ],
+            "tactic": [
+                "TA0009"
+            ],
+            "technique_name": "INPUT CAPTURE",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Carbanak records keystrokes on the infected system's keyboard to collect sensitive information such as credentials and other data.",
+            "tool_name": [
+                "CARBANAK"
+            ],
+            "tool": [
+                "S0030"
+            ],
+            "note": null,
+            "link": [
+                "015"
+            ]
+        }
+    },
+    {
+        "context": "Carbanak sets Termservice service execution mode to Auto. Also, after executing this service",
+        "technique": "T1569",
+        "metadata": {
+            "page_number": 9,
+            "id": "027",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXECUTION"
+            ],
+            "tactic": [
+                "TA0002"
+            ],
+            "technique_name": "SYSTEM SERVICES",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Carbanak sets Termservice in automatic execution mode (Auto).",
+            "tool_name": [
+                "CARBANAK"
+            ],
+            "tool": [
+                "S0030"
+            ],
+            "note": null,
+            "link": [
+                "015",
+                "028"
+            ]
+        }
+    },
+    {
+        "context": "it modifies the executable code in memory in order to establish simultaneous work processes for both remote and local users. Modules modified in this process are: termsrv.dll, csrsrv.dll, msgina.dll and winlogon.exe.",
+        "technique": "T1134",
+        "metadata": {
+            "page_number": 9,
+            "id": "041",
+            "source": "TEXT",
+            "tactic_name": [
+                ""
+            ],
+            "tactic": [
+                null
+            ],
+            "technique_name": "ACCESS TOKEN MANIPULATION",
+            "sub_technique_name": "CREATE PROCESS WITH TOKEN",
+            "sub_technique": "T1134.002",
+            "description": "Carbanak modifies the executable code in memory",
+            "tool_name": [
+                "CARBANAK"
+            ],
+            "tool": [
+                "S0030"
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "it modifies the executable code in memory in order to establish simultaneous work processes for both remote and local users",
+        "technique": "T1055",
+        "metadata": {
+            "page_number": 9,
+            "id": "028",
+            "source": "TEXT",
+            "tactic_name": [
+                ""
+            ],
+            "tactic": [
+                null
+            ],
+            "technique_name": "PROCESS INJECTION",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Modifies executable code in memory to establish simultaneous work processes for remote and local users.",
+            "tool_name": [
+                "CARBANAK"
+            ],
+            "tool": [
+                "S0030"
+            ],
+            "note": null,
+            "link": [
+                "015",
+                "027"
+            ]
+        }
+    },
+    {
+        "context": "If Carbanak detects the banking application BLIZKO (funds transfer software) in the infected computer",
+        "technique": "T1057",
+        "metadata": {
+            "page_number": 9,
+            "id": "029",
+            "source": "TEXT",
+            "tactic_name": [
+                "DISCOVERY"
+            ],
+            "tactic": [
+                "TA0007"
+            ],
+            "technique_name": "PROCESS DISCOVERY",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Carbanak detects the presence of BLIZKO",
+            "tool_name": [
+                "CARBANAK"
+            ],
+            "tool": [
+                "S0030"
+            ],
+            "note": null,
+            "link": [
+                "015"
+            ]
+        }
+    },
+    {
+        "context": "If Carbanak detects the banking application BLIZKO (funds transfer software) in the infected computer",
+        "technique": "T1082",
+        "metadata": {
+            "page_number": 9,
+            "id": "042",
+            "source": "TEXT",
+            "tactic_name": [
+                "DISCOVERY"
+            ],
+            "tactic": [
+                "TA0007"
+            ],
+            "technique_name": "SYSTEM INFORMATION DISCOVERY",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "If Carbanak detects the banking application BLIZKO (funds transfer software) in the infected computer, it sends a special notification to its C2 server",
+            "tool_name": [
+                "CARBANAK"
+            ],
+            "tool": [
+                "S0030"
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "Carbanak is also aware of the IFOBS banking application and can, on command, substitute the details of payment documents in the IFOBS system",
+        "technique": "T1565",
+        "metadata": {
+            "page_number": 9,
+            "id": "030",
+            "source": "TEXT",
+            "tactic_name": [
+                "IMPACT"
+            ],
+            "tactic": [
+                "TA0040"
+            ],
+            "technique_name": "DATA MANIPULATION",
+            "sub_technique_name": "STORED DATA MANIPULATION",
+            "sub_technique": "T1565.001",
+            "description": "Carbanak can manipulate payment document details in the IFOBS system on command.",
+            "tool_name": [
+                "CARBANAK"
+            ],
+            "tool": [
+                "S0030"
+            ],
+            "note": null,
+            "link": [
+                "015"
+            ]
+        }
+    },
+    {
+        "context": "with RC2+Base64 encryption,",
+        "technique": "T1132",
+        "metadata": {
+            "page_number": 9,
+            "id": "032",
+            "source": "TEXT",
+            "tactic_name": [
+                "COMMAND AND CONTROL"
+            ],
+            "tactic": [
+                "TA0011"
+            ],
+            "technique_name": "DATA ENCODING",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Carbanak uses RC2+Base64 encryption to encrypt data transmitted through the command and control channel.",
+            "tool_name": [
+                "CARBANAK"
+            ],
+            "tool": [
+                "S0030"
+            ],
+            "note": "",
+            "link": [
+                "015",
+                "031"
+            ]
+        }
+    },
+    {
+        "context": "Carbanak uses the HTTP protocol",
+        "technique": "T1041",
+        "metadata": {
+            "page_number": 9,
+            "id": "031",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXFILTRATION"
+            ],
+            "tactic": [
+                "TA0010"
+            ],
+            "technique_name": "EXFILTRATION OVER C2 CHANNEL",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Carbanak uses the HTTP protocol to communicate with its C2 server.",
+            "tool_name": [
+                "CARBANAK"
+            ],
+            "tool": [
+                "S0030"
+            ],
+            "note": null,
+            "link": [
+                "015",
+                "032"
+            ]
+        }
+    },
+    {
+        "context": "There appears to be a preference for the Ammyy Admin remote administration tool for remote control",
+        "technique": "T1219",
+        "metadata": {
+            "page_number": 18,
+            "id": "033",
+            "source": "TEXT",
+            "tactic_name": [
+                "COMMAND AND CONTROL"
+            ],
+            "tactic": [
+                "S0030"
+            ],
+            "technique_name": "REMOTE ACCESS TOOL",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "This technique specifically covers the use of Ammyy Admin as a remote administration tool for controlling systems within a compromised network.",
+            "tool_name": [
+                "AMMYY"
+            ],
+            "tool": [
+                null
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "a Secure Shell (SSH) backdoor was used to communicate with the C2 server in 190.97.165.126 (operatemesscont.net).",
+        "technique": "T1021",
+        "metadata": {
+            "page_number": 18,
+            "id": "034",
+            "source": "TEXT",
+            "tactic_name": [
+                "LATERAL MOVEMENT"
+            ],
+            "tactic": [
+                "TA0008"
+            ],
+            "technique_name": "REMOTE ACCESS TOOL",
+            "sub_technique_name": "SSH",
+            "sub_technique": "T1021.004",
+            "description": "This technique involves the use of SSH for establishing unauthorized access to remote systems.",
+            "tool_name": null,
+            "tool": null,
+            "note": "Adversaries often leverage SSH for secure, encrypted communication with compromised hosts, allowing them to maintain persistent access and exfiltrate data.",
+            "link": null
+        }
+    },
+    {
+        "context": "Metasploit,",
+        "technique": null,
+        "metadata": {
+            "page_number": 18,
+            "id": "035",
+            "source": null,
+            "tactic_name": [],
+            "tactic": [],
+            "technique_name": null,
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": null,
+            "tool_name": [
+                "METASPLOIT"
+            ],
+            "tool": [
+                null
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "PsExec",
+        "technique": null,
+        "metadata": {
+            "page_number": 18,
+            "id": "036",
+            "source": null,
+            "tactic_name": [],
+            "tactic": [],
+            "technique_name": null,
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": null,
+            "tool_name": [
+                "PSEXEC"
+            ],
+            "tool": [
+                "S0029"
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "Mimikatz.",
+        "technique": null,
+        "metadata": {
+            "page_number": 18,
+            "id": "037",
+            "source": null,
+            "tactic_name": [],
+            "tactic": [],
+            "technique_name": null,
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": null,
+            "tool_name": [
+                "MIMIKATZ"
+            ],
+            "tool": [
+                "S0002"
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "The video file naming conventions used the name of the application in the foreground (e.g., Outlook, Cmd, etc.) and only recorded user activity",
+        "technique": "T1125",
+        "metadata": {
+            "page_number": 21,
+            "id": "038",
+            "source": "TEXT",
+            "tactic_name": [
+                "COLLECTION"
+            ],
+            "tactic": [
+                "TA0009"
+            ],
+            "technique_name": "VIDEO CAPTURE",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "This technique involves capturing video of a user's actions on a system.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    }
+]

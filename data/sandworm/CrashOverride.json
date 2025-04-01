@@ -1,0 +1,698 @@
+[
+    {
+        "context": "BLACKENERGY",
+        "technique": null,
+        "metadata": {
+            "page_number": 10,
+            "id": "S01",
+            "source": "TEXT",
+            "tactic_name": [],
+            "tactic": [],
+            "technique_name": null,
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": null,
+            "tool_name": [
+                "BlackEnergy"
+            ],
+            "tool": [
+                "S0089"
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "wiping of Windows systems through the KillDisk malware",
+        "technique": "T1561",
+        "metadata": {
+            "page_number": 10,
+            "id": "001",
+            "source": "TEXT",
+            "tactic_name": [
+                "IMPACT"
+            ],
+            "tactic": [
+                "TA0040"
+            ],
+            "technique_name": "DISK WIPE",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may wipe or corrupt raw disk data on specific systems or in large numbers in a network to interrupt availability to system and network resources.",
+            "tool_name": [
+                "KillDisk"
+            ],
+            "tool": [
+                "S0607"
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "destruction of serial-to-Ethernet devices through malicious firmware updates",
+        "technique": "T1495",
+        "metadata": {
+            "page_number": 10,
+            "id": "002",
+            "source": "TEXT",
+            "tactic_name": [
+                "IMPACT"
+            ],
+            "tactic": [
+                "TA0040"
+            ],
+            "technique_name": "FIRMWARE CORRUPTION",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may overwrite or corrupt the flash memory contents of system BIOS or other firmware in devices attached to a system in order to render them inoperable or unable to boot, thus denying the availability to use the devices and/or the system.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "CRASHOVERRIDE",
+        "technique": null,
+        "metadata": {
+            "page_number": 12,
+            "id": "S02",
+            "source": "TEXT",
+            "tactic_name": [],
+            "tactic": [],
+            "technique_name": null,
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": null,
+            "tool_name": [
+                "CRASHOVERRIDE/Industroyer"
+            ],
+            "tool": [
+                "S0604"
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "After authentication opens HTTP channel to external command and control server (C2) through internal proxy",
+        "technique": "T1071",
+        "metadata": {
+            "page_number": 13,
+            "id": "003",
+            "source": "TEXT",
+            "tactic_name": [
+                "COMMAND AND CONTROL"
+            ],
+            "tactic": [
+                "TA0011"
+            ],
+            "technique_name": "APPLICATION LAYER PROTOCOL",
+            "sub_technique_name": "APPLICATION LAYER PROTOCOL",
+            "sub_technique": null,
+            "description": "Adversaries may communicate using application layer protocols associated with web traffic to avoid detection/network filtering by blending in with existing traffic.",
+            "tool_name": null,
+            "tool": null,
+            "note": "The backdoor opens an HTTP channel to an external C2 server through an internal proxy.",
+            "link": null
+        }
+    },
+    {
+        "context": "Overwrites an existing service to point to the backdoor so the malware persists between reboots",
+        "technique": "T1543",
+        "metadata": {
+            "page_number": 13,
+            "id": "004",
+            "source": "TEXT",
+            "tactic_name": [
+                "PERSISTENCE"
+            ],
+            "tactic": [
+                "TA0003"
+            ],
+            "technique_name": "CREATE OR MODIFY SYSTEM PROCESS",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may create or modify system-level processes to repeatedly execute malicious payloads as part of persistence.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "On execution, the malware attempts to contact a hard-coded proxy address located within the local network.",
+        "technique": "T1090",
+        "metadata": {
+            "page_number": 13,
+            "id": "005",
+            "source": "TEXT",
+            "tactic_name": [
+                "COMMAND AND CONTROL"
+            ],
+            "tactic": [
+                "TA0011"
+            ],
+            "technique_name": "PROXY",
+            "sub_technique_name": "PROXY",
+            "sub_technique": null,
+            "description": "Adversaries may use a connection proxy to direct network traffic between systems or act as an intermediary for network communications to a command and control server to avoid direct connections to their infrastructure.",
+            "tool_name": null,
+            "tool": null,
+            "note": "The malware contacts a hard-coded proxy address on the local network as part of its C2 communication strategy.",
+            "link": null
+        }
+    },
+    {
+        "context": "The backdoor then sends a series of HTTP POST requests with the victim's Windows GUID (a unique identifier set with every Windows installation) in the HTTP body. This information authenticates the targeted machine to the command and control (C2) server.",
+        "technique": "T1071",
+        "metadata": {
+            "page_number": 13,
+            "id": "006",
+            "source": "TEXT",
+            "tactic_name": [
+                "COMMAND AND CONTROL"
+            ],
+            "tactic": [
+                "TA0011"
+            ],
+            "technique_name": "APPLICATION LAYER PROTOCOL",
+            "sub_technique_name": "APPLICATION LAYER PROTOCOL",
+            "sub_technique": null,
+            "description": "Adversaries may communicate using application layer protocols associated with web traffic to avoid detection/network filtering by blending in with existing traffic.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "If the authentication is successful to the internal proxy, the malware attempts to perform an HTTP CONNECT to an external C2 server via the internal proxy.",
+        "technique": "T1071",
+        "metadata": {
+            "page_number": 14,
+            "id": "007",
+            "source": "TEXT",
+            "tactic_name": [
+                "COMMAND AND CONTROL"
+            ],
+            "tactic": [
+                "TA0011"
+            ],
+            "technique_name": "APPLICATION LAYER PROTOCOL",
+            "sub_technique_name": "APPLICATION LAYER PROTOCOL",
+            "sub_technique": null,
+            "description": "Adversaries may communicate using application layer protocols associated with web traffic to avoid detection/network filtering by blending in with existing traffic.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "#005 THEN #006 THEN #007"
+            ]
+        }
+    },
+    {
+        "context": "Create a new process as logged in user \u2022Create a new process as specified user via CreateProcessWithLogon",
+        "technique": "T1543",
+        "metadata": {
+            "page_number": 14,
+            "id": "008",
+            "source": "TEXT",
+            "tactic_name": [
+                "PRIVILEGE ESCALATION"
+            ],
+            "tactic": [
+                "TA0004"
+            ],
+            "technique_name": "CREATE OR MODIFY SYSTEM PROCESS",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may create or modify system-level processes to repeatedly execute malicious payloads.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "Write a file \u2022Copy a file \u2022Execute a command as logged in user \u2022Execute a command as specified user \u2022Kill the backdoor",
+        "technique": "T1059",
+        "metadata": {
+            "page_number": 14,
+            "id": "009",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXECUTION"
+            ],
+            "tactic": [
+                "TA0002"
+            ],
+            "technique_name": "COMMAND AND SCRIPT INTERPRETER",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may abuse command and script interpreters to execute commands, scripts, or binaries.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "Stop a service \u2022Specify a user (log in as user) and stop a service \u2022Specify a user (log in as user) and start a service \u2022Alter an existing service to point to specified process and change to start at boot",
+        "technique": "T1543",
+        "metadata": {
+            "page_number": 14,
+            "id": "010",
+            "source": "TEXT",
+            "tactic_name": [
+                "PERSISTENCE"
+            ],
+            "tactic": [
+                "TA0003"
+            ],
+            "technique_name": "CREATE OR MODIFY SYSTEM PROCESS",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may create or modify system-level processes to repeatedly execute malicious payloads as part of persistence.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "The service manipulation process is the only persistence mechanism for the malware. When used, the adversary can select an arbitrary system service, direct it to refer to CRASHOVERRIDE, and ensure it is loaded on system boot.",
+        "technique": "T1543",
+        "metadata": {
+            "page_number": 15,
+            "id": "011",
+            "source": "TEXT",
+            "tactic_name": [
+                "PERSISTENCE"
+            ],
+            "tactic": [
+                "TA0003"
+            ],
+            "technique_name": "CREATE OR MODIFY SYSTEM PROCESS",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may create or modify system-level processes to repeatedly execute malicious payloads as part of persistence.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "Loads payload modules which manipulate the ICS and cause destruction via the wiper",
+        "technique": "T1129",
+        "metadata": {
+            "page_number": 15,
+            "id": "012",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXECUTION"
+            ],
+            "tactic": [
+                "TA0002"
+            ],
+            "technique_name": "SHARED MODULES",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may execute malicious payloads via loading shared modules.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "Starts itself as a service likely to hide better",
+        "technique": "T1543",
+        "metadata": {
+            "page_number": 15,
+            "id": "013",
+            "source": "TEXT",
+            "tactic_name": [
+                "PERSISTENCE"
+            ],
+            "tactic": [
+                "TA0003"
+            ],
+            "technique_name": "CREATE OR MODIFY SYSTEM PROCESS",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may create or modify system-level processes to repeatedly execute malicious payloads as part of persistence.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "Launches the payload and begins either 1 or 2 hours countdown before launching the data wiper",
+        "technique": "T1485",
+        "metadata": {
+            "page_number": 15,
+            "id": "014",
+            "source": "TEXT",
+            "tactic_name": [
+                "IMPACT"
+            ],
+            "tactic": [
+                "TA0040"
+            ],
+            "technique_name": "DATA DESTRUCTION",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may destroy data and files on specific systems or in large numbers on a network to interrupt availability to systems, services, and network resources.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "the ICS payload modules and data wiper module must be loaded by a separate loader EXE.",
+        "technique": "T1129",
+        "metadata": {
+            "page_number": 16,
+            "id": "015",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXECUTION"
+            ],
+            "tactic": [
+                "TA0002"
+            ],
+            "technique_name": "SHARED MODULES",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may execute malicious payloads via loading shared modules.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "It then loads the module DLL via an exported function named Crash",
+        "technique": "T1129",
+        "metadata": {
+            "page_number": 16,
+            "id": "017",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXECUTION"
+            ],
+            "tactic": [
+                "TA0002"
+            ],
+            "technique_name": "SHARED MODULES",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may execute malicious payloads via loading shared modules.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "the sample analyzed starts a service named  defragsvc",
+        "technique": "T1543",
+        "metadata": {
+            "page_number": 16,
+            "id": "016",
+            "source": "TEXT",
+            "tactic_name": [
+                "PERSISTENCE"
+            ],
+            "tactic": [
+                "TA0003"
+            ],
+            "technique_name": "CREATE OR MODIFY SYSTEM PROCESS",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may create or modify system-level processes to repeatedly execute malicious payloads as part of persistence.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "Control then passes from the launcher to the loaded module while the launcher waits two hours before executing the data wiper.",
+        "technique": "T1053",
+        "metadata": {
+            "page_number": 16,
+            "id": "018",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXECUTION"
+            ],
+            "tactic": [
+                "TA0002"
+            ],
+            "technique_name": "SCHEDULED TASK/JOB",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may abuse task scheduling functionality to facilitate initial or recurring execution of malicious code.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "Clears all registry keys associated with system services \u2022Overwrites all ICS configuration files across the hard drives and all mapped network drives specifically targeting ABB PCM600 configuration files in this sample \u2022Overwrites generic Windows files",
+        "technique": "T1485",
+        "metadata": {
+            "page_number": 16,
+            "id": "019",
+            "source": "TEXT",
+            "tactic_name": [
+                "IMPACT"
+            ],
+            "tactic": [
+                "TA0040"
+            ],
+            "technique_name": "DATA DESTRUCTION",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may destroy data and files on specific systems or in large numbers on a network to interrupt availability to systems, services, and network resources.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "Renders the system unusable",
+        "technique": "T1489",
+        "metadata": {
+            "page_number": 16,
+            "id": "020",
+            "source": "TEXT",
+            "tactic_name": [
+                "IMPACT"
+            ],
+            "tactic": [
+                "TA0040"
+            ],
+            "technique_name": "SERVICE STOP",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may stop or disable services on a system to render those services unavailable to legitimate users.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "Once executed, the data wiper module clears registry keys, erase files, and kill processes running on the system.",
+        "technique": "T1485",
+        "metadata": {
+            "page_number": 16,
+            "id": "021",
+            "source": "TEXT",
+            "tactic_name": [
+                "IMPACT"
+            ],
+            "tactic": [
+                "TA0040"
+            ],
+            "technique_name": "DATA DESTRUCTION",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may destroy data and files on specific systems or in large numbers on a network to interrupt availability to systems, services, and network resources.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "The first task of the wiper writes zeros into all of the registry keys in: SYSTEM\\CurrentControlSet\\Services",
+        "technique": "T1485",
+        "metadata": {
+            "page_number": 16,
+            "id": "022",
+            "source": "TEXT",
+            "tactic_name": [
+                "IMPACT"
+            ],
+            "tactic": [
+                "TA0040"
+            ],
+            "technique_name": "DATA DESTRUCTION",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may destroy data and files on specific systems or in large numbers on a network to interrupt availability to systems, services, and network resources.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "'Kills' legitimate the master process on the victim host",
+        "technique": "T1543",
+        "metadata": {
+            "page_number": 17,
+            "id": "023",
+            "source": "TEXT",
+            "tactic_name": [
+                "PRIVILEGE ESCALATION"
+            ],
+            "tactic": [
+                "TA0004"
+            ],
+            "technique_name": "CREATE OR MODIFY SYSTEM PROCESS",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may create or modify system-level processes to repeatedly execute malicious payloads.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "Masquerades as the new master",
+        "technique": "T1036",
+        "metadata": {
+            "page_number": 17,
+            "id": "024",
+            "source": "TEXT",
+            "tactic_name": [
+                "DEFENSE EVASION"
+            ],
+            "tactic": [
+                "TA0005"
+            ],
+            "technique_name": "MASQUERADING",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may attempt to manipulate features of their artifacts to make them appear legitimate or benign to users and/or security tools.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "the first action is to try to kill the communications service process which acts as the master process",
+        "technique": "T1543",
+        "metadata": {
+            "page_number": 20,
+            "id": "025",
+            "source": "TEXT",
+            "tactic_name": [
+                "PRIVILEGE ESCALATION"
+            ],
+            "tactic": [
+                "TA0004"
+            ],
+            "technique_name": "CREATE OR MODIFY SYSTEM PROCESS",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may create or modify system-level processes to repeatedly execute malicious payloads.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "In some circumstances, it may have no immediate impact while in others it could put customers into an outage. It is important to note that grid operations encompass failure modes and operations can normally compensate.",
+        "technique": "T1489",
+        "metadata": {
+            "page_number": 23,
+            "id": "026",
+            "source": "TEXT",
+            "tactic_name": [
+                "IMPACT"
+            ],
+            "tactic": [
+                "TA0040"
+            ],
+            "technique_name": "SERVICE STOP",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may stop or disable services on a system to render those services unavailable to legitimate users.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "The outcome of the action infers that various systems can either perform actions on wrong information or report incorrect information to system operators. This Denial of Visibility will amplify misunderstanding and confusion while system operators troubleshoot the problem as their system view will show breakers closed when they are open.",
+        "technique": "T0833",
+        "metadata": {
+            "page_number": 24,
+            "id": "027",
+            "source": "TEXT",
+            "tactic_name": [
+                "IMPACT"
+            ],
+            "tactic": [
+                "TA0040"
+            ],
+            "technique_name": "MANIPULATION OF CONTROL",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may manipulate physical process control within the industrial environment. Methods of manipulating control can include changes to set point values, tags, or other parameters. Adversaries may manipulate control systems devices or possibly leverage their own, to communicate with and command physical control processes. The duration of manipulation may be temporary or longer sustained, depending on operator detection.",
+            "tool_name": null,
+            "tool": null,
+            "note": "The manipulation of control systems results in incorrect reporting and actions based on false data, leading to operational confusion and a Denial of Visibility for system operators.",
+            "link": null
+        }
+    },
+    {
+        "context": "A second, and more severe, amplifying attack would be to neutralize the automated protective system by creating a Denial of Service against some or all of the protective relays.",
+        "technique": "T0814",
+        "metadata": {
+            "page_number": 25,
+            "id": "028",
+            "source": "TEXT",
+            "tactic_name": [
+                "INHIBIT REPONSE FUNCTION"
+            ],
+            "tactic": [
+                "TA0107"
+            ],
+            "technique_name": "DENIAL OF SERVICE",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may perform Denial-of-Service (DoS) attacks to disrupt expected device functionality.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    }
+]

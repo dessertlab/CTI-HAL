@@ -1,0 +1,1029 @@
+[
+    {
+        "context": "CARBANAK is a full-featured backdoor with data-stealing capabilities and a plugin architecture",
+        "technique": null,
+        "metadata": {
+            "page_number": 1,
+            "id": "001",
+            "source": null,
+            "tactic_name": [],
+            "tactic": [],
+            "technique_name": null,
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": null,
+            "tool_name": [
+                "CARBANAK"
+            ],
+            "tool": [
+                "S0030"
+            ],
+            "note": null,
+            "link": [
+                "002",
+                "003",
+                "004",
+                "005",
+                "006",
+                "007",
+                "008",
+                "009"
+            ]
+        }
+    },
+    {
+        "context": "key logging",
+        "technique": "T1056",
+        "metadata": {
+            "page_number": 1,
+            "id": "002",
+            "source": "TEXT",
+            "tactic_name": [
+                "COLLECTION"
+            ],
+            "tactic": [
+                "TA0009"
+            ],
+            "technique_name": "INPUT CAPTURE",
+            "sub_technique_name": "KEYLOGGING",
+            "sub_technique": "T1056.001",
+            "description": "Capturing keystrokes to gather sensitive information",
+            "tool_name": [
+                "CARBANAK"
+            ],
+            "tool": [
+                "S0030"
+            ],
+            "note": null,
+            "link": [
+                "001"
+            ]
+        }
+    },
+    {
+        "context": "desktop video capture",
+        "technique": "T1113",
+        "metadata": {
+            "page_number": 1,
+            "id": "003",
+            "source": "TEXT",
+            "tactic_name": [
+                "COLLECTION"
+            ],
+            "tactic": [
+                "TA0009"
+            ],
+            "technique_name": "SCREEN CAPTURE",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Capturing screenshots of the victim's desktop to monitor user activity.",
+            "tool_name": [
+                "CARBANAK"
+            ],
+            "tool": [
+                "S0030"
+            ],
+            "note": null,
+            "link": [
+                "001"
+            ]
+        }
+    },
+    {
+        "context": "#le system management",
+        "technique": "T1083",
+        "metadata": {
+            "page_number": 1,
+            "id": "005",
+            "source": "TEXT",
+            "tactic_name": [
+                "DISCOVERY"
+            ],
+            "tactic": [
+                "TA0007"
+            ],
+            "technique_name": "FILE AND DIRECTORY DISCOVERY",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Managing and navigating the file system to locate files of interest.",
+            "tool_name": [
+                "CARBANAK"
+            ],
+            "tool": [
+                "S0030"
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "VNC",
+        "technique": "T1021",
+        "metadata": {
+            "page_number": 1,
+            "id": "004",
+            "source": "TEXT",
+            "tactic_name": [
+                "COMMAND AND CONTROL"
+            ],
+            "tactic": [
+                "TA0011"
+            ],
+            "technique_name": "REMOTE SERVICES",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Using tools like VNC to remotely control the victim's machine.",
+            "tool_name": [
+                "CARBANAK"
+            ],
+            "tool": [
+                "S0030"
+            ],
+            "note": null,
+            "link": [
+                "001"
+            ]
+        }
+    },
+    {
+        "context": "OS destruction",
+        "technique": "T1485",
+        "metadata": {
+            "page_number": 1,
+            "id": "008",
+            "source": "TEXT",
+            "tactic_name": [
+                "IMPACT"
+            ],
+            "tactic": [
+                "TA0040"
+            ],
+            "technique_name": "DATA DESTRUCTION",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Destroying data on the victim's system to disrupt operations or cover tracks.",
+            "tool_name": [
+                "CARBANAK"
+            ],
+            "tool": [
+                "S0030"
+            ],
+            "note": null,
+            "link": [
+                "001"
+            ]
+        }
+    },
+    {
+        "context": "#le transfer",
+        "technique": "T1105",
+        "metadata": {
+            "page_number": 1,
+            "id": "006",
+            "source": "TEXT",
+            "tactic_name": [
+                "COMMAND AND CONTROL"
+            ],
+            "tactic": [
+                "TA0011"
+            ],
+            "technique_name": "INGRESS TOOL TRANSFER",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Transferring files to or from a compromised system.",
+            "tool_name": [
+                "CARBANAK"
+            ],
+            "tool": [
+                "S0030"
+            ],
+            "note": null,
+            "link": [
+                "001"
+            ]
+        }
+    },
+    {
+        "context": "TCP tunneling",
+        "technique": "T1572",
+        "metadata": {
+            "page_number": 1,
+            "id": "007",
+            "source": "TEXT",
+            "tactic_name": [
+                "COMMAND AND CONTROL"
+            ],
+            "tactic": [
+                "TA0011"
+            ],
+            "technique_name": "PROTOCOL TUNNELING",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Using techniques like TCP tunneling to encapsulate traffic and avoid detection.",
+            "tool_name": [
+                "CARBANAK"
+            ],
+            "tool": [
+                "S0030"
+            ],
+            "note": null,
+            "link": [
+                "001"
+            ]
+        }
+    },
+    {
+        "context": "POS and Outlook data the$",
+        "technique": "T1005",
+        "metadata": {
+            "page_number": 1,
+            "id": "009",
+            "source": "TEXT",
+            "tactic_name": [
+                "COLLECTION"
+            ],
+            "tactic": [
+                "TA0009"
+            ],
+            "technique_name": "DATA FROM LOCAL SYSTEM",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Stealing data from point-of-sale (POS) systems and Outlook.",
+            "tool_name": [
+                "CARBANAK"
+            ],
+            "tool": [
+                "S0030"
+            ],
+            "note": null,
+            "link": [
+                "001"
+            ]
+        }
+    },
+    {
+        "context": "Key logger",
+        "technique": "T1056",
+        "metadata": {
+            "page_number": 2,
+            "id": "010",
+            "source": "TEXT",
+            "tactic_name": [
+                "COLLECTION"
+            ],
+            "tactic": [
+                "TA0009"
+            ],
+            "technique_name": "INPUT CAPTURE",
+            "sub_technique_name": "KEYLOGGING",
+            "sub_technique": "T1056.001",
+            "description": "Logs key strokes for con#gured processes and sends them to the command and control (C2) server",
+            "tool_name": [
+                "CARBANAK"
+            ],
+            "tool": [
+                "S0030"
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "The command and parameter names are hashed before being compared by the binary, making it di'cult to recover the original names of commands and parameters",
+        "technique": "T1027",
+        "metadata": {
+            "page_number": 2,
+            "id": "011",
+            "source": "TEXT",
+            "tactic_name": [
+                "DEFENSE EVASION"
+            ],
+            "tactic": [
+                "TA0005"
+            ],
+            "technique_name": "OBFUSCATED FILES OR INFORMATION",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "The commands and parameter names are hashed before being compared by the binary, making it difficult to recover the original names of commands and parameters.",
+            "tool_name": [
+                "CARBANAK"
+            ],
+            "tool": [
+                "S0030"
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "Desktop video recording",
+        "technique": "T1113",
+        "metadata": {
+            "page_number": 3,
+            "id": "012",
+            "source": "TEXT",
+            "tactic_name": [
+                "COLLECTION"
+            ],
+            "tactic": [
+                "TA0009"
+            ],
+            "technique_name": "SCREEN CAPTURE",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Capturing screenshots of the victim's desktop to monitor user activity.",
+            "tool_name": [
+                "CARBANAK"
+            ],
+            "tool": [
+                "S0030"
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "Downloads executable",
+        "technique": "T1105",
+        "metadata": {
+            "page_number": 3,
+            "id": "013",
+            "source": "TEXT",
+            "tactic_name": [
+                "COMMAND AND CONTROL"
+            ],
+            "tactic": [
+                "TA0011"
+            ],
+            "technique_name": "INGRESS TOOL TRANSFER",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "The act of downloading an executable aligns with this technique, which covers the transfer of tools or files into a victim's environment.",
+            "tool_name": [
+                "CARBANAK"
+            ],
+            "tool": [
+                "S0030"
+            ],
+            "note": null,
+            "link": [
+                "014"
+            ]
+        }
+    },
+    {
+        "context": "injects into new process",
+        "technique": "T1055",
+        "metadata": {
+            "page_number": 3,
+            "id": "014",
+            "source": "TEXT",
+            "tactic_name": [
+                "DEFENSE EVASION",
+                "PRIVILEGE ESCALATION"
+            ],
+            "tactic": [
+                "TA0005",
+                "TA0006"
+            ],
+            "technique_name": "PROCESS INJECTION",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "The technique of injecting code into a new process is directly described by \"injects into new process\".",
+            "tool_name": [
+                "CARBANAK"
+            ],
+            "tool": [
+                "S0030"
+            ],
+            "note": null,
+            "link": [
+                "013"
+            ]
+        }
+    },
+    {
+        "context": "Ammyy Admin tool",
+        "technique": "T1219",
+        "metadata": {
+            "page_number": 3,
+            "id": "015",
+            "source": "TEXT",
+            "tactic_name": [
+                "COMMAND AND CONTROL"
+            ],
+            "tactic": [
+                "TA0011"
+            ],
+            "technique_name": "REMOTE ACCESS SOFTWARE",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Ammyy Admin is a legitimate remote access tool often abused by attackers to gain remote control of victim systems.",
+            "tool_name": [
+                "CARBANAK",
+                "AMMYY"
+            ],
+            "tool": [
+                "S0030",
+                null
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "Renders computer unbootable by wiping the MBR",
+        "technique": "T1561",
+        "metadata": {
+            "page_number": 3,
+            "id": "016",
+            "source": "TEXT",
+            "tactic_name": [
+                "IMPACT"
+            ],
+            "tactic": [
+                "TA0040"
+            ],
+            "technique_name": "DISK WIPE",
+            "sub_technique_name": "DISK STRUCTURE WIPE",
+            "sub_technique": "T1561.002",
+            "description": "This involves the destruction of data structures, such as the MBR, to prevent the operating system from booting. This technique aims to render the system unusable.",
+            "tool_name": [
+                "CARBANAK"
+            ],
+            "tool": [
+                "S0030"
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "Creates",
+        "technique": "T1136",
+        "metadata": {
+            "page_number": 4,
+            "id": "017",
+            "source": "TEXT",
+            "tactic_name": [
+                "PERSISTENCE"
+            ],
+            "tactic": [
+                "TA0003"
+            ],
+            "technique_name": "CREATE ACCOUNT",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may create user accounts to establish persistence, elevate privileges, or facilitate other malicious activities.",
+            "tool_name": [
+                "CARBANAK"
+            ],
+            "tool": [
+                "S0030"
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "deletes Windows user account",
+        "technique": "T1531",
+        "metadata": {
+            "page_number": 4,
+            "id": "018",
+            "source": "TEXT",
+            "tactic_name": [
+                "IMPACT"
+            ],
+            "tactic": [
+                "TA0040"
+            ],
+            "technique_name": "ACCOUNT ACCESS REMOVAL",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may remove accounts to limit access to the system or to deny access to specific users, which can include deleting user accounts.",
+            "tool_name": [
+                "CARBANAK"
+            ],
+            "tool": [
+                "S0030"
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "Deletes #le or service",
+        "technique": "T1070",
+        "metadata": {
+            "page_number": 4,
+            "id": "019",
+            "source": "TEXT",
+            "tactic_name": [
+                "DEFENSE EVASION"
+            ],
+            "tactic": [
+                "TA0005"
+            ],
+            "technique_name": "INDICATOR REMOVAL ON HOST",
+            "sub_technique_name": "FILE DELETION",
+            "sub_technique": "T1070.004",
+            "description": "Adversaries may delete files to remove artifacts and other traces of their presence from the host to avoid detection.",
+            "tool_name": [
+                "CARBANAK"
+            ],
+            "tool": [
+                "S0030"
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "Downloads executable",
+        "technique": "T1105",
+        "metadata": {
+            "page_number": 4,
+            "id": "020",
+            "source": "TEXT",
+            "tactic_name": [
+                "COMMAND AND CONTROL"
+            ],
+            "tactic": [
+                "TA0011"
+            ],
+            "technique_name": "INGRESS TOOL TRANSFER",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "The act of downloading an executable aligns with this technique, which covers the transfer of tools or files into a victim's environment.",
+            "tool_name": [
+                "CARBANAK"
+            ],
+            "tool": [
+                "S0030"
+            ],
+            "note": null,
+            "link": [
+                "021"
+            ]
+        }
+    },
+    {
+        "context": "injects directly into new process",
+        "technique": "T1055",
+        "metadata": {
+            "page_number": 4,
+            "id": "021",
+            "source": "TEXT",
+            "tactic_name": [
+                "DEFENSE EVASION",
+                "PRIVILEGE ESCALATION"
+            ],
+            "tactic": [
+                "TA0005",
+                "TA0006"
+            ],
+            "technique_name": "PROCESS INJECTION",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "The technique of injecting code into a new process is directly described by \"injects into new process\".",
+            "tool_name": [
+                "CARBANAK"
+            ],
+            "tool": [
+                "S0030"
+            ],
+            "note": null,
+            "link": [
+                "020"
+            ]
+        }
+    },
+    {
+        "context": "the desktop Takes a screenshot of",
+        "technique": "T1113",
+        "metadata": {
+            "page_number": 4,
+            "id": "022",
+            "source": "TEXT",
+            "tactic_name": [
+                "COLLECTION"
+            ],
+            "tactic": [
+                "TA0009"
+            ],
+            "technique_name": "SCREEN CAPTURE",
+            "sub_technique_name": "",
+            "sub_technique": null,
+            "description": "Adversaries may use utilities to capture screenshots of the victim's desktop to gather information about the environment and operations on the victim's system.",
+            "tool_name": [
+                "CARBANAK"
+            ],
+            "tool": [
+                "S0030"
+            ],
+            "note": null,
+            "link": [
+                "023"
+            ]
+        }
+    },
+    {
+        "context": "sends it to the C2 server",
+        "technique": "T1071",
+        "metadata": {
+            "page_number": 4,
+            "id": "023",
+            "source": "TEXT",
+            "tactic_name": [
+                "COMMAND AND CONTROL"
+            ],
+            "tactic": [
+                "TA0011"
+            ],
+            "technique_name": "APPLICTION LAYER PROTOCOL",
+            "sub_technique_name": "WEB PROTOCOLS",
+            "sub_technique": "T1071.001",
+            "description": "Sending data to the C2 server could utilize common web protocols to communicate, making the traffic blend in with legitimate web traffic.",
+            "tool_name": [
+                "CARBANAK"
+            ],
+            "tool": [
+                "S0030"
+            ],
+            "note": null,
+            "link": [
+                "022"
+            ]
+        }
+    },
+    {
+        "context": "Runs VNC plugin",
+        "technique": "T1219",
+        "metadata": {
+            "page_number": 4,
+            "id": "024",
+            "source": "TEXT",
+            "tactic_name": [
+                "COMMAND AND CONTROL"
+            ],
+            "tactic": [
+                "TA0011"
+            ],
+            "technique_name": "REMOTE ACCESS SOFTWARE",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Using tools like VNC to remotely control the victim's machine.",
+            "tool_name": [
+                "CARBANAK"
+            ],
+            "tool": [
+                "S0030"
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "processes to the C2 Returns list of running server",
+        "technique": "T1057",
+        "metadata": {
+            "page_number": 5,
+            "id": "025",
+            "source": "TEXT",
+            "tactic_name": [
+                "DISCOVERY"
+            ],
+            "tactic": [
+                "TA0007"
+            ],
+            "technique_name": "PROCESS DISCOVERY",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "monitoring and collecting information about the processes running on a system.",
+            "tool_name": [
+                "CARBANAK"
+            ],
+            "tool": [
+                "S0030"
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "Download and execute shellcode from speci#ed address",
+        "technique": "T1105",
+        "metadata": {
+            "page_number": 5,
+            "id": "026",
+            "source": "TEXT",
+            "tactic_name": [
+                "COMMAND AND CONTROL"
+            ],
+            "tactic": [
+                "TA0011"
+            ],
+            "technique_name": "INGRESS TOOL TRANSFER",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Downloading and executing shellcode from a specific address",
+            "tool_name": [
+                "CARBANAK"
+            ],
+            "tool": [
+                "S0030"
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "CARBANAK communicates to its C2 servers",
+        "technique": "T1041",
+        "metadata": {
+            "page_number": 6,
+            "id": "034",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXFILTRATION"
+            ],
+            "tactic": [
+                "TA0010"
+            ],
+            "technique_name": "EXFILTRATION OVER C2 CHANNEL",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "The CARBANAK backdoor communicates with its command and control servers to exfiltrate stolen data",
+            "tool_name": [
+                "CARBANAK"
+            ],
+            "tool": [
+                "S0030"
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "Messages are encrypted using Microso$'s implementation of RC2 in CBC mode with PKCS#5 padding",
+        "technique": "T1486",
+        "metadata": {
+            "page_number": 6,
+            "id": "027",
+            "source": "TEXT",
+            "tactic_name": [
+                "IMPACT"
+            ],
+            "tactic": [
+                "TA0040"
+            ],
+            "technique_name": "DATA ENCRYPTED",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Use of RC2 in CBC mode with PKCS#5 padding to encrypt messages.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "028"
+            ]
+        }
+    },
+    {
+        "context": "The encrypted message is then Base64 encoded",
+        "technique": "T1132",
+        "metadata": {
+            "page_number": 6,
+            "id": "028",
+            "source": "TEXT",
+            "tactic_name": [
+                "COMMAND AND CONTROL"
+            ],
+            "tactic": [
+                "TA0011"
+            ],
+            "technique_name": "DATA ENCODING",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Use of Base64 encoding to represent encrypted data",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "027",
+                "029"
+            ]
+        }
+    },
+    {
+        "context": "replacing all the '/' and '+' characters",
+        "technique": "T1027",
+        "metadata": {
+            "page_number": 6,
+            "id": "029",
+            "source": "TEXT",
+            "tactic_name": [
+                "DEFENSE EVASION"
+            ],
+            "tactic": [
+                "TA0005"
+            ],
+            "technique_name": "OBFUSCATED FILES OR INFORMATION",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Use of Base64 encoding to replace specific characters ('/' and '+') with others ('.' and '-')",
+            "tool_name": null,
+            "tool": null,
+            "note": "with '.' and '-'",
+            "link": [
+                "028"
+            ]
+        }
+    },
+    {
+        "context": "The encoded payload is then made to look like a URI by having a random number of '/' characters inse%ed at random locations within the encoded payload",
+        "technique": "T1027",
+        "metadata": {
+            "page_number": 7,
+            "id": "030",
+            "source": "TEXT",
+            "tactic_name": [
+                "DEFENSE EVASION"
+            ],
+            "tactic": [
+                "TA0005"
+            ],
+            "technique_name": "OBFUSCATED FILES OR INFORMATION",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Described when the encoded payload is made to resemble a URI by inserting a random number of '/' characters in random locations. This is used to disguise the payload as a normal URI.",
+            "tool_name": null,
+            "tool": null,
+            "note": "with '.' and '-'",
+            "link": [
+                "031"
+            ]
+        }
+    },
+    {
+        "context": "The malware then appends a script extension (php, bml, or cgi) with a random number of random parameters or a #le extension from the following list with no parameters: gif, jpg, png, htm, html, php",
+        "technique": "T1036",
+        "metadata": {
+            "page_number": 7,
+            "id": "031",
+            "source": "TEX",
+            "tactic_name": [
+                "DEFENSE EVASION"
+            ],
+            "tactic": [
+                "TA0005"
+            ],
+            "technique_name": "MASQUERADING",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Described when the malware adds a script extension (php, bml or cgi) with a random number of random parameters or a file extension (gif, jpg, png, htm, html, php) with no parameters.",
+            "tool_name": null,
+            "tool": null,
+            "note": "This helps the malware camouflage itself as a legitimate file or another type of file that can be run or opened.",
+            "link": [
+                "030"
+            ]
+        }
+    },
+    {
+        "context": "A 256-bit AES session key is generated and used to encrypt both message headers and bodies separately",
+        "technique": "T1573",
+        "metadata": {
+            "page_number": 8,
+            "id": "035",
+            "source": "TEXT",
+            "tactic_name": [
+                "COMMAND AND CONTROL"
+            ],
+            "tactic": [
+                "TA0011"
+            ],
+            "technique_name": "ENCRYPTED CHANNEL",
+            "sub_technique_name": "ASYMMETRIC CRYPTOGRAPHIC",
+            "sub_technique": "T1573.002",
+            "description": "The CARBANAK backdoor's custom binary protocol uses RSA for the initial key exchange and AES for subsequent message encryption, providing an encrypted communication channel",
+            "tool_name": [
+                "CARBANAK"
+            ],
+            "tool": [
+                "S0030"
+            ],
+            "note": null,
+            "link": [
+                "036"
+            ]
+        }
+    },
+    {
+        "context": "All subsequent messages are encrypted with AES in CBC mode",
+        "technique": "T1573",
+        "metadata": {
+            "page_number": 8,
+            "id": "036",
+            "source": "TEXT",
+            "tactic_name": [
+                "COMMAND AND CONTROL"
+            ],
+            "tactic": [
+                "TA0011"
+            ],
+            "technique_name": "ENCRYPTED CHANNEL",
+            "sub_technique_name": "ASYMMETRIC CRYPTOGRAPHIC",
+            "sub_technique": "T1573.002",
+            "description": "\"The CARBANAK backdoor's custom binary protocol uses AES in CBC mode to encrypt message headers and bodies, providing an encrypted communication channel.",
+            "tool_name": [
+                "CARBANAK"
+            ],
+            "tool": [
+                "S0030"
+            ],
+            "note": null,
+            "link": [
+                "035"
+            ]
+        }
+    },
+    {
+        "context": "the backdoor was embedded as a packed payload in another executable or in a weaponized document #le of some kind",
+        "technique": "T1204",
+        "metadata": {
+            "page_number": 9,
+            "id": "037",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXECUTION"
+            ],
+            "tactic": [
+                "TA0002"
+            ],
+            "technique_name": "USER EXECUTION",
+            "sub_technique_name": "MALICIOUS FILE",
+            "sub_technique": "T1204.001",
+            "description": "CARBANAK has been delivered via weaponized document files and packed payloads in other executables, which can involve user execution of malicious files",
+            "tool_name": [
+                "CARBANAK"
+            ],
+            "tool": [
+                "S0030"
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "CARBANAK's strings are encrypted in order to make analysis more di'cult",
+        "technique": "T1027",
+        "metadata": {
+            "page_number": 9,
+            "id": "032",
+            "source": "TEXT",
+            "tactic_name": [
+                "DEFENSE EVASION"
+            ],
+            "tactic": [
+                "TA0005"
+            ],
+            "technique_name": "OBFUSCATED FILES OR INFORMATION",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "This technique involves making analysis more difficult by encoding or encrypting data and/or commands. It can be used to protect strings, file names, command-and-control (C2) server addresses, and other variables used by the malware.",
+            "tool_name": [
+                "CARBANAK"
+            ],
+            "tool": [
+                "S0030"
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "the use of Power Admin PAExec for lateral movement",
+        "technique": "T1059",
+        "metadata": {
+            "page_number": 13,
+            "id": "033",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXECUTION"
+            ],
+            "tactic": [
+                "TA0002"
+            ],
+            "technique_name": "COMMAND AND SCRIPTING INTERPRETER",
+            "sub_technique_name": "POWERSHELL",
+            "sub_technique": "T1059.001",
+            "description": "use of PAExec",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    }
+]

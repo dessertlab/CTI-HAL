@@ -1,0 +1,258 @@
+[
+    {
+        "context": "contains an encoded Visual Basic Script (VBScript)",
+        "technique": "T1059",
+        "metadata": {
+            "page_number": 1,
+            "id": "001",
+            "source": "TEXT",
+            "tactic_name": [
+                ""
+            ],
+            "tactic": [
+                null
+            ],
+            "technique_name": "COMMAND AND SCRIPTING INTERPRETER",
+            "sub_technique_name": "VISUAL BASIC",
+            "sub_technique": "T1059.005",
+            "description": "The use of VBScript for executing commands or scripts on the victim system.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "The RTF document we analyzed (SHA1\u00a01ec48e5c0b88f4f850facc718bbdec9200e4bd2d) has an embedded\u00a0OLE\u00a0object contains a VBScript file",
+        "technique": "T1059",
+        "metadata": {
+            "page_number": 1,
+            "id": "002",
+            "source": "TEXT",
+            "tactic_name": [
+                ""
+            ],
+            "tactic": [
+                null
+            ],
+            "technique_name": "COMMAND AND SCRIPTING INTERPRETER",
+            "sub_technique_name": "VISUAL BASIC",
+            "sub_technique": "T1059.005",
+            "description": "The use of VBScript for executing commands or scripts on the victim system.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "003"
+            ]
+        }
+    },
+    {
+        "context": "When the document is opened the targeted user is lured into double-clicking on the embedded object which is disguised as an image",
+        "technique": "T1204",
+        "metadata": {
+            "page_number": 1,
+            "id": "003",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXECUTION"
+            ],
+            "tactic": [
+                "TA0002"
+            ],
+            "technique_name": "USER EXECUTION",
+            "sub_technique_name": "MALICIOUS FILE",
+            "sub_technique": "T1204.002",
+            "description": "When the user double-clicks on the embedded object disguised as an image, the malicious script or executable is run.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "002",
+                "004"
+            ]
+        }
+    },
+    {
+        "context": "Double clicking on the image results in a file open dialog for\u00a0\"unprotected.vbe\". If the user executes this file then the malware will begin to execute.",
+        "technique": "T1204",
+        "metadata": {
+            "page_number": 2,
+            "id": "004",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXECUTION"
+            ],
+            "tactic": [
+                "TA0002"
+            ],
+            "technique_name": "USER EXECUTION",
+            "sub_technique_name": "MALICIOUS FILE",
+            "sub_technique": "T1204.002",
+            "description": "The user is tricked into double-clicking on the disguised embedded object, which leads to the execution of the malicious .vbe file.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "003"
+            ]
+        }
+    },
+    {
+        "context": "The VBScript malware inside the RTF document (SHA1\u00a0cd75662751c59951717b4704ea2cdb6fb7ec19bc) is an encoded file.",
+        "technique": "T1132",
+        "metadata": {
+            "page_number": 2,
+            "id": "005",
+            "source": "TEXT",
+            "tactic_name": [
+                "COMMAND AND CONTROL"
+            ],
+            "tactic": [
+                "TA0011"
+            ],
+            "technique_name": "DATA ENCODING",
+            "sub_technique_name": "NON-STANDARD ENCODING",
+            "sub_technique": "T1132.002",
+            "description": "The VBScript is encoded within the RTF document, making it more difficult to detect and analyze.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "The module is base64 encoded inside the main VBScript file",
+        "technique": "T1027",
+        "metadata": {
+            "page_number": 2,
+            "id": "006",
+            "source": "TEXT",
+            "tactic_name": [
+                "DEFENSE EVASION"
+            ],
+            "tactic": [
+                "TA0005"
+            ],
+            "technique_name": "OBFUSCATED FILES OR INFORMATION",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "The module is base64 encoded, which is a form of obfuscation to hide the malicious code from security tools and analysts.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "The \"ggldr\" script will send and receive commands to and from Google Apps Script, Google Sheets, and Google Forms",
+        "technique": "T1102",
+        "metadata": {
+            "page_number": 2,
+            "id": "007",
+            "source": "TEXT",
+            "tactic_name": [
+                "COMMAND AND CONTROL"
+            ],
+            "tactic": [
+                "TA0011"
+            ],
+            "technique_name": "WEB SERVICE",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "The \"ggldr\" script uses legitimate third-party web services such as Google Apps Script, Google Sheets, and Google Forms for C&C communication, hiding in plain sight within legitimate traffic.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "The \"ggldr\" script will send and receive commands to and from Google Apps Script, Google Sheets, and Google Forms",
+        "technique": "T1105",
+        "metadata": {
+            "page_number": 2,
+            "id": "008",
+            "source": "TEXT",
+            "tactic_name": [
+                "COMMAND AND CONTROL"
+            ],
+            "tactic": [
+                "TA0011"
+            ],
+            "technique_name": "INGRESS TOOL TRANSFER",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "The \"ggldr\" script is responsible for transferring commands and receiving data through the use of Google services.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "The \"ggldr\" script will send and receive commands to and from Google Apps Script, Google Sheets, and Google Forms",
+        "technique": "T1071",
+        "metadata": {
+            "page_number": 2,
+            "id": "010",
+            "source": "TEXT",
+            "tactic_name": [
+                "COMMAND AND CONTROL"
+            ],
+            "tactic": [
+                "TA0011"
+            ],
+            "technique_name": "APPLICATION LAYER PROTOCOL",
+            "sub_technique_name": "WEB PROTOCOLS",
+            "sub_technique": "T1071.001",
+            "description": "\"The \\\"ggldr\\\" script will send and receive commands with web protocols.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "Upon the first attempt to contact the hard-coded Google Apps Script URL with the user's unique infection ID, the C& that no spreadsheet currently exists for the user.",
+        "technique": "T1102",
+        "metadata": {
+            "page_number": 3,
+            "id": "009",
+            "source": "TEXT",
+            "tactic_name": [
+                "COMMAND AND CONTROL"
+            ],
+            "tactic": [
+                "TA0011"
+            ],
+            "technique_name": "WEB SERVICE",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Using legitimate third-party web services like Google Apps Script, Google Sheets, and Google Forms for C&C communication.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "Upon the first attempt to contact the hard-coded Google Apps Script URL with the user's unique infection ID, the C& that no spreadsheet currently exists for the user.",
+        "technique": null,
+        "metadata": {
+            "page_number": 3,
+            "id": "008",
+            "source": "TEXT",
+            "tactic_name": [],
+            "tactic": [],
+            "technique_name": null,
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "The C&C procedure",
+            "tool_name": [],
+            "tool": [],
+            "note": null,
+            "link": null
+        }
+    }
+]

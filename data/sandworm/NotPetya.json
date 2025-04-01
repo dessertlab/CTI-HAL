@@ -1,0 +1,29 @@
+[
+    {
+        "context": "even if they pay the ransom they will not get their data back. Secondly, this reinforces the theory that the main goal of the ExPetr attack was not !nancially motivated, but destructive.",
+        "technique": "T1485",
+        "metadata": {
+            "page_number": 3,
+            "id": "001",
+            "source": "TEXT",
+            "tactic_name": [
+                "IMPACT"
+            ],
+            "tactic": [
+                "TA0040"
+            ],
+            "technique_name": "DATA DESTRUCTION",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may destroy data and files on specific systems or in large numbers on a network to interrupt availability to systems, services, and network resources.",
+            "tool_name": [
+                "NotPetya"
+            ],
+            "tool": [
+                "S0368"
+            ],
+            "note": "The ExPetr attack's main goal appears to be destructive rather than financially motivated, as paying the ransom does not lead to data recovery.",
+            "link": null
+        }
+    }
+]

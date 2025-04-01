@@ -1,0 +1,636 @@
+[
+    {
+        "context": "Email phishing credential theft",
+        "technique": "T1566",
+        "metadata": {
+            "page_number": 4,
+            "id": "001",
+            "source": "IMAGE",
+            "tactic_name": [
+                "INITIAL ACCESS"
+            ],
+            "tactic": [
+                "TA0001"
+            ],
+            "technique_name": "PHISHING",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Email phishing campaigns aimed to credential theft.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "014"
+            ]
+        }
+    },
+    {
+        "context": "FIN6 used a Metasploit PowerShell module to download and execute shellcode and to set up a local listener that would execute shellcode received over a specific port. Similarly, FIN6 used at least two downloaders called HARDTACK and SHIPBREAD (apparent variations on Metasploit payloads) to establish backdoor access to the compromised environment. Both of these tools are configured to connect to remote command and control (CnC) servers and download and execute shellcode.",
+        "technique": "T1105",
+        "metadata": {
+            "page_number": 6,
+            "id": "003",
+            "source": "TEXT",
+            "tactic_name": [
+                "COMMAND AND CONTROL"
+            ],
+            "tactic": [
+                "TA0011"
+            ],
+            "technique_name": "INGRESS TOOL TRANSFER",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Tools or files may be copied from an external adversary-controlled system to the victim network through the command and control channel.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "002"
+            ]
+        }
+    },
+    {
+        "context": "FIN6 used a Metasploit PowerShell module to download and execute shellcode and to set up a local listener that would execute shellcode received over a specific port. Similarly, FIN6 used at least two downloaders called HARDTACK and SHIPBREAD (apparent variations on Metasploit payloads) to establish backdoor access to the compromised environment. Both of these tools are configured to connect to remote command and control (CnC) servers and download and execute shellcode.",
+        "technique": "T1059",
+        "metadata": {
+            "page_number": 6,
+            "id": "004",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXECUTION"
+            ],
+            "tactic": [
+                "TA0002"
+            ],
+            "technique_name": "COMMAND AND SCRIPTING INTERPRETER",
+            "sub_technique_name": "POWERSHELL",
+            "sub_technique": "T1059.001",
+            "description": "Adversaries can abuse PowerShell commands and scripts for execution.",
+            "tool_name": [
+                "METASPLOIT",
+                "HARDTACK",
+                "SHIPBREAD"
+            ],
+            "tool": [
+                null,
+                null,
+                "Downloader"
+            ],
+            "note": null,
+            "link": [
+                "007",
+                "008"
+            ]
+        }
+    },
+    {
+        "context": "FIN6 generally used either registry run keys",
+        "technique": "T1547",
+        "metadata": {
+            "page_number": 6,
+            "id": "005",
+            "source": "TEXT",
+            "tactic_name": [
+                "PERSISTENCE"
+            ],
+            "tactic": [
+                "TA0003"
+            ],
+            "technique_name": "BOOT OR LOGON AUTOSTART EXECUTION",
+            "sub_technique_name": "REGISTRY RUN KEYS/STARTUP FOLDER",
+            "sub_technique": "T1547.001",
+            "description": "Adversaries may achieve persistence by adding a program to a startup folder or referencing it with a Registry run key.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "Windows scheduled tasks in order to establish persistence for these tools.",
+        "technique": "T1053",
+        "metadata": {
+            "page_number": 6,
+            "id": "006",
+            "source": "TEXT",
+            "tactic_name": [
+                "PERSISTENCE"
+            ],
+            "tactic": [
+                "TA0003"
+            ],
+            "technique_name": "SCHEDULED TASK/JOB",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may abuse task scheduling functionality to facilitate initial or recurring execution of malicious code.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "or",
+        "technique": null,
+        "metadata": {
+            "page_number": 6,
+            "id": "T01",
+            "source": "TEXT",
+            "tactic_name": [],
+            "tactic": [],
+            "technique_name": null,
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": null,
+            "tool_name": [],
+            "tool": [],
+            "note": null,
+            "link": [
+                "005",
+                "006"
+            ]
+        }
+    },
+    {
+        "context": "FIN6 used additional public utilities such as Windows Credentials Editor for privilege escalation and credential harvesting",
+        "technique": "T1003",
+        "metadata": {
+            "page_number": 6,
+            "id": "007",
+            "source": "TEXT",
+            "tactic_name": [
+                "CREDENTIAL ACCESS"
+            ],
+            "tactic": [
+                "TA0006"
+            ],
+            "technique_name": "CREDENTIALS DUMPING",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may attemp to dump credentials to obtain account login.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "004"
+            ]
+        }
+    },
+    {
+        "context": "FIN6 used additional public utilities such as Windows Credentials Editor for privilege escalation and credential harvesting",
+        "technique": "T1078",
+        "metadata": {
+            "page_number": 6,
+            "id": "008",
+            "source": "TEXT",
+            "tactic_name": [
+                "PRIVILEGE ESCALATION"
+            ],
+            "tactic": [
+                "TA0004"
+            ],
+            "technique_name": "VALID ACCOUNTS",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may obtain credentials of existing accounts.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "004"
+            ]
+        }
+    },
+    {
+        "context": "gaining access with valid credentials",
+        "technique": "T1078",
+        "metadata": {
+            "page_number": 6,
+            "id": "002",
+            "source": "TEXT",
+            "tactic_name": [
+                "INITIAL ACCESS"
+            ],
+            "tactic": [
+                "TA0001"
+            ],
+            "technique_name": "VALID ACCOUNTS",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may obtain credentials of existing accounts.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "003"
+            ]
+        }
+    },
+    {
+        "context": "FIN6 also used Metasploit's PsExec NTDSGRAB module to obtain a copy of the Active Directory database (ntds.dit). Access to this file would allow them to extract password hashes from the file and crack them offline.",
+        "technique": "T1003",
+        "metadata": {
+            "page_number": 6,
+            "id": "009",
+            "source": "TEXT",
+            "tactic_name": [
+                "CREDENTIAL ACCESS"
+            ],
+            "tactic": [
+                "TA0006"
+            ],
+            "technique_name": "CREDENTIAL DUMPING",
+            "sub_technique_name": "NTDS",
+            "sub_technique": "T1003.003",
+            "description": "Adversaries may attempt to access or create a copy of the Active Directory domain database in order to steal credential information.",
+            "tool_name": [
+                "Metasploit's PsExec NTDSGRAB"
+            ],
+            "tool": [
+                null
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "FIN6 also used Metasploit's PsExec NTDSGRAB module to obtain a copy of the Active Directory database (ntds.dit). Access to this file would allow them to extract password hashes from the file and crack them offline.",
+        "technique": "T1110",
+        "metadata": {
+            "page_number": 6,
+            "id": "010",
+            "source": "TEXT",
+            "tactic_name": [
+                "CREDENTIAL ACCESS"
+            ],
+            "tactic": [
+                "TA0006"
+            ],
+            "technique_name": "BRUTEFORCE",
+            "sub_technique_name": "PASSWORD CRACKING",
+            "sub_technique": "T1110.002",
+            "description": "Adversaries may use password cracking to attempt to recover usable credentials, such as plaintext passwords, when credential material such as password hashes are obtained.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "In addition to collecting credentials, FIN6 used publicly available tools to map the internal network and conduct reconnaissance against Active Directory, Structured Query Language (SQL) servers and NetBIOS.",
+        "technique": "T1018",
+        "metadata": {
+            "page_number": 7,
+            "id": "011",
+            "source": "TEXT",
+            "tactic_name": [
+                "DISCOVERY"
+            ],
+            "tactic": [
+                "TA0007"
+            ],
+            "technique_name": "REMOTE SYSTEM DISCOVERY",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "FIN6 used publicly available tools (including Microsoft's built-in SQL querying tool, osql.exe) to map the internal network and conduct reconnaissance against Active Directory, SQL servers, and NetBIOS.",
+            "tool_name": [
+                "AdFind",
+                "osql.exe"
+            ],
+            "tool": [
+                "S0552",
+                null
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "gathered information on systems running SQL instances, dumping schemas for multiple databases and SQL user accounts",
+        "technique": "T1082",
+        "metadata": {
+            "page_number": 7,
+            "id": "022",
+            "source": "TEXT",
+            "tactic_name": [
+                "DISCOVERY"
+            ],
+            "tactic": [
+                "TA0007"
+            ],
+            "technique_name": "SYSTEM INFORMATION DISCOVERY",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "gathered information on systems running SQL instances",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "using credentials stolen from various systems on which they gathered usernames and password hashes",
+        "technique": "T1003",
+        "metadata": {
+            "page_number": 7,
+            "id": "012",
+            "source": "TEXT",
+            "tactic_name": [
+                "CREDENTIAL ACCESS"
+            ],
+            "tactic": [
+                "TA0006"
+            ],
+            "technique_name": "OS CREDENTIAL DUMPING",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may attempt to dump credentials to obtain account login and credential material, normally in the form of a hash or a clear text password.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "remote command execution tools such as PsExec and Remote Command Executor (RemCom) throughout the rest of the lateral movement phase.",
+        "technique": "T1072",
+        "metadata": {
+            "page_number": 7,
+            "id": "013",
+            "source": "TEXT",
+            "tactic_name": [
+                "LATERAL MOVEMENT"
+            ],
+            "tactic": [
+                "TA0008"
+            ],
+            "technique_name": "SOFTWARE DEPLOYMENT TOOLS",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may gain access to and use centralized software suites installed within an enterprise to execute commands and move laterally through the network.",
+            "tool_name": [
+                "PsExec",
+                "RemCom"
+            ],
+            "tool": [
+                "S0029",
+                null
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "FIN6 leveraged the publicly available Plink command-line utility (part of the PuTTY SSH and Telnet suite) to create SSH tunnels to CnC servers under their control",
+        "technique": "T1572",
+        "metadata": {
+            "page_number": 7,
+            "id": "014",
+            "source": "TEXT",
+            "tactic_name": [
+                "COMMAND AND CONTROL"
+            ],
+            "tactic": [
+                "TA0011"
+            ],
+            "technique_name": "PROTOCOL TUNNELING",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries perform SSH tunneling.",
+            "tool_name": [
+                "Plink"
+            ],
+            "tool": [
+                null
+            ],
+            "note": null,
+            "link": [
+                "001",
+                "019",
+                "020"
+            ]
+        }
+    },
+    {
+        "context": "they used these SSH tunnels to route Remote Desktop Protocol (RDP) traffic and allow for interactive RDP sessions with systems in the target network.",
+        "technique": "T1021",
+        "metadata": {
+            "page_number": 7,
+            "id": "015",
+            "source": "TEXT",
+            "tactic_name": [
+                "LATERAL MOVEMENT"
+            ],
+            "tactic": [
+                "TA0008"
+            ],
+            "technique_name": "REMOTE SERVICES",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may use Valid Accounts to log into a computer using the Remote Desktop Protocol (RDP). The adversary may then perform actions as the logged-on user.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "Once the malware identifies track data, it copies and encodes it to a local file in a subdirectory of the c:\\windows\\ directory while attempting to conceal these files with .dll or .chm extensions.",
+        "technique": "T1005",
+        "metadata": {
+            "page_number": 7,
+            "id": "016",
+            "source": "TEXT",
+            "tactic_name": [
+                "COLLECTION"
+            ],
+            "tactic": [
+                "TA0009"
+            ],
+            "technique_name": "DATA FROM LOCAL SYSTEM",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may target and collect data from local system sources.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "Once the malware identifies track data, it copies and encodes it to a local file in a subdirectory of the c:\\windows\\ directory while attempting to conceal these files with .dll or .chm extensions.",
+        "technique": "T1036",
+        "metadata": {
+            "page_number": 7,
+            "id": "017",
+            "source": null,
+            "tactic_name": [
+                "DEFENSE EVASION"
+            ],
+            "tactic": [
+                "TA0005"
+            ],
+            "technique_name": "MASQUERADING",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may attempt to manipulate features of their artifacts to make them appear legitimate or benign to users and/or security tools.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "The malware encodes the data with a simple substitution cipher and single-byte XOR using the OxAA key.",
+        "technique": "T1027",
+        "metadata": {
+            "page_number": 7,
+            "id": "018",
+            "source": "TEXT",
+            "tactic_name": [
+                "DEFENSE EVASION"
+            ],
+            "tactic": [
+                "TA0005"
+            ],
+            "technique_name": "OBFUSCATED FILES OR INFORMATION",
+            "sub_technique_name": "ENCRYPTED/ENCODED FILE",
+            "sub_technique": "T1027.013",
+            "description": "Encrypting and/or encoding file content aims to conceal malicious artifacts within a file used in an intrusion.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "to move the stolen payment card data out of the environment, FIN6 used a script to systematically iterate through a list of compromised POS systems, copying the harvested track data files to a numbered \"log\" file before removing the original data files. They then compressed the log files into a ZIP archive and moved the archive through the environment to an intermediary system and then to a staging system.",
+        "technique": "T1560",
+        "metadata": {
+            "page_number": 7,
+            "id": "021",
+            "source": "TEXT",
+            "tactic_name": [
+                "COLLECTION"
+            ],
+            "tactic": [
+                "TA0009"
+            ],
+            "technique_name": "ARCHIVE COLLECTED DATA",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "FIN6 used a script to systematically iterate through a list of compromised POS systems, copying the harvested track data files. They then compressed into a ZIP archive.",
+            "tool_name": [
+                "Framework POS"
+            ],
+            "tool": [
+                "S0503"
+            ],
+            "note": null,
+            "link": [
+                "024"
+            ]
+        }
+    },
+    {
+        "context": "to move the stolen payment card data out of the environment, FIN6 used a script to systematically iterate through a list of compromised POS systems, copying the harvested track data files to a numbered \"log\" file before removing the original data files. They then compressed the log files into a ZIP archive and moved the archive through the environment to an intermediary system and then to a staging system.",
+        "technique": "T1020",
+        "metadata": {
+            "page_number": 7,
+            "id": "024",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXFILTRATION"
+            ],
+            "tactic": [
+                "TA0010"
+            ],
+            "technique_name": "AUTOMATED EXFILTRATION",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "they used a script to systematically iterate through a list of compromiserd POS system.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "021"
+            ]
+        }
+    },
+    {
+        "context": "they then copied the stolen data to external CnC servers under their control using the FTP command line utility",
+        "technique": "T1041",
+        "metadata": {
+            "page_number": 7,
+            "id": "019",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXFILTRATION"
+            ],
+            "tactic": [
+                "TA0010"
+            ],
+            "technique_name": "EXFILTRATION OVER C2 CHANNEL",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may steal data by exfiltrating it over an existing command and control channel.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "014",
+                "023"
+            ]
+        }
+    },
+    {
+        "context": "they then copied the stolen data to external CnC servers under their control using the FTP command line utility",
+        "technique": "T1071",
+        "metadata": {
+            "page_number": 7,
+            "id": "023",
+            "source": "TEXT",
+            "tactic_name": [
+                "COMMAND AND CONTROL"
+            ],
+            "tactic": [
+                "TA0011"
+            ],
+            "technique_name": "APPLICATION LAYER PROTOCOL",
+            "sub_technique_name": "WEB PROTOCOLS",
+            "sub_technique": "T1071.001",
+            "description": "they used the FTP command to copy the stolen data to external CnC servers.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "019"
+            ]
+        }
+    },
+    {
+        "context": "FIN6 used an alternative extraction method to upload payment card data to a public file sharing service.",
+        "technique": "T1048",
+        "metadata": {
+            "page_number": 7,
+            "id": "020",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXFILTRATION"
+            ],
+            "tactic": [
+                "TA0010"
+            ],
+            "technique_name": "EXFILTRATION OVER ALTERNATIVE PROTOCOL",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may steal data by exfiltrating it over a different protocol than that of the existing command and control channel. The data may also be sent to an alternate network location from the main command and control server.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "014"
+            ]
+        }
+    }
+]

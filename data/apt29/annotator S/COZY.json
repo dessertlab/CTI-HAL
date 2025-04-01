@@ -1,0 +1,441 @@
+[
+    {
+        "context": "The a!empts involved a phishing email appearing to be from the U.S. Depa\"ment of State with links to zip #les containing malicious Windows sho\"cuts that delivered Cobalt Strike Beacon.",
+        "technique": "T1566",
+        "metadata": {
+            "page_number": 1,
+            "id": "016",
+            "source": "TEXT",
+            "tactic_name": [
+                "INITIAL ACCESS"
+            ],
+            "tactic": [
+                "TA0001"
+            ],
+            "technique_name": "PHISHING",
+            "sub_technique_name": "SPEARPHISHING LINK",
+            "sub_technique": "T1566.002",
+            "description": "Phishing emails that contain links to malicious zipper files.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "The a!acker appears to have compromised the email server of a hospital and the corporate website of a consulting company in order to use their infrastructure to send phishing emails.",
+        "technique": "T1588",
+        "metadata": {
+            "page_number": 2,
+            "id": "015",
+            "source": "TEXT",
+            "tactic_name": [
+                "RESOURCE DEVELOPMENT"
+            ],
+            "tactic": [
+                "TA0042"
+            ],
+            "technique_name": "OBTAIN CAPABILITIES",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may buy and/or steal capabilities that can be used during targeting.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "The a!acker used unique links in each phishing email",
+        "technique": "T1566",
+        "metadata": {
+            "page_number": 2,
+            "id": "017",
+            "source": "TEXT",
+            "tactic_name": [
+                "INITIAL ACCESS"
+            ],
+            "tactic": [
+                "TA0001"
+            ],
+            "technique_name": "PHISHING",
+            "sub_technique_name": "SPEARPHISHING LINK",
+            "sub_technique": "T1566.002",
+            "description": "Phishing emails that contain links to malicious zipper files.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "The threat actor cra&ed the phishing emails to masquerade as a U.S. Depa\"ment of State Public A%airs o$cial sharing an o$cial document.",
+        "technique": "T1566",
+        "metadata": {
+            "page_number": 3,
+            "id": "001",
+            "source": "TEXT",
+            "tactic_name": [
+                "INITIAL ACCESS"
+            ],
+            "tactic": [
+                "TA0001"
+            ],
+            "technique_name": "PHISHING",
+            "sub_technique_name": "SPEARPHISHING LINK",
+            "sub_technique": "T1566.002",
+            "description": "Adversaries may send spearphishing emails with a malicious link in an attempt to gain access to victim systems.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "The links led to a ZIP archive that contained a weaponized Windows sho\"cut #le hosted on a likely compromised legitimate domain,",
+        "technique": "T1204",
+        "metadata": {
+            "page_number": 3,
+            "id": "002",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXECUTION"
+            ],
+            "tactic": [
+                "TA0002"
+            ],
+            "technique_name": "MALICIOUS FILE",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "An adversary may rely upon a user opening a malicious file in order to gain execution.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "The links led to a ZIP archive that contained a weaponized Windows sho\"cut #le hosted on a likely compromised legitimate domain,",
+        "technique": "T1036",
+        "metadata": {
+            "page_number": 3,
+            "id": "003",
+            "source": "TEXT",
+            "tactic_name": [
+                "DEFENSE EVASION"
+            ],
+            "tactic": [
+                "TA0005"
+            ],
+            "technique_name": "MASQUERADING",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may attempt to manipulate features of their artifacts to make them appear legitimate or benign to users and/or security tools.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "#001 THEN #002"
+            ]
+        }
+    },
+    {
+        "context": "The sho\"cut #le was cra&ed to execute a PowerShell command that read, decoded, and executed additional code from within the sho\"cut #le.",
+        "technique": "T1059",
+        "metadata": {
+            "page_number": 3,
+            "id": "004",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXECUTION"
+            ],
+            "tactic": [
+                "TA0002"
+            ],
+            "technique_name": "COMMAND AND SCRIPTING INTERPRETER",
+            "sub_technique_name": "POWERSHELL",
+            "sub_technique": "T1059.001",
+            "description": "Adversaries may abuse PowerShell commands and scripts for execution.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "Cobalt Strike",
+        "technique": null,
+        "metadata": {
+            "page_number": 3,
+            "id": "000",
+            "source": null,
+            "tactic_name": [],
+            "tactic": [],
+            "technique_name": null,
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": null,
+            "tool_name": [
+                "Cobalt Strike"
+            ],
+            "tool": [
+                "S0154"
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "The BEACON payload was con#gured with a modi#ed variation of the publicly available \"Pandora\" Malleable C2 Pro#le and used a command and control (C2) domain",
+        "technique": "T1036",
+        "metadata": {
+            "page_number": 3,
+            "id": "005",
+            "source": "TEXT",
+            "tactic_name": [
+                "DEFENSE EVASION"
+            ],
+            "tactic": [
+                "TA0005"
+            ],
+            "technique_name": "MASQUERADING",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may attempt to manipulate features of their artifacts to make them appear legitimate or benign to users and/or security tools.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "The BEACON payload was con#gured with a modi#ed variation of the publicly available \"Pandora\" Malleable C2 Pro#le and used a command and control (C2) domain",
+        "technique": "T1071",
+        "metadata": {
+            "page_number": 3,
+            "id": "006",
+            "source": "TEXT",
+            "tactic_name": [
+                "COMMAND AND CONTROL"
+            ],
+            "tactic": [
+                "TA0011"
+            ],
+            "technique_name": "APPLICATION LAYER PROTOCOL",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Commands to the remote system, and often the results of those commands, will be embedded within the protocol traffic between the client and server.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "Each phishing email contained a unique malicious URL, likely for tracking victim clicks.",
+        "technique": "T1566",
+        "metadata": {
+            "page_number": 5,
+            "id": "007",
+            "source": "TEXT",
+            "tactic_name": [
+                "INITIAL ACCESS"
+            ],
+            "tactic": [
+                "TA0001"
+            ],
+            "technique_name": "PHISHING",
+            "sub_technique_name": "SPEARPHISHING LINK",
+            "sub_technique": "T1566.002",
+            "description": "Adversaries may send spearphishing emails with a malicious link.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "ds7002.lnk was a malicious sho\"cut (LNK) #le that contained an embedded BEACON DLL and decoy PDF, and was cra&ed to launch a PowerShell command.",
+        "technique": "T1204",
+        "metadata": {
+            "page_number": 6,
+            "id": "008",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXECUTION"
+            ],
+            "tactic": [
+                "TA0002"
+            ],
+            "technique_name": "USER EXECUTION",
+            "sub_technique_name": "MALICIOUS FILE",
+            "sub_technique": "T1204.002",
+            "description": "An adversary may rely upon a user opening a malicious file in order to gain execution.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "ds7002.lnk was a malicious sho\"cut (LNK) #le that contained an embedded BEACON DLL and decoy PDF, and was cra&ed to launch a PowerShell command.",
+        "technique": "T1059",
+        "metadata": {
+            "page_number": 6,
+            "id": "009",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXECUTION"
+            ],
+            "tactic": [
+                "TA0002"
+            ],
+            "technique_name": "COMMAND AND SCRIPTING INTERPRETER",
+            "sub_technique_name": "POWERSHELL",
+            "sub_technique": "T1059.001",
+            "description": "Adversaries may abuse PowerShell commands and scripts for execution.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "ds7002.lnk was a malicious sho\"cut (LNK) #le that contained an embedded BEACON DLL and decoy PDF, and was cra&ed to launch a PowerShell command.",
+        "technique": "T1055",
+        "metadata": {
+            "page_number": 6,
+            "id": "010",
+            "source": "TEXT",
+            "tactic_name": [
+                "DEFENSE EVASION"
+            ],
+            "tactic": [
+                "TA0005"
+            ],
+            "technique_name": "PROCESS INJECTION",
+            "sub_technique_name": "DLL INJECTION",
+            "sub_technique": "T1055.001",
+            "description": "Adversaries may inject dynamic-link libraries (DLLs).",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "ds7002.lnk was a malicious sho\"cut (LNK) #le that contained an embedded BEACON DLL and decoy PDF, and was cra&ed to launch a PowerShell command.",
+        "technique": "T1105",
+        "metadata": {
+            "page_number": 6,
+            "id": "011",
+            "source": "TEXT",
+            "tactic_name": [
+                "COMMAND AND CONTROL"
+            ],
+            "tactic": [
+                "TA0011"
+            ],
+            "technique_name": "INGRESS TOOL TRANSFER",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may transfer tools or other files from an external system into a compromised environment.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "the PowerShell command extracted and executed the Cobalt Strike BEACON backdoor and decoy PDF.",
+        "technique": "T1071",
+        "metadata": {
+            "page_number": 6,
+            "id": "012",
+            "source": "TEXT",
+            "tactic_name": [
+                "COMMAND AND CONTROL"
+            ],
+            "tactic": [
+                "TA0011"
+            ],
+            "technique_name": "APPLICATION LAYER PROTOCOL",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may communicate using OSI application layer protocols.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "This command included some speci#c obfuscation, which may indicate a!empts to bypass speci#c detection logic. For example, the use of 'FromBase'+0x40+'String', in place of FromBase64String, the PowerShell command used to decode base64.",
+        "technique": "T1027",
+        "metadata": {
+            "page_number": 8,
+            "id": "013",
+            "source": "TEXT",
+            "tactic_name": [
+                "DEFENSE EVASION"
+            ],
+            "tactic": [
+                "TA0005"
+            ],
+            "technique_name": "OBFUSCATED FILES OR INFORMATION",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may attempt to make an executable or file difficult to discover or analyze by encrypting, encoding, or otherwise obfuscating its contents on the system or in transit.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "The PowerShell loader code is obfuscated",
+        "technique": "T1027",
+        "metadata": {
+            "page_number": 9,
+            "id": "018",
+            "source": "TEXT",
+            "tactic_name": [
+                "DEFENSE EVASION"
+            ],
+            "tactic": [
+                "TA0005"
+            ],
+            "technique_name": "OBFUSCATED FILES OR INFORMATION",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may attempt to make an executable or file difficult to discover or analyze by encrypting, encoding, or otherwise obfuscating its contents on the system or in transit.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "The dropped BEACON loader DLL was executed by RunDll32.exe using the expo\" function \"PointFunctionCall\":",
+        "technique": "T1218",
+        "metadata": {
+            "page_number": 10,
+            "id": "014",
+            "source": "TEXT",
+            "tactic_name": [
+                "DEFENSE EVASION"
+            ],
+            "tactic": [
+                "TA0005"
+            ],
+            "technique_name": "SYSTEM BINARY PROXY EXECUTION",
+            "sub_technique_name": "RUNDLL32",
+            "sub_technique": "T1218.011",
+            "description": "Adversaries may bypass process and/or signature-based defenses by proxying execution of malicious content with signed, or otherwise trusted, binaries.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    }
+]

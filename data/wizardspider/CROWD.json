@@ -1,0 +1,879 @@
+[
+    {
+        "context": "TrickBot",
+        "technique": null,
+        "metadata": {
+            "page_number": 5,
+            "id": "001",
+            "source": "TEXT",
+            "tactic_name": [],
+            "tactic": [],
+            "technique_name": null,
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": null,
+            "tool_name": [
+                "TRICKBOT"
+            ],
+            "tool": [
+                "S0266"
+            ],
+            "note": null,
+            "link": [
+                "002 OR 003"
+            ]
+        }
+    },
+    {
+        "context": "typically distributed either via spam email",
+        "technique": "T1566",
+        "metadata": {
+            "page_number": 5,
+            "id": "002",
+            "source": "TEXT",
+            "tactic_name": [
+                "INITIAL ACCESS"
+            ],
+            "tactic": [
+                "TA0001"
+            ],
+            "technique_name": "PHISHING",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "he initial compromise involves TrickBot, which is typically distributed via spam email, suggesting the use of phishing techniques to gain an initial foothold.",
+            "tool_name": [
+                "TRICKBOT"
+            ],
+            "tool": [
+                "S0266"
+            ],
+            "note": null,
+            "link": [
+                "001"
+            ]
+        }
+    },
+    {
+        "context": "through the use of the Emotet",
+        "technique": "T1105",
+        "metadata": {
+            "page_number": 5,
+            "id": "003",
+            "source": "TEXT",
+            "tactic_name": [
+                "COMMAND AND CONTROL"
+            ],
+            "tactic": [
+                "TA0011"
+            ],
+            "technique_name": "INGRESS TOOL TRANSFER",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Distribution via Emotet",
+            "tool_name": [
+                "TRICKBOT",
+                "EMOTET"
+            ],
+            "tool": [
+                "S0266",
+                null
+            ],
+            "note": "Emotet's role in downloading and executing TrickBot within the victim environment showcases the technique of transferring tools from external systems to the victim's network.",
+            "link": [
+                "001"
+            ]
+        }
+    },
+    {
+        "context": "TrickBot's modules (such aspwgrab)could aid in recovering the credentials needed to compromise environments",
+        "technique": "T1555",
+        "metadata": {
+            "page_number": 5,
+            "id": "004",
+            "source": "TEXT",
+            "tactic_name": [
+                "CREDENTIALS ACCESS"
+            ],
+            "tactic": [
+                "TA0006"
+            ],
+            "technique_name": "CREDENTIAL FROM PASSWORD STORES",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "TrickBot's pwgrab module",
+            "tool_name": [
+                "TRICKBOT"
+            ],
+            "tool": [
+                "S0266"
+            ],
+            "note": null,
+            "link": [
+                "005"
+            ]
+        }
+    },
+    {
+        "context": "TrickBot's modules (such aspwgrab)could aid in recovering the credentials needed to compromise environments",
+        "technique": "T1003",
+        "metadata": {
+            "page_number": 5,
+            "id": "035",
+            "source": "TEXT",
+            "tactic_name": [
+                "CREDENTIALS ACCESS"
+            ],
+            "tactic": [
+                "TA0006"
+            ],
+            "technique_name": "OS CREDENTIAL DUMPING",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may attempt to dump credentials to obtain account login and credential material, normally in the form of a hash or a clear text password.",
+            "tool_name": [
+                "TRICKBOT"
+            ],
+            "tool": [
+                "S0266"
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "PowerShell Empire traffic to perform reconnaissance and lateral movement",
+        "technique": "T1059",
+        "metadata": {
+            "page_number": 5,
+            "id": "005",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXECUTION"
+            ],
+            "tactic": [
+                "TA0002"
+            ],
+            "technique_name": "COMMAND AND SCRIPTING",
+            "sub_technique_name": "POWERSHELL",
+            "sub_technique": "T1059.001",
+            "description": "Tunneling PowerShell Empire traffic",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "004"
+            ]
+        }
+    },
+    {
+        "context": "An obfuscated PowerShell script is executed",
+        "technique": "T1059",
+        "metadata": {
+            "page_number": 5,
+            "id": "006",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXECUTION"
+            ],
+            "tactic": [
+                "TA0002"
+            ],
+            "technique_name": "COMMAND AND SCRIPTING",
+            "sub_technique_name": "POWERSHELL",
+            "sub_technique": "T1059.001",
+            "description": "Use of obfuscated PowerShell scripts to avoid detection.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "007"
+            ]
+        }
+    },
+    {
+        "context": "connects to a remote IP address",
+        "technique": "T1071",
+        "metadata": {
+            "page_number": 5,
+            "id": "007",
+            "source": "TEXT",
+            "tactic_name": [
+                "COMMAND AND CONTROL"
+            ],
+            "tactic": [
+                "TA0011"
+            ],
+            "technique_name": "APPLICATION LAYER PROTOCOL",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Establishing command and control communication with a remote IP.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "006"
+            ]
+        }
+    },
+    {
+        "context": "A reverse shell is downloaded and executed on the compromised host.",
+        "technique": "T1105",
+        "metadata": {
+            "page_number": 5,
+            "id": "008",
+            "source": "TEXT",
+            "tactic_name": [
+                "COMMAND AND CONTROL"
+            ],
+            "tactic": [
+                "TA0011"
+            ],
+            "technique_name": "INGRESS TOOL TRANSFER",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Downloading and executing a reverse shell on the compromised host.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "Reconnaissance of the network is conducted using standard Windows command line tools along with external uploaded tools",
+        "technique": "T1018",
+        "metadata": {
+            "page_number": 5,
+            "id": "009",
+            "source": "TEXT",
+            "tactic_name": [
+                "DISCOVERY"
+            ],
+            "tactic": [
+                "TA0007"
+            ],
+            "technique_name": "REMOTE SYSTEM DISCOVERY",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Utilizing standard and external tools to gather information about the network.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "Lateral movement throughout the network is enabled using Remote Desktop Protocol (RDP)",
+        "technique": "T1021",
+        "metadata": {
+            "page_number": 5,
+            "id": "010",
+            "source": "TEXT",
+            "tactic_name": [
+                "LATERAL MOVEMENT"
+            ],
+            "tactic": [
+                "TA0008"
+            ],
+            "technique_name": "REMOTE SERVICES",
+            "sub_technique_name": "REMOTE DESKTOP PROTOCOL",
+            "sub_technique": "T1021.001",
+            "description": "Using RDP for moving laterally within the network.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "Service User Accounts are created",
+        "technique": "T1078",
+        "metadata": {
+            "page_number": 5,
+            "id": "011",
+            "source": "TEXT",
+            "tactic_name": [
+                "INITAL ACCESS",
+                "PERSISTENCE",
+                "PRIVILEGE ESCALATION",
+                "DEFENSE EVASION"
+            ],
+            "tactic": [
+                "TA0001",
+                "TA0003",
+                "TA0004",
+                "TA0005"
+            ],
+            "technique_name": "VALID ACCOUNTS",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Using or creating new user accounts for persistence and privilege escalation.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "PowerShell Empire is downloaded",
+        "technique": "T1059",
+        "metadata": {
+            "page_number": 5,
+            "id": "012",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXECUTION"
+            ],
+            "tactic": [
+                "TA0002"
+            ],
+            "technique_name": "COMMAND AND SCRIPTING",
+            "sub_technique_name": "POWERSHELL",
+            "sub_technique": "T1059.001",
+            "description": "Downloading and installing PowerShell Empire for post-exploitation activities.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "013"
+            ]
+        }
+    },
+    {
+        "context": "installed as a service",
+        "technique": "T1035",
+        "metadata": {
+            "page_number": 5,
+            "id": "013",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXECUTION"
+            ],
+            "tactic": [
+                "TA0002"
+            ],
+            "technique_name": "SERVICE EXECUTION",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Installing PowerShell Empire as a service to maintain persistence and control.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "012"
+            ]
+        }
+    },
+    {
+        "context": "PSEXEC is used to push out the Ryuk binary to individual hosts",
+        "technique": "T1021",
+        "metadata": {
+            "page_number": 5,
+            "id": "014",
+            "source": "TEXT",
+            "tactic_name": [
+                "LATERAL MOVEMENT"
+            ],
+            "tactic": [
+                "TA0008"
+            ],
+            "technique_name": "REMOTE SERVICES",
+            "sub_technique_name": "SMB/WINDOWS ADMIN SHARES",
+            "sub_technique": "T1021.002",
+            "description": "Employing PsExec to push out the Ryuk binary to multiple hosts.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "Batch scripts are executed to terminate processes/services and remove backups, followed by the Ryuk binary",
+        "technique": "T1106",
+        "metadata": {
+            "page_number": 5,
+            "id": "015",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXECUTION"
+            ],
+            "tactic": [
+                "TA0002"
+            ],
+            "technique_name": "EXECUTION THROUGH API",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Using batch scripts to terminate processes/services and remove backups before executing the Ryuk binary.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "Ryuk was tailored to target enterprise environments and some of the modifications include removing anti-analysis checks",
+        "technique": "T1027",
+        "metadata": {
+            "page_number": 6,
+            "id": "016",
+            "source": "TEXT",
+            "tactic_name": [
+                "DEFENSE EVASION"
+            ],
+            "tactic": [
+                "TA0005"
+            ],
+            "technique_name": "OBFUSCATED FILES OR INFORMATION",
+            "sub_technique_name": "SOFTWARE PACKING",
+            "sub_technique": "T1027.002",
+            "description": "Modifying the malware to remove checks that could detect analysis environments.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "checking to see if the host is running VirtualBox by calling the instruction CPUID",
+        "technique": "T1497",
+        "metadata": {
+            "page_number": 6,
+            "id": "017",
+            "source": "TEXT",
+            "tactic_name": [
+                "DEFENSE EVASION",
+                "DISCOVERY"
+            ],
+            "tactic": [
+                "TA0005",
+                "TA0007"
+            ],
+            "technique_name": "VIRTUALIZATION/SANDBOX EVASION",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Using CPUID instruction to detect if the malware is running in a virtualized environment like VirtualBox.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "Encrypts files using RSA-2048 and AES-256",
+        "technique": "T1486",
+        "metadata": {
+            "page_number": 6,
+            "id": "018",
+            "source": "TEXT",
+            "tactic_name": [
+                "IMPACT"
+            ],
+            "tactic": [
+                "TA0040"
+            ],
+            "technique_name": "DATA ENCRYPTED FOR IMPACT",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Encrypts files using RSA-2048 and AES-256",
+            "tool_name": null,
+            "tool": null,
+            "note": "This indicates that the malware encrypts victim files to make them inaccessible, demanding a ransom for decryption.",
+            "link": null
+        }
+    },
+    {
+        "context": "Stores keys in the executable using the proprietary Microsoft SIMPLEBLOB format",
+        "technique": "T1070",
+        "metadata": {
+            "page_number": 6,
+            "id": "019",
+            "source": "TEXT",
+            "tactic_name": [
+                "DEFENSE EVASION"
+            ],
+            "tactic": [
+                "TA0005"
+            ],
+            "technique_name": "INDICATOR REMOVAL",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Stores keys in the executable using the proprietary Microsoft SIMPLEBLOB format",
+            "tool_name": null,
+            "tool": null,
+            "note": "This method involves storing encryption keys in a specific format to obfuscate their presence and avoid detection.",
+            "link": null
+        }
+    },
+    {
+        "context": "Uses a file marker ofHERMESto mark or check if a file has been encrypted",
+        "technique": "T1486",
+        "metadata": {
+            "page_number": 6,
+            "id": "020",
+            "source": "TEXT",
+            "tactic_name": [
+                "IMPACT"
+            ],
+            "tactic": [
+                "TA0040"
+            ],
+            "technique_name": "DATA ENCRYPTED FOR IMPACT",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Uses a file marker of HERMES to mark or check if a file has been encrypted",
+            "tool_name": null,
+            "tool": null,
+            "note": "This is a method to identify encrypted files and avoid re-encrypting them.",
+            "link": null
+        }
+    },
+    {
+        "context": "Upon execution, the dropper constructs an installation folder path. The folder path is created by calling GetWindowsDirectoryWand then inserting a null byte at the fourth character of the path. This is used to create a string that contains the drive letter path",
+        "technique": "T1106",
+        "metadata": {
+            "page_number": 7,
+            "id": "022",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXECUTION"
+            ],
+            "tactic": [
+                "TA0002"
+            ],
+            "technique_name": "NATIVE API",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "GetWindowsDirectoryW to construct installation folder path",
+            "tool_name": null,
+            "tool": null,
+            "note": "The dropper uses a native Windows API call to get the Windows directory path and then manipulates it to create a drive letter path. This is used for constructing the installation folder path, which aids in evasion and persistence.",
+            "link": [
+                "023"
+            ]
+        }
+    },
+    {
+        "context": "Ryuk executable payload deleting the dropper when executed",
+        "technique": "T1070",
+        "metadata": {
+            "page_number": 7,
+            "id": "021",
+            "source": "TEXT",
+            "tactic_name": [
+                "DEFENSE EVASION"
+            ],
+            "tactic": [
+                "TA0005"
+            ],
+            "technique_name": "INDICATOR REMOVAL ON HOST",
+            "sub_technique_name": "FILE DELETION",
+            "sub_technique": "T1070.004",
+            "description": "Deleting the dropper when executed",
+            "tool_name": null,
+            "tool": null,
+            "note": "The executable payload removes the initial dropper to minimize traces of the initial infection vector and reduce the chances of detection and analysis.",
+            "link": [
+                "022"
+            ]
+        }
+    },
+    {
+        "context": "If the host operating system is Windows XP or earlier, the stringDocuments and Settings\\Default User\\is appended to the drive letter path. If the host is Windows Vista or newer, the stringusers\\Public\\is appended to the drive letter path. For Windows XP, an example folder path would beC:\\Documents and Settings\\Default User\\,and for Window Vista or higher, the path would be C:\\Users\\Public",
+        "technique": "T1082",
+        "metadata": {
+            "page_number": 7,
+            "id": "023",
+            "source": "TEXT",
+            "tactic_name": [
+                "DISCOVERY"
+            ],
+            "tactic": [
+                "TA0007"
+            ],
+            "technique_name": "SYSTEM INFORMATION DISCOVERY",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Environment awareness based on OS version",
+            "tool_name": null,
+            "tool": null,
+            "note": "The malware checks the OS version to determine the appropriate folder path for installation. For Windows XP or earlier, it appends Documents and Settings\\Default User\\ to the drive letter path. For Windows Vista or newer, it appends Users\\Public\\ to the drive letter path. This OS-specific behavior indicates awareness of the environment to ensure compatibility and persistence.",
+            "link": [
+                "022",
+                "024"
+            ]
+        }
+    },
+    {
+        "context": "A random executable file name is then constructed. It is created by calling_srand with a seed value returned from callingGetTickCount,then_randis continuously called until five alphabetic characters are concatenated together. The extension .exeis then appended",
+        "technique": "T1036",
+        "metadata": {
+            "page_number": 7,
+            "id": "024",
+            "source": "TEXT",
+            "tactic_name": [
+                "DEFENSE EVASION"
+            ],
+            "tactic": [
+                "TA0005"
+            ],
+            "technique_name": "MASQUERADING",
+            "sub_technique_name": "MATCH LEGITIMATE NAME OR LOCATION",
+            "sub_technique": "T1036.003",
+            "description": "A random executable file name is constructed by calling _srand with a seed value from GetTickCount and _rand to generate five alphabetic characters",
+            "tool_name": null,
+            "tool": null,
+            "note": "This technique generates a random file name, making it less likely to be detected as a known malicious file.",
+            "link": [
+                "023",
+                "025"
+            ]
+        }
+    },
+    {
+        "context": "The dropper checks whether the host is 32-bit or 64-bit by callingIsWow64Processand writes one of two embedded payload executables corresponding to the host's architecture",
+        "technique": "T1082",
+        "metadata": {
+            "page_number": 7,
+            "id": "025",
+            "source": "TEXT",
+            "tactic_name": [
+                "DISCOVERY"
+            ],
+            "tactic": [
+                "TA0007"
+            ],
+            "technique_name": "SYSTEM INFORMATION DISCOVERY",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Using IsWow64Process to determine system architecture",
+            "tool_name": null,
+            "tool": null,
+            "note": "This technique checks the system architecture to ensure the correct payload is used.",
+            "link": [
+                "024",
+                "026"
+            ]
+        }
+    },
+    {
+        "context": "The newly written executable is then run by callingShellExecuteW",
+        "technique": "T1106",
+        "metadata": {
+            "page_number": 7,
+            "id": "026",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXECUTION"
+            ],
+            "tactic": [
+                "TA0002"
+            ],
+            "technique_name": "NATIVE API",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Constructing and running the executable using ShellExecuteW",
+            "tool_name": null,
+            "tool": null,
+            "note": "This involves calling native APIs to execute the payload, enabling direct interaction with the system for execution.",
+            "link": [
+                "025"
+            ]
+        }
+    },
+    {
+        "context": "a ping-like request to an IP address once the encryption process was completed",
+        "technique": "T1040",
+        "metadata": {
+            "page_number": 7,
+            "id": "027",
+            "source": "TEXT",
+            "tactic_name": [
+                "CREDENTIAL ACCESS",
+                "DISCOVERY"
+            ],
+            "tactic": [
+                "TA0006",
+                "TA0007"
+            ],
+            "technique_name": "NETWORK SNIFFING",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Ping-like request to an IP address once the encryption process was completed",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "many ransomware families contain extensive lists of file extensions or folder names that should not be encrypted (whitelisted), but Ryuk only whitelists three extensions: It will not encrypt files with the extensionsexe, dll,orhrmlog.",
+        "technique": "T1486",
+        "metadata": {
+            "page_number": 8,
+            "id": "028",
+            "source": "TEXT",
+            "tactic_name": [
+                "IMPACT"
+            ],
+            "tactic": [
+                "TA0040"
+            ],
+            "technique_name": "DATA ENCRYPTED FOR IMPACT",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Ryuk specifically avoids encrypting files with the extensions .exe, .dll, and .hrmlog. This technique is employed to prevent the encryption of executable files, dynamic link libraries, and debug log files, which might be critical for system operation or development/debugging purposes.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "Ryuk uses a combination of symmetric (AES) and asymmetric (RSA) encryption to encrypt files",
+        "technique": "T1486",
+        "metadata": {
+            "page_number": 8,
+            "id": "029",
+            "source": "TEXT",
+            "tactic_name": [
+                "IMPACT"
+            ],
+            "tactic": [
+                "TA0040"
+            ],
+            "technique_name": "DATA ENCRYPTED FOR IMPACT",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "AES-256 Encryption",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "Ryuk created a registry entry under the Run key using Windowscmd.exeshell.",
+        "technique": "T1547",
+        "metadata": {
+            "page_number": 9,
+            "id": "030",
+            "source": "TEXT",
+            "tactic_name": [
+                "PERSISTENCE"
+            ],
+            "tactic": [
+                "TA0003"
+            ],
+            "technique_name": "BOOT OR LOGON AUOSTART EXECUTION",
+            "sub_technique_name": "REGISTRY RUN KEYS/STARTUP FOLDER",
+            "sub_technique": "T1547.001",
+            "description": "This technique is used by Ryuk to ensure persistence by modifying the Windows Registry Run key to execute its payload on startup.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "Ryuk attempts to adjust its token privileges to have theSeDebugPrivilege",
+        "technique": "T1134",
+        "metadata": {
+            "page_number": 9,
+            "id": "031",
+            "source": "TEXT",
+            "tactic_name": [
+                "PRIVILEGE ESCALATION",
+                "DEFENSE EVASION"
+            ],
+            "tactic": [
+                "TA0004",
+                "TA0005"
+            ],
+            "technique_name": "ACCESS TOKEN MANIPULATION",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Ryuk attempts to adjust token privileges to gain necessary permissions for process manipulation.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "032"
+            ]
+        }
+    },
+    {
+        "context": "Ryuk also callsCreateToolhelp32Snapshotto enumerate all running processes.",
+        "technique": "T1057",
+        "metadata": {
+            "page_number": 9,
+            "id": "032",
+            "source": "TEXT",
+            "tactic_name": [
+                "DISCOVERY"
+            ],
+            "tactic": [
+                "TA0007"
+            ],
+            "technique_name": "PROCESS DISCOVERY",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Ryuk uses process enumeration to identify suitable targets for code injection.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "031",
+                "033"
+            ]
+        }
+    },
+    {
+        "context": "Ryuk will inject itself into this single process",
+        "technique": "T1055",
+        "metadata": {
+            "page_number": 9,
+            "id": "033",
+            "source": "TEXT",
+            "tactic_name": [
+                "PRIVILEGE ESCALATION",
+                "DEFENSE EVASION"
+            ],
+            "tactic": [
+                "TA0004",
+                "TA0005"
+            ],
+            "technique_name": "PROCESS INJECTION",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Ryuk uses process injection methods to execute code within the context of a target process.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "032"
+            ]
+        }
+    },
+    {
+        "context": "The final set of commands deletes files based on their extension or folder locations",
+        "technique": "T1485",
+        "metadata": {
+            "page_number": 11,
+            "id": "034",
+            "source": "TEXT",
+            "tactic_name": [
+                "IMPACT"
+            ],
+            "tactic": [
+                "TA0040"
+            ],
+            "technique_name": "DATA DESTRUCTION",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "This tactic is used to destroy files",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    }
+]

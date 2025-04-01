@@ -1,0 +1,601 @@
+[
+    {
+        "context": "Microsoft Excel macros",
+        "technique": "T1203",
+        "metadata": {
+            "page_number": 5,
+            "id": "001",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXECUTION"
+            ],
+            "tactic": [
+                "TA0002"
+            ],
+            "technique_name": "EXPLOITATION FOR CLIENT EXECUTION",
+            "sub_technique_name": "MALICIOUS FILE",
+            "sub_technique": "T1203.002",
+            "description": "Attackers embed malicious macros within Microsoft Excel files. When a victim enables macro",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "PowerShell-based exploits",
+        "technique": "T1059",
+        "metadata": {
+            "page_number": 5,
+            "id": "002",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXECUTION"
+            ],
+            "tactic": [
+                "TA0002"
+            ],
+            "technique_name": "COMMAND AND SCRIPTING INTERPRETER",
+            "sub_technique_name": "POWERSHELL",
+            "sub_technique": "T1059.001",
+            "description": "Attackers use PowerShell to execute malicious scripts",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "They use phishing emails to deliver weaponized Microsoft Excel documents",
+        "technique": "T1566",
+        "metadata": {
+            "page_number": 5,
+            "id": "003",
+            "source": "TEXT",
+            "tactic_name": [
+                "INITIAL ACCESS"
+            ],
+            "tactic": [
+                "TA0001"
+            ],
+            "technique_name": "PHISHING",
+            "sub_technique_name": "SPEARPHISHING ATTACHMENT",
+            "sub_technique": "T1566.001",
+            "description": "The adversaries use phishing emails to deliver weaponized Microsoft Excel documents",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "004",
+                "005"
+            ]
+        }
+    },
+    {
+        "context": "VisualBasic",
+        "technique": "T1059",
+        "metadata": {
+            "page_number": 5,
+            "id": "004",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXECUTION"
+            ],
+            "tactic": [
+                "TA0002"
+            ],
+            "technique_name": "COMMAND AND SCRIPTING INTERPRETER",
+            "sub_technique_name": "VISUAL BASIC",
+            "sub_technique": "T1059.005",
+            "description": "Once the Excel document is opened and the macros are enabled, Visual Basic for Applications (VBA) scripts can be executed.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "003"
+            ]
+        }
+    },
+    {
+        "context": "PowerShell",
+        "technique": "T1059",
+        "metadata": {
+            "page_number": 5,
+            "id": "005",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXECUTION"
+            ],
+            "tactic": [
+                "TA0002"
+            ],
+            "technique_name": "COMMAND AND SCRIPTING INTERPRETER",
+            "sub_technique_name": "POWERSHELL",
+            "sub_technique": "T1059.001",
+            "description": "PowerShell scripts are often used due to their powerful capabilities and deep integration with Windows",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "003"
+            ]
+        }
+    },
+    {
+        "context": "phishing emails that included weaponized Microsoft Excel attachments",
+        "technique": "T1566",
+        "metadata": {
+            "page_number": 5,
+            "id": "006",
+            "source": "TEXT",
+            "tactic_name": [
+                "INITIAL ACCESS"
+            ],
+            "tactic": [
+                "TA0001"
+            ],
+            "technique_name": "PHISHING",
+            "sub_technique_name": "SPEARPHISHING ATTACHMENT",
+            "sub_technique": "T1566.001",
+            "description": "The adversaries use phishing emails to deliver weaponized Microsoft Excel documents",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "Oxford websites to deliver malware to the victims",
+        "technique": "T1071",
+        "metadata": {
+            "page_number": 6,
+            "id": "007",
+            "source": "TEXT",
+            "tactic_name": [
+                "INITIAL ACCESS"
+            ],
+            "tactic": [
+                "TA0001"
+            ],
+            "technique_name": "APPLICATION LAYER PROTOCOL",
+            "sub_technique_name": "WEB PROTOCOLS",
+            "sub_technique": "T1071.001",
+            "description": "The adversaries create and host fake websites that mimic legitimate services, such as a Juniper Networks VPN portal or University of Oxford websites.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "008"
+            ]
+        }
+    },
+    {
+        "context": "The group registered four domain names belonging to Oxford University",
+        "technique": "T1583",
+        "metadata": {
+            "page_number": 6,
+            "id": "008",
+            "source": "TEXT",
+            "tactic_name": [
+                "RESOURCE DEVELOPMENT"
+            ],
+            "tactic": [
+                "TA0042"
+            ],
+            "technique_name": "ACQUIRE INFRASTRUCTURE",
+            "sub_technique_name": "DOMAINS",
+            "sub_technique": "T1583.001",
+            "description": "The group registers domain names similar to those of legitimate organizations (like Oxford University) to lend authenticity to their fake sites.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "007"
+            ]
+        }
+    },
+    {
+        "context": "They exploited CVE-2017-0199 remote code execution vulnerability in the Windows Object Linking and Embedding (OLE) application programming interface",
+        "technique": "T1203",
+        "metadata": {
+            "page_number": 6,
+            "id": "009",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXECUTION"
+            ],
+            "tactic": [
+                "TA0002"
+            ],
+            "technique_name": "EXPLOITATION FOR CLIENT EXECUTION",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "The attackers exploit the CVE-2017-0199 vulnerability, which allows remote code execution due to improper handling of objects in memory by the Windows Object Linking and Embedding (OLE) API.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "The links between TwoFace and five other web shells were found, including RunningBee, PuTTY Link (plink)",
+        "technique": "T1505",
+        "metadata": {
+            "page_number": 6,
+            "id": "010",
+            "source": "TEXT",
+            "tactic_name": [
+                "PERSISTENCE"
+            ],
+            "tactic": [
+                "TA0003"
+            ],
+            "technique_name": "SERVER SOFTWARE COMPONENT",
+            "sub_technique_name": "WEB SHELL",
+            "sub_technique": "T1505.003",
+            "description": "The use of web shells such as TwoFace, RunningBee, and RGDoor suggests the attackers implanted malicious scripts on compromised web servers to gain persistent access.",
+            "tool_name": [
+                "TWO-FACE",
+                "RUNNINGBEE",
+                "PUTTY",
+                "RGDOOR"
+            ],
+            "tool": [
+                null,
+                null,
+                null,
+                null
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "\"Agent Injector\" (Trojan with the specific purpose of installing the ISMAgent backdoor)",
+        "technique": "T1204",
+        "metadata": {
+            "page_number": 7,
+            "id": "011",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXECUTION"
+            ],
+            "tactic": [
+                "TA0002"
+            ],
+            "technique_name": "USER EXECUTION",
+            "sub_technique_name": "MALICIOUS FILE",
+            "sub_technique": "T1204.002",
+            "description": "The \"Agent Injector\" Trojan was used to install the ISMAgent backdoor. This indicates that once the email attachment was executed by the victim, the Trojan initiated the installation of additional malicious payloads.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "012"
+            ]
+        }
+    },
+    {
+        "context": "The attack used a spearphishing spam email that had a subject of 'Importan Issue'",
+        "technique": "T1566",
+        "metadata": {
+            "page_number": 7,
+            "id": "012",
+            "source": "TEXT",
+            "tactic_name": [
+                "INITIAL ACCESS"
+            ],
+            "tactic": [
+                "TA0001"
+            ],
+            "technique_name": "PHISHING",
+            "sub_technique_name": "SPEARPHISHING ATTACHMENT",
+            "sub_technique": "T1566.001",
+            "description": "The attackers used spearphishing emails with the subject \"Important Issue\" to deliver the \"Agent Injector\" Trojan.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "011"
+            ]
+        }
+    },
+    {
+        "context": "The group was also found to be using CVE-2017- 11882",
+        "technique": "T1203",
+        "metadata": {
+            "page_number": 7,
+            "id": "009",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXECUTION"
+            ],
+            "tactic": [
+                "TA0002"
+            ],
+            "technique_name": "EXPLOITATION FOR CLIENT EXECUTION",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "The attackers exploited CVE-2017-11882, a vulnerability in Microsoft Office's Equation Editor component. This vulnerability allows for remote code execution when a specially crafted document is opened.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "They tried to deliver a new Trojan called OopsIE, via using a variant of the ThreeDollars delivery document",
+        "technique": "T1204",
+        "metadata": {
+            "page_number": 7,
+            "id": "014",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXECUTION"
+            ],
+            "tactic": [
+                "TA0002"
+            ],
+            "technique_name": "USER EXECUTION",
+            "sub_technique_name": "MALICIOUS FILE",
+            "sub_technique": "T1204.002",
+            "description": "The emails included a variant of the \"ThreeDollars\" delivery document, which is used to deliver the \"OopsIE\" Trojan.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "015"
+            ]
+        }
+    },
+    {
+        "context": "They sent two emails to two separate email addresses within the same organization",
+        "technique": "T1566",
+        "metadata": {
+            "page_number": 7,
+            "id": "015",
+            "source": "TEXT",
+            "tactic_name": [
+                "INITIAL ACCESS"
+            ],
+            "tactic": [
+                "TA0001"
+            ],
+            "technique_name": "PHISHING",
+            "sub_technique_name": "SPEARPHISHING ATTACHMENT",
+            "sub_technique": "T1566.001",
+            "description": "The attackers used spearphishing emails, sending them to two separate email addresses within the same organization.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "014"
+            ]
+        }
+    },
+    {
+        "context": "they launched multiple attacks using spearphishing email (having attached PhpSpy and QuadAgent backdoor) to target an unnamed technology services provider, the Lebanese intelligence agency, and healthcare facilities in Saudi Arabia.",
+        "technique": "T1566",
+        "metadata": {
+            "page_number": 8,
+            "id": "016",
+            "source": "TEXT",
+            "tactic_name": [
+                "INITIAL ACCESS"
+            ],
+            "tactic": [
+                "TA0001"
+            ],
+            "technique_name": "PHISHING",
+            "sub_technique_name": "SPEARPHISHING ATTACHMENT",
+            "sub_technique": "T1566.001",
+            "description": "The attackers used spearphishing emails with malicious attachments to deliver malware to the target organizations.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "The malware was delivered via an Excel document",
+        "technique": "T1566",
+        "metadata": {
+            "page_number": 9,
+            "id": "017",
+            "source": "TEXT",
+            "tactic_name": [
+                "INITIAL ACCESS"
+            ],
+            "tactic": [
+                "TA0001"
+            ],
+            "technique_name": "PHISHING",
+            "sub_technique_name": "SPEARPHISHING ATTACHMENT",
+            "sub_technique": "T1566.001",
+            "description": "The malware is delivered through an Excel document with malicious macros.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "They also created a new remote administration tool that supported HTTP and DNS communication",
+        "technique": "T1071",
+        "metadata": {
+            "page_number": 9,
+            "id": "018",
+            "source": "TEXT",
+            "tactic_name": [
+                "COMMAND AND CONTROL"
+            ],
+            "tactic": [
+                "TA0011"
+            ],
+            "technique_name": "APPLICATION LAYER PROTOCOL",
+            "sub_technique_name": "WEB PROTOCOLS",
+            "sub_technique": "T1071.001",
+            "description": "The RAT communicates over HTTP, allowing it to send and receive commands or exfiltrate data through standard web traffic.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "They also created a new remote administration tool that supported HTTP and DNS communication",
+        "technique": "T1071",
+        "metadata": {
+            "page_number": 9,
+            "id": "019",
+            "source": "TEXT",
+            "tactic_name": [
+                "COMMAND AND CONTROL"
+            ],
+            "tactic": [
+                "TA0011"
+            ],
+            "technique_name": "APPLICATION LAYER PROTOCOL",
+            "sub_technique_name": "DNS",
+            "sub_technique": "T1071.004",
+            "description": "The RAT also uses DNS for communication, which can help evade detection by blending with regular DNS traffic.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "They also created a new remote administration tool that supported HTTP and DNS communication",
+        "technique": "T1573",
+        "metadata": {
+            "page_number": 9,
+            "id": "022",
+            "source": "TEXT",
+            "tactic_name": [
+                "COMMAND AND CONTROL"
+            ],
+            "tactic": [
+                "TA0011"
+            ],
+            "technique_name": "ENCRYPTED CHANNEL",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Created remote administration tools supporting HTTP and DNS communication with potential encryption.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "a phishing campaign was observed asking victims to join their social network. This time the group masqueraded as a Cambridge University lecturer, also setting up a LinkedIn page in order to gain victims' trust.",
+        "technique": "T1566",
+        "metadata": {
+            "page_number": 9,
+            "id": "020",
+            "source": "TEXT",
+            "tactic_name": [
+                "INITIAL ACCESS"
+            ],
+            "tactic": [
+                "TA0001"
+            ],
+            "technique_name": "PHISHING",
+            "sub_technique_name": "SPEARPHISHING LINK",
+            "sub_technique": "T1566.002",
+            "description": "he attackers impersonate a Cambridge University lecturer and use social networks like LinkedIn to gain the victims' trust.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "021"
+            ]
+        }
+    },
+    {
+        "context": "From there they asked victims to open malicious documents.",
+        "technique": "T1204",
+        "metadata": {
+            "page_number": 9,
+            "id": "021",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXECUTION"
+            ],
+            "tactic": [
+                "TA0002"
+            ],
+            "technique_name": "USER EXECUTION",
+            "sub_technique_name": "MALICIOUS FILE",
+            "sub_technique": "T1204.002",
+            "description": "Open a malicious document",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "020"
+            ]
+        }
+    },
+    {
+        "context": "Twoface - A web shell, which is used to harvest credentials",
+        "technique": "T1078",
+        "metadata": {
+            "page_number": 10,
+            "id": "023",
+            "source": "TEXT",
+            "tactic_name": [
+                "DEFENSE EVASION",
+                "PERSISTENCE",
+                "PRIVILEGE ESCALATION",
+                "INITIAL ACCESS"
+            ],
+            "tactic": [
+                "TA0005",
+                "TA0003",
+                "TA0004",
+                "TA0001"
+            ],
+            "technique_name": "VALID ACCOUNTS",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Used tools like Twoface for credential harvesting from local system accounts.",
+            "tool_name": [
+                "Twoface"
+            ],
+            "tool": [
+                null
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "Pickpocket - It is a browser credentialtheft tool.",
+        "technique": "T1589",
+        "metadata": {
+            "page_number": 10,
+            "id": "024",
+            "source": "TEXT",
+            "tactic_name": [
+                "RECONNAISSANCE"
+            ],
+            "tactic": [
+                "TA0043"
+            ],
+            "technique_name": "GATHER VICTIM IDENTITY INFORMATION",
+            "sub_technique_name": "CREDENTIALS",
+            "sub_technique": "T1589.001",
+            "description": "Adversaries may gather credentials that can be used during targeting.",
+            "tool_name": [
+                "Pickpocket"
+            ],
+            "tool": [
+                null
+            ],
+            "note": null,
+            "link": null
+        }
+    }
+]

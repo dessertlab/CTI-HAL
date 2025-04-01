@@ -1,0 +1,287 @@
+[
+    {
+        "context": "FIN7 would gain access to the POS environment primarily using\u00a0PSExec",
+        "technique": "T1219",
+        "metadata": {
+            "page_number": 2,
+            "id": "001",
+            "source": "TEXT",
+            "tactic_name": [
+                ""
+            ],
+            "tactic": [
+                null
+            ],
+            "technique_name": "REMOTE ACCESS SOFTWARE",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "FIN7 used PSExec, a legitimate remote administration tool from Sysinternals, to execute processes on the POS systems remotely, which is part of their lateral movement strategy to spread malware across a network.",
+            "tool_name": [
+                "PSEXEC"
+            ],
+            "tool": [
+                "S0029"
+            ],
+            "note": null,
+            "link": [
+                "002"
+            ]
+        }
+    },
+    {
+        "context": "combined with a custom PowerShell script to deploy their payload.",
+        "technique": "T1059",
+        "metadata": {
+            "page_number": 2,
+            "id": "002",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXECUTION"
+            ],
+            "tactic": [
+                "TA0002"
+            ],
+            "technique_name": "COMMAND AND SCRIPTING INTERPRETER",
+            "sub_technique_name": "POWERSHELL",
+            "sub_technique": "T1059.001",
+            "description": "A custom PowerShell script is used to execute and manage payload delivery, showcasing the use of PowerShell as an execution platform. PowerShell scripts are commonly abused by attackers to execute arbitrary code and evade detection due to their presence in most Windows environments.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "001",
+                "003"
+            ]
+        }
+    },
+    {
+        "context": "The weaponized PowerShell script was built to load an embedded DLL using reflective injection",
+        "technique": "T1620",
+        "metadata": {
+            "page_number": 2,
+            "id": "003",
+            "source": "TEXT",
+            "tactic_name": [
+                "DEFENSE EVASION"
+            ],
+            "tactic": [
+                "TA0005"
+            ],
+            "technique_name": "REFLECTIVE CODE LOADING",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "eflective DLL injection is a technique where a DLL is injected into a process without touching disk, which helps evade traditional security controls.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "002"
+            ]
+        }
+    },
+    {
+        "context": "the script executed code from PowerSploit designed to resolve Windows API functions necessary for performing the injection",
+        "technique": "T1106",
+        "metadata": {
+            "page_number": 3,
+            "id": "004",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXECUTION"
+            ],
+            "tactic": [
+                "TA0002"
+            ],
+            "technique_name": "NATIVE API",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "The use of Windows API functions to perform the injection, manage memory, and create threads is a critical aspect of reflective DLL injection. By directly accessing low-level system calls, FIN7 ensures the payload remains hidden in memory.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "005"
+            ]
+        }
+    },
+    {
+        "context": "the script would allocate memory in its current process and use the System.Runtime.Interopservices.Marshal class to copy code into the newly allocated memory",
+        "technique": "T1055",
+        "metadata": {
+            "page_number": 3,
+            "id": "005",
+            "source": "TEXT",
+            "tactic_name": [
+                ""
+            ],
+            "tactic": [
+                null
+            ],
+            "technique_name": "PROCESS INJECTION",
+            "sub_technique_name": "DYNAMIC-LINK LIBRARY",
+            "sub_technique": "T1055.001",
+            "description": "Creating a thread to execute the bootstrap code for loading a DLL is an example of process injection. This technique is used to inject malicious code into another process's address space, which helps evade detection by running malicious code within a legitimate process.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "004"
+            ]
+        }
+    },
+    {
+        "context": "Once injected, the payload proceeded to write a binary encoded blob into the registry key HKLM\\Software\\Microsoft\\DRM",
+        "technique": "T1112",
+        "metadata": {
+            "page_number": 3,
+            "id": "006",
+            "source": "TEXT",
+            "tactic_name": [
+                "DEFENSE EVASION"
+            ],
+            "tactic": [
+                "TA0005"
+            ],
+            "technique_name": "MODIFY REGISTRY",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "This technique involves modifying the Windows Registry to store malicious data or configurations. FIN7 uses this method to write a binary blob into the registry, which is later accessed and executed as part of their payload, making it harder to detect or remove since the data isn't stored on disk.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "005",
+                "007"
+            ]
+        }
+    },
+    {
+        "context": "install persistence using a custom Shim targeting services.exe and adding it to the shim database by executing sdbinst.exe",
+        "technique": "T1546",
+        "metadata": {
+            "page_number": 3,
+            "id": "007",
+            "source": "TEXT",
+            "tactic_name": [
+                "PERSISTENCE",
+                "PRIVILEGE ESCALATION"
+            ],
+            "tactic": [
+                "TA0003",
+                "TA0004"
+            ],
+            "technique_name": "EVENT TRIGGERED EXECUTION",
+            "sub_technique_name": "APPLICAITON SHIMMING",
+            "sub_technique": "T1546.011",
+            "description": "Application Shimming is a technique that involves modifying how applications are executed on the system by creating a custom compatibility shim. In this case, FIN7 creates a shim for services.exe to ensure the malicious payload is executed whenever the service starts, achieving persistence. This is done by adding the shim to the shim database using the sdbinst.exe tool.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "006"
+            ]
+        }
+    },
+    {
+        "context": "the POS scraping capability will attempt to inject Library/Webinar-H Platform.html) Utm_source=Giga Service Providers itself into svchost.exe, wuauclt.exe or explorer.exe (in that order) Links&Utm_conte (Https://Www.gig",
+        "technique": "T1055",
+        "metadata": {
+            "page_number": 5,
+            "id": "008",
+            "source": "TEXT",
+            "tactic_name": [
+                ""
+            ],
+            "tactic": [
+                null
+            ],
+            "technique_name": "PROCESS INJECTION",
+            "sub_technique_name": "DYNAMIC-LINK LIBRARY",
+            "sub_technique": "T1055.001",
+            "description": "Injecting malicious code into the memory of legitimate processes such as svchost.exe, wuauclt.exe, and explorer.exe.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "009"
+            ]
+        }
+    },
+    {
+        "context": "Upon successful injection, the scraper enumerates running Provider.htm Product Do (Https://Ww processes, comparing them to a list provided via a text file on (Https://Com Cloud/Gigavu disk",
+        "technique": "T1057",
+        "metadata": {
+            "page_number": 5,
+            "id": "009",
+            "source": "TEXT",
+            "tactic_name": [
+                "DISCOVERY"
+            ],
+            "tactic": [
+                "TA0007"
+            ],
+            "technique_name": "PROCESS DISCOVERY",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "This describes enumerating running processes on the infected system, which is a process discovery technique. The malware checks for specific processes to determine which ones it can target for scraping sensitive data.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "008",
+                "010"
+            ]
+        }
+    },
+    {
+        "context": "Once the scraping capability has identified a process of interest, OpenStack the payload will read memory from the process and extract track (Https://Www.giga one and track two data formats",
+        "technique": "T1005",
+        "metadata": {
+            "page_number": 5,
+            "id": "010",
+            "source": "TEXT",
+            "tactic_name": [
+                "COLLECTION"
+            ],
+            "tactic": [
+                "TA0009"
+            ],
+            "technique_name": "DATA FROM LOCAL SYSTEM",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Memory scraping is a method used to extract sensitive data, such as payment card information, directly from the memory of running processes. The malware specifically targets track one and track two data, which are commonly found in credit card transactions and contain information like account numbers, expiration dates, and service codes.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "009",
+                "011"
+            ]
+        }
+    },
+    {
+        "context": "Once extracted, the malware Cloud/Gigavue encrypts the data and writes it to disk for later collection by the VMware threat actors.",
+        "technique": "T1027",
+        "metadata": {
+            "page_number": 5,
+            "id": "011",
+            "source": "TEXT",
+            "tactic_name": [
+                "DEFENSE EVASION"
+            ],
+            "tactic": [
+                "TA0005"
+            ],
+            "technique_name": "OBFUSCATED FILES OR INFORMATION",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "After scraping the sensitive data, the malware encrypts the stolen information before writing it to disk. This ensures that even if the files are discovered by security teams, the data remains unreadable without the decryption key. Obfuscation or encryption is a common tactic to hide stolen data from detection.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "010"
+            ]
+        }
+    }
+]

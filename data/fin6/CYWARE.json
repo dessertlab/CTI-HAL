@@ -1,0 +1,285 @@
+[
+    {
+        "context": "FIN6 relied on Windows' Remote Desktop Protocol (RDP) to move laterally across a\u0000ected networks",
+        "technique": "T1021",
+        "metadata": {
+            "page_number": 1,
+            "id": "001",
+            "source": "TEXT",
+            "tactic_name": [
+                "LATERAL MOVEMENT"
+            ],
+            "tactic": [
+                "TA0008"
+            ],
+            "technique_name": "REMOTE SERVICES",
+            "sub_technique_name": "REMOTE DESKTOP PROTOCOL",
+            "sub_technique": "T1021.001",
+            "description": "Using Windows' Remote Desktop Protocol (RDP) to move laterally across affected networks",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "002"
+            ]
+        }
+    },
+    {
+        "context": "two di\u0000erent techniques",
+        "technique": null,
+        "metadata": {
+            "page_number": 1,
+            "id": "002",
+            "source": null,
+            "tactic_name": [],
+            "tactic": [],
+            "technique_name": null,
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": null,
+            "tool_name": [],
+            "tool": [],
+            "note": "FIN6 employed two different techniques after using RDP",
+            "link": [
+                "001 THEN T01 OR T02"
+            ]
+        }
+    },
+    {
+        "context": "This movement enabled FIN6 to then inject LockerGoga and Ryuk ransomware",
+        "technique": "T1055",
+        "metadata": {
+            "page_number": 1,
+            "id": "003",
+            "source": "TEXT",
+            "tactic_name": [
+                "DEFENSE EVASION"
+            ],
+            "tactic": [
+                "TA0005"
+            ],
+            "technique_name": "PROCESS INJECTION",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Injecting LockerGoga and Ryuk ransomware",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "001"
+            ]
+        }
+    },
+    {
+        "context": "executing an encoded command through PowerShell",
+        "technique": "T1059",
+        "metadata": {
+            "page_number": 1,
+            "id": "004",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXECUTION"
+            ],
+            "tactic": [
+                "TA0002"
+            ],
+            "technique_name": "COMMAND AND SCRIPTING INTERPRETER",
+            "sub_technique_name": "POWERSHELL",
+            "sub_technique": "T1059.001",
+            "description": "Executing an encoded command through PowerShell",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "005"
+            ]
+        }
+    },
+    {
+        "context": "\u0000rst technique",
+        "technique": null,
+        "metadata": {
+            "page_number": 1,
+            "id": "T001",
+            "source": null,
+            "tactic_name": [],
+            "tactic": [],
+            "technique_name": null,
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": null,
+            "tool_name": [],
+            "tool": [],
+            "note": null,
+            "link": [
+                "004",
+                "005",
+                "006"
+            ]
+        }
+    },
+    {
+        "context": "which in turn was con\u0000gured to drop a malicious payload onto the systems",
+        "technique": "T1129",
+        "metadata": {
+            "page_number": 1,
+            "id": "006",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXECUTION"
+            ],
+            "tactic": [
+                "TA0002"
+            ],
+            "technique_name": "SHARED MODULES",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Cobalt Strike payload dropping a malicious payload onto the systems",
+            "tool_name": [
+                "COBALT STRIKE"
+            ],
+            "tool": [
+                "S0154"
+            ],
+            "note": null,
+            "link": [
+                "005"
+            ]
+        }
+    },
+    {
+        "context": "The command downloaded a Cobalt Strike payload",
+        "technique": "T1105",
+        "metadata": {
+            "page_number": 1,
+            "id": "005",
+            "source": "TEXT",
+            "tactic_name": [
+                "COMMAND AND CONTROL"
+            ],
+            "tactic": [
+                "TA0011"
+            ],
+            "technique_name": "INGRESS TOOL TRANSFER",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Downloading a Cobalt Strike payload",
+            "tool_name": [
+                "COBALT STRIKE"
+            ],
+            "tool": [
+                "S0154"
+            ],
+            "note": null,
+            "link": [
+                "004",
+                "006"
+            ]
+        }
+    },
+    {
+        "context": "use of a Windows Service created by Metasploit",
+        "technique": "T1543",
+        "metadata": {
+            "page_number": 1,
+            "id": "007",
+            "source": "TEXT",
+            "tactic_name": [
+                "PERSISTENCE",
+                "PRIVILEGE ESCLATION"
+            ],
+            "tactic": [
+                "TA0003",
+                "TA0004"
+            ],
+            "technique_name": "CREATE OR MODIFY SYSTEM PROCESS",
+            "sub_technique_name": "WINDOWS SERVICE",
+            "sub_technique": "T1543.003",
+            "description": "Use of a Windows Service created by Metasploit",
+            "tool_name": [
+                "METASPLOIT"
+            ],
+            "tool": [
+                null
+            ],
+            "note": null,
+            "link": [
+                "008"
+            ]
+        }
+    },
+    {
+        "context": "second technique",
+        "technique": null,
+        "metadata": {
+            "page_number": 1,
+            "id": "T02",
+            "source": null,
+            "tactic_name": [],
+            "tactic": [],
+            "technique_name": null,
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": null,
+            "tool_name": [],
+            "tool": [],
+            "note": null,
+            "link": [
+                "007",
+                "008",
+                "009"
+            ]
+        }
+    },
+    {
+        "context": "that was used to communicate with a C2 server for dropping additional payloads into compromised systems.",
+        "technique": "T1105",
+        "metadata": {
+            "page_number": 1,
+            "id": "008",
+            "source": "TEXT",
+            "tactic_name": [
+                "COMMAND AND CONTROL"
+            ],
+            "tactic": [
+                "TA0011"
+            ],
+            "technique_name": "INGRESS TOOL TRANSFER",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Communicating with a C2 server for dropping additional payloads",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "007",
+                "009"
+            ]
+        }
+    },
+    {
+        "context": "This would allow FIN6 to escalate privileges in the system.",
+        "technique": "T1068",
+        "metadata": {
+            "page_number": 1,
+            "id": "009",
+            "source": "TEXT",
+            "tactic_name": [
+                "PRIVILEGE ESCLATION"
+            ],
+            "tactic": [
+                "TA0004"
+            ],
+            "technique_name": "EXPLOITATION FOR PRIVILEGE ESCALATION",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Escalating privileges in the system",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "008"
+            ]
+        }
+    }
+]

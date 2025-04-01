@@ -1,0 +1,451 @@
+[
+    {
+        "context": "The malware arrives via an email disguised as a tax incentive notification from a major financial services company. This email includes a macro enabled (XLSM) Microsoft Excel spreadsheet attachment (detected as Trojan.W97M.MERETAM.A) that purportedly contains the details of the tax incentive.",
+        "technique": "T1566",
+        "metadata": {
+            "page_number": 1,
+            "id": "002",
+            "source": "TEXT",
+            "tactic_name": [
+                "INITIAL ACCESS"
+            ],
+            "tactic": [
+                "TA0002"
+            ],
+            "technique_name": "PHISHING",
+            "sub_technique_name": "SPEARPHISHING ATTACHMENT",
+            "sub_technique": "T1566.001",
+            "description": "Trickbot arrives via an email disguised as a tax incentive notification.",
+            "tool_name": [
+                "TRICKBOT"
+            ],
+            "tool": [
+                null
+            ],
+            "note": null,
+            "link": [
+                "003"
+            ]
+        }
+    },
+    {
+        "context": "The malware arrives via an email disguised as a tax incentive notification from a major financial services company. This email includes a macro enabled (XLSM) Microsoft Excel spreadsheet attachment (detected as Trojan.W97M.MERETAM.A) that purportedly contains the details of the tax incentive.",
+        "technique": "T1059",
+        "metadata": {
+            "page_number": 1,
+            "id": "016",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXECUTION"
+            ],
+            "tactic": [
+                "TA0002"
+            ],
+            "technique_name": "COMMAND AND SCRIPTING INTERPRETER",
+            "sub_technique_name": "VISUAL BASIC",
+            "sub_technique": "T1059.005",
+            "description": "Macro-enabled spreadsheet suggests Visual Basic macro used for initial payload delivery.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "Figure 1. Infection chain for the malware",
+        "technique": null,
+        "metadata": {
+            "page_number": 1,
+            "id": "001",
+            "source": "FIGURE",
+            "tactic_name": [],
+            "tactic": [],
+            "technique_name": null,
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "infection chain for the malware",
+            "tool_name": [],
+            "tool": [],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "download and deploy Trickbot on the user's machine",
+        "technique": "T1105",
+        "metadata": {
+            "page_number": 2,
+            "id": "004",
+            "source": "TEXT",
+            "tactic_name": [
+                "COMMAND AND CONTROL"
+            ],
+            "tactic": [
+                "TA0011"
+            ],
+            "technique_name": "INGRESS TOOL TRANSFER",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "The macro downloads Trickbot from a remote server.",
+            "tool_name": [
+                "TRICKBOT"
+            ],
+            "tool": [
+                null
+            ],
+            "note": null,
+            "link": [
+                "003"
+            ]
+        }
+    },
+    {
+        "context": "once activated",
+        "technique": "T1204",
+        "metadata": {
+            "page_number": 2,
+            "id": "003",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXECUTION"
+            ],
+            "tactic": [
+                "TA0002"
+            ],
+            "technique_name": "USER EXECUTION",
+            "sub_technique_name": "MALICIOUS FILE",
+            "sub_technique": "T1204.002",
+            "description": "The email attachment is a macro-enabled Excel spreadsheet that the user is tricked into opening.",
+            "tool_name": [
+                "TRICKBOT"
+            ],
+            "tool": [
+                null
+            ],
+            "note": null,
+            "link": [
+                "002",
+                "004"
+            ]
+        }
+    },
+    {
+        "context": "Virtual Network Computing (VNC)",
+        "technique": "T1021",
+        "metadata": {
+            "page_number": 2,
+            "id": "005",
+            "source": "TEXT",
+            "tactic_name": [
+                "LATERAL MOVEMENT"
+            ],
+            "tactic": [
+                "TA0008"
+            ],
+            "technique_name": "REMOTE SERVICES",
+            "sub_technique_name": "VNC",
+            "sub_technique": "T1021.005",
+            "description": "The malware includes functionality to exploit VNC.",
+            "tool_name": [
+                "TRICKBOT"
+            ],
+            "tool": [
+                null
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "PuTTY",
+        "technique": "T1021",
+        "metadata": {
+            "page_number": 2,
+            "id": "006",
+            "source": "TEXT",
+            "tactic_name": [
+                "LATERAL MOVEMENT"
+            ],
+            "tactic": [
+                "TA0008"
+            ],
+            "technique_name": "REMOTE SERVICES",
+            "sub_technique_name": "SSH",
+            "sub_technique": "T1021.004",
+            "description": "The malware includes functionality to exploit SSH, particularly via PuTTY.",
+            "tool_name": [
+                "TRICKBOT"
+            ],
+            "tool": [
+                null
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "Remote Desktop Protocol (RDP)",
+        "technique": "T1021",
+        "metadata": {
+            "page_number": 2,
+            "id": "007",
+            "source": "TEXT",
+            "tactic_name": [
+                "LATERAL MOVEMENT"
+            ],
+            "tactic": [
+                "TA0008"
+            ],
+            "technique_name": "REMOTE SERVICES",
+            "sub_technique_name": "REMOTE DESKTOP PROTOCOL",
+            "sub_technique": "T1021.001",
+            "description": "The malware includes functionality to exploit RDP.",
+            "tool_name": [
+                "TRICKBOT"
+            ],
+            "tool": [
+                null
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "encrypts the strings it uses via simple variants of XOR or SUB routines",
+        "technique": "T1027",
+        "metadata": {
+            "page_number": 3,
+            "id": "008",
+            "source": "TEXT",
+            "tactic_name": [
+                "DEFENSE EVASION"
+            ],
+            "tactic": [
+                "TA0005"
+            ],
+            "technique_name": "OBFUSCATED FILES OR INFORMATION",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may use obfuscation techniques to hide code or strings within the malware.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "It also makes use of API hashes for indirect API calling, which was prominently attributed to the Carberp trojan source code leak from 2013",
+        "technique": "T1027",
+        "metadata": {
+            "page_number": 4,
+            "id": "009",
+            "source": "TEXT",
+            "tactic_name": [
+                "DEFENSE EVASION"
+            ],
+            "tactic": [
+                "TA0005"
+            ],
+            "technique_name": "OBFUSCATED FILES OR INFORMATION",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Using API hashing to obscure API calls",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "the pwgrab module searches for files using the \"*.vnc.lnk\" a!x",
+        "technique": "T1552",
+        "metadata": {
+            "page_number": 4,
+            "id": "010",
+            "source": "TEXT",
+            "tactic_name": [
+                "CREDENTIAL ACCESS"
+            ],
+            "tactic": [
+                "TA0006"
+            ],
+            "technique_name": "UNSECURED CREDENTIALS",
+            "sub_technique_name": "CREDENTIALS IN FILES",
+            "sub_technique": "T1552.001",
+            "description": "Adversaries may search for and steal credentials stored in files.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "The module will send the required data via POST, which is configured through a downloaded configuration file using the filename \"dpost.\"",
+        "technique": "T1071",
+        "metadata": {
+            "page_number": 5,
+            "id": "011",
+            "source": "TEXT",
+            "tactic_name": [
+                "COMMAND AND CONTROL"
+            ],
+            "tactic": [
+                "TA0011"
+            ],
+            "technique_name": "APPLICATION LAYER PROTOCOL",
+            "sub_technique_name": "WEB PROTOCOLS",
+            "sub_technique": "T1071.001",
+            "description": "Using HTTP POST for data exfiltration to evade detection.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "012"
+            ]
+        }
+    },
+    {
+        "context": "This file contains a list of command-and-control (C&C) servers that will receive the exfiltrated data from the victim.",
+        "technique": "T1041",
+        "metadata": {
+            "page_number": 5,
+            "id": "012",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXFILTRATION"
+            ],
+            "tactic": [
+                "TA0010"
+            ],
+            "technique_name": "EXFILTRATION OVER C2 CHANNEL",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Sending exfiltrated data to C2 servers via HTTP POST.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "011"
+            ]
+        }
+    },
+    {
+        "context": "it queries the registry key Software\\SimonTatham\\Putty\\Sessions to identify the saved connection settings",
+        "technique": "T1083",
+        "metadata": {
+            "page_number": 5,
+            "id": "013",
+            "source": "TEXT",
+            "tactic_name": [
+                "DISCOVERY"
+            ],
+            "tactic": [
+                "TA0007"
+            ],
+            "technique_name": "FILE AND DIRECTORY DISCOVERY",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Querying the registry to identify PuTTY sessions and settings.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "014"
+            ]
+        }
+    },
+    {
+        "context": "it queries the registry key Software\\SimonTatham\\Putty\\Sessions to identify the saved connection settings",
+        "technique": "T1003",
+        "metadata": {
+            "page_number": 5,
+            "id": "017",
+            "source": "TEXT",
+            "tactic_name": [
+                "CREDENTIAL ACCESS"
+            ],
+            "tactic": [
+                "TA0006"
+            ],
+            "technique_name": "OS CREDENTIAL DUMPING",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Trickbot specifically queries registry for saved credentials.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "To retrieve the PuTTY credentials, it queries the registry key Software\\SimonTatham\\Putty\\Sessions to identify the saved connection settings, which allows the module to retrieve information such as the Hostname and Username, and Private Key Files used for authentication.",
+        "technique": "T1005",
+        "metadata": {
+            "page_number": 5,
+            "id": "018",
+            "source": "TEXT",
+            "tactic_name": [
+                "COLLECTION"
+            ],
+            "tactic": [
+                "TA0009"
+            ],
+            "technique_name": "DATA FROM LOCAL SYSTEM",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Credential harvesting across multiple local applications and services, including VNC and PuTTY, demonstrated by searching specific directories and registry keys.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "which allows the module to retrieve information such as the Hostname and Username, and Private Key Files used for authentication",
+        "technique": "T1522",
+        "metadata": {
+            "page_number": 5,
+            "id": "014",
+            "source": "TEXT",
+            "tactic_name": [
+                "CREDENTIAL ACCESS"
+            ],
+            "tactic": [
+                "TA0006"
+            ],
+            "technique_name": "UNSECURED CREDENTIALS",
+            "sub_technique_name": "PRIVATE KEYS",
+            "sub_technique": "T1522.004",
+            "description": "Retrieving PuTTY private keys used for SSH authentication.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "013"
+            ]
+        }
+    },
+    {
+        "context": "Its third function related to RDP uses the CredEnumerateA API to identify and steal saved credentials.",
+        "technique": "T1552",
+        "metadata": {
+            "page_number": 6,
+            "id": "015",
+            "source": "TEXT",
+            "tactic_name": [
+                "CREDENTIAL ACCESS"
+            ],
+            "tactic": [
+                "TA0006"
+            ],
+            "technique_name": "UNSECURED CREDENTIALS",
+            "sub_technique_name": "CREDENTIAL API",
+            "sub_technique": "T1552.006",
+            "description": "Using CredEnumerateA API to steal saved RDP credentials.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    }
+]

@@ -1,0 +1,94 @@
+[
+    {
+        "context": "Magecart injects scripts designed to steal sensitive data that consumers enter into online payment forms on e-commerce websites directly or through compromised third-party suppliers used by these sites",
+        "technique": "T1059",
+        "metadata": {
+            "page_number": 3,
+            "id": "001",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXECUTION"
+            ],
+            "tactic": [
+                "TA0002"
+            ],
+            "technique_name": "COMMAND AND SCRIPTING INTERPRETER",
+            "sub_technique_name": "JAVASCRIPT",
+            "sub_technique": "T1059.007",
+            "description": "Adversaries may abuse various implementations of JavaScript for execution.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "Magecart injects scripts designed to steal sensitive data that consumers enter into online payment forms on e-commerce websites directly or through compromised third-party suppliers used by these sites",
+        "technique": "T1056",
+        "metadata": {
+            "page_number": 3,
+            "id": "002",
+            "source": "TEXT",
+            "tactic_name": [
+                "COLLECTION"
+            ],
+            "tactic": [
+                "T0009"
+            ],
+            "technique_name": "INPUT CAPTURE",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may use methods of capturing user input to obtain credentials or collect information.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "once a user hits the button to submit their payment on the compromised British Airways site, the information from the payment form is extracted along with their name and sent to the attacker's server.",
+        "technique": "T1041",
+        "metadata": {
+            "page_number": 8,
+            "id": "003",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXFILTRATION"
+            ],
+            "tactic": [
+                "TA0010"
+            ],
+            "technique_name": "EXFILTRATION OVER C2 CHANNEL",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may steal data by exfiltrating it over an existing command and control channel.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "they decided to go with a paid certificate from Comodo instead of a free LetsEncrypt certificate, likely to make it appear like a legitimate server",
+        "technique": "T1588",
+        "metadata": {
+            "page_number": 8,
+            "id": "004",
+            "source": "TEXT",
+            "tactic_name": [
+                "RESOURCE DEVELOPMENT"
+            ],
+            "tactic": [
+                "TA0042"
+            ],
+            "technique_name": "OBTAIN CAPABILITIES",
+            "sub_technique_name": "DIGITAL CERTIFICATES",
+            "sub_technique": "T1588.004",
+            "description": "Adversaries may buy and/or steal SSL/TLS certificates that can be used during targeting. SSL/TLS certificates are designed to instill trust.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    }
+]

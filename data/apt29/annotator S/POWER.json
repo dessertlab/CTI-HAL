@@ -1,0 +1,673 @@
+[
+    {
+        "context": "These spear phishing messages were spoofed and made to appear to have been sent from real individuals at well-known think tanks in the United States and Europe.",
+        "technique": "T1566",
+        "metadata": {
+            "page_number": 2,
+            "id": "027",
+            "source": "TEXT",
+            "tactic_name": [
+                "INITIAL ACCESS"
+            ],
+            "tactic": [
+                "TA0001"
+            ],
+            "technique_name": "PHISHING",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may send phishing messages to gain access to victim systems.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "The Dukes are known for launching their attacks by sending links to ZIP files, that contain malicious executables, hosted on legitimate compromised web servers.",
+        "technique": "T1566",
+        "metadata": {
+            "page_number": 2,
+            "id": "029",
+            "source": "TEXT",
+            "tactic_name": [
+                "INITIAL ACCESS"
+            ],
+            "tactic": [
+                "TA0001"
+            ],
+            "technique_name": "PHISHING",
+            "sub_technique_name": "SPEARPHISHING LINK",
+            "sub_technique": "T1566.002",
+            "description": "Adversaries may send spearphishing emails with a malicious link in an attempt to gain access to victim systems.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "each of the e-mail messages from the August attacks contained a Microsoft O#ce Word (.doc) or Excel (.xls) attachment.",
+        "technique": "T1566",
+        "metadata": {
+            "page_number": 2,
+            "id": "001",
+            "source": "TEXT",
+            "tactic_name": [
+                "INITIAL ACCESS"
+            ],
+            "tactic": [
+                "TA0001"
+            ],
+            "technique_name": "PHISHING",
+            "sub_technique_name": "SPEARPHISHING ATTACHMENT",
+            "sub_technique": "T1566.001",
+            "description": "Adversaries may send spearphishing emails with a malicious attachment in an attempt to gain access to victim systems.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "the attackers inserted macros into the documents designed to install a malware downloader on the system. Successful exploitation would result in the download of a PNG image file from a compromised webserver.",
+        "technique": "T1105",
+        "metadata": {
+            "page_number": 3,
+            "id": "002",
+            "source": "TEXT",
+            "tactic_name": [
+                "COMMAND AND CONTROL"
+            ],
+            "tactic": [
+                "TA0011"
+            ],
+            "technique_name": "INGRESS TOOL TRANSFER",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may transfer tools or other files from an external system into a compromised environment.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "the attackers inserted macros into the documents designed to install a malware downloader on the system. Successful exploitation would result in the download of a PNG image file from a compromised webserver.",
+        "technique": "T1204",
+        "metadata": {
+            "page_number": 3,
+            "id": "030",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXECUTION"
+            ],
+            "tactic": [
+                "TA0002"
+            ],
+            "technique_name": "USER EXECUTION",
+            "sub_technique_name": "MALICIOUS FILE",
+            "sub_technique": "T1204.002",
+            "description": "An adversary may rely upon specific actions by a user in order to gain execution.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "These attack campaigns leveraged steganography in the PNG files by hiding components of a backdoor that would exist only in memory after being loaded into rundll32.exe.",
+        "technique": "T1027",
+        "metadata": {
+            "page_number": 3,
+            "id": "003",
+            "source": "TEXT",
+            "tactic_name": [
+                "DEFENSE EVASION"
+            ],
+            "tactic": [
+                "TA0005"
+            ],
+            "technique_name": "OBFUSCATED FILES OR INFORMATION",
+            "sub_technique_name": "STEGANOGRAPHY",
+            "sub_technique": "T1027.003",
+            "description": "Adversaries may use steganography techniques in order to prevent the detection of hidden information. Steganographic techniques can be used to hide data in digital media such as images, audio tracks, video clips, or text files.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "These attack campaigns leveraged steganography in the PNG files by hiding components of a backdoor that would exist only in memory after being loaded into rundll32.exe.",
+        "technique": "T1059",
+        "metadata": {
+            "page_number": 3,
+            "id": "004",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXECUTION"
+            ],
+            "tactic": [
+                "TA0002"
+            ],
+            "technique_name": "COMMAND AND SCRIPTING INTERPRETER",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may abuse command and script interpreters to execute commands, scripts, or binaries.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "Three of the five attack waves contained links to download files from domains that the attackers appear to have control over.",
+        "technique": "T1566",
+        "metadata": {
+            "page_number": 3,
+            "id": "005",
+            "source": "TEXT",
+            "tactic_name": [
+                "INITIAL ACCESS"
+            ],
+            "tactic": [
+                "TA0001"
+            ],
+            "technique_name": "PHISHING",
+            "sub_technique_name": "SPEARPHISHING LINK",
+            "sub_technique": "T1566.002",
+            "description": "Adversaries may send spearphishing emails with a malicious link in an attempt to gain access to victim systems.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "The other two attacks contained documents with malicious macros embedded within them.",
+        "technique": "T1566",
+        "metadata": {
+            "page_number": 3,
+            "id": "006",
+            "source": "TEXT",
+            "tactic_name": [
+                "INITIAL ACCESS"
+            ],
+            "tactic": [
+                "TA0001"
+            ],
+            "technique_name": "PHISHING",
+            "sub_technique_name": "SPEARPHISHING ATTACHMENT",
+            "sub_technique": "T1566.001",
+            "description": "Adversaries may send spearphishing emails with a malicious attachment in an attempt to gain access to victim systems.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "This message claims to have been sent from Secure Fax Corp. and has a link to a ZIP file that contains a Microsoft shortcut file (.LNK).",
+        "technique": "T1566",
+        "metadata": {
+            "page_number": 3,
+            "id": "007",
+            "source": "TEXT",
+            "tactic_name": [
+                "INITIAL ACCESS"
+            ],
+            "tactic": [
+                "TA0001"
+            ],
+            "technique_name": "PHISHING",
+            "sub_technique_name": "SPEARPHISHING LINK",
+            "sub_technique": "T1566.002",
+            "description": "Adversaries may send spearphishing emails with a malicious link in an attempt to gain access to victim systems.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "This shortcut file contains PowerShell commands that conduct anti-VM checks,",
+        "technique": "T1497",
+        "metadata": {
+            "page_number": 3,
+            "id": "008",
+            "source": "TEXT",
+            "tactic_name": [
+                "DEFENSE EVASION"
+            ],
+            "tactic": [
+                "TA0005"
+            ],
+            "technique_name": "VIRTUALIZATION/SANDBOX EVASION",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may employ various techniques to detect and evade virtual machine or sandbox environments.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "This shortcut file contains PowerShell commands that conduct anti-VM checks,",
+        "technique": "T1059",
+        "metadata": {
+            "page_number": 3,
+            "id": "009",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXECUTION"
+            ],
+            "tactic": [
+                "TA0002"
+            ],
+            "technique_name": "COMMAND AND SCRIPTING INTERPRETER",
+            "sub_technique_name": "POWERSHELL",
+            "sub_technique": "T1059.001",
+            "description": "Adversaries may use PowerShell commands to execute various actions on a system, including anti-VM checks.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "Primary PowerDuke backdoor (DLL) loader (leverages kxwn.lock:schemas) dropped to \"%APPDATA\\Roaming\\Microsoft\\\" with persistence via HKCU Run Key \"WebCache\" (rundll32.exe\u00a0%APPDATA\\Roaming\\Microsoft\\kxwn.lock , #2).",
+        "technique": "T1218",
+        "metadata": {
+            "page_number": 5,
+            "id": "025",
+            "source": "TEXT",
+            "tactic_name": [
+                "DEFENSE EVASION"
+            ],
+            "tactic": [
+                "TA0005"
+            ],
+            "technique_name": "SYSTEM BINARY PROXY EXECUTION",
+            "sub_technique_name": "RUNDLL32",
+            "sub_technique": "T1070.011",
+            "description": "The PowerDuke backdoor file is dropped with persistence via HKCU Run Key and executed via rundll32.exe.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "Primary PowerDuke backdoor (DLL) loader (leverages kxwn.lock:schemas) dropped to \"%APPDATA\\Roaming\\Microsoft\\\" with persistence via HKCU Run Key \"WebCache\" (rundll32.exe\u00a0%APPDATA\\Roaming\\Microsoft\\kxwn.lock , #2).",
+        "technique": "T1112",
+        "metadata": {
+            "page_number": 5,
+            "id": "026",
+            "source": "TEXT",
+            "tactic_name": [
+                "DEFENSE EVASION"
+            ],
+            "tactic": [
+                "TA0005"
+            ],
+            "technique_name": "MODIFY REGISTRY",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "The PowerDuke backdoor is persisted via HKCU Run Key.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "The second attack wave that Volexity observed leveraged a Microsoft Word document with a malicious embedded macro.",
+        "technique": "T1059",
+        "metadata": {
+            "page_number": 6,
+            "id": "010",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXECUTION"
+            ],
+            "tactic": [
+                "TA0002"
+            ],
+            "technique_name": "COMMAND AND SCRIPTING INTERPRETER",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may abuse command and script interpreters to execute commands, scripts, or binaries.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "The Macros contain several anti-VM checks designed to avoid executing in virtualized environments.",
+        "technique": "T1497",
+        "metadata": {
+            "page_number": 6,
+            "id": "011",
+            "source": "TEXT",
+            "tactic_name": [
+                "DEFENSE EVASION"
+            ],
+            "tactic": [
+                "TA0005"
+            ],
+            "technique_name": "VIRTUALIZATION/SANDBOX EVASION",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may employ various techniques to detect and evade virtual machine or sandbox environments.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "The fourth attack wave that Volexity observed leveraged a Microsoft Word document with a malicious embedded macro.",
+        "technique": "T1059",
+        "metadata": {
+            "page_number": 9,
+            "id": "012",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXECUTION"
+            ],
+            "tactic": [
+                "TA0002"
+            ],
+            "technique_name": "COMMAND AND SCRIPTING INTERPRETER",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may abuse command and script interpreters to execute commands, scripts, or binaries.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "The Macros contain several anti-VM checks designed to avoid executing in virtualized environments.",
+        "technique": "T1497",
+        "metadata": {
+            "page_number": 9,
+            "id": "013",
+            "source": "TEXT",
+            "tactic_name": [
+                "DEFENSE EVASION"
+            ],
+            "tactic": [
+                "TA0005"
+            ],
+            "technique_name": "VIRTUALIZATION/SANDBOX EVASION",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may employ various techniques to detect and evade virtual machine or sandbox environments.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "The link in the e-mail points to a ZIP file that has a Microsoft shortcut file (.LNK) inside of it.",
+        "technique": "T1105",
+        "metadata": {
+            "page_number": 11,
+            "id": "014",
+            "source": "TEXT",
+            "tactic_name": [
+                "COMMAND AND CONTROL"
+            ],
+            "tactic": [
+                "TA0011"
+            ],
+            "technique_name": "INGRESS TOOL TRANSFER",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may transfer tools or other files from an external system into a compromised environment.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "This shortcut file contains PowerShell commands that conduct anti-VM checks, drop a backdoor, and launch a clean decoy document.",
+        "technique": "T1497",
+        "metadata": {
+            "page_number": 11,
+            "id": "015",
+            "source": "TEXT",
+            "tactic_name": [
+                "DEFENSE EVASION"
+            ],
+            "tactic": [
+                "TA0005"
+            ],
+            "technique_name": "VIRTUALIZATION/SANDBOX EVASION",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may employ various techniques to detect and evade virtual machine or sandbox environments.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "This shortcut file contains PowerShell commands that conduct anti-VM checks, drop a backdoor, and launch a clean decoy document.",
+        "technique": "T1059",
+        "metadata": {
+            "page_number": 11,
+            "id": "016",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXECUTION"
+            ],
+            "tactic": [
+                "TA0002"
+            ],
+            "technique_name": "COMMAND AND SCRIPTING INTERPRETER",
+            "sub_technique_name": "POWERSHELL",
+            "sub_technique": "T1059.001",
+            "description": "Adversaries may use PowerShell commands to execute various actions on a system, including anti-VM checks.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "The PowerDuke backdoor boasts a pretty extensive list of features that allow the Dukes to examine and control a system.",
+        "technique": "T1082",
+        "metadata": {
+            "page_number": 14,
+            "id": "028",
+            "source": "TEXT",
+            "tactic_name": [
+                "DISCOVERY"
+            ],
+            "tactic": [
+                "TA0007"
+            ],
+            "technique_name": "SYSTEM INFORMATION DISCOVERY",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "The PowerDuke backdoor boasts a feature set that allows the attackers to examine the system.",
+            "tool_name": [
+                "POWERDUKE"
+            ],
+            "tool": [
+                "S0139"
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "comp get the NetBIOS name via GetComputerNameEx domain get the computer's domain via NetWkstaGetInfo",
+        "technique": "T1016",
+        "metadata": {
+            "page_number": 14,
+            "id": "017",
+            "source": "TEXT",
+            "tactic_name": [
+                "DISCOVERY"
+            ],
+            "tactic": [
+                "TA0007"
+            ],
+            "technique_name": "SYSTEM NETWORK CONFIGURATION DISCOVERY",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may use various utilities to retrieve system network configuration information, such as NetBIOS name and domain information.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "drives get logical drives, drive type, free space, serial number, etc. fsize get the size of a file via GetFileAttributesExW or failing that, by mapping the file and getting the size",
+        "technique": "T1083",
+        "metadata": {
+            "page_number": 14,
+            "id": "018",
+            "source": "TEXT",
+            "tactic_name": [
+                "DISCOVERY"
+            ],
+            "tactic": [
+                "TA0007"
+            ],
+            "technique_name": "FILE AND DIRECTORY DISCOVERY",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may search for files and directories on local and remote systems.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "memstat get memory usage status via GlobalMemoryStatusEx, total RAM, percent used, etc. osdate get the time the machine was built (via InstallDate registry key) osver get OS info via registry, such as ProductName, CurrentBuild, CurrentVersion, CSDBuildNumber, etc.",
+        "technique": "T1082",
+        "metadata": {
+            "page_number": 14,
+            "id": "020",
+            "source": "TEXT",
+            "tactic_name": [
+                "DISCOVERY"
+            ],
+            "tactic": [
+                "TA0007"
+            ],
+            "technique_name": "SYSTEM INFORMATION DISCOVERY",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may attempt to gather information about the operating system and hardware.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "pslist list processes via CreateToolhelp32Snapshot",
+        "technique": "T1057",
+        "metadata": {
+            "page_number": 14,
+            "id": "019",
+            "source": "TEXT",
+            "tactic_name": [
+                "DISCOVERY"
+            ],
+            "tactic": [
+                "TA0007"
+            ],
+            "technique_name": "PROCESS DISCOVERY",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may attempt to get information about running processes on a system.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "run # start a process via CreateProcessW runs cmd.exe /c and gets the output via Named Pipe and sends the data back",
+        "technique": "T1059",
+        "metadata": {
+            "page_number": 14,
+            "id": "022",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXECUTION"
+            ],
+            "tactic": [
+                "TA0002"
+            ],
+            "technique_name": "COMMAND AND SCRIPTING INTERPRETER",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may abuse command and script interpreters to execute commands, scripts, or binaries.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "siduser gets the current user's SID via GetTokenInformation and LookupAccountSidW",
+        "technique": "T1033",
+        "metadata": {
+            "page_number": 14,
+            "id": "021",
+            "source": "TEXT",
+            "tactic_name": [
+                "DISCOVERY"
+            ],
+            "tactic": [
+                "TA0007"
+            ],
+            "technique_name": "SYSTEM OWNER/USER DISCOVERY",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may try to identify the current user of the system.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "time the time + timezone (GetLocalTime and GetTimeZoneInformation)",
+        "technique": "T1124",
+        "metadata": {
+            "page_number": 15,
+            "id": "023",
+            "source": "TEXT",
+            "tactic_name": [
+                "DISCOVERY"
+            ],
+            "tactic": [
+                "TA0007"
+            ],
+            "technique_name": "SYSTEM TIME DISCOVERY",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may gather the system time and time zone information from a local or remote system.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    }
+]

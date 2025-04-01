@@ -1,0 +1,370 @@
+[
+    {
+        "context": "SandWorm threat group members primarily used spearphishing emails to gain access to computers or account credentials.",
+        "technique": "T1566",
+        "metadata": {
+            "page_number": 4,
+            "id": "001",
+            "source": "TEXT",
+            "tactic_name": [
+                "INITIAL ACCESS"
+            ],
+            "tactic": [
+                "TA0001"
+            ],
+            "technique_name": "PHISHING",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may send spearphishing emails in an attempt to gain access to victim systems.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "SandWorm heavily leveraged PowerShell commands and scripts to discover system information, execute code, and download malware.",
+        "technique": "T1059",
+        "metadata": {
+            "page_number": 5,
+            "id": "002",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXECUTION"
+            ],
+            "tactic": [
+                "TA0002"
+            ],
+            "technique_name": "COMMAND AND SCRIPTING INTERPRETER",
+            "sub_technique_name": "POWERSHELL",
+            "sub_technique": "T1059.001",
+            "description": "Adversaries may abuse PowerShell commands and scripts for execution.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "Many of the spearphishing emails sent by SandWorm contained malware-laced documents that required user execution to deploy.",
+        "technique": "T1204",
+        "metadata": {
+            "page_number": 5,
+            "id": "003",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXECUTION"
+            ],
+            "tactic": [
+                "TA0002"
+            ],
+            "technique_name": "USER EXECUTION",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "An adversary may rely upon specific actions by a user in order to gain execution.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "To maintain their foothold, SandWorm obtained and repeatedly used existing accounts' credentials to preserve persistence in victim systems.",
+        "technique": "T1078",
+        "metadata": {
+            "page_number": 6,
+            "id": "004",
+            "source": "TEXT",
+            "tactic_name": [
+                "PERSISTENCE"
+            ],
+            "tactic": [
+                "TA0003"
+            ],
+            "technique_name": "VALID ACCOUNTS",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may obtain and abuse credentials of existing accounts as a means of gaining Persistence.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "SandWorm leveraged malware to escalate system privileges and determine whether particular antivirus processors were running, then attempted to identify other computers on the same network to potentially compromise.",
+        "technique": "T1078",
+        "metadata": {
+            "page_number": 6,
+            "id": "005",
+            "source": "TEXT",
+            "tactic_name": [
+                "PERSISTENCE"
+            ],
+            "tactic": [
+                "TA0004"
+            ],
+            "technique_name": "VALID ACCOUNTS",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may obtain and abuse credentials of existing accounts as a means of gaining Privilege Escalation.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "SandWorm used an algorithm to obscure particular features of the Olympic Destroyer malware to obstruct post-attack investigations and avoid detection. The group also attempted to obfuscate their activity by deleting data from compromised machines and servers and",
+        "technique": "T1070",
+        "metadata": {
+            "page_number": 6,
+            "id": "006",
+            "source": "TEXT",
+            "tactic_name": [
+                "DEFENSE EVASION"
+            ],
+            "tactic": [
+                "TA0005"
+            ],
+            "technique_name": "INDICATOR REMOVAL ON HOST",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may delete or modify artifacts generated within systems to remove evidence of their presence or hinder defenses.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "On multiple occasions, SandWorm attempted to masquerade their activity through researching and emulating malware used by the Lazarus Group.",
+        "technique": "T1036",
+        "metadata": {
+            "page_number": 7,
+            "id": "007",
+            "source": "TEXT",
+            "tactic_name": [
+                "DEFENSE EVASION"
+            ],
+            "tactic": [
+                "TA0005"
+            ],
+            "technique_name": "MASQUERADING",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may use randomly generated file names to disguise the true nature of malicious files, making detection more difficult.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "SandWorm dumped credentials to obtain account login and credential details from compromised machines.",
+        "technique": "T1003",
+        "metadata": {
+            "page_number": 7,
+            "id": "008",
+            "source": "TEXT",
+            "tactic_name": [
+                "CREDENTIAL ACCESS"
+            ],
+            "tactic": [
+                "TA0006"
+            ],
+            "technique_name": "OS CREDENTIAL DUMPING",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may attempt to dump credentials to obtain account login and credential material, normally in the form of a hash or a clear text password.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "SandWorm leveraged customized malware to overwrite itself to incorporate any additional usernames and passwords that it could obtain from the previous computer before spreading to the next computer.",
+        "technique": "T1552",
+        "metadata": {
+            "page_number": 7,
+            "id": "009",
+            "source": "TEXT",
+            "tactic_name": [
+                "CREDENTIAL ACCESS"
+            ],
+            "tactic": [
+                "TA0006"
+            ],
+            "technique_name": "UNSECURED CREDENTIALS",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may search compromised systems to find and obtain insecurely stored credentials.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "SandWorm repeatedly accessed and browsed Vles, ran malicious scripts, and searched compromised machines for credential Vles",
+        "technique": "T1083",
+        "metadata": {
+            "page_number": 7,
+            "id": "010",
+            "source": "TEXT",
+            "tactic_name": [
+                "DISCOVERY"
+            ],
+            "tactic": [
+                "TA0007"
+            ],
+            "technique_name": "FILE AND DIRECTORY DISCOVERY",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may enumerate files and directories or may search in specific locations of a host or network share for certain information within a file system.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "SandWorm exploited remote services to gain unauthorized access to internal systems. Once they gained access to the remote system, they deployed malware that was leveraged to obtain system privileges, extract and execute an open-source credential harvesting tool, and move laterally throughout the network.",
+        "technique": "T1210",
+        "metadata": {
+            "page_number": 8,
+            "id": "011",
+            "source": "TEXT",
+            "tactic_name": [
+                "LATERAL MOVEMENT"
+            ],
+            "tactic": [
+                "TA0008"
+            ],
+            "technique_name": "EXPLOITATION OF REMOTE SERVICES",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may exploit remote services to gain unauthorized access to internal systems once inside of a network.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "After gaining access to victims' computers, SandWorm threat actors performed various functions designed to identify, collect, package, and view targeted data, including usernames, IP addresses, and server data relating to RDP sessions on the target computers. This activity included stealing",
+        "technique": "T1083",
+        "metadata": {
+            "page_number": 8,
+            "id": "012",
+            "source": "TEXT",
+            "tactic_name": [
+                "COLLECTION"
+            ],
+            "tactic": [
+                "TA0009"
+            ],
+            "technique_name": "FILE AND DIRECTORY DISCOVERY",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may enumerate files and directories or may search in specific locations of a host or network share for certain information within a file system.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "SandWorm established command and control to create a single point of access between compromised networks and a server they controlled. The tunnel allowed them to hide their activity, issue commands, install additional tools, and transfer data.",
+        "technique": "T1001",
+        "metadata": {
+            "page_number": 9,
+            "id": "013",
+            "source": "TEXT",
+            "tactic_name": [
+                "COMMAND AND CONTROL"
+            ],
+            "tactic": [
+                "TA0011"
+            ],
+            "technique_name": "DATA OBFUSCATION",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may obfuscate command and control traffic to make it more difficult to detect.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "SandWorm leveraged legitimate credentials to exVltrate data from a victim network and retrieve internal documents from machines inside victim environments.",
+        "technique": "T1078",
+        "metadata": {
+            "page_number": 9,
+            "id": "014",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXFILTRATION"
+            ],
+            "tactic": [
+                "TA0010"
+            ],
+            "technique_name": "VALID ACCOUNTS",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may obtain and abuse credentials of existing accounts as a means of gaining Exfiltration.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "SandWorm defaced approximately 1,500 websites and disrupted service to some of those websites following the Georgian web hosting provider's compromise.",
+        "technique": "T1491",
+        "metadata": {
+            "page_number": 10,
+            "id": "015",
+            "source": "TEXT",
+            "tactic_name": [
+                "IMPACT"
+            ],
+            "tactic": [
+                "TA0040"
+            ],
+            "technique_name": "DEFACEMENT",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may modify visual content available internally or externally to an enterprise network, thus affecting the integrity of the original content.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "The group deployed destructive malware to delete Vles from the hard drive, force shutdowns, and impede rebooting and recovery by misconVguring BitLocker, rendering computers inoperable.",
+        "technique": "T1490",
+        "metadata": {
+            "page_number": 10,
+            "id": "016",
+            "source": "TEXT",
+            "tactic_name": [
+                "IMPACT"
+            ],
+            "tactic": [
+                "TA0040"
+            ],
+            "technique_name": "INHIBIT SYSTEM RECOVERY",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may delete or remove built-in data and turn off services designed to aid in the recovery of a corrupted system to prevent recovery.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    }
+]

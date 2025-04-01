@@ -1,0 +1,495 @@
+[
+    {
+        "context": "a suspicious email that targeted a government oFcial from Jordan's foreign ministry. The email contained a malicious Excel document that drops a new backdoor named\u00a0Saitama",
+        "technique": "T1566",
+        "metadata": {
+            "page_number": 1,
+            "id": "001",
+            "source": "TEXT",
+            "tactic_name": [
+                "INITIAL ACCESS"
+            ],
+            "tactic": [
+                "TA0001"
+            ],
+            "technique_name": "PHISHING",
+            "sub_technique_name": "SPEARPHISHING ATTACHMENT",
+            "sub_technique": "T1566.001",
+            "description": "The malicious email targeting a government official from Jordan's foreign ministry, which contained a malicious Excel document, is a clear example of spear-phishing with an attachment.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "The malicious email was sent to the victim via a Microsoft Outlook account with the subject \"ConCrmation Receive Document\" with an Excel Cle called \"ConCrmation Receive Document.xls\". The sender pretends to be a person from the Government of Jordan by using its coat of arms as a signature.",
+        "technique": "T1566",
+        "metadata": {
+            "page_number": 2,
+            "id": "002",
+            "source": "TEXT",
+            "tactic_name": [
+                "INITIAL ACCESS"
+            ],
+            "tactic": [
+                "TA0001"
+            ],
+            "technique_name": "PHISHING",
+            "sub_technique_name": "SPEARPHISHING ATTACHMENT",
+            "sub_technique": "T1566.001",
+            "description": "The malicious email with the subject \"Confirmation Receive Document\" and the attachment \"Confirmation Receive Document.xls\"",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "The Excel attachment contains a macro that performs malicious activities",
+        "technique": "T1204",
+        "metadata": {
+            "page_number": 2,
+            "id": "003",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXECUTION"
+            ],
+            "tactic": [
+                "TA0002"
+            ],
+            "technique_name": "USER EXECUTION",
+            "sub_technique_name": "MALICIOUS FILE",
+            "sub_technique": "T1204.002",
+            "description": "The Excel attachment contains a macro that performs malicious activities.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "004"
+            ]
+        }
+    },
+    {
+        "context": "The document has an image that tries to convince the victim to enable a macro.",
+        "technique": "T1203",
+        "metadata": {
+            "page_number": 2,
+            "id": "004",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXECUTION"
+            ],
+            "tactic": [
+                "TA0002"
+            ],
+            "technique_name": "EXPLOITATION FOR CLIENT EXECUTION",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "The image in the document is a social engineering tactic designed to persuade the victim to enable the macro, which is crucial for the attack to proceed.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "003",
+                "005"
+            ]
+        }
+    },
+    {
+        "context": "After enabling the macro, the image is replaced with the Jordan government's the coat of the arms",
+        "technique": "T1564",
+        "metadata": {
+            "page_number": 3,
+            "id": "005",
+            "source": "TEXT",
+            "tactic_name": [
+                "DEFENSE EVASION"
+            ],
+            "tactic": [
+                "TA0005"
+            ],
+            "technique_name": "HIDE ARTIFACTS",
+            "sub_technique_name": "MASQUERADE FILE",
+            "sub_technique": "T1564.004",
+            "description": "After the macro is enabled, the image is replaced with the coat of arms of the Jordanian government. This act of swapping images can be seen as a form of masquerading, where the attacker attempts to make the document appear more legitimate to avoid raising suspicion from the victim.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "004"
+            ]
+        }
+    },
+    {
+        "context": "Hides the current sheet and shows the new sheet that contains the coat of arms image",
+        "technique": "T1564",
+        "metadata": {
+            "page_number": 4,
+            "id": "006",
+            "source": "TEXT",
+            "tactic_name": [
+                "DEFENSE EVASION"
+            ],
+            "tactic": [
+                "TA0005"
+            ],
+            "technique_name": "HIDE ARTIFACTS",
+            "sub_technique_name": "HIDDEN WINDOW",
+            "sub_technique": "T1564.003",
+            "description": "The Excel macro hides the current sheet (which likely contains the initial content that lures the victim into enabling macros) and shows a new sheet with the Jordanian government's coat of arms",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "Calls the \"eNotif' function which is used to send a notiCcation of each steps of macro execution to its server using the DNS protocol",
+        "technique": "T1071",
+        "metadata": {
+            "page_number": 4,
+            "id": "007",
+            "source": "TEXT",
+            "tactic_name": [
+                "COMMAND AND CONTROL"
+            ],
+            "tactic": [
+                "TA0011"
+            ],
+            "technique_name": "APPLICATION LAYER PROTOCOL",
+            "sub_technique_name": "DNS",
+            "sub_technique": "T1071.004",
+            "description": "Adversaries use DNS for communication between the malware and its C2 server.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "it uses the following WMI query to get the IP address of the request",
+        "technique": "T1082",
+        "metadata": {
+            "page_number": 4,
+            "id": "019",
+            "source": "TEXT",
+            "tactic_name": [
+                "DISCOVERY"
+            ],
+            "tactic": [
+                "TA0007"
+            ],
+            "technique_name": "SYSTEM INFORMATION DISCOVERY",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Uses WMI query to get IP address information.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "Creates a TaskService object and Gets the task folder that contains the list of the current tasks",
+        "technique": "T1053",
+        "metadata": {
+            "page_number": 4,
+            "id": "008",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXECUTION",
+                "PERSISTENCE",
+                "PRIVILEGE ESCALATION"
+            ],
+            "tactic": [
+                "TA0002",
+                "TA0003",
+                "TA0004"
+            ],
+            "technique_name": "SCHEDULED TASK/JOB",
+            "sub_technique_name": "SCHEDULED TASK",
+            "sub_technique": "T1053.005",
+            "description": "The creation of a `TaskService` object and retrieving the task folder that contains the list of current tasks indicates that the malware is interacting with the Windows Task Scheduler.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "Checks if there is a mouse connected to PC",
+        "technique": "T1497",
+        "metadata": {
+            "page_number": 5,
+            "id": "009",
+            "source": "TEXT",
+            "tactic_name": [
+                "DEFENSE EVASION",
+                "DISCOVERY"
+            ],
+            "tactic": [
+                "TA0005",
+                "TA0007"
+            ],
+            "technique_name": "VIRTUALIZATION/SANDBOX EVASION",
+            "sub_technique_name": "SYSTEM CHECKS",
+            "sub_technique": "T1497.001",
+            "description": "The malware checks if a mouse is connected, which suggests it's attempting to determine if it is running on a real machine rather than in a virtualized or sandbox environment. This helps the malware avoid execution in an analysis environment, thus impairing defenses.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "010"
+            ]
+        }
+    },
+    {
+        "context": "Reads the content of the\u00a0UserForm1.label1, UserForm2.label1 and UserForm3.label1\u00a0that are in base64 format, decodes them and Cnally writes them into the created Cles in the previous step",
+        "technique": "T1027",
+        "metadata": {
+            "page_number": 5,
+            "id": "010",
+            "source": "TEXT",
+            "tactic_name": [
+                "DEFENSE EVASION"
+            ],
+            "tactic": [
+                "TA0005"
+            ],
+            "technique_name": "OBFUSCATED FILES OR INFORMATION",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "he malware reads base64-encoded content from the user forms, decodes it, and writes the decoded content into the created files.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "009"
+            ]
+        }
+    },
+    {
+        "context": "Checks the existence of theUpdate.exeCle",
+        "technique": "T1547",
+        "metadata": {
+            "page_number": 5,
+            "id": "011",
+            "source": "TEXT",
+            "tactic_name": [
+                "PERSISTENCE",
+                "PRIVILEGE ESCALATION"
+            ],
+            "tactic": [
+                "TA0003",
+                "TA0004"
+            ],
+            "technique_name": "BOOT OR LOGON AUTOSTART EXECUTION",
+            "sub_technique_name": "REGISTRY RUN KEYS/STARTUP FOLDER",
+            "sub_technique": "T1547.001",
+            "description": "This technique involves using the Windows Registry or startup folder to ensure that malicious executables are run at system startup or user logon.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "012"
+            ]
+        }
+    },
+    {
+        "context": "it writes it using a technique that loads a DotNet assembly directly using mscorlib and Assembly.Load by manually accessing the VTable of the IUnknown",
+        "technique": "T1105",
+        "metadata": {
+            "page_number": 5,
+            "id": "012",
+            "source": "TEXT",
+            "tactic_name": [
+                "COMMAND AND CONTROL"
+            ],
+            "tactic": [
+                "TA0011"
+            ],
+            "technique_name": "INGRESS TOOL TRANSFER",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "This technique involves the transfer of files or tools into a compromised environment, often from a remote server.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "011"
+            ]
+        }
+    },
+    {
+        "context": "DeCnes a xml schema for a scheduled task and registers it using the RegisterTask function. The name of the scheduled task is MicrosoftUpdate and is used to make\u00a0update.exepersistent",
+        "technique": "T1053",
+        "metadata": {
+            "page_number": 6,
+            "id": "013",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXECUTION",
+                "PERSISTENCE",
+                "PRIVILEGE ESCALATION"
+            ],
+            "tactic": [
+                "TA0002",
+                "TA0003",
+                "TA0004"
+            ],
+            "technique_name": "SCHEDULED TASK/JOB",
+            "sub_technique_name": "SCHEDULED TASK",
+            "sub_technique": "T1053.005",
+            "description": "This technique involves creating or modifying scheduled tasks or jobs to establish persistence or perform automated tasks. In your case, the malware uses a scheduled task to ensure that update.exe remains persistent on the system.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "Saitama backdoor abuses the DNS protocol for its command and control communications",
+        "technique": "T1071",
+        "metadata": {
+            "page_number": 7,
+            "id": "014",
+            "source": "TEXT",
+            "tactic_name": [
+                "COMMAND AND CONTROL"
+            ],
+            "tactic": [
+                "TA0011"
+            ],
+            "technique_name": "APPLICATION LAYER PROTOCOL",
+            "sub_technique_name": "DNS",
+            "sub_technique": "T1071.003",
+            "description": "This technique involves using DNS (Domain Name System) for C2 communications.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "the actor cleverly uses techniques such as compression",
+        "technique": "T1027",
+        "metadata": {
+            "page_number": 7,
+            "id": "015",
+            "source": "TEXT",
+            "tactic_name": [
+                "DEFENSE EVASION"
+            ],
+            "tactic": [
+                "TA0005"
+            ],
+            "technique_name": "OBFUSCATED FILES OR INFORMATION",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "The use of compression to obscure the data being transmitted is an example of data obfuscation.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "This state fetches the C&C server, expecting to receive a command from the attackers. These servers are generated by using the PRNG algorithm that involves transformations like the Mersenne Twister",
+        "technique": "T1568",
+        "metadata": {
+            "page_number": 9,
+            "id": "016",
+            "source": "TEXT",
+            "tactic_name": [
+                "COMMAND AND CONTROL"
+            ],
+            "tactic": [
+                "TA0011"
+            ],
+            "technique_name": "DYNAMIC RESOLUTION",
+            "sub_technique_name": "DOMAIN GENERATION ALGORITHM",
+            "sub_technique": "T1568.002",
+            "description": "The malware uses a Pseudo-Random Number Generator (PRNG), such as the Mersenne Twister, to generate subdomains dynamically.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "As domain names are used to exCltrate unknown amounts of data, attackers had to split this data in different buffers. Every buffer is then sent through a different DNS request.",
+        "technique": "T1041",
+        "metadata": {
+            "page_number": 14,
+            "id": "020",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXFILTRATION"
+            ],
+            "tactic": [
+                "TA0010"
+            ],
+            "technique_name": "EXFILTRATION OVER C2 CHANNEL",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may steal data by exfiltrating it over an existing command and control channel.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "scheduled task that would launch the executable every X minutes",
+        "technique": "T1053",
+        "metadata": {
+            "page_number": 15,
+            "id": "017",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXECUTION",
+                "PERSISTENCE",
+                "PRIVILEGE ESCALATION"
+            ],
+            "tactic": [
+                "TA0002",
+                "TA0003",
+                "TA0004"
+            ],
+            "technique_name": "SCHEDULED TASK/JOB",
+            "sub_technique_name": "SCHEDULED TASK",
+            "sub_technique": "T1053.005",
+            "description": "The malicious document registers a scheduled task to execute an executable every X minutes, ensuring the malware runs persistently and systematically.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "anti sandboxing technique (checking if there is a mouse connected to the PC or not)",
+        "technique": "T1497",
+        "metadata": {
+            "page_number": 15,
+            "id": "018",
+            "source": "TEXT",
+            "tactic_name": [
+                "DEFENSE EVASION",
+                "DISCOVERY"
+            ],
+            "tactic": [
+                "TA0005",
+                "TA0007"
+            ],
+            "technique_name": "VIRTUALIZATION/SANDBOX EVASION",
+            "sub_technique_name": "SYSTEM CHECKS",
+            "sub_technique": "T1497.001",
+            "description": "The malware checks if a mouse is connected, which suggests it's attempting to determine if it is running on a real machine rather than in a virtualized or sandbox environment. This helps the malware avoid execution in an analysis environment, thus impairing defenses.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    }
+]

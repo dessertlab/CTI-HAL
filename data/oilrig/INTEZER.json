@@ -1,0 +1,558 @@
+[
+    {
+        "context": "spear-phishing operation conducted by APT34",
+        "technique": "T1566",
+        "metadata": {
+            "page_number": 2,
+            "id": "001",
+            "source": "TEXT",
+            "tactic_name": [
+                "INITIAL ACCESS"
+            ],
+            "tactic": [
+                "TA0001"
+            ],
+            "technique_name": "PHISHING",
+            "sub_technique_name": "SPEARPHISHING ATTACHMENT",
+            "sub_technique": "T1566.001",
+            "description": "The `survey.xls` file was likely distributed as an attachment in a spearphishing email, enticing the user to open it by masquerading as a legitimate survey.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "002"
+            ]
+        }
+    },
+    {
+        "context": "a\u00a0file named survey.xls\u00a0that was designed to look like an employee satisfaction survey tailored to either Westat employees or Westat customers",
+        "technique": "T1204",
+        "metadata": {
+            "page_number": 3,
+            "id": "002",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXECUTION"
+            ],
+            "tactic": [
+                "TA0002"
+            ],
+            "technique_name": "USER EXECUTION",
+            "sub_technique_name": "MALICIOUS FILE",
+            "sub_technique": "T1204.002",
+            "description": "The `survey.xls` file is designed to look like a legitimate employee satisfaction survey, which is a form of social engineering to get the victim to open the file and potentially enable macros.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "001",
+                "003"
+            ]
+        }
+    },
+    {
+        "context": "At first the spreadsheet appeared to be blank. Only once the victim enables macros, the survey is displayed to the user and the malicious VBA code begins to execute",
+        "technique": "T1059",
+        "metadata": {
+            "page_number": 3,
+            "id": "003",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXECUTION"
+            ],
+            "tactic": [
+                "TA0002"
+            ],
+            "technique_name": "COMMAND AND SCRIPTING INTERPRETER",
+            "sub_technique_name": "VISUAL BASIC",
+            "sub_technique": "T1059.005",
+            "description": "The malicious VBA code within the `survey.xls` file begins to execute once macros are enabled by the user, which is an example of scripting for malicious purposes.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "002",
+                "004"
+            ]
+        }
+    },
+    {
+        "context": "The embedded VBA code unpacks a zip file into a temporary folder",
+        "technique": "T1059",
+        "metadata": {
+            "page_number": 3,
+            "id": "004",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXECUTION"
+            ],
+            "tactic": [
+                "TA0002"
+            ],
+            "technique_name": "COMMAND AND SCRIPTING INTERPRETER",
+            "sub_technique_name": "VISUAL BASIC",
+            "sub_technique": "T1059.005",
+            "description": "The embedded VBA code that unpacks and installs the executable is an example of using VBA for malicious purposes.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "003",
+                "005"
+            ]
+        }
+    },
+    {
+        "context": "extracts a \"Client update.exe\" executable file and installs it to \"C:Users<User>valsClient update.exe\"",
+        "technique": "T1105",
+        "metadata": {
+            "page_number": 3,
+            "id": "005",
+            "source": "TEXT",
+            "tactic_name": [
+                "COMMAND AND CONTROL"
+            ],
+            "tactic": [
+                "TA0011"
+            ],
+            "technique_name": "INGRESS TOOL TRANSFER",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "The unpacking of \"Client update.exe\" and its installation to the user's directory represents the transfer of a malicious tool onto the victim's machine.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "004",
+                "006"
+            ]
+        }
+    },
+    {
+        "context": "the crtt\u00a0function creates a scheduled task \"CheckUpdate\" that runs the unpacked executable five minutes after being infected by it, as well as on future log-ons.",
+        "technique": "T1053",
+        "metadata": {
+            "page_number": 3,
+            "id": "006",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXECUTION",
+                "PERSISTENCE",
+                "PRIVILEGE ESCLATION"
+            ],
+            "tactic": [
+                "TA0002",
+                "TA0003",
+                "TA0004"
+            ],
+            "technique_name": "SCHEDULED TASK/JOB",
+            "sub_technique_name": "SCHEDULED TASK",
+            "sub_technique": "T1053.005",
+            "description": "The creation of the scheduled task \"CheckUpdate\" to run the executable is an example of using a scheduled task for persistence.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "005"
+            ]
+        }
+    },
+    {
+        "context": "TONEDEAF is a backdoor that communicates with its Command and Control server via HTTP in order to receive and",
+        "technique": "T1071",
+        "metadata": {
+            "page_number": 5,
+            "id": "007",
+            "source": "TEXT",
+            "tactic_name": [
+                "COMMAND AND CONTROL"
+            ],
+            "tactic": [
+                "TA0011"
+            ],
+            "technique_name": "APPLICATION LAYER PROTOCOL",
+            "sub_technique_name": "WEB PROTOCOLS",
+            "sub_technique": "T1071.001",
+            "description": "TONEDEAF 2.0 uses HTTP for communication with its C2 server. This TTP describes how the backdoor establishes a connection and maintains communication with the adversary's infrastructure.",
+            "tool_name": [
+                "TONEDEAF"
+            ],
+            "tool": [
+                null
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "shell execution capabilities",
+        "technique": "T1059",
+        "metadata": {
+            "page_number": 6,
+            "id": "008",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXECUTION"
+            ],
+            "tactic": [
+                "TA0002"
+            ],
+            "technique_name": "COMMAND AND SCRIPTING INTERPRETER",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "TONEDEAF 2.0's capability to execute arbitrary shell commands falls under this TTP, as it allows the attacker to issue any command on the compromised system.",
+            "tool_name": [
+                "TONEDEAF"
+            ],
+            "tool": [
+                null
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "string decoding",
+        "technique": "T1027",
+        "metadata": {
+            "page_number": 6,
+            "id": "009",
+            "source": "TEXT",
+            "tactic_name": [
+                "DEFENSE EVASION"
+            ],
+            "tactic": [
+                "TA0005"
+            ],
+            "technique_name": "OBFUSCATED FILES OR INFORMATION",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "TONEDEAF 2.0's use of string decoding is an example of this technique. By decoding strings dynamically, the malware avoids easy detection and analysis.",
+            "tool_name": [
+                "TONEDEAF"
+            ],
+            "tool": [
+                null
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "the backdoor checks whether it was executed with \"...\" as an\u00a0argument",
+        "technique": "T1569",
+        "metadata": {
+            "page_number": 6,
+            "id": "010",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXECUTION"
+            ],
+            "tactic": [
+                "TA0002"
+            ],
+            "technique_name": "SYSTEM SERVICES",
+            "sub_technique_name": "SERVICE EXECUTION",
+            "sub_technique": "T1569.002",
+            "description": "The scheduled task using the \"...\" argument to execute the backdoor aligns with this tactic.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "In the case it's executed without the correct argument, such as by launching it via a double click, it will display a blank GUI Window to the user",
+        "technique": "T1036",
+        "metadata": {
+            "page_number": 6,
+            "id": "011",
+            "source": "TEXT",
+            "tactic_name": [
+                "DEFENSE EVASION"
+            ],
+            "tactic": [
+                "TA0005"
+            ],
+            "technique_name": "MASQUERADING",
+            "sub_technique_name": "MATCH LEGITIMATE NAME OR LOCATION",
+            "sub_technique": "T1036.005",
+            "description": "The malware is trying to deceive the user into believing that the application is a legitimate, albeit broken, program, rather than malicious software.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "010"
+            ]
+        }
+    },
+    {
+        "context": "TONEDEAF 2.0 also attempts to be more stealthy than its predecessor by hiding many of the interesting API imports it uses. The names of these APIs, and the DLLs that contain them, are stored as encoded strings and are decoded and resolved on demand during runtime",
+        "technique": "T1027",
+        "metadata": {
+            "page_number": 7,
+            "id": "012",
+            "source": "TEXT",
+            "tactic_name": [
+                "DEFENSE EVASION"
+            ],
+            "tactic": [
+                "TA0005"
+            ],
+            "technique_name": "OBFUSCATED FILES OR INFORMATION",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "TONEDEAF 2.0 obfuscates the names of APIs and the DLLs that contain them by encoding these strings. The encoded strings are only decoded during runtime, making static analysis more difficult and increasing the stealthiness of the malware.",
+            "tool_name": [
+                "TONEDEAF"
+            ],
+            "tool": [
+                null
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "TONEDEAF 2.0 also attempts to be more stealthy than its predecessor by hiding many of the interesting API imports it uses. The names of these APIs, and the DLLs that contain them, are stored as encoded strings and are decoded and resolved on demand during runtime",
+        "technique": "T1140",
+        "metadata": {
+            "page_number": 7,
+            "id": "017",
+            "source": "TEXT",
+            "tactic_name": [
+                "DEFENSE EVASION"
+            ],
+            "tactic": [
+                "TA0005"
+            ],
+            "technique_name": "DEOBFUSCATE/DECODE FILES OR INFORMATION",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Dynamically decodes API and DLL names during runtime to resolve them on demand.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "The backdoor uses HTTP for C2 communication",
+        "technique": "T1071",
+        "metadata": {
+            "page_number": 7,
+            "id": "013",
+            "source": "TEXT",
+            "tactic_name": [
+                "COMMAND AND CONTROL"
+            ],
+            "tactic": [
+                "TA0011"
+            ],
+            "technique_name": "APPLICATION LAYER PROTOCOL",
+            "sub_technique_name": "WEB PROTOCOLS",
+            "sub_technique": "T1071.001",
+            "description": "TONEDEAF 2.0 uses HTTP to communicate with its Command and Control (C2) server.",
+            "tool_name": [
+                "TONEDEAF"
+            ],
+            "tool": [
+                null
+            ],
+            "note": null,
+            "link": [
+                "014"
+            ]
+        }
+    },
+    {
+        "context": "custom encoding",
+        "technique": "T1132",
+        "metadata": {
+            "page_number": 7,
+            "id": "014",
+            "source": "TEXT",
+            "tactic_name": [
+                "COMMAND AND CONTROL"
+            ],
+            "tactic": [
+                "TA0011"
+            ],
+            "technique_name": "DATA ENCODING",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "The mention of a custom encoding mechanism indicates that TONEDEAF 2.0 is likely using a method to encode its C2 communications.",
+            "tool_name": [
+                "TONEDEAF"
+            ],
+            "tool": [
+                null
+            ],
+            "note": null,
+            "link": [
+                "013"
+            ]
+        }
+    },
+    {
+        "context": "custom encoding",
+        "technique": "T1573",
+        "metadata": {
+            "page_number": 7,
+            "id": "019",
+            "source": "TEXT",
+            "tactic_name": [
+                "COMMAND AND CONTROL"
+            ],
+            "tactic": [
+                "TA0011"
+            ],
+            "technique_name": "ENCRYPTED CHANNEL",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Uses custom encoding for C2 communication and message exchanges.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "Messages sent by the backdoor always contain the HTTP query parameter \"?ser=<6 digits>\" as an identifier. The first three digits are the <server_id>\u00a0and the last three are the <client_id>.",
+        "technique": "T1205",
+        "metadata": {
+            "page_number": 7,
+            "id": "022",
+            "source": "TEXT",
+            "tactic_name": [
+                "COMMAND AND CONTROL"
+            ],
+            "tactic": [
+                "TA0011"
+            ],
+            "technique_name": "TRAFFIC SIGNALING",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Uses specific HTTP query parameters as communication identifier.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "Before performing the first request, the malware will generate the <client_id>\u00a0derived from the environment variables %HOMEPATH%\u00a0and %COMPUTERNAME%\u00a0using a custom formula.",
+        "technique": "T1426",
+        "metadata": {
+            "page_number": 7,
+            "id": "018",
+            "source": "TEXT",
+            "tactic_name": [
+                "DISCOVERY"
+            ],
+            "tactic": [
+                "TA0007"
+            ],
+            "technique_name": "SYSTEM INFOMRATION DISCOVERY",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Generates client ID using environment variables %HOMEPATH% and %COMPUTERNAME%.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "it will reply with an encoded message that contains the <server_id>",
+        "technique": "T1027",
+        "metadata": {
+            "page_number": 8,
+            "id": "015",
+            "source": "TEXT",
+            "tactic_name": [
+                "DEFENSE EVASION"
+            ],
+            "tactic": [
+                "TA0005"
+            ],
+            "technique_name": "OBFUSCATED FILES OR INFORMATION",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "The C2 server's response is encoded and contains the command within an HTML <div> element with a special class name.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "The malware extracts the command by looking for an HTTP div element",
+        "technique": "T1102",
+        "metadata": {
+            "page_number": 8,
+            "id": "016",
+            "source": "TEXT",
+            "tactic_name": [
+                "COMMAND AND CONTROL"
+            ],
+            "tactic": [
+                "TA0011"
+            ],
+            "technique_name": "WEB SERVICE",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "The use of a web page and an HTTP <div> element to transmit commands from the C2 to the malware aligns with using web services for C2.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "Only Chrome password dumping is now supported, although interestingly the use of the file \"fsociety.dat\" as a password data store under the \"AppData\\Roaming\" directory stayed the same.",
+        "technique": "T1005",
+        "metadata": {
+            "page_number": 12,
+            "id": "020",
+            "source": "TEXT",
+            "tactic_name": [
+                "COLLECTION"
+            ],
+            "tactic": [
+                "TA0009"
+            ],
+            "technique_name": "DATA FROM LOCAL SYSTEM",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "VALUEVAULT 2.0 specifically targets Chrome password dumping from local system.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "Only Chrome password dumping is now supported, although interestingly the use of the file \"fsociety.dat\" as a password data store under the \"AppData\\Roaming\" directory stayed the same.",
+        "technique": "T1115",
+        "metadata": {
+            "page_number": 12,
+            "id": "021",
+            "source": "TEXT",
+            "tactic_name": [
+                "CREDENTIAL ACCESS"
+            ],
+            "tactic": [
+                "TA0006"
+            ],
+            "technique_name": "CREDENTIALS FROM PASSWORD STORES",
+            "sub_technique_name": "CREDENTIALS FROM WEB BROWSERS",
+            "sub_technique": "T1115.003",
+            "description": "Uses 'fsociety.dat' in AppData\\\\Roaming to store stolen Chrome passwords.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    }
+]

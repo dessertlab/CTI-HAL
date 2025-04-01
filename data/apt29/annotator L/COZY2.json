@@ -1,0 +1,744 @@
+[
+    {
+        "context": "CozyDuke",
+        "technique": null,
+        "metadata": {
+            "page_number": 1,
+            "id": "000",
+            "source": null,
+            "tactic_name": [],
+            "tactic": [],
+            "technique_name": null,
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": null,
+            "tool_name": [
+                "COZYDUKE"
+            ],
+            "tool": [
+                "S0046"
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "The actor often spearphishes targets with e-mails containing a link to a hacked website",
+        "technique": "T1566",
+        "metadata": {
+            "page_number": 2,
+            "id": "001",
+            "source": "TEXT",
+            "tactic_name": [
+                "INITIAL ACCESS"
+            ],
+            "tactic": [
+                "TA0001"
+            ],
+            "technique_name": "PHISHING",
+            "sub_technique_name": "SPEARPHISHING LINK",
+            "sub_technique": "T1566.002",
+            "description": "Sending spearphishing emails with links to a compromised website.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "002"
+            ]
+        }
+    },
+    {
+        "context": "Sometimes it is a high pro#le, legitimate site such as \"diplomacy.pl\", hosting a ZIP archive.",
+        "technique": "T1189",
+        "metadata": {
+            "page_number": 2,
+            "id": "002",
+            "source": "TEXT",
+            "tactic_name": [
+                "INITIAL ACCESS"
+            ],
+            "tactic": [
+                "TA0001"
+            ],
+            "technique_name": "DRIVE-BY COMPROMISE",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Using a legitimate website (in this case \"diplomacy.pl\") to host a ZIP archive containing a malicious executable.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "001",
+                "003"
+            ]
+        }
+    },
+    {
+        "context": "The ZIP archive contains a RAR SFX which installs the malware",
+        "technique": "T1204",
+        "metadata": {
+            "page_number": 2,
+            "id": "003",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXECUTION"
+            ],
+            "tactic": [
+                "TA0002"
+            ],
+            "technique_name": "USER EXECUTION",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Using a self-extracting RAR file (RAR SFX) that, when executed by the user, installs the malware.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "002"
+            ]
+        }
+    },
+    {
+        "context": "The ZIP archive contains a RAR SFX which installs the malware",
+        "technique": "T1105",
+        "metadata": {
+            "page_number": 2,
+            "id": "026",
+            "source": "TEXT",
+            "tactic_name": [
+                "COMMAND AND CONTROL"
+            ],
+            "tactic": [
+                "TA0011"
+            ],
+            "technique_name": "INGRESS TOOL TRANSFER",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may transfer tools or other files from an external system into a compromised environment.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "this actor sends out phony $ash videos directly as email attachments",
+        "technique": "T1566",
+        "metadata": {
+            "page_number": 2,
+            "id": "004",
+            "source": "TEXT",
+            "tactic_name": [
+                "INITIAL ACCESS"
+            ],
+            "tactic": [
+                "TA0001"
+            ],
+            "technique_name": "PHISHING",
+            "sub_technique_name": "SPEARPHISHING ATTACHMENTS",
+            "sub_technique": "T1566.001",
+            "description": "Sending spearphishing emails with phony flash videos as attachments.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "005",
+                "006"
+            ]
+        }
+    },
+    {
+        "context": "The executable within not only plays a $ash video, but drops and runs another CozyDuke executable",
+        "technique": "T1204",
+        "metadata": {
+            "page_number": 2,
+            "id": "005",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXECUTION"
+            ],
+            "tactic": [
+                "TA0002"
+            ],
+            "technique_name": "USER EXECUTION",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "The user runs a malicious executable file, presumably the fake money video (cash video).",
+            "tool_name": [
+                "COZYDUKE"
+            ],
+            "tool": [
+                "S0046"
+            ],
+            "note": null,
+            "link": [
+                "004"
+            ]
+        }
+    },
+    {
+        "context": "The executable within not only plays a $ash video, but drops and runs another CozyDuke executable",
+        "technique": "T1036",
+        "metadata": {
+            "page_number": 2,
+            "id": "006",
+            "source": "TEXT",
+            "tactic_name": [
+                "DEFENSE EVASION"
+            ],
+            "tactic": [
+                "TA0005"
+            ],
+            "technique_name": "MASQUERADING",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "The malware masquerades as a legitimate media file (in this case a money video) to trick the user.",
+            "tool_name": [
+                "COZYDUKE"
+            ],
+            "tool": [
+                "S0046"
+            ],
+            "note": null,
+            "link": [
+                "004"
+            ]
+        }
+    },
+    {
+        "context": "It #rst launches Monkeys.exe, playing a selfcontained, very funny video of white-collar tie wearing chimpanzees working in a high rise o!ice with a human colleague",
+        "technique": "T1204",
+        "metadata": {
+            "page_number": 4,
+            "id": "007",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXECUTION"
+            ],
+            "tactic": [
+                "TA0002"
+            ],
+            "technique_name": "USER EXECUTION",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "The user voluntarily runs the executable file Monkeys.exe to play the chimpanzee video.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "It #rst launches Monkeys.exe, playing a selfcontained, very funny video of white-collar tie wearing chimpanzees working in a high rise o!ice with a human colleague",
+        "technique": "T1036",
+        "metadata": {
+            "page_number": 4,
+            "id": "008",
+            "source": "TEXT",
+            "tactic_name": [
+                "DEFENSE EVASION"
+            ],
+            "tactic": [
+                "TA0005"
+            ],
+            "technique_name": "MASQUERADING",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "The malware masquerades as a harmless funny chimpanzee video to fool the user.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "a CozyDuke dropper maintaining anti-detection techniques",
+        "technique": "T1027",
+        "metadata": {
+            "page_number": 4,
+            "id": "009",
+            "source": "TEXT",
+            "tactic_name": [
+                "DEFENSE EVASION"
+            ],
+            "tactic": [
+                "TA0005"
+            ],
+            "technique_name": "OBFUSCATED FILES OR INFORMATION",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "The player.exe dropper uses anti-detection techniques to avoid detection.",
+            "tool_name": [
+                "COZYDUKE"
+            ],
+            "tool": [
+                "S0046"
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "The #le collects system information,",
+        "technique": "T1082",
+        "metadata": {
+            "page_number": 4,
+            "id": "010",
+            "source": "TEXT",
+            "tactic_name": [
+                "DISCOVERY"
+            ],
+            "tactic": [
+                "TA0007"
+            ],
+            "technique_name": "SYSTEM INFORMATION DISCOVERY",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "The malicious file collects system information to understand the environment in which it is executed.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "011"
+            ]
+        }
+    },
+    {
+        "context": "then invokes a WMI instance in the rootsecuritycenter namespace to identify security products installed on the system",
+        "technique": "T1047",
+        "metadata": {
+            "page_number": 4,
+            "id": "011",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXECUTION"
+            ],
+            "tactic": [
+                "TA0002"
+            ],
+            "technique_name": "WINDOWS MANAGEMENT INSTRUMENTATION",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may abuse Windows Management Instrumentation (WMI) to execute malicious commands and payloads.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "010",
+                "012"
+            ]
+        }
+    },
+    {
+        "context": "In addition to the WMI/wql use, it also hunts through the \"SOFTWAREMicrosoftWindowsCurrentVersionUnin stall\" registry key looking for security products to avoid",
+        "technique": "T1012",
+        "metadata": {
+            "page_number": 5,
+            "id": "012",
+            "source": "TEXT",
+            "tactic_name": [
+                "DISCOVERY"
+            ],
+            "tactic": [
+                "TA0007"
+            ],
+            "technique_name": "QUERY REGISTRY",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "The malware performs a registry search, specifically in the registry key \"SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall,\" to locate installed security products.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "011",
+                "013"
+            ]
+        }
+    },
+    {
+        "context": "it drops several more malware #les signed with the pasted AMD digital signature to a directory it creates",
+        "technique": "T1218",
+        "metadata": {
+            "page_number": 5,
+            "id": "013",
+            "source": "TEXT",
+            "tactic_name": [
+                "DEFENSE EVASION"
+            ],
+            "tactic": [
+                "TA0005"
+            ],
+            "technique_name": "SYSTEM BINARY PROXY EXECUTION",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "The malware uses files signed with a digital signature (in this case, AMD's digital signature) to execute other malicious files.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "012",
+                "014"
+            ]
+        }
+    },
+    {
+        "context": "These #les are stored within an 217kb encrypted cab #le in the dropper's resources under the name \"A\". The cab #le was encrypted and decrypted using a simple xor cipher with a rotating 16 byte key",
+        "technique": "T1486",
+        "metadata": {
+            "page_number": 5,
+            "id": "014",
+            "source": "TEXT",
+            "tactic_name": [
+                "IMPACT"
+            ],
+            "tactic": [
+                "TA0040"
+            ],
+            "technique_name": "DATA ENCRYPTED",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "The malware uses an XOR encryption algorithm with a 16-byte rotating key to encrypt and decrypt a CAB file containing malware.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "013",
+                "015"
+            ]
+        }
+    },
+    {
+        "context": "The cab #le is decompressed and its contents are created on disk",
+        "technique": "T1027",
+        "metadata": {
+            "page_number": 5,
+            "id": "015",
+            "source": "TEXT",
+            "tactic_name": [
+                "DEFENSE EVASION"
+            ],
+            "tactic": [
+                "TA0005"
+            ],
+            "technique_name": "OBFUSCATED FILES OR INFORMATION",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "The malware uses an encrypted CAB file that is decompressed and whose contents are created on the disk.",
+            "tool_name": null,
+            "tool": null,
+            "note": "This technique allows the malware to hide its true purpose and contents by using an encrypted and then decompressed CAB file to evade detection.",
+            "link": [
+                "014"
+            ]
+        }
+    },
+    {
+        "context": "The code collects information about the system and xml formats this data prior to encryption for proper parsing",
+        "technique": "T1082",
+        "metadata": {
+            "page_number": 6,
+            "id": "016",
+            "source": "TEXT",
+            "tactic_name": [
+                "DISCOVERY"
+            ],
+            "tactic": [
+                "TA0007"
+            ],
+            "technique_name": "SYSTEM INFORMATION DISCOVERY",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "An adversary may attempt to get detailed information about the operating system and hardware, including version, patches, hotfixes, service packs, and architecture.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "It uses standard Win32 base cryptography functions to generate a CALG_RC4 session key to encrypt the collected data communications and POSTs it to the server",
+        "technique": "T1573",
+        "metadata": {
+            "page_number": 7,
+            "id": "025",
+            "source": "TEXT",
+            "tactic_name": [
+                "COMMAND AND CONTROL"
+            ],
+            "tactic": [
+                "TA0011"
+            ],
+            "technique_name": "ENCRYPTED CHANNEL",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "collected data communications were encrypted",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "Samples are usually signed with a fake certi#cate \u2013 we've seen two instances, one AMD and one Intel",
+        "technique": "T1218",
+        "metadata": {
+            "page_number": 7,
+            "id": "027",
+            "source": "TEXT",
+            "tactic_name": [
+                "DEFENSE EVASION"
+            ],
+            "tactic": [
+                "TA0005"
+            ],
+            "technique_name": "SYSTEM BINARY PROXY EXECUTION",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may bypass process and/or signature-based defenses by proxying execution of malicious content with signed, or otherwise trusted, binaries.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "Some of the malware uses an encrypted con#guration #le which is stored on disk as \"racss.dat\". This is encrypted by RC4",
+        "technique": "T1486",
+        "metadata": {
+            "page_number": 7,
+            "id": "017",
+            "source": "TEXT",
+            "tactic_name": [
+                "IMPACT"
+            ],
+            "tactic": [
+                "TA0040"
+            ],
+            "technique_name": "DATA ENCRYPTED",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "The malware uses the RC4 encryption algorithm to encrypt the \"racss.dat\" configuration file on the disk.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "The attackers send commands and new modules to be executed to the victims through the C&Cs",
+        "technique": "T1105",
+        "metadata": {
+            "page_number": 8,
+            "id": "018",
+            "source": "TEXT",
+            "tactic_name": [
+                "COMMAND AND CONTROL"
+            ],
+            "tactic": [
+                "TA0011"
+            ],
+            "technique_name": "INGRESS TOOL TRANSFER",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may transfer tools or other files from an external system into a compromised environment.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "019"
+            ]
+        }
+    },
+    {
+        "context": "The C&C scripts store these temporarily until the victim next connects to retrieve\u00a0local #les.",
+        "technique": "T1074",
+        "metadata": {
+            "page_number": 8,
+            "id": "019",
+            "source": "TEXT",
+            "tactic_name": [
+                "COLLECTION"
+            ],
+            "tactic": [
+                "TA0009"
+            ],
+            "technique_name": "DATA STAGED",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "C&Cs temporarily store commands and new forms until the victim reconnects to retrieve local files.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "018"
+            ]
+        }
+    },
+    {
+        "context": "RC4 encryption key",
+        "technique": "T1486",
+        "metadata": {
+            "page_number": 8,
+            "id": "021",
+            "source": "TEXT",
+            "tactic_name": [
+                "IMPACT"
+            ],
+            "tactic": [
+                "TA0040"
+            ],
+            "technique_name": "DATA ENCRYPTED",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Data encoded in BASE64 is encrypted with the RC4 algorithm using the same encryption key as the malware configuration file.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "020"
+            ]
+        }
+    },
+    {
+        "context": "BASE64 encoded",
+        "technique": "T1132",
+        "metadata": {
+            "page_number": 8,
+            "id": "020",
+            "source": "TEXT",
+            "tactic_name": [
+                "COMMAND AND CONTROL"
+            ],
+            "tactic": [
+                "TA0011"
+            ],
+            "technique_name": "DATA ENCODING",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "The data are encoded in BASE64 to hide their true content.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "021"
+            ]
+        }
+    },
+    {
+        "context": "And a set of \"reporting\" #les, maintaining stolen system \"info\", error output, and \"AgentInfo\" output, from victim systems",
+        "technique": "T1074",
+        "metadata": {
+            "page_number": 9,
+            "id": "021",
+            "source": "TEXT",
+            "tactic_name": [
+                "COLLECTION"
+            ],
+            "tactic": [
+                "TA0009"
+            ],
+            "technique_name": "DATA STAGED",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "\"Reporting\" files maintain stolen system information, error output, and \"AgentInfo\" output from victim systems.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "screenshot_task.dll is a 32-bit dll used to take a screenshot of the full desktop window and save it as a bitmap in %temp%.",
+        "technique": "T1113",
+        "metadata": {
+            "page_number": 9,
+            "id": "022",
+            "source": "TEXT",
+            "tactic_name": [
+                "COLLECTION"
+            ],
+            "tactic": [
+                "TA0009"
+            ],
+            "technique_name": "SCREEN CAPTURE",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "`screenshot_task.dll` is a 32-bit DLL used to capture a screenshot of the full desktop window and save it as a bitmap in the %temp% directory.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "It is used to create new processes, perform as a command line shell, and several other tasks.",
+        "technique": "T1059",
+        "metadata": {
+            "page_number": 9,
+            "id": "023",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXECUTION"
+            ],
+            "tactic": [
+                "TA0002"
+            ],
+            "technique_name": "COMMAND AND SCRIPTING INTERPRETER",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "attackers can execute shell commands through `cmd_task.dll`, allowing direct control and interaction with the victim's system.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "Much like the prior o!ice monkey \"atiumdag.dll\" component, this code collects identifying system information using standard win32 API calls",
+        "technique": "T1071",
+        "metadata": {
+            "page_number": 14,
+            "id": "024",
+            "source": "TEXT",
+            "tactic_name": [
+                "DISCOVERY",
+                "COMMAND AND CONTROL"
+            ],
+            "tactic": [
+                "TA0007",
+                "TA0011"
+            ],
+            "technique_name": "APPLICATION LAYER PROTOCOL",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may communicate using OSI application layer protocols to avoid detection/network filtering by blending in with existing traffic.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "It then uses the runtime resolved networking API calls to send the collected data back to a hardcoded c2 and set of urls",
+        "technique": "T1041",
+        "metadata": {
+            "page_number": 15,
+            "id": "028",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXFILTRATION"
+            ],
+            "tactic": [
+                "TA0010"
+            ],
+            "technique_name": "EXFILTRATION OVER C2 CHANNEL",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may steal data by exfiltrating it over an existing command and control channel.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    }
+]

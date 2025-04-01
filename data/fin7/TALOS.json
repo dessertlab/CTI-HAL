@@ -1,0 +1,435 @@
+[
+    {
+        "context": "This document is used in phishing campaigns to execute a series of scripting languages",
+        "technique": "T1566",
+        "metadata": {
+            "page_number": 1,
+            "id": "001",
+            "source": "TEXT",
+            "tactic_name": [
+                "INITIAL ACCESS"
+            ],
+            "tactic": [
+                "TA0001"
+            ],
+            "technique_name": "PHISHING",
+            "sub_technique_name": "SPEARPHISHING ATTACHMENT",
+            "sub_technique": "T1566.001",
+            "description": "Attackers use email attachments containing malicious files",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "002",
+                "004"
+            ]
+        }
+    },
+    {
+        "context": "to execute a series of scripting languages containing multiple obfuscation mechanisms and advanced techniques to bypass traditional security mechanisms.",
+        "technique": "T1059",
+        "metadata": {
+            "page_number": 1,
+            "id": "002",
+            "source": "TEXT",
+            "tactic_name": [
+                ""
+            ],
+            "tactic": [
+                null
+            ],
+            "technique_name": "COMMAND AND SCRIPTING INTERPRETER",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "The use of script languages to execute malicious code.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "001",
+                "003"
+            ]
+        }
+    },
+    {
+        "context": "containing multiple obfuscation mechanisms",
+        "technique": "T1027",
+        "metadata": {
+            "page_number": 1,
+            "id": "003",
+            "source": "TEXT",
+            "tactic_name": [
+                "DEFENSE EVASION"
+            ],
+            "tactic": [
+                "TA0005"
+            ],
+            "technique_name": "OFUSCATED FILES OR INFORMATION",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "FIN7 uses techniques such as file obfuscation to avoid detection by traditional security tools.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "002"
+            ]
+        }
+    },
+    {
+        "context": "The document contains messages enticing the user to click on an embedded object that executes scripts",
+        "technique": "T1204",
+        "metadata": {
+            "page_number": 1,
+            "id": "004",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXECUTION"
+            ],
+            "tactic": [
+                "TA0002"
+            ],
+            "technique_name": "USER EXECUTION",
+            "sub_technique_name": "MALICIOUS FILE",
+            "sub_technique": "T1204.002",
+            "description": "Attackers rely on user actions to open malicious files or click on embedded objects, triggering the malware execution.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "001"
+            ]
+        }
+    },
+    {
+        "context": "This malware is then used to steal passwords from popular browsers and mail clients",
+        "technique": "T1555",
+        "metadata": {
+            "page_number": 1,
+            "id": "005",
+            "source": "TEXT",
+            "tactic_name": [
+                "CREDENTIAL ACCESS"
+            ],
+            "tactic": [
+                "TA0006"
+            ],
+            "technique_name": "CREDENTIALS FROM PASSWORD STORES",
+            "sub_technique_name": "CREDENTIALS FROM WEB BROWSERS",
+            "sub_technique": "T1555.003",
+            "description": "Attackers steal saved login credentials from web browsers, gaining access to accounts.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "006"
+            ]
+        }
+    },
+    {
+        "context": "which are sent to remote nodes",
+        "technique": "T1071",
+        "metadata": {
+            "page_number": 1,
+            "id": "006",
+            "source": "TEXT",
+            "tactic_name": [
+                ""
+            ],
+            "tactic": [
+                null
+            ],
+            "technique_name": "APPLICATION LAYER PROTOCOL",
+            "sub_technique_name": "WEB PROTOCOLS",
+            "sub_technique": "T1071.011",
+            "description": "FIN7's malware uses legitimate web protocols such as HTTP/HTTPS to communicate with its command-and-control servers.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "005"
+            ]
+        }
+    },
+    {
+        "context": "a new infection vector technique using an RTF document containing an embedded JavaScript OLE object",
+        "technique": "T1566",
+        "metadata": {
+            "page_number": 2,
+            "id": "007",
+            "source": "TEXT",
+            "tactic_name": [
+                "INITIAL ACCESS"
+            ],
+            "tactic": [
+                "TA0001"
+            ],
+            "technique_name": "PHISHING",
+            "sub_technique_name": "SPEARPHISHING ATTACHMENT",
+            "sub_technique": "T1566.001",
+            "description": "Attackers deliver phishing emails containing malicious attachments, in this case, an RTF document embedded with a JavaScript OLE object.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "008"
+            ]
+        }
+    },
+    {
+        "context": "When clicked it launches an infection chain",
+        "technique": "T1204",
+        "metadata": {
+            "page_number": 2,
+            "id": "008",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXECUTION"
+            ],
+            "tactic": [
+                "TA0002"
+            ],
+            "technique_name": "USER EXECUTION",
+            "sub_technique_name": "MALICIOUS FILE",
+            "sub_technique": "T1204.002",
+            "description": "The attack relies on the user clicking the embedded OLE object to trigger the infection chain.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "007",
+                "009"
+            ]
+        }
+    },
+    {
+        "context": "an infection chain made up of JavaScript, and a Knal shellcode payload",
+        "technique": "T1059",
+        "metadata": {
+            "page_number": 2,
+            "id": "009",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXECUTION"
+            ],
+            "tactic": [
+                "TA0002"
+            ],
+            "technique_name": "COMMAND AND SCRIPTING INTERPRETER",
+            "sub_technique_name": "JAVASCRIPT",
+            "sub_technique": "T1059.007",
+            "description": "Execution of JavaScript from the embedded OLE object to begin the infection process.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "008",
+                "010"
+            ]
+        }
+    },
+    {
+        "context": "that makes use of DNS to load additional shellcode from a remote command and control server",
+        "technique": "T1071",
+        "metadata": {
+            "page_number": 2,
+            "id": "010",
+            "source": "TEXT",
+            "tactic_name": [
+                "COMMAND AND CONTROL"
+            ],
+            "tactic": [
+                "TA0011"
+            ],
+            "technique_name": "APPLICATION LAYER PROTOCOL",
+            "sub_technique_name": "DNS",
+            "sub_technique": "T1071.004",
+            "description": "Using DNS as a channel to communicate with the command and control (C2) server and load additional shellcode.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "009"
+            ]
+        }
+    },
+    {
+        "context": "this new document variant that makes use of an LNK embedded OLE object",
+        "technique": "T1566",
+        "metadata": {
+            "page_number": 2,
+            "id": "011",
+            "source": "TEXT",
+            "tactic_name": [
+                "INITIAL ACCESS"
+            ],
+            "tactic": [
+                "TA0001"
+            ],
+            "technique_name": "PHISHING",
+            "sub_technique_name": "SPEARPHISHING ATTACHMENT",
+            "sub_technique": "T1566.001",
+            "description": "The attack starts with a spear-phishing email containing a malicious document with an LNK embedded OLE object.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "012"
+            ]
+        }
+    },
+    {
+        "context": "which extracts a JavaScript bot from a document object,",
+        "technique": "T1059",
+        "metadata": {
+            "page_number": 2,
+            "id": "012",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXECUTION"
+            ],
+            "tactic": [
+                "TA0002"
+            ],
+            "technique_name": "COMMAND AND SCRIPTING INTERPRETER",
+            "sub_technique_name": "JAVASCRIPT",
+            "sub_technique": "T1059.007",
+            "description": "The JavaScript bot is extracted and executed as part of the infection chain.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "011",
+                "013"
+            ]
+        }
+    },
+    {
+        "context": "injects a stealer DLL in memory",
+        "technique": "T1055",
+        "metadata": {
+            "page_number": 2,
+            "id": "013",
+            "source": "TEXT",
+            "tactic_name": [
+                "PRIVILEGE ESCALATION",
+                "DEFENSE EVASION"
+            ],
+            "tactic": [
+                "TA0004",
+                "TA0005"
+            ],
+            "technique_name": "PROCESS INJECTION",
+            "sub_technique_name": "DYNAMIC-LINK LIBRARY INJECTION",
+            "sub_technique": "T1055.001",
+            "description": "The stealer DLL is injected directly into memory using PowerShell, allowing the malware to run in the context of legitimate processes.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "014"
+            ]
+        }
+    },
+    {
+        "context": "using PowerShell.",
+        "technique": "T1059",
+        "metadata": {
+            "page_number": 2,
+            "id": "014",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXECUTION"
+            ],
+            "tactic": [
+                "TA0002"
+            ],
+            "technique_name": "COMMAND AND SCRIPTING INTERPRETER",
+            "sub_technique_name": "POWERSHELL",
+            "sub_technique": "T1059.001",
+            "description": "PowerShell is used to inject the stealer DLL into memory, a key part of the execution chain.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "013"
+            ]
+        }
+    },
+    {
+        "context": "The dropper variant that we encountered makes use of an LNK Kle to execute wscript.exe",
+        "technique": "T1203",
+        "metadata": {
+            "page_number": 2,
+            "id": "015",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXECUTION"
+            ],
+            "tactic": [
+                "TA0002"
+            ],
+            "technique_name": "EXPLOITATION FOR CLIENT EXECUTION",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "The dropper leverages a crafted LNK file to initiate the execution of malicious code on the victim's machine, embedded within the Word document.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "016"
+            ]
+        }
+    },
+    {
+        "context": "the beginning of the JavaScript chain",
+        "technique": "T1059",
+        "metadata": {
+            "page_number": 2,
+            "id": "016",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXECUTION"
+            ],
+            "tactic": [
+                "TA0002"
+            ],
+            "technique_name": "COMMAND AND SCRIPTING INTERPRETER",
+            "sub_technique_name": "JAVASCRIPT",
+            "sub_technique": "T1059.007",
+            "description": "The JavaScript chain is used for the next stage of execution",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "015",
+                "017"
+            ]
+        }
+    },
+    {
+        "context": "from a word document object",
+        "technique": "T1204",
+        "metadata": {
+            "page_number": 2,
+            "id": "017",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXECUTION"
+            ],
+            "tactic": [
+                "TA0002"
+            ],
+            "technique_name": "USER EXECUTION",
+            "sub_technique_name": "MALICIOUS FILE",
+            "sub_technique": "T1204.002",
+            "description": "The victim likely opens a malicious Word document object, initiating the infection process.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "016"
+            ]
+        }
+    }
+]

@@ -1,0 +1,804 @@
+[
+    {
+        "context": "Anunak",
+        "technique": null,
+        "metadata": {
+            "page_number": 1,
+            "id": "001",
+            "source": null,
+            "tactic_name": [],
+            "tactic": [],
+            "technique_name": null,
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": null,
+            "tool_name": [
+                "ANUNAK"
+            ],
+            "tool": [
+                "S0030"
+            ],
+            "note": null,
+            "link": [
+                "002",
+                "003",
+                "004",
+                "005",
+                "006",
+                "007"
+            ]
+        }
+    },
+    {
+        "context": "Primary remote access toolkit (RAT) for monitoring victim systems of interest",
+        "technique": "T1219",
+        "metadata": {
+            "page_number": 1,
+            "id": "002",
+            "source": "TEXT",
+            "tactic_name": [
+                "COMMAND AND CONTROL"
+            ],
+            "tactic": [
+                "TA0011"
+            ],
+            "technique_name": "REMOTE ACCESS SOFTWARE",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Use of remote access software to control victims' machines.",
+            "tool_name": [
+                "ANUNAK"
+            ],
+            "tool": [
+                "S0030"
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "It contains all the functionality you would expect from a RAT, allowing the adversary to execute commands, manage the file system, manage processes, and collect data",
+        "technique": "T1219",
+        "metadata": {
+            "page_number": 1,
+            "id": "003",
+            "source": "TEXT",
+            "tactic_name": [
+                "COMMAND AND CONTROL"
+            ],
+            "tactic": [
+                "TA0011"
+            ],
+            "technique_name": "REMOTE ACCESS SOFTWARE",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Using remote access software to execute commands and manage victim systems.",
+            "tool_name": [
+                "ANUNAK"
+            ],
+            "tool": [
+                "S0030"
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "it can record videos of victim sessions",
+        "technique": "T1113",
+        "metadata": {
+            "page_number": 1,
+            "id": "004",
+            "source": "TEXT",
+            "tactic_name": [
+                "COLLECTION"
+            ],
+            "tactic": [
+                "TA0009"
+            ],
+            "technique_name": "SCREEN CAPTURE",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Capture of compromised system screenshots",
+            "tool_name": [
+                "ANUNAK"
+            ],
+            "tool": [
+                "S0030"
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "install Ammyy Admin or VNC modules",
+        "technique": "T1133",
+        "metadata": {
+            "page_number": 1,
+            "id": "007",
+            "source": "TEXT",
+            "tactic_name": [
+                "PERSISTENCE"
+            ],
+            "tactic": [
+                "TA0003"
+            ],
+            "technique_name": "EXTERNAL REMOTE SERVICES",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Use of external remote services to maintain compromised system access.",
+            "tool_name": [
+                "ANUNAK"
+            ],
+            "tool": [
+                "S0030"
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "log keystrokes",
+        "technique": "T1056",
+        "metadata": {
+            "page_number": 1,
+            "id": "005",
+            "source": "TEXT",
+            "tactic_name": [
+                "COLLECTION"
+            ],
+            "tactic": [
+                "TA0009"
+            ],
+            "technique_name": "INPUT CAPTURE",
+            "sub_technique_name": "KEYLOGGING",
+            "sub_technique": "T1056.001",
+            "description": "Capture of keyboard inputs.",
+            "tool_name": [
+                "ANUNAK"
+            ],
+            "tool": [
+                "S0030"
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "enable remote desktop",
+        "technique": "T1021",
+        "metadata": {
+            "page_number": 1,
+            "id": "006",
+            "source": "TEXT",
+            "tactic_name": [
+                "LATERAL MOVEMENT"
+            ],
+            "tactic": [
+                "TA0008"
+            ],
+            "technique_name": "REMOTE SERVICES",
+            "sub_technique_name": "REMOTE DESKTOP PROTOCOL",
+            "sub_technique": "T1021.001",
+            "description": "Using RDP to access and control the victim's system.",
+            "tool_name": [
+                "ANUNAK"
+            ],
+            "tool": [
+                "S0030"
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "Agent ORM",
+        "technique": null,
+        "metadata": {
+            "page_number": 1,
+            "id": "008",
+            "source": null,
+            "tactic_name": [],
+            "tactic": [],
+            "technique_name": null,
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": null,
+            "tool_name": [
+                "AGENT ORM"
+            ],
+            "tool": [
+                null
+            ],
+            "note": null,
+            "link": [
+                "009",
+                "010",
+                "011"
+            ]
+        }
+    },
+    {
+        "context": "The malware collects basic system information",
+        "technique": "T1082",
+        "metadata": {
+            "page_number": 1,
+            "id": "009",
+            "source": "TEXT",
+            "tactic_name": [
+                "DISCOVERY"
+            ],
+            "tactic": [
+                "TA0007"
+            ],
+            "technique_name": "SYSTEM INFORMATION DISCOVERY",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Collection of basic system information.",
+            "tool_name": [
+                "AGENT ORM"
+            ],
+            "tool": [
+                null
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "The malware collects basic system information",
+        "technique": "T1005",
+        "metadata": {
+            "page_number": 1,
+            "id": "030",
+            "source": "TEXT",
+            "tactic_name": [
+                "COLLECTION"
+            ],
+            "tactic": [
+                "TA0009"
+            ],
+            "technique_name": "DATA FROM LOCAL SYSTEM",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "The malware collects basic system information and is able to take screenshots of victim systems",
+            "tool_name": [
+                "AGENT ORM"
+            ],
+            "tool": [
+                null
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "take screenshots of victim systems",
+        "technique": "T1113",
+        "metadata": {
+            "page_number": 1,
+            "id": "010",
+            "source": "TEXT",
+            "tactic_name": [
+                "COLLECTION"
+            ],
+            "tactic": [
+                "TA0009"
+            ],
+            "technique_name": "SCREEN CAPTURE",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Capture of compromised system screenshots",
+            "tool_name": [
+                "AGENT ORM"
+            ],
+            "tool": [
+                null
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "It is used to download next-stage payloads when systems of interest are identified",
+        "technique": "T1105",
+        "metadata": {
+            "page_number": 1,
+            "id": "011",
+            "source": "TEXT",
+            "tactic_name": [
+                "COMMAND AND CONTROLE"
+            ],
+            "tactic": [
+                "TA0011"
+            ],
+            "technique_name": "INGRESS TOOL TRANSFER",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Transfer of additional tools or payloads to the compromised system.",
+            "tool_name": [
+                "AGENT ORM"
+            ],
+            "tool": [
+                null
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "VB Flash",
+        "technique": null,
+        "metadata": {
+            "page_number": 1,
+            "id": "012",
+            "source": null,
+            "tactic_name": [],
+            "tactic": [],
+            "technique_name": null,
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": null,
+            "tool_name": [
+                "VB FLASH"
+            ],
+            "tool": [
+                null
+            ],
+            "note": null,
+            "link": [
+                "013",
+                "014"
+            ]
+        }
+    },
+    {
+        "context": "Several versions of VB Flash were developed including ones that utilized Google Forms, Google Macros, and Google Spreadsheets together to make a command-and-control (C2) channel",
+        "technique": "T1102",
+        "metadata": {
+            "page_number": 1,
+            "id": "013",
+            "source": "TEXT",
+            "tactic_name": [
+                "COMMAND AND CONTROL"
+            ],
+            "tactic": [
+                "TA0011"
+            ],
+            "technique_name": "WEB SERVICE",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Use of legitimate web services for command and control.",
+            "tool_name": [
+                "VB FLASH"
+            ],
+            "tool": [
+                null
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "This variant would POST victim data to a specified Google form, then make a request to a Google macro script, receiving an address for a Google Spreadsheet from which to request commands",
+        "technique": "T1567",
+        "metadata": {
+            "page_number": 1,
+            "id": "014",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXFILTRATION"
+            ],
+            "tactic": [
+                "TA0010"
+            ],
+            "technique_name": "EXFILTRATION OVER WEB SERVICE",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Data exfiltration through legitimate web services.",
+            "tool_name": [
+                "VB FLASH"
+            ],
+            "tool": [
+                null
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "JS Flash",
+        "technique": null,
+        "metadata": {
+            "page_number": 1,
+            "id": "015",
+            "source": null,
+            "tactic_name": [],
+            "tactic": [],
+            "technique_name": null,
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": null,
+            "tool_name": [
+                "JS FLASH"
+            ],
+            "tool": [
+                null
+            ],
+            "note": null,
+            "link": [
+                "016",
+                "017",
+                "018",
+                "019"
+            ]
+        }
+    },
+    {
+        "context": "JS Flash capabilities closely resemble those of VB Flash and leverage interesting techniques in deployment via batch scripts embedded as OLE objects in malicious documents",
+        "technique": "T1059",
+        "metadata": {
+            "page_number": 1,
+            "id": "016",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXECUTION"
+            ],
+            "tactic": [
+                "TA0002"
+            ],
+            "technique_name": "COMMAND AND SCRIPTING INTERPRETER",
+            "sub_technique_name": "WINDOWS COMMAND SHELL",
+            "sub_technique": "T1059.003",
+            "description": "Using the Windows command shell to execute commands and scripts.",
+            "tool_name": [
+                "JS FLASH"
+            ],
+            "tool": [
+                null
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "minor changes to obfuscation",
+        "technique": "T1027",
+        "metadata": {
+            "page_number": 1,
+            "id": "017",
+            "source": "TEXT",
+            "tactic_name": [
+                "DEFENSE EVASION"
+            ],
+            "tactic": [
+                "TA0005"
+            ],
+            "technique_name": "OBFUSCATED FILES OR INFORMATION",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Obfuscation of files or information to avoid detection.",
+            "tool_name": [
+                "JS FLASH"
+            ],
+            "tool": [
+                null
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "ability to downloadTinyMet(a cutdown of theMetasploit Meterpreterpayload)",
+        "technique": "T1105",
+        "metadata": {
+            "page_number": 1,
+            "id": "018",
+            "source": "TEXT",
+            "tactic_name": [
+                "COMMAND AND CONTROL"
+            ],
+            "tactic": [
+                "TA0011"
+            ],
+            "technique_name": "INGRESS TOOL TRASNFER",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Transfer of additional tools or payloads to the compromised system.",
+            "tool_name": [
+                "JS FLASH",
+                "METERPETER"
+            ],
+            "tool": [
+                null,
+                null
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "PowerShell was also used heavily for the execution of commands and arbitrary script execution",
+        "technique": "T1059",
+        "metadata": {
+            "page_number": 1,
+            "id": "019",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXECUTION"
+            ],
+            "tactic": [
+                "TA0002"
+            ],
+            "technique_name": "COMMAND AND SCRIPTING INTERPRETER",
+            "sub_technique_name": "POWERSHELL",
+            "sub_technique": "T1059.001",
+            "description": "Using PowerShell to execute arbitrary commands and scripts.",
+            "tool_name": [
+                "JS FLASH"
+            ],
+            "tool": [
+                null
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "Bateleur",
+        "technique": null,
+        "metadata": {
+            "page_number": 1,
+            "id": "020",
+            "source": null,
+            "tactic_name": [],
+            "tactic": [],
+            "technique_name": null,
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": null,
+            "tool_name": [
+                "BATELEUR"
+            ],
+            "tool": [
+                null
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "download arbitrary scripts and executables, deploy TinyMet",
+        "technique": "T1105",
+        "metadata": {
+            "page_number": 1,
+            "id": "021",
+            "source": "TEXT",
+            "tactic_name": [
+                "COMMAND AND CONTROL"
+            ],
+            "tactic": [
+                "TA0011"
+            ],
+            "technique_name": "INGRESS TOOLS TRANSFER",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Transfer of additional tools or payloads to the compromised system.",
+            "tool_name": [
+                "BATELEUR"
+            ],
+            "tool": [
+                null
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "execute commands via PowerShell",
+        "technique": "T1059",
+        "metadata": {
+            "page_number": 1,
+            "id": "022",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXECUTION"
+            ],
+            "tactic": [
+                "TA0002"
+            ],
+            "technique_name": "COMMAND AND SCRIPTING INTERPRETER",
+            "sub_technique_name": "POWERSHELL",
+            "sub_technique": "T1059.001",
+            "description": "Using PowerShell to execute commands.",
+            "tool_name": [
+                "BATELEUR"
+            ],
+            "tool": [
+                null
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "deploy a credential stealer",
+        "technique": "T1555",
+        "metadata": {
+            "page_number": 1,
+            "id": "023",
+            "source": "TEXT",
+            "tactic_name": [
+                "CREDENTIAL ACCESS"
+            ],
+            "tactic": [
+                "TA0006"
+            ],
+            "technique_name": "CREDENTIALS FROM PASSWORD STORES",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Extraction of credentials from password repositories",
+            "tool_name": [
+                "BATELEUR"
+            ],
+            "tool": [
+                null
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "collect victim system information",
+        "technique": "T1082",
+        "metadata": {
+            "page_number": 1,
+            "id": "024",
+            "source": "TEXT",
+            "tactic_name": [
+                "DISCOVERY"
+            ],
+            "tactic": [
+                "TA0007"
+            ],
+            "technique_name": "SYSTEM INFORMATION DISCOVERY",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Collection of system information.",
+            "tool_name": [
+                "BATELEUR"
+            ],
+            "tool": [
+                null
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "spear phishing emails to deploy malicious documents",
+        "technique": "T1566",
+        "metadata": {
+            "page_number": 1,
+            "id": "025",
+            "source": "TEXT",
+            "tactic_name": [
+                "INITIAL ACCESS"
+            ],
+            "tactic": [
+                "TA0002"
+            ],
+            "technique_name": "PHISHING",
+            "sub_technique_name": "SPEARPHISHING ATTACHMENT",
+            "sub_technique": "T1566.001",
+            "description": "Use of spear phishing attachments to gain initial access.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "026",
+                "027"
+            ]
+        }
+    },
+    {
+        "context": "used exploits",
+        "technique": "T1203",
+        "metadata": {
+            "page_number": 1,
+            "id": "026",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXECUTION"
+            ],
+            "tactic": [
+                "TA0002"
+            ],
+            "technique_name": "EXPLOITATION FOR CLIENT EXECUTION",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Using exploits to execute code on the victim's machine.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "025"
+            ]
+        }
+    },
+    {
+        "context": "they have used macros and OLE embedded objects",
+        "technique": "T1204",
+        "metadata": {
+            "page_number": 1,
+            "id": "027",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXECUTION"
+            ],
+            "tactic": [
+                "TA0002"
+            ],
+            "technique_name": "USER EXECUTION",
+            "sub_technique_name": "MALICIOUS DOCUMENT",
+            "sub_technique": "T1204.002",
+            "description": "Use of malicious documents that require user intervention for execution.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "025"
+            ]
+        }
+    },
+    {
+        "context": "that use exploits for a variety of vulnerabilities in Microsoft Office: CVE-2015-2545 CVE-2014-4114 CVE-2015-1770 CVE-2015-1641",
+        "technique": "T1203",
+        "metadata": {
+            "page_number": 1,
+            "id": "029",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXECUTION"
+            ],
+            "tactic": [
+                "TA0002"
+            ],
+            "technique_name": "EXPLOITATION FOR CLIENT EXECUTION",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Using exploits to execute code on the victim's machine.",
+            "tool_name": null,
+            "tool": null,
+            "note": "Spear phishing attachments exploit various vulnerabilities in Microsoft Office (CVE-2015-2545, CVE-2014-4114, CVE-2015-1770, CVE-2015-1641) to execute malicious code.",
+            "link": [
+                "028"
+            ]
+        }
+    },
+    {
+        "context": "spear phishing emails",
+        "technique": "T1566",
+        "metadata": {
+            "page_number": 1,
+            "id": "028",
+            "source": "TEXT",
+            "tactic_name": [
+                "INITIAL ACCESS"
+            ],
+            "tactic": [
+                "TA0002"
+            ],
+            "technique_name": "PHISHING",
+            "sub_technique_name": "SPEARPHISHING ATTACHMENT",
+            "sub_technique": "T1566.001",
+            "description": "Use of spear phishing attachments to gain initial access.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "029"
+            ]
+        }
+    }
+]

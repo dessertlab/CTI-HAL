@@ -1,0 +1,401 @@
+[
+    {
+        "context": "Seaduke",
+        "technique": null,
+        "metadata": {
+            "page_number": 1,
+            "id": "000",
+            "source": null,
+            "tactic_name": [],
+            "tactic": [],
+            "technique_name": null,
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": null,
+            "tool_name": [
+                "SEADUKE"
+            ],
+            "tool": [
+                "S0053"
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "the UPX packer",
+        "technique": "T1027",
+        "metadata": {
+            "page_number": 1,
+            "id": "001",
+            "source": "TEXT",
+            "tactic_name": [
+                "DEFENSE EVASION"
+            ],
+            "tactic": [
+                "TA0005"
+            ],
+            "technique_name": "OBFUSCATED FILES OR INFORMATION",
+            "sub_technique_name": "SOFTWARE PACKING",
+            "sub_technique": "T1027.002",
+            "description": "Malware is packaged using UPX, a common packer to compress and obfuscate the contents of the malware.",
+            "tool_name": [
+                "UPX"
+            ],
+            "tool": [
+                null
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "a sample compiled using PyInstaller. This program allows an individual to write a program using the Python scripting language and convert it into an executable for the Microsoft Windows, Linux, Mac OSX, Solaris, or AIX platform",
+        "technique": "T1027",
+        "metadata": {
+            "page_number": 1,
+            "id": "002",
+            "source": "TEXT",
+            "tactic_name": [
+                "DEFENSE EVASION"
+            ],
+            "tactic": [
+                "TA0005"
+            ],
+            "technique_name": "OBFUSCATED FILES OR INFORMATION",
+            "sub_technique_name": "PYTHON",
+            "sub_technique": "T1027.006",
+            "description": "Even if the UPX packer is removed, using PyInstaller to convert a Python program into an executable can result in some degree of obfuscation, further hiding the source code and intentions of the malware.",
+            "tool_name": [
+                "PYINSTALLER"
+            ],
+            "tool": [
+                null
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "the underlying Python code has been obfuscated",
+        "technique": "T1027",
+        "metadata": {
+            "page_number": 2,
+            "id": "003",
+            "source": "TEXT",
+            "tactic_name": [
+                "DEFENSE EVASION"
+            ],
+            "tactic": [
+                "TA0005"
+            ],
+            "technique_name": "OBFUSCATED FILES OR INFORMATION",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "The underlying Python code has been obfuscated",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "an 'exec(ZxkBDKLakV)' statement, which will presumably execute some Python code",
+        "technique": "T1059",
+        "metadata": {
+            "page_number": 3,
+            "id": "005",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXECUTION"
+            ],
+            "tactic": [
+                "TA0002"
+            ],
+            "technique_name": "COMMAND AND SCRIPTING INTERPRETER",
+            "sub_technique_name": "PYTHON",
+            "sub_technique": "T1059.006",
+            "description": "The use of `exec()` to execute Python code dynamically . This allows malware to execute arbitrary commands or runtime code.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "we discover that this string is generated via appending a number of strings to the 'ZxkBDKLakV' variable. Finally, we find that after this string is created, it is base64-decoded and subsequently decompressed using the ZLIB library",
+        "technique": "T1027",
+        "metadata": {
+            "page_number": 3,
+            "id": "006",
+            "source": "TEXT",
+            "tactic_name": [
+                "DEFENSE EVASION"
+            ],
+            "tactic": [
+                "TA0005"
+            ],
+            "technique_name": "OBFUSCATED FILES OR INFORMATION",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "The use of obfuscated code, string manipulation, and the use of methods such as string append, base64 decoding, and ZLIB decompression are all obfuscation techniques to hide the true intentions and functionality of the code.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "The remaining Python code still appears to be obfuscated",
+        "technique": "T1027",
+        "metadata": {
+            "page_number": 5,
+            "id": "007",
+            "source": "TEXT",
+            "tactic_name": [
+                "DEFENSE EVASION"
+            ],
+            "tactic": [
+                "TA0005"
+            ],
+            "technique_name": "OBFUSCATED FILES OR INFORMATION",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "The Python code still appears to be obfuscated",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "all variable names and class names have been obfuscated using long unique strings",
+        "technique": "T1027",
+        "metadata": {
+            "page_number": 5,
+            "id": "008",
+            "source": "TEXT",
+            "tactic_name": [
+                "DEFENSE EVASION"
+            ],
+            "tactic": [
+                "TA0005"
+            ],
+            "technique_name": "OBFUSCATED FILES OR INFORMATION",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "The use of obfuscated variable and class names with long, unique strings is an obfuscation technique.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "large blob of base64-encoded data, which is additionally decompressed using ZLIB",
+        "technique": "T1027",
+        "metadata": {
+            "page_number": 6,
+            "id": "009",
+            "source": "TEXT",
+            "tactic_name": [
+                "DEFENSE EVASION"
+            ],
+            "tactic": [
+                "TA0005"
+            ],
+            "technique_name": "OBFUSCATED FILES OR INFORMATION",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "The use of base64-encoded data and further compressed with ZLIB is an obfuscation technique.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "it will determine on which operating system it is running",
+        "technique": "T1082",
+        "metadata": {
+            "page_number": 6,
+            "id": "010",
+            "source": "TEXT",
+            "tactic_name": [
+                "DISCOVERY"
+            ],
+            "tactic": [
+                null
+            ],
+            "technique_name": "SYSTEM INFORMATION DISCOVERY",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "The malware determines which operating system it is running on, which is a form of system information discovery.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "Persistence via PowerShell",
+        "technique": "T1546",
+        "metadata": {
+            "page_number": 7,
+            "id": "011",
+            "source": "TEXT",
+            "tactic_name": [
+                "PERSISTENCE"
+            ],
+            "tactic": [
+                "TA0003"
+            ],
+            "technique_name": "EVENT TRIGGERED EXECUTION",
+            "sub_technique_name": "POWERSHELL PROFILE",
+            "sub_technique": "T1546.013",
+            "description": "Persistence via PowerShell",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "Persistence via the Run registry key",
+        "technique": "T1547",
+        "metadata": {
+            "page_number": 7,
+            "id": "012",
+            "source": "TEXT",
+            "tactic_name": [
+                "PERSISTENCE"
+            ],
+            "tactic": [
+                "TA0003"
+            ],
+            "technique_name": "BOOT OR LOGON AUTOSTART EXECUTION",
+            "sub_technique_name": "REGISTRY RUN KEYS/STARTUP FOLDER",
+            "sub_technique": "T1547.001",
+            "description": "Persistence via the Run registry key",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "Persistence via a .lnk file stored in the Startup directory",
+        "technique": "T1547",
+        "metadata": {
+            "page_number": 7,
+            "id": "013",
+            "source": "TEXT",
+            "tactic_name": [
+                "PERSISTENCE"
+            ],
+            "tactic": [
+                "TA0003"
+            ],
+            "technique_name": "BOOT OR LOGON AUTOSTART EXECUTION",
+            "sub_technique_name": "SHORTCUT MODIFICATION",
+            "sub_technique": "T1547.009",
+            "description": "Persistence via .lnk stored in the startup directory",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "All network communications are performed over HTTP for this particular sample; however, it appears to support HTTPS as well",
+        "technique": "T1071",
+        "metadata": {
+            "page_number": 8,
+            "id": "014",
+            "source": "TEXT",
+            "tactic_name": [
+                "COMMAND AND CONTROL"
+            ],
+            "tactic": [
+                "TA0011"
+            ],
+            "technique_name": "APPLICATION LAYER PROTOCOL",
+            "sub_technique_name": "WEB PROTOCOLS",
+            "sub_technique": "T1071.001",
+            "description": "The use of HTTP/HTTPS for communication.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "this Cookie value contains encrypted data",
+        "technique": "T1027",
+        "metadata": {
+            "page_number": 8,
+            "id": "015",
+            "source": "TEXT",
+            "tactic_name": [
+                "DEFENSE EVASION"
+            ],
+            "tactic": [
+                "TA0005"
+            ],
+            "technique_name": "OBFUSCATED FILES OR INFORMATION",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Encryption and base64 encoding of the data in the Cookie value are obfuscation techniques.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "the encrypted data is encrypted using the RC4 algorithm",
+        "technique": "T1027",
+        "metadata": {
+            "page_number": 9,
+            "id": "016",
+            "source": "TEXT",
+            "tactic_name": [
+                "DEFENSE EVASION"
+            ],
+            "tactic": [
+                "TA0005"
+            ],
+            "technique_name": "OBFUSCATED FILES OR INFORMATION",
+            "sub_technique_name": "ENCRYPTED/ENCODED FILES",
+            "sub_technique": "T1027.013",
+            "description": "RC4 algorithm is used",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "This data is then base64-decoded with additional characters ('-_') prior to being decrypted via RC4 using the previously discussed key.",
+        "technique": "T1027",
+        "metadata": {
+            "page_number": 10,
+            "id": "017",
+            "source": "TEXT",
+            "tactic_name": [
+                "DEFENSE EVASION"
+            ],
+            "tactic": [
+                "TA0005"
+            ],
+            "technique_name": "OBFUSCATED FILES OR INFORMATION",
+            "sub_technique_name": "ENCRYPTED/ENCODED FILES",
+            "sub_technique": "T1027.013",
+            "description": "RC4 algorithm is used",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    }
+]

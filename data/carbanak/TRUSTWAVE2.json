@@ -1,0 +1,1740 @@
+[
+    {
+        "context": "the agent opened the attachment contained in the email",
+        "technique": "T1566",
+        "metadata": {
+            "page_number": 2,
+            "id": "001",
+            "source": "TEXT",
+            "tactic_name": [
+                "INITIAL ACCESS"
+            ],
+            "tactic": [
+                "TA0001"
+            ],
+            "technique_name": "PHISHING",
+            "sub_technique_name": "SPEARPHISHING ATTACHMENT",
+            "sub_technique": "T1566.001",
+            "description": "The attacker uses social engineering to convince the agent to open a malicious email attachment. The email contains a malicious Word document.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "002"
+            ]
+        }
+    },
+    {
+        "context": "The email attachment was a malicious Word Document",
+        "technique": "T1204",
+        "metadata": {
+            "page_number": 2,
+            "id": "002",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXECUTION"
+            ],
+            "tactic": [
+                "TA0002"
+            ],
+            "technique_name": "USER EXECUTION",
+            "sub_technique_name": "MALICIOUS FILE",
+            "sub_technique": "T1204.002",
+            "description": "The agent executes the malicious attachment, triggered by the attacker. The malicious Word document contains the encoded .VBS script.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "001",
+                "003"
+            ]
+        }
+    },
+    {
+        "context": "that contained an encoded .VBS script capable of",
+        "technique": "T1059",
+        "metadata": {
+            "page_number": 2,
+            "id": "003",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXECUTION"
+            ],
+            "tactic": [
+                "TA0002"
+            ],
+            "technique_name": "COMMAND AND SCRIPTING INTERPRETER",
+            "sub_technique_name": "VISUAL BASIC",
+            "sub_technique": "T1059.005",
+            "description": "The attack involves a .VBS script that performs various malicious activities.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "002",
+                "004",
+                "005",
+                "006"
+            ]
+        }
+    },
+    {
+        "context": "stealing system information",
+        "technique": "T1005",
+        "metadata": {
+            "page_number": 2,
+            "id": "004",
+            "source": "TEXT",
+            "tactic_name": [
+                "COLLECTION"
+            ],
+            "tactic": [
+                "TA0009"
+            ],
+            "technique_name": "DATA FROM LOCAL SYSTEM",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "The script is capable of stealing system information.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "003"
+            ]
+        }
+    },
+    {
+        "context": "desktop screenshots",
+        "technique": "T1113",
+        "metadata": {
+            "page_number": 2,
+            "id": "005",
+            "source": "TEXT",
+            "tactic_name": [
+                "COLLECTION"
+            ],
+            "tactic": [
+                "TA0009"
+            ],
+            "technique_name": "SCREEN CAPTURE",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "The script takes desktop screenshots.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "003"
+            ]
+        }
+    },
+    {
+        "context": "to download additional malware",
+        "technique": "T1105",
+        "metadata": {
+            "page_number": 2,
+            "id": "006",
+            "source": "TEXT",
+            "tactic_name": [
+                "COMMAND AND CONTROL"
+            ],
+            "tactic": [
+                "TA0011"
+            ],
+            "technique_name": "INGRESS TOOL TRANSFER",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "The encoded .VBS script downloads additional malware after being executed on the victim's system.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "003"
+            ]
+        }
+    },
+    {
+        "context": "The malicious VB Script will use macros to search for instances of Microsoft Word running on the system",
+        "technique": "T1059",
+        "metadata": {
+            "page_number": 2,
+            "id": "007",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXECUTION"
+            ],
+            "tactic": [
+                "TA0002"
+            ],
+            "technique_name": "COMMAND AND SCRIPTING INTERPRETER",
+            "sub_technique_name": "VISUAL BASIC",
+            "sub_technique": "T1059.005",
+            "description": "This involves the use of Visual Basic scripts to execute commands on the system, which is what the malicious VB Script is doing.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "The victim system will then reach out to http://95.215.47.105 to retrieve additional malware called AdobeUpdateManagementTool.vbs",
+        "technique": "T1105",
+        "metadata": {
+            "page_number": 3,
+            "id": "008",
+            "source": "TEXT",
+            "tactic_name": [
+                "COMMAND AND CONTROL"
+            ],
+            "tactic": [
+                "TA0011"
+            ],
+            "technique_name": "INGRESS TOOL TRANSFER",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "This technique involves transferring tools or files from an external system into the victim environment. The victim system retrieves the additional malware from http",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "003"
+            ]
+        }
+    },
+    {
+        "context": "Adds file to WindowsUpdate folder:\u00a0vbs",
+        "technique": "T1105",
+        "metadata": {
+            "page_number": 3,
+            "id": "009",
+            "source": "TEXT",
+            "tactic_name": [
+                "COMMAND AND CONTROL"
+            ],
+            "tactic": [
+                "TA0011"
+            ],
+            "technique_name": "INGRESS TOOL TRANSFER",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "This technique involves transferring tools or files to the victim system. The malware adds the VBS file to the `WindowsUpdate` folder.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "Adds persistence mechanism to the CURRENT_USER registry hive in the CurrentVersion\\Run and CurrentVersion\\RunOnce keys to autostart AdobeUpdateManagementTool.",
+        "technique": "T1547",
+        "metadata": {
+            "page_number": 3,
+            "id": "010",
+            "source": "TEXT",
+            "tactic_name": [
+                "PERSISTENCE"
+            ],
+            "tactic": [
+                "TA0003"
+            ],
+            "technique_name": "BOOT OR LOGON AUTOSTART EXECUTION",
+            "sub_technique_name": "REGISTRY RUN KEYS / STARTUP FOLDER",
+            "sub_technique": "T1547.001",
+            "description": "This technique involves adding registry keys to automatically execute programs upon user logon. The malware adds entries to the `CurrentVersion\\Run` and `CurrentVersion\\RunOnce` keys.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "A scheduled task is created named SysChecks which calls the\u00a0vbs",
+        "technique": "T1053",
+        "metadata": {
+            "page_number": 3,
+            "id": "011",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXECUTION",
+                "PERSISTENCE",
+                "PRIVILEGE ESCALATION"
+            ],
+            "tactic": [
+                "TA0002",
+                "TA0003",
+                "TA0004"
+            ],
+            "technique_name": "SCHEDULED TASK/JOB",
+            "sub_technique_name": "SCHEDULED TASK",
+            "sub_technique": "T1053.005",
+            "description": "This technique involves using scheduled tasks for persistence. The malware creates a scheduled task named `SysChecks` to execute the VBS script.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "A service is created named 'ADOBEUPDTOOL' which calls the AdobeUpdateManagementTool.vbs",
+        "technique": "T1543",
+        "metadata": {
+            "page_number": 4,
+            "id": "012",
+            "source": "TEXT",
+            "tactic_name": [
+                "PERSISTENCE",
+                "PRIVILEGE ESCALATION"
+            ],
+            "tactic": [
+                "TA0003",
+                "TA0004"
+            ],
+            "technique_name": "CREATE OR MODIFY SYSTEM PROCESS",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "This technique involves creating or modifying Windows services for persistence or to execute malicious code.",
+            "tool_name": null,
+            "tool": null,
+            "note": "A service named 'ADOBEUPDTOOL' is created to call the `AdobeUpdateManagementTool.vbs`.",
+            "link": null
+        }
+    },
+    {
+        "context": "The malware drops a Shockwave Flash icon and disguises itself as such",
+        "technique": "T1036",
+        "metadata": {
+            "page_number": 4,
+            "id": "013",
+            "source": "TEXT",
+            "tactic_name": [
+                "DEFENSE EVASION"
+            ],
+            "tactic": [
+                "TA0005"
+            ],
+            "technique_name": "MASQUERADING",
+            "sub_technique_name": "MATCH LEGITIMATE NAME OR LOCATION",
+            "sub_technique": "T1036.005",
+            "description": "his technique involves disguising malicious files or processes to appear as legitimate ones.",
+            "tool_name": null,
+            "tool": null,
+            "note": "The malware disguises itself as a Shockwave Flash icon.",
+            "link": null
+        }
+    },
+    {
+        "context": "The malware contacts the following and may attempt to download\u00a0doc:",
+        "technique": "T1105",
+        "metadata": {
+            "page_number": 4,
+            "id": "014",
+            "source": "TEXT",
+            "tactic_name": [
+                "COMMAND AND CONTROL"
+            ],
+            "tactic": [
+                "TA0011"
+            ],
+            "technique_name": "INGRESS TOOL TRANSFER",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may transfer tools or other files from an external system into a compromised environment.",
+            "tool_name": null,
+            "tool": null,
+            "note": "The malware attempts to download a file (possibly a document) from an external server.",
+            "link": null
+        }
+    },
+    {
+        "context": "This malware was capable of stealing significant system and network information",
+        "technique": "T1082",
+        "metadata": {
+            "page_number": 4,
+            "id": "015",
+            "source": "TEXT",
+            "tactic_name": [
+                "DISCOVERY"
+            ],
+            "tactic": [
+                "TA0007"
+            ],
+            "technique_name": "SYSTEM INFORMATION DISCOVERY",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may attempt to get detailed information about the system they are targeting.",
+            "tool_name": null,
+            "tool": null,
+            "note": "The malware is capable of stealing significant system information.",
+            "link": null
+        }
+    },
+    {
+        "context": "It was also used to download several other reconnaissance tools to map out the network.",
+        "technique": "T1105",
+        "metadata": {
+            "page_number": 4,
+            "id": "016",
+            "source": "TEXT",
+            "tactic_name": [
+                "COMMAND AND CONTROL"
+            ],
+            "tactic": [
+                "TA00011"
+            ],
+            "technique_name": "INGRESS TOOL TRANSFER",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may transfer tools or other files from an external system into a compromised environment.",
+            "tool_name": [
+                "NMAP",
+                "FREEDRP",
+                "NCAT",
+                "NPING"
+            ],
+            "tool": [
+                null,
+                null,
+                null,
+                null
+            ],
+            "note": "The malware downloads several reconnaissance tools such as Nmap, FreeRDP, NCat, NPing, and others.",
+            "link": null
+        }
+    },
+    {
+        "context": "Downloaded tools have included Nmap, FreeRDP, NCat, NPing, and others",
+        "technique": "T1018",
+        "metadata": {
+            "page_number": 5,
+            "id": "068",
+            "source": "TEXT",
+            "tactic_name": [
+                "DISCOVERY"
+            ],
+            "tactic": [
+                "TA0007"
+            ],
+            "technique_name": "REMOTE SYSTEM DISCOVERY",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "The malware downloads several reconnaissance tools like Nmap, FreeRDP, NCat, NPing to map out the network.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "it also downloaded additional malware that enables the next stage of the attack",
+        "technique": "T1105",
+        "metadata": {
+            "page_number": 5,
+            "id": "017",
+            "source": "TEXT",
+            "tactic_name": [
+                "COMMAND AND CONTROL"
+            ],
+            "tactic": [
+                "TA00011"
+            ],
+            "technique_name": "INGRESS TOOL TRANSFER",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may transfer tools or other files from an external system into a compromised environment.",
+            "tool_name": null,
+            "tool": null,
+            "note": "The system reaches out to retrieve additional malware.",
+            "link": [
+                "018"
+            ]
+        }
+    },
+    {
+        "context": "could execute powershell scripts on command",
+        "technique": "T1059",
+        "metadata": {
+            "page_number": 5,
+            "id": "018",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXECUTION"
+            ],
+            "tactic": [
+                "TA0002"
+            ],
+            "technique_name": "COMMAND AND SCRIPTING INTERPRETER",
+            "sub_technique_name": "POWERSHELL",
+            "sub_technique": "T1059.001",
+            "description": "Adversaries may abuse PowerShell commands and scripts for execution.",
+            "tool_name": null,
+            "tool": null,
+            "note": "The malware can execute PowerShell scripts on command.",
+            "link": null
+        }
+    },
+    {
+        "context": "Beaconing messages are sent out to 179.43.133.34 via standard HTTP GET requests every 5 minutes",
+        "technique": "T1071",
+        "metadata": {
+            "page_number": 5,
+            "id": "019",
+            "source": "TEXT",
+            "tactic_name": [
+                "COMMAND AND CONTROL"
+            ],
+            "tactic": [
+                "TA0011"
+            ],
+            "technique_name": "APPLICATION LAYER PROTOCOL",
+            "sub_technique_name": "WEB PROTOCOLS",
+            "sub_technique": "T1071.001",
+            "description": "Adversaries may use web protocols like HTTP to communicate with their command and control (C2) servers.",
+            "tool_name": null,
+            "tool": null,
+            "note": "Beaconing messages are sent out via standard HTTP GET requests, indicating the use of HTTP for communication.",
+            "link": null
+        }
+    },
+    {
+        "context": "The content of the GET request is encoded with Base64 and secondarily encrypted with RC4",
+        "technique": "T1027",
+        "metadata": {
+            "page_number": 5,
+            "id": "020",
+            "source": "TEXT",
+            "tactic_name": [
+                "DEFENSE EVASION"
+            ],
+            "tactic": [
+                "TA0005"
+            ],
+            "technique_name": "OBFUSCATED FILES OR INFORMATION",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may use various methods to obfuscate data to evade detection.",
+            "tool_name": null,
+            "tool": null,
+            "note": "The content of the GET request is Base64 encoded and encrypted with RC4, indicating an attempt to obfuscate the traffic.",
+            "link": null
+        }
+    },
+    {
+        "context": "This malware executes a new iteration of svchost.exe and injects its malicious code into this running process",
+        "technique": "T1055",
+        "metadata": {
+            "page_number": 7,
+            "id": "021",
+            "source": "TEXT",
+            "tactic_name": [
+                "PRIVILEGE ESCALATION",
+                "DEFENSE EVASION"
+            ],
+            "tactic": [
+                "TA0004",
+                "TA0005"
+            ],
+            "technique_name": "PROCESS INJECTION",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may inject code into the address space of another process to evade detection and achieve persistence.",
+            "tool_name": [
+                "CARBANAK"
+            ],
+            "tool": [
+                "S0030"
+            ],
+            "note": "The malware injects its code into a running `svchost.exe` process to hide its presence.",
+            "link": [
+                "022"
+            ]
+        }
+    },
+    {
+        "context": "It then drops a pseudo-randomly named configuration file into the %ProgramData%\\Mozilla\u00a0folder. This file's name is base64 encoded and based on the infected system's MAC code, so identifying it by name will be challenging.",
+        "technique": "T1036",
+        "metadata": {
+            "page_number": 7,
+            "id": "022",
+            "source": "TEXT",
+            "tactic_name": [
+                "DEFENSE EVASION"
+            ],
+            "tactic": [
+                "TA0005"
+            ],
+            "technique_name": "MASQUERADING",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may use masquerading to disguise their files or processes as something legitimate to avoid detection.",
+            "tool_name": [
+                "CARBANAK"
+            ],
+            "tool": [
+                "S0030"
+            ],
+            "note": "The malware drops a configuration file with a pseudo-random name and a `.bin` extension, making it harder to identify or distinguish from legitimate files. The name is based on the MAC address and is base64 encoded to further obfuscate its purpose.",
+            "link": [
+                "021",
+                "023"
+            ]
+        }
+    },
+    {
+        "context": "It then searches Kaspersky antivirus processes and terminates them if running on the victim system.",
+        "technique": "T1089",
+        "metadata": {
+            "page_number": 8,
+            "id": "023",
+            "source": "TEXT",
+            "tactic_name": [
+                "DEFENSE EVASION"
+            ],
+            "tactic": [
+                "TA0005"
+            ],
+            "technique_name": "DISABLING SECURITY TOOLS",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may disable or interfere with security tools to prevent them from detecting or responding to the attack.",
+            "tool_name": [
+                "CARBANAK"
+            ],
+            "tool": [
+                "S0030"
+            ],
+            "note": "Specifically, terminating antivirus processes falls under this technique as it directly impacts the functionality of security tools on the system.",
+            "link": [
+                "022",
+                "024"
+            ]
+        }
+    },
+    {
+        "context": "It then searches Kaspersky antivirus processes and terminates them if running on the victim system.",
+        "technique": "T1562",
+        "metadata": {
+            "page_number": 8,
+            "id": "069",
+            "source": "TEXT",
+            "tactic_name": [
+                "DEFENSE EVASION"
+            ],
+            "tactic": [
+                "TA0005"
+            ],
+            "technique_name": "IMPAIR DEFENSE",
+            "sub_technique_name": "DISABLE OR MODIFY TOOLS",
+            "sub_technique": "T1562.001",
+            "description": "The malware searches Kaspersky antivirus processes and terminates them if running on the victim system.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "it registers itself as a service with the following details: Service name: RpcSsSys (this name is random, may vary on different system)",
+        "technique": "T1543",
+        "metadata": {
+            "page_number": 8,
+            "id": "024",
+            "source": "TEXT",
+            "tactic_name": [
+                "PERSISTENCE"
+            ],
+            "tactic": [
+                "TA0003"
+            ],
+            "technique_name": "CREATE OR MODIFY SYSTEM SERVICE",
+            "sub_technique_name": "WINDOWS SERVICE",
+            "sub_technique": "T1543.003",
+            "description": "Adversaries may create or modify Windows services to ensure their malware runs automatically when the system starts or when a service is started.",
+            "tool_name": [
+                "CARBANAK"
+            ],
+            "tool": [
+                "S0030"
+            ],
+            "note": "The text describes registering the malware as a Windows service with a specific service name, path, and display name, which aligns with creating or modifying a system service for persistence.",
+            "link": [
+                "023"
+            ]
+        }
+    },
+    {
+        "context": "steal local passwords",
+        "technique": "T1003",
+        "metadata": {
+            "page_number": 8,
+            "id": "025",
+            "source": "TEXT",
+            "tactic_name": [
+                "CREDENTIAL ACCESS"
+            ],
+            "tactic": [
+                "TA0006"
+            ],
+            "technique_name": "CREDENTIAL DUMPING",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may dump credentials to obtain user passwords or hashes.",
+            "tool_name": [
+                "CARBANAK"
+            ],
+            "tool": [
+                "S0030"
+            ],
+            "note": "The malware's ability to steal local passwords indicates it may use credential dumping techniques.",
+            "link": null
+        }
+    },
+    {
+        "context": "install completely different remote desktop programs, such as VNC or AMMYY",
+        "technique": "T1219",
+        "metadata": {
+            "page_number": 9,
+            "id": "026",
+            "source": "TEXT",
+            "tactic_name": [
+                "COMMAND AND CONTROL"
+            ],
+            "tactic": [
+                "TA0011"
+            ],
+            "technique_name": "REMOTE ACCESS TOOLS",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may use remote access tools to control systems and maintain persistence.",
+            "tool_name": [
+                "CARBANAK"
+            ],
+            "tool": [
+                "S0030"
+            ],
+            "note": "The installation of remote desktop programs (such as VNC or AMMYY) is a classic example of using remote access tools for control and persistence.",
+            "link": null
+        }
+    },
+    {
+        "context": "It communicates via an encrypted tunnel on port 443",
+        "technique": "T1071",
+        "metadata": {
+            "page_number": 9,
+            "id": "027",
+            "source": "TEXT",
+            "tactic_name": [
+                "COMMAND AND CONTROL"
+            ],
+            "tactic": [
+                "TA0011"
+            ],
+            "technique_name": "APPLICAITON LAYER PROTOCOL",
+            "sub_technique_name": "WEB PROTOCOLS",
+            "sub_technique": "T1071.001",
+            "description": "Adversaries use application layer protocols for command and control (C2) communications.",
+            "tool_name": null,
+            "tool": null,
+            "note": "The malware communicates via an encrypted tunnel over port 443 and sends data via HTTP POST messages.",
+            "link": null
+        }
+    },
+    {
+        "context": "screen captures",
+        "technique": "T1113",
+        "metadata": {
+            "page_number": 9,
+            "id": "028",
+            "source": "TEXT",
+            "tactic_name": [
+                "COLLECTION"
+            ],
+            "tactic": [
+                "TA0009"
+            ],
+            "technique_name": "SCREEN CAPTURE",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may capture screenshots to gather information from the victim's desktop.",
+            "tool_name": null,
+            "tool": null,
+            "note": "The malware is capable of stealing screen captures.",
+            "link": null
+        }
+    },
+    {
+        "context": "email addresses from the PST file",
+        "technique": "T1005",
+        "metadata": {
+            "page_number": 9,
+            "id": "030",
+            "source": "TEXT",
+            "tactic_name": [
+                "COLLECTION"
+            ],
+            "tactic": [
+                "TA0009"
+            ],
+            "technique_name": "DATA FROM LOCAL SYSTEM",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may gather data from local systems for exfiltration.",
+            "tool_name": null,
+            "tool": null,
+            "note": "The malware collects various types of data, including email addresses from PST files.",
+            "link": null
+        }
+    },
+    {
+        "context": "keylogger information",
+        "technique": "T1056",
+        "metadata": {
+            "page_number": 9,
+            "id": "029",
+            "source": "TEXT",
+            "tactic_name": [
+                "COLLECTION"
+            ],
+            "tactic": [
+                "TA0009"
+            ],
+            "technique_name": "INPUT CAPTURE",
+            "sub_technique_name": "KEYLOGGING",
+            "sub_technique": "T1056.001",
+            "description": "Adversaries may capture keystrokes to gather information from the victim.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "The file is OLE compound file format that contains an embedded .VBE (encoded VBS) script",
+        "technique": "T1059",
+        "metadata": {
+            "page_number": 10,
+            "id": "031",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXECUTION"
+            ],
+            "tactic": [
+                "TA0002"
+            ],
+            "technique_name": "COMMAND AND SCRIPTING INTERPRETER",
+            "sub_technique_name": "VISUAL BASIC",
+            "sub_technique": "T1059.005",
+            "description": "This technique involves the use of scripting languages such as VBS (Visual Basic Script) to execute malicious actions. The .VBE (encoded VBS) script is a form of scripting used to perform various actions.",
+            "tool_name": null,
+            "tool": null,
+            "note": "The embedded .VBE script in the OLE compound file performs actions such as stealing system information and screenshots, and downloading additional malware.",
+            "link": [
+                "032",
+                "033",
+                "034",
+                "035"
+            ]
+        }
+    },
+    {
+        "context": "stealing system information",
+        "technique": "T1005",
+        "metadata": {
+            "page_number": 10,
+            "id": "032",
+            "source": "TEXT",
+            "tactic_name": [
+                "COLLECTION"
+            ],
+            "tactic": [
+                "TA0009"
+            ],
+            "technique_name": "DATA FROM LOCAL SYSTEM",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may gather data from local systems for exfiltration.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "031"
+            ]
+        }
+    },
+    {
+        "context": "desktop screenshots",
+        "technique": "T1113",
+        "metadata": {
+            "page_number": 10,
+            "id": "033",
+            "source": "TEXT",
+            "tactic_name": [
+                "COLLECTION"
+            ],
+            "tactic": [
+                "TA0009"
+            ],
+            "technique_name": "SCREEN CAPTURE",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may capture screenshots to gather information from the victim's desktop.",
+            "tool_name": null,
+            "tool": null,
+            "note": "The malware is capable of stealing screen captures.",
+            "link": [
+                "031"
+            ]
+        }
+    },
+    {
+        "context": "download / execute additional malware",
+        "technique": "T1105",
+        "metadata": {
+            "page_number": 10,
+            "id": "034",
+            "source": "TEXT",
+            "tactic_name": [
+                "COMMAND AND CONTROL"
+            ],
+            "tactic": [
+                "TA00011"
+            ],
+            "technique_name": "INGRESS TOOL TRANSFER",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may transfer tools or other files from an external system into a compromised environment.",
+            "tool_name": null,
+            "tool": null,
+            "note": "The system reaches out to retrieve additional malware.",
+            "link": [
+                "031"
+            ]
+        }
+    },
+    {
+        "context": "When the malicious document file is opened, the embedded VBScript (VBE) file is dropped in the Windows %temp% folder.",
+        "technique": "T1547",
+        "metadata": {
+            "page_number": 11,
+            "id": "035",
+            "source": "TEXT",
+            "tactic_name": [
+                "PERSISTENCE"
+            ],
+            "tactic": [
+                "TA0003"
+            ],
+            "technique_name": "BOOT OR LOGON AUTOSTART EXECUTION",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "This technique involves configuring the system to execute the malicious payload during system boot or user logon. Although not directly related to dropping the VBScript, the placement in %temp% could be part of a persistence mechanism.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "031"
+            ]
+        }
+    },
+    {
+        "context": "The dropped VBE file is a loader script that drops, installs and executes",
+        "technique": "T1105",
+        "metadata": {
+            "page_number": 11,
+            "id": "036",
+            "source": "TEXT",
+            "tactic_name": [
+                "COMMAND AND CONTROL"
+            ],
+            "tactic": [
+                "TA00011"
+            ],
+            "technique_name": "INGRESS TOOL TRANSFER",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may transfer tools or other files from an external system into a compromised environment.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "037"
+            ]
+        }
+    },
+    {
+        "context": "a second layer VBScript payload in the victim's system.",
+        "technique": "T1059",
+        "metadata": {
+            "page_number": 11,
+            "id": "037",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXECUTION"
+            ],
+            "tactic": [
+                "TA0002"
+            ],
+            "technique_name": "COMMAND AND SCRIPTING INTERPRETER",
+            "sub_technique_name": "VISUAL BASIC",
+            "sub_technique": "T1059.005",
+            "description": "This technique involves the use of scripting languages such as VBS (Visual Basic Script) to execute malicious actions.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "036",
+                "038"
+            ]
+        }
+    },
+    {
+        "context": "It creates a folder named\u00a0\"WindowsUpdate_\"\u00a0in the Window's %temp% directory, If the folder already exists, it will create the folder in the parent directory where the script resides.",
+        "technique": "T1036",
+        "metadata": {
+            "page_number": 11,
+            "id": "038",
+            "source": "TEXT",
+            "tactic_name": [
+                "DEFENSE EVASION"
+            ],
+            "tactic": [
+                "TA0005"
+            ],
+            "technique_name": "MASQUERADING",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "This technique involves disguising files or processes to make them appear legitimate. The creation of the \"WindowsUpdate_\" folder and the naming conventions used may be attempts to blend in with legitimate system operations.",
+            "tool_name": null,
+            "tool": null,
+            "note": "The folder named \"WindowsUpdate_\" is an example of masquerading, as it attempts to appear as a legitimate Windows folder.",
+            "link": [
+                "037"
+            ]
+        }
+    },
+    {
+        "context": "A registry key is created that points to the Loader's directory sh.RegWriTe\"HKEY_CURRENT_USER\\System\\CurrentControlSet\\Control",
+        "technique": "T1547",
+        "metadata": {
+            "page_number": 12,
+            "id": "039",
+            "source": "TEXT",
+            "tactic_name": [
+                "PERSISTENCE",
+                "PRIVILEGE ESCALATION"
+            ],
+            "tactic": [
+                "TA0003",
+                "TA0004"
+            ],
+            "technique_name": "BOTT OR LOGON AUTOSTART EXECUTION",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "This technique involves creating or modifying registry entries to ensure that the malware executes automatically upon system boot or user logon.",
+            "tool_name": null,
+            "tool": null,
+            "note": "y creating a registry key that points to the directory containing the loader, the malware can ensure that its components are executed automatically when the system starts or when a user logs in.",
+            "link": null
+        }
+    },
+    {
+        "context": "The second VBScript payload is embedded in the loader script as a Base64 string",
+        "technique": "T1027",
+        "metadata": {
+            "page_number": 12,
+            "id": "040",
+            "source": "TEXT",
+            "tactic_name": [
+                "DEFENSE EVASION"
+            ],
+            "tactic": [
+                "TA0005"
+            ],
+            "technique_name": "OBFUSCATED FILES OR INFORMATION",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "This technique involves encoding or obfuscating files or information to hide their true purpose. The use of Base64 encoding is a form of obfuscation that helps to evade detection by making the payload less recognizable.",
+            "tool_name": null,
+            "tool": null,
+            "note": "The second VBScript payload is encoded in Base64 to obscure its content within the loader script.",
+            "link": null
+        }
+    },
+    {
+        "context": "The loader script decodes the base64 string",
+        "technique": "T1140",
+        "metadata": {
+            "page_number": 12,
+            "id": "041",
+            "source": "TEXT",
+            "tactic_name": [
+                "DEFENSE EVASION"
+            ],
+            "tactic": [
+                "TA0005"
+            ],
+            "technique_name": "DEOBFUSCATE/DECODE FILES OR INFORMATION",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "This technique involves decoding or deobfuscating information to make it usable. The loader script decodes the Base64 string to retrieve the VBScript payload.",
+            "tool_name": null,
+            "tool": null,
+            "note": "The decoding process is a key step in making the malicious VBScript operational.",
+            "link": null
+        }
+    },
+    {
+        "context": "This is then saved to a file named\u00a0\"AdobeUpdateManagementTool.vbs\"\u00a0into the\u00a0\"\\WindowsUpdate_\"\u00a0folder",
+        "technique": "T1105",
+        "metadata": {
+            "page_number": 12,
+            "id": "042",
+            "source": "TEXT",
+            "tactic_name": [
+                "COMMAND AND CONTROL"
+            ],
+            "tactic": [
+                "TA0011"
+            ],
+            "technique_name": "INGRESS TOOL TRANSFER",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "This technique involves transferring tools or files into a compromised system. The VBScript file is saved and created in the target system's directory.",
+            "tool_name": null,
+            "tool": null,
+            "note": "The decoded VBScript is saved to a file in the \\WindowsUpdate_ folder, transferring the malicious payload onto the system.",
+            "link": null
+        }
+    },
+    {
+        "context": "A persistence registry key is also created by the loader script: HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Run",
+        "technique": "T1547",
+        "metadata": {
+            "page_number": 12,
+            "id": "043",
+            "source": "TEXT",
+            "tactic_name": [
+                "PERSISTENCE",
+                "PRIVILEGE ESCALATION"
+            ],
+            "tactic": [
+                "TA0003",
+                "TA0004"
+            ],
+            "technique_name": "BOOT OR LOGON AUTOSTART EXECUTION",
+            "sub_technique_name": "REGISTRY RUN KEYS/STARTUP",
+            "sub_technique": "T1547.001",
+            "description": "Adversaries may achieve persistence by adding a program to a startup folder or referencing it with a Registry run key. These mechanisms ensure that the program runs each time the user logs in or the system starts.",
+            "tool_name": null,
+            "tool": null,
+            "note": "The loader script creates a registry key under `HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Run` to ensure that the script runs at startup, providing persistence on the infected system.",
+            "link": null
+        }
+    },
+    {
+        "context": "The loader script adds a scheduled task with a task named \"SysChecks\". The purpose of this scheduled task is to run the payload script (AdobeUpdateManagementTool.vbs) in every 5 minutes",
+        "technique": "T1053",
+        "metadata": {
+            "page_number": 12,
+            "id": "044",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXECUTION",
+                "PERSISTENCE",
+                "PRIVILEGE ESCALATION"
+            ],
+            "tactic": [
+                "TA0002",
+                "TA0003",
+                "TA0004"
+            ],
+            "technique_name": "SCHEDULED TASK/JOB",
+            "sub_technique_name": "SCHEDULED TASK",
+            "sub_technique": "T1053.005",
+            "description": "Adversaries may abuse task scheduling functionality to facilitate initial or recurring execution of malicious code. This can be used to execute code at a specific time or on a recurring schedule.",
+            "tool_name": null,
+            "tool": null,
+            "note": "The loader script creates a scheduled task named \"SysChecks\" to run the payload script (AdobeUpdateManagementTool.vbs) every 5 minutes. This ensures that the malicious script executes periodically, maintaining the persistence of the malware.",
+            "link": null
+        }
+    },
+    {
+        "context": "A SWF icon file is also dropped in the folder in order to disguise the dropped file as a Shockwave Flash file",
+        "technique": "T1036",
+        "metadata": {
+            "page_number": 13,
+            "id": "045",
+            "source": "TEXT",
+            "tactic_name": [
+                "DEFENSE EVASION"
+            ],
+            "tactic": [
+                "TA0005"
+            ],
+            "technique_name": "MASQUERADING",
+            "sub_technique_name": "MASQUERADE FILE TYPE",
+            "sub_technique": "T1036.008",
+            "description": "Adversaries may change the file extension of a file to match a different file type. They can use this tactic to disguise files as benign or known types, making them less likely to be detected or scrutinized by security tools or users.",
+            "tool_name": null,
+            "tool": null,
+            "note": "The malware drops a SWF (Shockwave Flash) icon file to disguise the dropped file as a Shockwave Flash file. This masquerading helps evade detection by making the malicious file appear as a legitimate and familiar file type.",
+            "link": null
+        }
+    },
+    {
+        "context": "A shortcut file is also added in the Windows startup folder as \"AdobeUpdateManagementTool.lnk\"",
+        "technique": "T1547",
+        "metadata": {
+            "page_number": 13,
+            "id": "046",
+            "source": "TEXT",
+            "tactic_name": [
+                "PERSISTENCE",
+                "PRIVILEGE ESCALATION"
+            ],
+            "tactic": [
+                "TA0003",
+                "TA0004"
+            ],
+            "technique_name": "BOOT OR LOGON AUTOSTART EXECUTION",
+            "sub_technique_name": "SHORTCUT MODIFICATION",
+            "sub_technique": "T1547.009",
+            "description": "Adversaries may create or modify shortcut files (.lnk) that are automatically started at boot or logon to execute malware or other malicious code. This technique involves placing shortcuts in specific locations, such as the startup folder, to achieve persistence.",
+            "tool_name": null,
+            "tool": null,
+            "note": "The malware adds a shortcut file named \"AdobeUpdateManagementTool.lnk\" in the Windows startup folder. This ensures that the malware runs every time the system starts, providing a persistent foothold on the infected system.",
+            "link": null
+        }
+    },
+    {
+        "context": "script uses obfuscation, a combination of base64 and integer-ed characters (chr) to hide malicious code",
+        "technique": "T1027",
+        "metadata": {
+            "page_number": 13,
+            "id": "047",
+            "source": "TEXT",
+            "tactic_name": [
+                "DEFENSE EVASION"
+            ],
+            "tactic": [
+                "TA0005"
+            ],
+            "technique_name": "OBFUSCATE FILES OR INFORMATION",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "The use of base64 encoding and integer-ed characters (chr) to obfuscate the script. This more accurately reflects the described obfuscation of the VBScript payload.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "Steal system information System Name System Manufacturer System Model Time Zone Total Physical Memory Processor System Type Processor BIOS Version Networking information Computer name Domain User name",
+        "technique": "T1082",
+        "metadata": {
+            "page_number": 14,
+            "id": "048",
+            "source": "TEXT",
+            "tactic_name": [
+                "DISCOVERY"
+            ],
+            "tactic": [
+                "TA0007"
+            ],
+            "technique_name": "SYSTEM INFORMATION DISCOVERY",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Collecting information about the system, such as system name, system manufacturer, system model, total physical memory, processor details, BIOS version, and system type.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "A powershell script (filename: screenshot__.ps1) is created",
+        "technique": "T1059",
+        "metadata": {
+            "page_number": 15,
+            "id": "049",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXECUTION"
+            ],
+            "tactic": [
+                "TA0002"
+            ],
+            "technique_name": "COMMAND AND SCRIPTING INTERPRETER",
+            "sub_technique_name": "POWERSHELL",
+            "sub_technique": "T1059.001",
+            "description": "The creation and execution of a PowerShell script.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "050"
+            ]
+        }
+    },
+    {
+        "context": "to screenshot victim's desktop",
+        "technique": "T1113",
+        "metadata": {
+            "page_number": 15,
+            "id": "050",
+            "source": "TEXT",
+            "tactic_name": [
+                "COLLECTION"
+            ],
+            "tactic": [
+                "TA0009"
+            ],
+            "technique_name": "SCREEN CAPTURE",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may capture screenshots of the victim's desktop.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "049"
+            ]
+        }
+    },
+    {
+        "context": "It may also be able to receive additional malware executables and install them on the victim's computer.",
+        "technique": "T1105",
+        "metadata": {
+            "page_number": 15,
+            "id": "051",
+            "source": "TEXT",
+            "tactic_name": [
+                "COMMAND AND CONTROL"
+            ],
+            "tactic": [
+                "TA0011"
+            ],
+            "technique_name": "INGRESS TOOL TRANSFER",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "The malware can receive additional executables from the attacker and install them on the victim's system. This technique involves transferring tools or files to a compromised system.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "The data is sent as a data encrypted with RC4 and Base64 It is sent via an HTTP POST tunnel to the attacker's server",
+        "technique": "T1027",
+        "metadata": {
+            "page_number": 16,
+            "id": "052",
+            "source": "TEXT",
+            "tactic_name": [
+                "DEFENSE EVASION"
+            ],
+            "tactic": [
+                "TA0005"
+            ],
+            "technique_name": "OBFUSCATED FILES OR INFORMATION",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "The data is encrypted with RC4 and Base64, which constitutes obfuscation. Obfuscation techniques are used to make it harder for security tools to analyze or detect the exfiltrated data.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "It can receive commands from the attacker to download and execute EXE files, VBScript, or Powershell script files.",
+        "technique": "T1105",
+        "metadata": {
+            "page_number": 16,
+            "id": "051",
+            "source": "TEXT",
+            "tactic_name": [
+                "COMMAND AND CONTROL"
+            ],
+            "tactic": [
+                "TA0011"
+            ],
+            "technique_name": "INGRESS TOOL TRANSFER",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "The malware can download and execute EXE files, VBScript, or PowerShell scripts, which aligns with the use of a backdoor to transfer tools or additional payloads into the victim's system.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "screenshot__.ps1 - a powershell script that takes screenshots of the active desktop",
+        "technique": "T1113",
+        "metadata": {
+            "page_number": 17,
+            "id": "054",
+            "source": "TEXT",
+            "tactic_name": [
+                "COLLECTION"
+            ],
+            "tactic": [
+                "TA0009"
+            ],
+            "technique_name": "SCREEN CAPTURE",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Powershell script",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "vb__.vbs - a VBscript sent by the attacker",
+        "technique": "T1059",
+        "metadata": {
+            "page_number": 18,
+            "id": "055",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXECUTION"
+            ],
+            "tactic": [
+                "TA0002"
+            ],
+            "technique_name": "COMMAND AND SCRIPTING INTERPRETER",
+            "sub_technique_name": "VISUAL BASIC",
+            "sub_technique": "T1059.005",
+            "description": "a VBscript",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "ps1__.ps1 - a Powershell script sent by the attacker",
+        "technique": "T1059",
+        "metadata": {
+            "page_number": 18,
+            "id": "056",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXECUTION"
+            ],
+            "tactic": [
+                "TA0002"
+            ],
+            "technique_name": "COMMAND AND SCRIPTING INTERPRETER",
+            "sub_technique_name": "POWERSHELL",
+            "sub_technique": "T1059.001",
+            "description": "A PowerShell script.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "it writes the cmdunig value to this registry key: HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion",
+        "technique": "T1547",
+        "metadata": {
+            "page_number": 23,
+            "id": "057",
+            "source": "TEXT",
+            "tactic_name": [
+                "PERSISTENCE",
+                "PRIVILEGE ESCALATION"
+            ],
+            "tactic": [
+                "TA0003",
+                "TA0004"
+            ],
+            "technique_name": "BOOT OR LOGON AUTOSTART EXECUTION",
+            "sub_technique_name": "REGISTRY RUN KEYS / STARTUP FOLDER",
+            "sub_technique": "T1547.001",
+            "description": "If the registry key is used to ensure the malware runs on startup or after a logon, this technique applies.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "Following is the System information sent to the control server when the command \"INFO\" is received from the attacker. OS Name Version Service Pack OS Manufacturer Windows Directory Locale Available Physical Memory Total Virtual Memory Available Virtual Memory System Name System Manufacturer System Model Time Zone Total Physical Memory Processor System Type Processor BIOS Version Computer name Domain User name",
+        "technique": "T1082",
+        "metadata": {
+            "page_number": 23,
+            "id": "058",
+            "source": "TEXT",
+            "tactic_name": [
+                "DISCOVERY"
+            ],
+            "tactic": [
+                "TA0007"
+            ],
+            "technique_name": "SYSTEM INFORMATION DISCOVERY",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Collecting information about the system, such as system name, system manufacturer, system model, total physical memory, processor details, BIOS version, and system type.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "This system information is also stored in this registry key: HKEY_CURRENT_USER\\System\\CurrentControlSet\\Control\\Network\\CLM",
+        "technique": "T1112",
+        "metadata": {
+            "page_number": 23,
+            "id": "059",
+            "source": "TEXT",
+            "tactic_name": [
+                "DEFENSE EVASION"
+            ],
+            "tactic": [
+                "TA0005"
+            ],
+            "technique_name": "MODIFY REGISTRY",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "The malware interacts with the Windows registry, specifically modifying registry keys",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "The config filename is a base64 string comprising of a unique string and the MAC address of the infected system",
+        "technique": "T1027",
+        "metadata": {
+            "page_number": 26,
+            "id": "060",
+            "source": "TEXT",
+            "tactic_name": [
+                "DEFENSE EVASION"
+            ],
+            "tactic": [
+                "TA0005"
+            ],
+            "technique_name": "OBFUSCATED FILES OR INFORMATION",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "The configuration filename is a base64 string, indicating the use of obfuscation.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "injects its code to that process",
+        "technique": "T1055",
+        "metadata": {
+            "page_number": 26,
+            "id": "061",
+            "source": "TEXT",
+            "tactic_name": [
+                "DEFENSE EVASION",
+                "PRIVILEGE ESCALATION"
+            ],
+            "tactic": [
+                "TA0005",
+                "TA0004"
+            ],
+            "technique_name": "PROCESS INJECTION",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "he malware injects its code into a new `svchost.exe` process. Process injection is a common technique used to execute malicious code within the context of a legitimate process to evade detection and",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "it registers itself as a service with the following details: Service name: RpcSsSys (this name is random, may vary on different systems)",
+        "technique": "T1543",
+        "metadata": {
+            "page_number": 26,
+            "id": "062",
+            "source": "text",
+            "tactic_name": [
+                "PERSITENCE",
+                "PRIVILEGE ESCALATION"
+            ],
+            "tactic": [
+                "TA0003",
+                "TA0004"
+            ],
+            "technique_name": "CREATE OR MODIFY SYSTEM PROCESS",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "The malware creates a new Windows service to ensure its persistence. It sets up the service with a path that disguises its true nature, often using a name that mimics legitimate services.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "The malware checks for the \"isDebugged\" flag in the PEB (Process Environment Block). It also checks for significant delay of code execution by utilizing the GetTickCount() function.",
+        "technique": "T1497",
+        "metadata": {
+            "page_number": 26,
+            "id": "070",
+            "source": "TEXT",
+            "tactic_name": [
+                "DEFENSE EVASION",
+                "DISCOVERY"
+            ],
+            "tactic": [
+                "TA0005",
+                "TA0007"
+            ],
+            "technique_name": "VIRTUALIZATION/SANDBOX EVASION",
+            "sub_technique_name": "SYSTEM CHECKS",
+            "sub_technique": "T1497.001",
+            "description": "The malware checks the \\\"isDebugged\\\" flag in the PEB (Process Environment Block) and also checks for significant delay of code execution by utilizing the GetTickCount() function to detect if the process is being debugged",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "Strings are heavily obfuscated to avoid static string analysis",
+        "technique": "T1027",
+        "metadata": {
+            "page_number": 27,
+            "id": "063",
+            "source": "TEXT",
+            "tactic_name": [
+                "DEFENSE EVASION"
+            ],
+            "tactic": [
+                "TA0005"
+            ],
+            "technique_name": "OBFUSCATED FILES OR INFORMATION",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Strings are obfuscated to avoid static string analysis",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "The malware enables the Remote Desktop by starting the\u00a0Termservice\u00a0service",
+        "technique": "T1021",
+        "metadata": {
+            "page_number": 29,
+            "id": "064",
+            "source": "TEXT",
+            "tactic_name": [
+                "LATERAL MOVEMENT"
+            ],
+            "tactic": [
+                "TA0008"
+            ],
+            "technique_name": "REMOTE SERVICES",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "This technique involves using remote services such as Remote Desktop Protocol (RDP) or other remote access tools. Enabling and configuring Remote Desktop is a direct use of this technique to maintain access to the system.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "065"
+            ]
+        }
+    },
+    {
+        "context": "It also sets the service to auto-mode so that the service will start on Windows startup.",
+        "technique": "T1547",
+        "metadata": {
+            "page_number": 29,
+            "id": "065",
+            "source": "TEXT",
+            "tactic_name": [
+                "PERSISTENCE",
+                "PRIVILEGE ESCALATION"
+            ],
+            "tactic": [
+                "TA0003",
+                "TA0004"
+            ],
+            "technique_name": "BOOT OR LOGON AUTOSTART EXECUTION",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Modifying the Termservice service to start automatically on Windows startup is a form of persistence where the malware ensures that it will be able to reconnect to the system after a reboot.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "The malware utilizes the open source project called Mimikatz and reused codes from this project to steal clear text local passwords from Lsass memory dump.",
+        "technique": "T1003",
+        "metadata": {
+            "page_number": 30,
+            "id": "066",
+            "source": "TEXT",
+            "tactic_name": [
+                "CREDENTIAL ACCESS"
+            ],
+            "tactic": [
+                "TA0006"
+            ],
+            "technique_name": "CREDENTIAL DUMPING",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "This technique involves extracting credentials from operating system memory, files, or other sources. Mimikatz is a well-known tool for credential dumping, and its use to extract passwords from LSASS memory falls directly under this technique.",
+            "tool_name": [
+                "MIMIKATZ"
+            ],
+            "tool": [
+                "S0002"
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "$\"  ammyy.pl- this enables the malware to run AMMYY remote desktop control software %\"  vnc.pl- this enables the malware to run a remote desktop VNC application",
+        "technique": "T1021",
+        "metadata": {
+            "page_number": 31,
+            "id": "067",
+            "source": "TEXT",
+            "tactic_name": [
+                "LATERAL MOVEMENT"
+            ],
+            "tactic": [
+                "TA0008"
+            ],
+            "technique_name": "REMOTE SERVICES",
+            "sub_technique_name": "REMOTE DESKTOP PROTOCOL",
+            "sub_technique": "T1021.001",
+            "description": "This technique involves the use of Remote Desktop Protocol (RDP) for remote access to systems. While the text specifically mentions Ammyy and VNC, RDP is a common protocol for similar purposes.",
+            "tool_name": [
+                "AMMYY",
+                "VNC"
+            ],
+            "tool": [
+                null,
+                null
+            ],
+            "note": null,
+            "link": null
+        }
+    }
+]

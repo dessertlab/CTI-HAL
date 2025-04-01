@@ -1,0 +1,801 @@
+[
+    {
+        "context": "MiniDuke",
+        "technique": null,
+        "metadata": {
+            "page_number": 2,
+            "id": "000",
+            "source": null,
+            "tactic_name": [],
+            "tactic": [],
+            "technique_name": null,
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": null,
+            "tool_name": [
+                "MINIDUKE"
+            ],
+            "tool": [
+                "S0051"
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "CosmicDuke infections start by tricking victims into opening either a PDF file that contains an exploit",
+        "technique": "T1203",
+        "metadata": {
+            "page_number": 2,
+            "id": "T01",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXECUTION"
+            ],
+            "tactic": [
+                "TA0002"
+            ],
+            "technique_name": "EXPLOITATION FOR CLIENT EXECUTION",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Exploitation of vulnerabilities in client software to execute code. In the case of CosmicDuke, opening a PDF containing an exploit exploits a vulnerability to execute malicious code.",
+            "tool_name": [
+                "COSMICDUKE"
+            ],
+            "tool": [
+                "S0050"
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "a Windows executable whose filename is manipulated to make it look like a document or image file.",
+        "technique": null,
+        "metadata": {
+            "page_number": 2,
+            "id": "T02",
+            "source": null,
+            "tactic_name": [],
+            "tactic": [],
+            "technique_name": null,
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": null,
+            "tool_name": [],
+            "tool": [],
+            "note": null,
+            "link": [
+                "002",
+                "003"
+            ]
+        }
+    },
+    {
+        "context": "a Windows executable whose filename is manipulated to make it look like a document or image file.",
+        "technique": "T1204",
+        "metadata": {
+            "page_number": 2,
+            "id": "002",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXECUTION"
+            ],
+            "tactic": [
+                "TA0002"
+            ],
+            "technique_name": "USER EXECUTION",
+            "sub_technique_name": "MALICIOUS FILE",
+            "sub_technique": "T1204.002",
+            "description": "This technique involves inducing the user to run a malicious file, such as a Windows executable whose name has been manipulated to look like a document or image file.",
+            "tool_name": [
+                "COSMICDUKE"
+            ],
+            "tool": [
+                "S0050"
+            ],
+            "note": "--",
+            "link": [
+                "003"
+            ]
+        }
+    },
+    {
+        "context": "a Windows executable whose filename is manipulated to make it look like a document or image file.",
+        "technique": "T1036",
+        "metadata": {
+            "page_number": 2,
+            "id": "003",
+            "source": "TEXT",
+            "tactic_name": [
+                "DEFENSE EVASION"
+            ],
+            "tactic": [
+                "TA0005"
+            ],
+            "technique_name": "MASQUERADING",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "This technique involves manipulating the file name to make it look like a different type of file, such as a document or image, in order to trick the victim into executing the malicious file.",
+            "tool_name": [
+                "COSMICDUKE"
+            ],
+            "tool": [
+                "S0050"
+            ],
+            "note": "--",
+            "link": [
+                "003"
+            ]
+        }
+    },
+    {
+        "context": "or",
+        "technique": null,
+        "metadata": {
+            "page_number": 2,
+            "id": "001",
+            "source": null,
+            "tactic_name": [],
+            "tactic": [],
+            "technique_name": null,
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": null,
+            "tool_name": [],
+            "tool": [],
+            "note": null,
+            "link": [
+                "T01 OR T02 THEN T03 THEN T04"
+            ]
+        }
+    },
+    {
+        "context": "Once the victim opens the file, the malware gains persistence on the system and starts collecting information.",
+        "technique": null,
+        "metadata": {
+            "page_number": 2,
+            "id": "T03",
+            "source": null,
+            "tactic_name": [],
+            "tactic": [],
+            "technique_name": null,
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": null,
+            "tool_name": [],
+            "tool": [],
+            "note": null,
+            "link": [
+                "004",
+                "005",
+                "006",
+                "007",
+                "008",
+                "009"
+            ]
+        }
+    },
+    {
+        "context": "keylogger,",
+        "technique": "T1056",
+        "metadata": {
+            "page_number": 2,
+            "id": "004",
+            "source": "TEXT",
+            "tactic_name": [
+                "COLLECTION"
+            ],
+            "tactic": [
+                "TA0009"
+            ],
+            "technique_name": "INPUT CAPTURE",
+            "sub_technique_name": "KEYLOGGING",
+            "sub_technique": "T1056.001",
+            "description": "recording of keystrokes made by the user to capture sensitive information such as credentials.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "T03"
+            ]
+        }
+    },
+    {
+        "context": "password stealers",
+        "technique": "T1555",
+        "metadata": {
+            "page_number": 2,
+            "id": "007",
+            "source": "TEXT",
+            "tactic_name": [
+                "CREDENTIAL ACCESS"
+            ],
+            "tactic": [
+                "TA0006"
+            ],
+            "technique_name": "CREDENTIALS FROM PASSWORD STORES",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "password",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "T03"
+            ]
+        }
+    },
+    {
+        "context": "clipboard stealer,",
+        "technique": "T1115",
+        "metadata": {
+            "page_number": 2,
+            "id": "005",
+            "source": "TEXT",
+            "tactic_name": [
+                "COLLECTION"
+            ],
+            "tactic": [
+                "TA0009"
+            ],
+            "technique_name": "CLIPBOARD DATA",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Theft of data in the system clipboard.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "T03"
+            ]
+        }
+    },
+    {
+        "context": "screenshotter,",
+        "technique": "T1113",
+        "metadata": {
+            "page_number": 2,
+            "id": "006",
+            "source": "TEXT",
+            "tactic_name": [
+                "COLLECTION"
+            ],
+            "tactic": [
+                "TA0009"
+            ],
+            "technique_name": "SCREEN CAPTURE",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Capture of desktop screens or specific windows",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "T03"
+            ]
+        }
+    },
+    {
+        "context": "It also collects information about the files on the system",
+        "technique": "T1005",
+        "metadata": {
+            "page_number": 2,
+            "id": "008",
+            "source": "TEXT",
+            "tactic_name": [
+                "COLLECTION"
+            ],
+            "tactic": [
+                "TA0009"
+            ],
+            "technique_name": "DATA FROM LOCAL SYSTEM",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Collection of data from files in the system.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "T03"
+            ]
+        }
+    },
+    {
+        "context": "the capability to export cryptographic certificates and the associated private keys",
+        "technique": "T1552",
+        "metadata": {
+            "page_number": 2,
+            "id": "009",
+            "source": "TEXT",
+            "tactic_name": [
+                "CREDENTIAL ACCESS"
+            ],
+            "tactic": [
+                "TA0006"
+            ],
+            "technique_name": "UNSECURED CREDENTIALS",
+            "sub_technique_name": "PRIVATE KEYS",
+            "sub_technique": "T1552.004",
+            "description": "The exfiltration of private keys and cryptographic certificates.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "T03"
+            ]
+        }
+    },
+    {
+        "context": "Once the information has been collected",
+        "technique": null,
+        "metadata": {
+            "page_number": 2,
+            "id": "T04",
+            "source": null,
+            "tactic_name": [],
+            "tactic": [],
+            "technique_name": null,
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": null,
+            "tool_name": [],
+            "tool": [],
+            "note": null,
+            "link": [
+                "010",
+                "011"
+            ]
+        }
+    },
+    {
+        "context": "it is sent out to remote servers via FTP",
+        "technique": "T1048",
+        "metadata": {
+            "page_number": 2,
+            "id": "010",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXFILTRATION"
+            ],
+            "tactic": [
+                "TA0010"
+            ],
+            "technique_name": "EXFILTRATION OVER ALTERNATIVE PROTOCOL",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Use of FTP specifically to exfiltrate data",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "T04"
+            ]
+        }
+    },
+    {
+        "context": "Cosmu allows the attacker to download and execute other malware on the system",
+        "technique": "T1105",
+        "metadata": {
+            "page_number": 2,
+            "id": "011",
+            "source": "TEXT",
+            "tactic_name": [
+                "COMMAND AND CONTROL"
+            ],
+            "tactic": [
+                "TA0011"
+            ],
+            "technique_name": "INGRESS TOOL TRANSFER",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may transfer tools or other files from an external system into a compromised environment.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "T04"
+            ]
+        }
+    },
+    {
+        "context": "Keylogger",
+        "technique": "T1056",
+        "metadata": {
+            "page_number": 3,
+            "id": "017",
+            "source": "TEXT",
+            "tactic_name": [
+                "COLLECTION"
+            ],
+            "tactic": [
+                "TA0009"
+            ],
+            "technique_name": "INPUT CAPTURE",
+            "sub_technique_name": "KEYLOGGING",
+            "sub_technique": "T1056.001",
+            "description": "recording of keystrokes made by the user to capture sensitive information such as credentials.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "Taking screenshots",
+        "technique": "T1113",
+        "metadata": {
+            "page_number": 3,
+            "id": "017",
+            "source": "TEXT",
+            "tactic_name": [
+                "COLLECTION"
+            ],
+            "tactic": [
+                "TA0009"
+            ],
+            "technique_name": "SCREEN CAPTURE",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Capture of desktop screens or specific windows",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "Stealing data from clipboard",
+        "technique": "T1115",
+        "metadata": {
+            "page_number": 3,
+            "id": "018",
+            "source": "TEXT",
+            "tactic_name": [
+                "COLLECTION"
+            ],
+            "tactic": [
+                "TA0009"
+            ],
+            "technique_name": "CLIPBOARD DATA",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Theft of data in the system clipboard.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "Stealing files",
+        "technique": "T1005",
+        "metadata": {
+            "page_number": 3,
+            "id": "019",
+            "source": "TEXT",
+            "tactic_name": [
+                "COLLECTION"
+            ],
+            "tactic": [
+                "TA0009"
+            ],
+            "technique_name": "DATA FROM LOCAL SYSTEM",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Collection of data from files in the system.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "Stealing PKI certificates and associated private keys",
+        "technique": "T1552",
+        "metadata": {
+            "page_number": 3,
+            "id": "020",
+            "source": "TEXT",
+            "tactic_name": [
+                "CREDENTIAL ACCESS"
+            ],
+            "tactic": [
+                "TA0006"
+            ],
+            "technique_name": "UNSECURED CREDENTIALS",
+            "sub_technique_name": "PRIVATE KEYS",
+            "sub_technique": "T1552.004",
+            "description": "The exfiltration of private keys and cryptographic certificates.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "Stealing usernames and passwords from browsers, instant messengers and email clients",
+        "technique": "T1555",
+        "metadata": {
+            "page_number": 3,
+            "id": "007",
+            "source": "TEXT",
+            "tactic_name": [
+                "CREDENTIAL ACCESS"
+            ],
+            "tactic": [
+                "TA0006"
+            ],
+            "technique_name": "CREDENTIALS FROM PASSWORD STORES",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "password",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "The information collected by the malware is automatically uploaded to remote servers via FTP",
+        "technique": "T1048",
+        "metadata": {
+            "page_number": 3,
+            "id": "010",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXFILTRATION"
+            ],
+            "tactic": [
+                "TA0010"
+            ],
+            "technique_name": "EXFILTRATION OVER ALTERNATIVE PROTOCOL",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Use of FTP specifically to exfiltrate data",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "It is possible that the PDF documents containing exploits were emailed to the targeted users as file attachments",
+        "technique": "T1566",
+        "metadata": {
+            "page_number": 3,
+            "id": "012",
+            "source": "TEXT",
+            "tactic_name": [
+                "INITIAL ACCESS"
+            ],
+            "tactic": [
+                "TA0001"
+            ],
+            "technique_name": "PHISHING",
+            "sub_technique_name": "SPEARPHISHING ATTACHMENT",
+            "sub_technique": "T1566.001",
+            "description": "Sending malicious attachments via email to induce victims to open them. PDF documents containing exploits are sent to targeted users as email attachments.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "CosmicDuke malware samples that use exploits to gain entry onto a target system (referred to as exploit files in the rest of this document) start with a malicious Flash object embedded into a PDF file.",
+        "technique": "T1190",
+        "metadata": {
+            "page_number": 3,
+            "id": "013",
+            "source": "TEXT",
+            "tactic_name": [
+                "INITIAL ACCESS"
+            ],
+            "tactic": [
+                "TA0001"
+            ],
+            "technique_name": "EXPLOIT PUBLIC-FACING APPLICATION",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Exploitation of known vulnerabilities in publicly exposed applications, as in the case of exploits used in PDF files containing malicious Flash objects",
+            "tool_name": [
+                "COSMICDUKE"
+            ],
+            "tool": [
+                "S0050"
+            ],
+            "note": null,
+            "link": [
+                "014"
+            ]
+        }
+    },
+    {
+        "context": "When the file is launched, the object exploits the known CVE-2011-0611 vulnerability in specific versions of Adobe Flash, Reader and Acrobat products.",
+        "technique": "T1203",
+        "metadata": {
+            "page_number": 3,
+            "id": "014",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXECUTION"
+            ],
+            "tactic": [
+                "TA0002"
+            ],
+            "technique_name": "EXPOLITATION FOR CLIENT EXECUTION",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "exploitation of vulnerabilities in client software to execute malicious code. the malicious Flash object embedded in the PDF file exploits a known vulnerability in Adobe Flash, Reader, and Acrobat to execute the malware.",
+            "tool_name": [
+                "COSMICDUKE"
+            ],
+            "tool": [
+                "S0050"
+            ],
+            "note": null,
+            "link": [
+                "013"
+            ]
+        }
+    },
+    {
+        "context": "social engineering to trick the user into willingly launching the attack file",
+        "technique": "T1204",
+        "metadata": {
+            "page_number": 3,
+            "id": "015",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXECUTION"
+            ],
+            "tactic": [
+                "TA0002"
+            ],
+            "technique_name": "USER EXECUTION",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "CosmicDuke uses social engineering to induce the user to launch the attack file.",
+            "tool_name": [
+                "COMSICDUKE"
+            ],
+            "tool": [
+                "S0050"
+            ],
+            "note": null,
+            "link": [
+                "016"
+            ]
+        }
+    },
+    {
+        "context": "the malware's executable file is first disguised as an image or document to make it seem innocuous",
+        "technique": "1036",
+        "metadata": {
+            "page_number": 3,
+            "id": "016",
+            "source": "TEXT",
+            "tactic_name": [
+                "DEFENSE EVASION"
+            ],
+            "tactic": [
+                "TA0005"
+            ],
+            "technique_name": "MASQUERADING",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Disguising the malicious file as an image or document to look legitimate.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "015"
+            ]
+        }
+    },
+    {
+        "context": "It creates a scheduled task and installs a Windows service",
+        "technique": "T1053",
+        "metadata": {
+            "page_number": 7,
+            "id": "021",
+            "source": "TEXT",
+            "tactic_name": [
+                "PERSISTENCE"
+            ],
+            "tactic": [
+                "TA0003"
+            ],
+            "technique_name": "SCHEDULED TASK/JOB",
+            "sub_technique_name": "SCHEDULED TASK",
+            "sub_technique": "T1053.005",
+            "description": "Creation of planned activities to maintain persistence on the system.",
+            "tool_name": [
+                "COSMU/MINIDUKE"
+            ],
+            "tool": [
+                "S0051"
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "It creates a scheduled task and installs a Windows service",
+        "technique": "T1543",
+        "metadata": {
+            "page_number": 7,
+            "id": "022",
+            "source": "TEXT",
+            "tactic_name": [
+                "PERSISTENCE"
+            ],
+            "tactic": [
+                "TA0003"
+            ],
+            "technique_name": "CREATE OR MODIFY SYSTEM PROCESS",
+            "sub_technique_name": "WINDOWS SERVICE",
+            "sub_technique": "T1543.003",
+            "description": "installation of Windows services to maintain persistence on the system.",
+            "tool_name": [
+                "COSMU/MINIDUKE"
+            ],
+            "tool": [
+                "S0051"
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "The malware uses the FTP servers and WebDav servers both for exfiltrating the collected data and for updating the malware",
+        "technique": "T1048",
+        "metadata": {
+            "page_number": 9,
+            "id": "029",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXFILTRATION"
+            ],
+            "tactic": [
+                "TA0010"
+            ],
+            "technique_name": "EXFILTRATION OVER ALTERNATIVE PROTOCOL",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may steal data by exfiltrating it over a different protocol than that of the existing command and control channel.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "Cosmu uses RC4 to decrypt incoming data and encrypt outgoing data",
+        "technique": "T1132",
+        "metadata": {
+            "page_number": 9,
+            "id": "023",
+            "source": "TEXT",
+            "tactic_name": [
+                "COMMAND AND CONTROL"
+            ],
+            "tactic": [
+                "TA0011"
+            ],
+            "technique_name": "DATA ENCODING",
+            "sub_technique_name": "STANDARD ENCODING",
+            "sub_technique": "T1132.001",
+            "description": "use of standard encodings to transform data for transfer or storage, as in the case of using RC4 to encrypt and decrypt data.",
+            "tool_name": [
+                "COSMU/MINIDUKE"
+            ],
+            "tool": [
+                "S0051"
+            ],
+            "note": null,
+            "link": null
+        }
+    }
+]

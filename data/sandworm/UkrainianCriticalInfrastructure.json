@@ -1,0 +1,206 @@
+[
+    {
+        "context": "malicious remote operation of the breakers was conducted by multiple external humans using either existing remote administration tools at the operating system level or remote industrial control system (ICS) client so\"ware via virtual private network (VPN) connections.",
+        "technique": "T1021",
+        "metadata": {
+            "page_number": 2,
+            "id": "001",
+            "source": "TEXT",
+            "tactic_name": [
+                "LATERAL MOVEMENT"
+            ],
+            "tactic": [
+                "TA0008"
+            ],
+            "technique_name": "REMOTE SERVICES",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may use Valid Accounts to log into a service that accepts remote connections, such as telnet, SSH, and VNC. The adversary may then perform actions as the logged-on user.",
+            "tool_name": [
+                "VPN",
+                "Remote Administration Tools",
+                "ICS Software"
+            ],
+            "tool": [
+                null,
+                null,
+                null
+            ],
+            "note": "The attackers used VPN connections and remote administration tools to control the breakers and operate industrial systems maliciously.",
+            "link": null
+        }
+    },
+    {
+        "context": "The companies believe that the actors acquired legitimate credentials prior to the cyber-attack to facilitate remote access.",
+        "technique": "T1078",
+        "metadata": {
+            "page_number": 2,
+            "id": "002",
+            "source": "TEXT",
+            "tactic_name": [
+                "INITIAL ACCESS"
+            ],
+            "tactic": [
+                "TA0001"
+            ],
+            "technique_name": "VALID ACCOUNTS",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may obtain and abuse credentials of existing accounts as a means of gaining Persistence.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "The KillDisk malware erases selected files on target systems and corrupts the master boot record, rendering systems inoperable.",
+        "technique": "T1561",
+        "metadata": {
+            "page_number": 2,
+            "id": "003",
+            "source": "TEXT",
+            "tactic_name": [
+                "IMPACT"
+            ],
+            "tactic": [
+                "TA0040"
+            ],
+            "technique_name": "DISK WIPE",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may wipe or corrupt raw disk data on specific systems or in large numbers in a network to interrupt availability to system and network resources.",
+            "tool_name": [
+                "KillDisk"
+            ],
+            "tool": [
+                "S0607"
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "It was further reported that in at least one instance, Windows-based human-machine interfaces (HMIs) embedded in remote terminal units were also overwritten with KillDisk.",
+        "technique": "T1485",
+        "metadata": {
+            "page_number": 2,
+            "id": "004",
+            "source": "TEXT",
+            "tactic_name": [
+                "IMPACT"
+            ],
+            "tactic": [
+                "TA0040"
+            ],
+            "technique_name": "DATA DESTRUCTION",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may destroy data and files on specific systems or in large numbers on a network to interrupt availability to systems, services, and network resources.",
+            "tool_name": [
+                "KillDisk"
+            ],
+            "tool": [
+                "S0607"
+            ],
+            "note": "",
+            "link": null
+        }
+    },
+    {
+        "context": "The actors also rendered Serial-to-Ethernet devices at substations inoperable by corrupting their firmware.",
+        "technique": "T1495",
+        "metadata": {
+            "page_number": 2,
+            "id": "005",
+            "source": "TEXT",
+            "tactic_name": [
+                "IMPACT"
+            ],
+            "tactic": [
+                "TA0040"
+            ],
+            "technique_name": "FIRMWARE CORRUPTION",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may overwrite or corrupt the flash memory contents of system BIOS or other firmware in devices attached to a system in order to render them inoperable or unable to boot, thus denying the availability to use the devices and/or the system.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "the actors reportedly scheduled disconnects for server Uninterruptable Power Supplies (UPS) via the UPS remote management interface.",
+        "technique": "T1529",
+        "metadata": {
+            "page_number": 2,
+            "id": "006",
+            "source": "TEXT",
+            "tactic_name": [
+                "IMPACT"
+            ],
+            "tactic": [
+                "TA0040"
+            ],
+            "technique_name": "SYSTEM SHUTDOWN/REBOOT",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may shutdown/reboot systems to interrupt access to, or aid in the destruction of, those systems.",
+            "tool_name": [
+                "KillDisk"
+            ],
+            "tool": [
+                "S0607"
+            ],
+            "note": "",
+            "link": null
+        }
+    },
+    {
+        "context": "The malware was reportedly delivered via spear phishing emails with malicious Microso\" O!ice attachments.",
+        "technique": "T1566",
+        "metadata": {
+            "page_number": 2,
+            "id": "007",
+            "source": "TEXT",
+            "tactic_name": [
+                "INITIAL ACCESS"
+            ],
+            "tactic": [
+                "TA0001"
+            ],
+            "technique_name": "PHISHING",
+            "sub_technique_name": "SPEARPHISHING ATTACHMENT",
+            "sub_technique": "T1566.001",
+            "description": "Adversaries may send spearphishing emails with a malicious attachment in an attempt to gain access to victim systems.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "It is suspected that BlackEnergy may have been used as an initial access vector to acquire legitimate credentials;",
+        "technique": "T1078",
+        "metadata": {
+            "page_number": 2,
+            "id": "008",
+            "source": "TEXT",
+            "tactic_name": [
+                "INITIAL ACCESS"
+            ],
+            "tactic": [
+                "TA0001"
+            ],
+            "technique_name": "VALID ACCOUNTS",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may obtain and abuse credentials of existing accounts as a means of gaining Persistence.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    }
+]

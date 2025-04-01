@@ -1,0 +1,604 @@
+[
+    {
+        "context": "Seaduke",
+        "technique": null,
+        "metadata": {
+            "page_number": 1,
+            "id": "000",
+            "source": null,
+            "tactic_name": [],
+            "tactic": [],
+            "technique_name": null,
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": null,
+            "tool_name": [
+                "SEADUKE"
+            ],
+            "tool": [
+                "S0053"
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "The malware hides behind numerous layers of encryption and obfuscation",
+        "technique": "T1027",
+        "metadata": {
+            "page_number": 3,
+            "id": "001",
+            "source": "TEXT",
+            "tactic_name": [
+                "DEFENSE EVASION"
+            ],
+            "tactic": [
+                "TA0005"
+            ],
+            "technique_name": "OBFUSCATED FILES OR INFORMATION",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Threat actors use various obfuscation and encryption methods to make it difficult to detect and analyze their tools and techniques.",
+            "tool_name": [
+                "SEADUKE"
+            ],
+            "tool": [
+                "S0053"
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "is capable of quietly stealing and ex!ltrating sensitive information such as email from the victim's computer.",
+        "technique": "T1048",
+        "metadata": {
+            "page_number": 3,
+            "id": "002",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXFILTRATION"
+            ],
+            "tactic": [
+                "TA0010"
+            ],
+            "technique_name": "EXFILTRATION OVER ALTERNATIVE PROTOCOL",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Seaduke is able to exfiltrate sensitive information such as emails from the victim's machine.",
+            "tool_name": [
+                "SEADUKE"
+            ],
+            "tool": [
+                "S0053"
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "Seaduke victims are generally !rst infected with Cozyduke and, if the computer appears to be a target of interest, the operators will install Seaduke",
+        "technique": null,
+        "metadata": {
+            "page_number": 3,
+            "id": "003",
+            "source": null,
+            "tactic_name": [],
+            "tactic": [],
+            "technique_name": null,
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": null,
+            "tool_name": [
+                "COZYDUKE",
+                "SEADUKE"
+            ],
+            "tool": [
+                "S0046",
+                "S0053"
+            ],
+            "note": "first CozyDuke, then if the computer appears to be a target the operators will install Seaduke",
+            "link": null
+        }
+    },
+    {
+        "context": "Cozyduke",
+        "technique": null,
+        "metadata": {
+            "page_number": 3,
+            "id": "004",
+            "source": null,
+            "tactic_name": [],
+            "tactic": [],
+            "technique_name": null,
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": null,
+            "tool_name": [
+                "COZYDUKE"
+            ],
+            "tool": [
+                "S0046"
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "Miniduke",
+        "technique": null,
+        "metadata": {
+            "page_number": 3,
+            "id": "005",
+            "source": null,
+            "tactic_name": [],
+            "tactic": [],
+            "technique_name": null,
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": null,
+            "tool_name": [
+                "MINIDUKE"
+            ],
+            "tool": [
+                "S0051"
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "Cosmicduke",
+        "technique": null,
+        "metadata": {
+            "page_number": 3,
+            "id": "006",
+            "source": null,
+            "tactic_name": [],
+            "tactic": [],
+            "technique_name": null,
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": null,
+            "tool_name": [
+                "COSMICDUKE"
+            ],
+            "tool": [
+                "S0050"
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "Cozy Bear",
+        "technique": null,
+        "metadata": {
+            "page_number": 3,
+            "id": "007",
+            "source": null,
+            "tactic_name": [],
+            "tactic": [],
+            "technique_name": null,
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": null,
+            "tool_name": [
+                "COZYBEAR"
+            ],
+            "tool": [
+                "S0046"
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "Cozyduke",
+        "technique": null,
+        "metadata": {
+            "page_number": 3,
+            "id": "008",
+            "source": null,
+            "tactic_name": [],
+            "tactic": [],
+            "technique_name": null,
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": null,
+            "tool_name": [
+                "COZYDUKE"
+            ],
+            "tool": [
+                "S0046"
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "the Duke group began to target victims with \"O$ce Monkeys\"- and \"eFax\"-themed emails, booby-trapped with a Cozyduke payload",
+        "technique": "T1566",
+        "metadata": {
+            "page_number": 3,
+            "id": "021",
+            "source": "TEXT",
+            "tactic_name": [
+                "INITIAL ACCESS"
+            ],
+            "tactic": [
+                "TA0001"
+            ],
+            "technique_name": "PHISHING",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "themed emails were sente with a CozyDuke payload",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "The attackers control Cozyduke via compromised websites, issuing instructions to infected machines by uploading \"tasks\" to a database !le",
+        "technique": "T1102",
+        "metadata": {
+            "page_number": 4,
+            "id": "009",
+            "source": "TEXT",
+            "tactic_name": [
+                "COMMAND AND CONTROL"
+            ],
+            "tactic": [
+                "TA0011"
+            ],
+            "technique_name": "WEB SERVICE",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Attackers control Cozyduke through compromised Web sites by uploading \"tasks\" to a database file. This technique describes the use of web services for command and control malware.",
+            "tool_name": [
+                "COZYDUKE"
+            ],
+            "tool": [
+                "S0046"
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "One such task (an encoded PowerShell script) instructed Cozyduke to download and execute Seaduke from a compromised website",
+        "technique": "T1059",
+        "metadata": {
+            "page_number": 5,
+            "id": "011",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXECUTION"
+            ],
+            "tactic": [
+                "TA0002"
+            ],
+            "technique_name": "COMMAND AND SCRIPTING INTERPRETER",
+            "sub_technique_name": "POWERSHELL",
+            "sub_technique": "T1059.001",
+            "description": "A task described as a coded PowerShell script that instructs Cozyduke to download and run Seaduke from a compromised website",
+            "tool_name": [
+                "COZYDUKE"
+            ],
+            "tool": [
+                "S0046"
+            ],
+            "note": null,
+            "link": [
+                "010"
+            ]
+        }
+    },
+    {
+        "context": "Seaduke securely communicates with the C&C server over HTTP/HTTPS beneath layers of encoding (Base64) and encryption (RC4, AES).",
+        "technique": "T1573",
+        "metadata": {
+            "page_number": 5,
+            "id": "021",
+            "source": "TEXT",
+            "tactic_name": [
+                "COMMAND AND CONTROL"
+            ],
+            "tactic": [
+                "TA0011"
+            ],
+            "technique_name": "ENCRYPTED CHANNEL",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "encoding and encryption layers were used",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "Seaduke securely communicates with the C&C server over HTTP/HTTPS",
+        "technique": "T1071",
+        "metadata": {
+            "page_number": 5,
+            "id": "012",
+            "source": "TEXT",
+            "tactic_name": [
+                "COMMAND AND CONTROL"
+            ],
+            "tactic": [
+                "TA0011"
+            ],
+            "technique_name": "APPLICATION LAYER PROTOCOL",
+            "sub_technique_name": "WEB PROTOCOLS",
+            "sub_technique": "T1071.001",
+            "description": "Use of HTTP/HTTPS as an application layer protocol for communication with the C&C server.",
+            "tool_name": [
+                "SEADUKE"
+            ],
+            "tool": [
+                "S0053"
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "They have the ability to retrieve detailed bot/system information",
+        "technique": "T1005",
+        "metadata": {
+            "page_number": 5,
+            "id": "013",
+            "source": "TEXT",
+            "tactic_name": [
+                "COLLECTION"
+            ],
+            "tactic": [
+                "TA0009"
+            ],
+            "technique_name": "DATA FROM LOCAL SYSTEM",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Gathering local information from the compromised system, such as operating system details, network configurations, and other information relevant to malware operations.",
+            "tool_name": [
+                "SEADUKE"
+            ],
+            "tool": [
+                "S0053"
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "self-delete the malware from the system",
+        "technique": "T1070",
+        "metadata": {
+            "page_number": 5,
+            "id": "015",
+            "source": "TEXT",
+            "tactic_name": [
+                "DEFENSE EVASION"
+            ],
+            "tactic": [
+                "TA0005"
+            ],
+            "technique_name": "INDICATOR REMOVAL ON HOST",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Ability to self-destruct malware from the compromised system. This can help avoid detection and remove traces of the infection to maintain persistent access.",
+            "tool_name": [
+                "SEADUKE"
+            ],
+            "tool": [
+                "S0053"
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "upload !les, download !les",
+        "technique": "T1105",
+        "metadata": {
+            "page_number": 5,
+            "id": "014",
+            "source": "TEXT",
+            "tactic_name": [
+                "COMMAND AND CONTROL"
+            ],
+            "tactic": [
+                "TA0011"
+            ],
+            "technique_name": "REMOTE FILE COPY",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Uploading and downloading files between the compromised system and the C&C server. This may include updating bot configuration, uploading command or script files, and downloading additional payloads.",
+            "tool_name": [
+                "SEADUKE"
+            ],
+            "tool": [
+                "S0053"
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "Impersonation using Kerberos pass-the-ticket attacks (Mimikatz PowerShell)",
+        "technique": "T1558",
+        "metadata": {
+            "page_number": 5,
+            "id": "016",
+            "source": "TEXT",
+            "tactic_name": [
+                "CREDENTIAL ACCESS"
+            ],
+            "tactic": [
+                "TA0006"
+            ],
+            "technique_name": "STEAL OR FORGE KERBEROS TICKETS",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Using Kerberos pass-the-ticket attacks to impersonate legitimate users and gain unauthorized access to systems.",
+            "tool_name": [
+                "MIMIKATZ"
+            ],
+            "tool": [
+                "S0002"
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "Impersonation using Kerberos pass-the-ticket attacks (Mimikatz PowerShell)",
+        "technique": "T1003",
+        "metadata": {
+            "page_number": 5,
+            "id": "022",
+            "source": "TEXT",
+            "tactic_name": [
+                "CREDENTIAL ACCESS"
+            ],
+            "tactic": [
+                "TA0006"
+            ],
+            "technique_name": "OS CREDENTIAL DUMPING",
+            "sub_technique_name": "LSASS MEMORY",
+            "sub_technique": "T1003.001",
+            "description": "Mimikatz was used",
+            "tool_name": [
+                "MIMIKATZ"
+            ],
+            "tool": [
+                "S0002"
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "Email extraction from the MS Exchange Server using compromised credentials",
+        "technique": "T1114",
+        "metadata": {
+            "page_number": 5,
+            "id": "017",
+            "source": "TEXT",
+            "tactic_name": [
+                "COLLECTION"
+            ],
+            "tactic": [
+                "TA0009"
+            ],
+            "technique_name": "EMAIL COLLECTION",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Extracting email from MS Exchange servers using compromised credentials.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "Email extraction from the MS Exchange Server using compromised credentials",
+        "technique": "T1078",
+        "metadata": {
+            "page_number": 5,
+            "id": "023",
+            "source": "TEXT",
+            "tactic_name": [
+                "DEFENSE EVASION",
+                "PERSISTENCE",
+                "PRIVILEGE ESCALATION",
+                "INITIAL ACCESS"
+            ],
+            "tactic": [
+                "TA0005",
+                "TA0003",
+                "TA0004",
+                "TA0001"
+            ],
+            "technique_name": "VALID ACCOUNTS",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "compromised credentials were used",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "Archiving sensitive information",
+        "technique": "T1560",
+        "metadata": {
+            "page_number": 5,
+            "id": "018",
+            "source": "TEXT",
+            "tactic_name": [
+                "COLLECTION"
+            ],
+            "tactic": [
+                "TA0009"
+            ],
+            "technique_name": "ARCHIVE COLLECTED DATA",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Storage of sensitive information collected for exfiltration or later use.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "Data ex!ltration via legitimate cloud services",
+        "technique": "T1567",
+        "metadata": {
+            "page_number": 5,
+            "id": "019",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXFILTRATION"
+            ],
+            "tactic": [
+                "TA0010"
+            ],
+            "technique_name": "EXFILTRATION OVER WEB SERVICE",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Data exfiltration through legitimate cloud services to camouflage malicious traffic.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "Secure !le deletion",
+        "technique": "T1561",
+        "metadata": {
+            "page_number": 5,
+            "id": "020",
+            "source": "TEXT",
+            "tactic_name": [
+                "IMPACT"
+            ],
+            "tactic": [
+                "TA0040"
+            ],
+            "technique_name": "DISK WIPE",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Secure file deletion to remove traces of malicious activity.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    }
+]

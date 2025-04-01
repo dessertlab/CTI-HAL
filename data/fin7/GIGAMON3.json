@@ -1,0 +1,260 @@
+[
+    {
+        "context": "FIN7 used Cobalt Strike's DNS C2 as their method of maintaining access inside target environments",
+        "technique": "T1071",
+        "metadata": {
+            "page_number": 3,
+            "id": "001",
+            "source": "TEXT",
+            "tactic_name": [
+                "COMMAND AND CONTROL"
+            ],
+            "tactic": [
+                "TA0011"
+            ],
+            "technique_name": "APPLICATION LAYER PROTOCOL",
+            "sub_technique_name": "DNS",
+            "sub_technique": "T1071.004",
+            "description": "DNS tunneling is used to establish and maintain a covert channel for C2 communication, evading traditional detection mechanisms that might monitor for suspicious IP traffic.",
+            "tool_name": [
+                "COBALT STRIKE"
+            ],
+            "tool": [
+                "S0154"
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "C2 method leveraged a different encrypted communication",
+        "technique": "T1573",
+        "metadata": {
+            "page_number": 3,
+            "id": "009",
+            "source": "TEXT",
+            "tactic_name": [
+                "COMMUNICATION AND CONTROL"
+            ],
+            "tactic": [
+                "TA0011"
+            ],
+            "technique_name": "ENCRYPTED CHANNEL",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "an encrypted comunication channel is used",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "the threat actors would spawn a secondary C2 component during their off-hour periods in an apparent attempt to maintain access should the DNS C2 be detected",
+        "technique": "T1008",
+        "metadata": {
+            "page_number": 4,
+            "id": "010",
+            "source": "TEXT",
+            "tactic_name": [
+                "COMMAND AND CONTROL"
+            ],
+            "tactic": [
+                "TA0011"
+            ],
+            "technique_name": "FALLBACK CHANNEL",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "a secondary C2 is used",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "DNS C2 leverages malicious DNS TXT and A RRs (resource records) queries which traverse standard recursive DNS channels and terminate at an attacker's authoritative DNS server",
+        "technique": "T1071",
+        "metadata": {
+            "page_number": 5,
+            "id": "002",
+            "source": "TEXT",
+            "tactic_name": [
+                "COMMAND AND CONTROL"
+            ],
+            "tactic": [
+                "TA0011"
+            ],
+            "technique_name": "APPLICATION LAYER PROTOCOL",
+            "sub_technique_name": "DNS",
+            "sub_technique": "T1071.004",
+            "description": "DNS C2 uses legitimate-looking DNS traffic to communicate with the attacker's server. Queries containing data or commands are sent as DNS TXT (Text) or A (Address) resource records, making the traffic blend into normal DNS activity. This is effective in environments with restrictive firewalls, web filters, or proxies, such as POS networks in the retail or hospitality sectors, where DNS traffic is often allowed and less scrutinized.",
+            "tool_name": [
+                "COBALT STRIKE"
+            ],
+            "tool": [
+                "S0154"
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "the actors used PowerShell scripts to deploy DNS TXT record stagers into memory",
+        "technique": "T1059",
+        "metadata": {
+            "page_number": 6,
+            "id": "003",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXECUTION"
+            ],
+            "tactic": [
+                "TA0002"
+            ],
+            "technique_name": "COMMAND AND SCRIPTING INTERPRETER",
+            "sub_technique_name": "POWERSHELL",
+            "sub_technique": "T1059.001",
+            "description": "PowerShell scripts are used to deploy DNS TXT record stagers into memory.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "004"
+            ]
+        }
+    },
+    {
+        "context": "During execution, PowerShell would make iterative DNS TXT queries, which would return encrypted data to be concatenated and then executed in memory",
+        "technique": "T1071",
+        "metadata": {
+            "page_number": 6,
+            "id": "004",
+            "source": "TEXT",
+            "tactic_name": [
+                "COMMAND AND CONTROL"
+            ],
+            "tactic": [
+                "TA0011"
+            ],
+            "technique_name": "APPLICATION LAYER PROTOCOL",
+            "sub_technique_name": "DNS",
+            "sub_technique": "T1071.004",
+            "description": "DNS TXT queries are used for communication with the C2 server, returning encrypted data to be executed.",
+            "tool_name": [
+                "COBALT STRIKE"
+            ],
+            "tool": [
+                "S0154"
+            ],
+            "note": null,
+            "link": [
+                "003"
+            ]
+        }
+    },
+    {
+        "context": "During execution, PowerShell would make iterative DNS TXT queries, which would return encrypted data to be concatenated and then executed in memory",
+        "technique": "T1027",
+        "metadata": {
+            "page_number": 6,
+            "id": "011",
+            "source": "TEXT",
+            "tactic_name": [
+                "DEFENSE EVASION"
+            ],
+            "tactic": [
+                "TA0005"
+            ],
+            "technique_name": "OBFUSCATED FILES OR INFORMATION",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "encrypted data are returned",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "After staging, the attacker would shift to the use of DNS A resource records. When idle, the malware would make requests to the attacker-controlled domain with a pattern matching [SessionID].MaliciousDomain.com",
+        "technique": "T1071",
+        "metadata": {
+            "page_number": 7,
+            "id": "005",
+            "source": "TEXT",
+            "tactic_name": [
+                "COMMAND AND CONTROL"
+            ],
+            "tactic": [
+                "TA0011"
+            ],
+            "technique_name": "APPLICATION LAYER PROTOCOL",
+            "sub_technique_name": "DNS",
+            "sub_technique": "T1071.004",
+            "description": "use of DNS A resource records for maintaining command and control communication",
+            "tool_name": [
+                "COBALT STRIKE"
+            ],
+            "tool": [
+                "S0154"
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "FIN7 would frequently use the psexec_psh (https://blog.cobaltstrike.com/2015/07/29/cobaltstrike-2-5-advanced-pivoting/)\u00a0command within Cobalt Strike, which uses the RPC Service Controller protocol to create a service on a remote host with the binary path",
+        "technique": "T1021",
+        "metadata": {
+            "page_number": 10,
+            "id": "006",
+            "source": "TEXT",
+            "tactic_name": [
+                "LATERAL MOVEMENT"
+            ],
+            "tactic": [
+                "TA0008"
+            ],
+            "technique_name": "REMOTE SERVICES",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "use of Cobalt Strike's psexec_psh command to create and execute services on remote hosts using the RPC Service Controller protoco",
+            "tool_name": [
+                "COBALT STRIKE"
+            ],
+            "tool": [
+                "S0154"
+            ],
+            "note": null,
+            "link": [
+                "007"
+            ]
+        }
+    },
+    {
+        "context": "set to execute a malicious PowerShell command",
+        "technique": "T1059",
+        "metadata": {
+            "page_number": 10,
+            "id": "008",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXECUTION"
+            ],
+            "tactic": [
+                "TA0002"
+            ],
+            "technique_name": "COMMAND AND SCRIPTING INTERPRETER",
+            "sub_technique_name": "POWERSHELL",
+            "sub_technique": "T1059.001",
+            "description": "executing malicious PowerShell commands",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "007"
+            ]
+        }
+    }
+]

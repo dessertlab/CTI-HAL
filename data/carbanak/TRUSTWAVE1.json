@@ -1,0 +1,339 @@
+[
+    {
+        "context": "The common successful entry point within all operations was an email message targeted to victim's public-facing services that contained a Microsoft Word document attachment",
+        "technique": "T1566",
+        "metadata": {
+            "page_number": 3,
+            "id": "001",
+            "source": "TEXT",
+            "tactic_name": [
+                "INITIAL ACCESS"
+            ],
+            "tactic": [
+                "TA0001"
+            ],
+            "technique_name": "PHISHING",
+            "sub_technique_name": "SPEARPHISHING ATTACHMENT",
+            "sub_technique": "T1566.001",
+            "description": "Sending targeted emails containing malicious attachments to gain initial access.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "002"
+            ]
+        }
+    },
+    {
+        "context": "Upon opening the attachment",
+        "technique": "T1204",
+        "metadata": {
+            "page_number": 3,
+            "id": "002",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXECUTION"
+            ],
+            "tactic": [
+                "TA0002"
+            ],
+            "technique_name": "USER EXECUTION",
+            "sub_technique_name": "MALICIOUS FILE",
+            "sub_technique": "T1204.002",
+            "description": "Execution of malicious code when the user opens a file or link.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "001",
+                "003"
+            ]
+        }
+    },
+    {
+        "context": "multiple malicious files were created or downloaded allowing the attackers to gain some level of access into the victim's infrastructure.",
+        "technique": "T1105",
+        "metadata": {
+            "page_number": 3,
+            "id": "003",
+            "source": "TEXT",
+            "tactic_name": [
+                "COMMAND AND CONTROL"
+            ],
+            "tactic": [
+                "TA0011"
+            ],
+            "technique_name": "INGRESS TOOL TRANSFER",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Transfer of tools or files from an external system to the compromised system.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "002"
+            ]
+        }
+    },
+    {
+        "context": "Figure 4: File process",
+        "technique": null,
+        "metadata": {
+            "page_number": 5,
+            "id": "004",
+            "source": "FIGURE",
+            "tactic_name": [],
+            "tactic": [],
+            "technique_name": null,
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "the role of each of the four dropped files",
+            "tool_name": [],
+            "tool": [],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "Data from section \"last\" is written into registry perhaps to keep track of last executed command",
+        "technique": "T1112",
+        "metadata": {
+            "page_number": 6,
+            "id": "005",
+            "source": "TEXT",
+            "tactic_name": [
+                "DEFENSE EVASION"
+            ],
+            "tactic": [
+                "TA0005"
+            ],
+            "technique_name": "MODIFY REGISTRY",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Modification of registry keys for various malicious purposes, such as keeping track of the last command executed.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "persistence was achieved by utilizing scheduled tasks",
+        "technique": "T1053",
+        "metadata": {
+            "page_number": 7,
+            "id": "006",
+            "source": "TEXT",
+            "tactic_name": [
+                "PERSISTENCE"
+            ],
+            "tactic": [
+                "TA0003"
+            ],
+            "technique_name": "SCHEDULED TASK/JOB",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Use of scheduled tasks to maintain persistence in the system.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "008"
+            ]
+        }
+    },
+    {
+        "context": "several of the Operating System's auto-start locations",
+        "technique": "T1547",
+        "metadata": {
+            "page_number": 7,
+            "id": "007",
+            "source": "TEXT",
+            "tactic_name": [
+                "PERSISTENCE"
+            ],
+            "tactic": [
+                "TA0003"
+            ],
+            "technique_name": "BOOT OR LOGON AUTOSTART EXECUTION",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Using automatic operating system startup locations to maintain persistence.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "008"
+            ]
+        }
+    },
+    {
+        "context": "allowed attackers to gain Domain or even Enterprise Admin access",
+        "technique": "T1078",
+        "metadata": {
+            "page_number": 7,
+            "id": "008",
+            "source": "TEXT",
+            "tactic_name": [
+                "PRIVILEGE ESCALATION"
+            ],
+            "tactic": [
+                "TA0004"
+            ],
+            "technique_name": "VALID ACCOUNTS",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Using valid credentials to access various systems.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "Cloud services such as Google Docs and Google Forms were involved allowing attackers to keep track of infected systems, spread malware and perform further malicious activities",
+        "technique": "T1102",
+        "metadata": {
+            "page_number": 8,
+            "id": "009",
+            "source": "TEXT",
+            "tactic_name": [
+                "COMMAND AND CONTROL"
+            ],
+            "tactic": [
+                "TA0011"
+            ],
+            "technique_name": "WEB SERVICE",
+            "sub_technique_name": "DEAD DROP RESOLVER",
+            "sub_technique": "T1102.001",
+            "description": "Using web services to store information that threat actors can retrieve.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "Cloud services such as Google Docs and Google Forms were involved allowing attackers to keep track of infected systems, spread malware and perform further malicious activities",
+        "technique": "T1071",
+        "metadata": {
+            "page_number": 8,
+            "id": "013",
+            "source": "TEXT",
+            "tactic_name": [
+                "COMMAND AND CONTROL"
+            ],
+            "tactic": [
+                "TA0011"
+            ],
+            "technique_name": "APPLICATION LAYER PROTOCOL",
+            "sub_technique_name": "WEB PROTOCOLS",
+            "sub_technique": "T1071.001",
+            "description": "Cloud services were involved",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "scripting code (PowerShell, JavaScript, VBS)",
+        "technique": "T1059",
+        "metadata": {
+            "page_number": 9,
+            "id": "010",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXECUTION"
+            ],
+            "tactic": [
+                "TA0002"
+            ],
+            "technique_name": "COMMAND AND SCRIPTING INTERPRETER",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Using command interpreters and scripting to execute code.",
+            "tool_name": null,
+            "tool": null,
+            "note": "The use of PowerShell, JavaScript, and VBS implies the use of scripting interpreters to execute malicious code.",
+            "link": null
+        }
+    },
+    {
+        "context": "What seems to be the core tools of these activities is a variant of Anunak, remote backdoor, along with a Visual Basic Script specially crafted with data exfiltration features",
+        "technique": "T1041",
+        "metadata": {
+            "page_number": 9,
+            "id": "014",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXFILTRATION"
+            ],
+            "tactic": [
+                "TA0010"
+            ],
+            "technique_name": "EXFILTRATION OVER C2 CHANNEL",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Steal data by exfiltrating it over a command and control channel",
+            "tool_name": [
+                "ANUNAK"
+            ],
+            "tool": [
+                "S0030"
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "Anunak,",
+        "technique": null,
+        "metadata": {
+            "page_number": 9,
+            "id": "011",
+            "source": null,
+            "tactic_name": [],
+            "tactic": [],
+            "technique_name": null,
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": null,
+            "tool_name": [
+                "ANUNAK"
+            ],
+            "tool": [
+                "S0030"
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "One other significant finding is that some of the executables were signed using valid certificates from Comodo, a Certification Authority",
+        "technique": "T1588",
+        "metadata": {
+            "page_number": 10,
+            "id": "012",
+            "source": "TEXT",
+            "tactic_name": [
+                "RESOURCE DEVELOPMENT"
+            ],
+            "tactic": [
+                "TA0042"
+            ],
+            "technique_name": "OBTAIN CAPABILITIES",
+            "sub_technique_name": "CODE SIGNING CERTIFICATES",
+            "sub_technique": "T1588.003",
+            "description": "Attackers acquire code signing certificates to sign their malicious executables.",
+            "tool_name": [
+                "ANUNAK"
+            ],
+            "tool": [
+                "S0030"
+            ],
+            "note": "The use of valid certificates by Comodo to sign malicious executables is a clear example of this technique.",
+            "link": null
+        }
+    }
+]

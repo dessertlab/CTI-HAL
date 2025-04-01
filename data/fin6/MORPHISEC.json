@@ -1,0 +1,775 @@
+[
+    {
+        "context": "FrameworkPOS scraping malware installed on some of the thin clients,",
+        "technique": "T1505",
+        "metadata": {
+            "page_number": 2,
+            "id": "001",
+            "source": "TEXT",
+            "tactic_name": [
+                "PERSISTENCE"
+            ],
+            "tactic": [
+                "TA0003"
+            ],
+            "technique_name": "SERVER SOFTWARE COMPONENT",
+            "sub_technique_name": "TERMINAL SERVICES",
+            "sub_technique": "T1505.001",
+            "description": "FrameworkPOS scraping malware installed on thin clients",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "initializing PowerShell/WMI stages that downloaded and reflectively loaded Cobalt-Strike beacon with PowerShell extension directly into the memory",
+        "technique": "T1059",
+        "metadata": {
+            "page_number": 2,
+            "id": "002",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXECUTION"
+            ],
+            "tactic": [
+                "TA0002"
+            ],
+            "technique_name": "COMMAND AND SCRIPTING INTERPRETER",
+            "sub_technique_name": "POWERSHELL",
+            "sub_technique": "T1059.001",
+            "description": "Initializing PowerShell stages",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "initializing PowerShell/WMI stages that downloaded and reflectively loaded Cobalt-Strike beacon with PowerShell extension directly into the memory",
+        "technique": "T1047",
+        "metadata": {
+            "page_number": 2,
+            "id": "003",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXECUTION"
+            ],
+            "tactic": [
+                "TA0002"
+            ],
+            "technique_name": "WINDOWS MANAGEMENT INSTRUMENTATION",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Initializing WMI stages",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "initializing PowerShell/WMI stages that downloaded and reflectively loaded Cobalt-Strike beacon with PowerShell extension directly into the memory",
+        "technique": "T1105",
+        "metadata": {
+            "page_number": 2,
+            "id": "004",
+            "source": "TEXT",
+            "tactic_name": [
+                "COMMAND AND CONTROL"
+            ],
+            "tactic": [
+                "TA0011"
+            ],
+            "technique_name": "INGRESS TOOL TRANSFER",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Downloading a payload such as the Cobalt Strike beacon.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "initializing PowerShell/WMI stages that downloaded and reflectively loaded Cobalt-Strike beacon with PowerShell extension directly into the memory",
+        "technique": "T1620",
+        "metadata": {
+            "page_number": 2,
+            "id": "005",
+            "source": "TEXT",
+            "tactic_name": [
+                "DEFENSE EVASION"
+            ],
+            "tactic": [
+                "TA0005"
+            ],
+            "technique_name": "REFLECTIVE CODE LOADING",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Loading code (such as Cobalt Strike beacon) directly into memory without writing it to disk",
+            "tool_name": [
+                "COBALT STRIKE"
+            ],
+            "tool": [
+                "S0154"
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "initializing PowerShell/WMI stages that downloaded and reflectively loaded Cobalt-Strike beacon with PowerShell extension directly into the memory",
+        "technique": "T1059",
+        "metadata": {
+            "page_number": 2,
+            "id": "006",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXECUTION"
+            ],
+            "tactic": [
+                "TA0002"
+            ],
+            "technique_name": "COMMAND AND SCRIPTING INTERPRETER",
+            "sub_technique_name": "POWERSHELL",
+            "sub_technique": "T1059.001",
+            "description": "Using PowerShell extensions to load the Cobalt Strike beacon into memory",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "the Cobalt Strike beacon payload gives attackers full control over the infected system",
+        "technique": "T1219",
+        "metadata": {
+            "page_number": 2,
+            "id": "007",
+            "source": "TEXT",
+            "tactic_name": [
+                "COMMAND AND CONTROL"
+            ],
+            "tactic": [
+                "TA0011"
+            ],
+            "technique_name": "REMOTE ACCESS SOFTWARE",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Using remote access tools such as the Cobalt Strike beacon to control the infected system",
+            "tool_name": [
+                "COBALT STRIKE"
+            ],
+            "tool": [
+                "S0154"
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "the ability to move laterally to other systems",
+        "technique": "T1021",
+        "metadata": {
+            "page_number": 2,
+            "id": "008",
+            "source": "TEXT",
+            "tactic_name": [
+                "LATERAL MOVEMENT"
+            ],
+            "tactic": [
+                "TA0008"
+            ],
+            "technique_name": "REMOTE SERVICES",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Using remote services to move laterally between systems",
+            "tool_name": [
+                "COBALT STRIKE"
+            ],
+            "tool": [
+                "S0154"
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "harvest user credentials",
+        "technique": "T1003",
+        "metadata": {
+            "page_number": 2,
+            "id": "009",
+            "source": "TEXT",
+            "tactic_name": [
+                "CREDENTIAL ACCESS"
+            ],
+            "tactic": [
+                "TA0006"
+            ],
+            "technique_name": "OS CREDENTIAL DUMPING",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "harvest user credentials",
+            "tool_name": [
+                "COBALT STRIKE"
+            ],
+            "tool": [
+                "S0154"
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "evading advanced EDR scanning techniques",
+        "technique": "T1562",
+        "metadata": {
+            "page_number": 3,
+            "id": "010",
+            "source": "TEXT",
+            "tactic_name": [
+                "DEFENSE EVASION"
+            ],
+            "tactic": [
+                "TA0005"
+            ],
+            "technique_name": "IMPAIR DEFENSES",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Techniques for evading detection by Endpoint Detection and Response (EDR) systems.",
+            "tool_name": [
+                "COBALT STRIKE"
+            ],
+            "tool": [
+                "S0154"
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "one vector is executed through HTA files",
+        "technique": "T1218",
+        "metadata": {
+            "page_number": 3,
+            "id": "011",
+            "source": "TEXT",
+            "tactic_name": [
+                "DEFENSE EVASION"
+            ],
+            "tactic": [
+                "TA0005"
+            ],
+            "technique_name": "SYSTEM BINARY PROXY EXECUTION",
+            "sub_technique_name": "MSHTA",
+            "sub_technique": "T1218.005",
+            "description": "Using HTA (HTML Application) files to execute malicious code",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "012"
+            ]
+        }
+    },
+    {
+        "context": "that execute PowerShell scripts",
+        "technique": "T1059",
+        "metadata": {
+            "page_number": 3,
+            "id": "012",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXECUTION"
+            ],
+            "tactic": [
+                "TA0002"
+            ],
+            "technique_name": "COMMAND AND SCRIPTING INTERPRETER",
+            "sub_technique_name": "POWERSHELL",
+            "sub_technique": "T1059.001",
+            "description": "HTA files that execute PowerShell scripts",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "011",
+                "013"
+            ]
+        }
+    },
+    {
+        "context": "part of an embedded VBScript",
+        "technique": "T1059",
+        "metadata": {
+            "page_number": 3,
+            "id": "013",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXECUTION"
+            ],
+            "tactic": [
+                "TA0002"
+            ],
+            "technique_name": "COMMAND AND SCRIPTING INTERPRETER",
+            "sub_technique_name": "VISUAL BASIC",
+            "sub_technique": "T1059.005",
+            "description": "Use of embedded VBScript to execute malicious commands.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "012"
+            ]
+        }
+    },
+    {
+        "context": "some of them are executed through WMI",
+        "technique": "T1047",
+        "metadata": {
+            "page_number": 4,
+            "id": "014",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXECUTION"
+            ],
+            "tactic": [
+                "TA0002"
+            ],
+            "technique_name": "WINDOWS MANAGEMENT INSTRUMENTATION",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Using WMI to execute commands and scripts",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "base64 encoded script",
+        "technique": "T1027",
+        "metadata": {
+            "page_number": 6,
+            "id": "015",
+            "source": "TEXT",
+            "tactic_name": [
+                "DEFENSE EVASION"
+            ],
+            "tactic": [
+                "TA0005"
+            ],
+            "technique_name": "OBFUSCATED FILES OR INFORMATION",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Using base64 encoding to obfuscate script content",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "016"
+            ]
+        }
+    },
+    {
+        "context": "that is either remotely injected into the existing 32 bit or into a newly created 32 bit PowerShell process (if the current PowerShell is 64bit)",
+        "technique": "T1055",
+        "metadata": {
+            "page_number": 6,
+            "id": "016",
+            "source": "TEXT",
+            "tactic_name": [
+                "DEFENSE EVASION",
+                "PRIVILEGE ESCALATION"
+            ],
+            "tactic": [
+                "TA0005",
+                "TA0004"
+            ],
+            "technique_name": "PROCESS INJECTION",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Remotely injected into the existing 32 bit or into a newly created 32 bit PowerShell process",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "015"
+            ]
+        }
+    },
+    {
+        "context": "The injected shellcode is a regular Metasploit downloader shellcode",
+        "technique": "T1055",
+        "metadata": {
+            "page_number": 6,
+            "id": "017",
+            "source": "TEXT",
+            "tactic_name": [
+                "DEFENSE EVASION",
+                "PRIVILEGE ESCALATION"
+            ],
+            "tactic": [
+                "TA0005",
+                "TA0004"
+            ],
+            "technique_name": "PROCESS INJECTION",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Injected shellcode is a regular Metasploit downloader shellcode",
+            "tool_name": [
+                "METASPLOIT"
+            ],
+            "tool": [
+                null
+            ],
+            "note": null,
+            "link": [
+                "018"
+            ]
+        }
+    },
+    {
+        "context": "that traverses the PEB, resolves the function names by the standard ROR 13 hash,",
+        "technique": "T1620",
+        "metadata": {
+            "page_number": 6,
+            "id": "018",
+            "source": "TEXT",
+            "tactic_name": [
+                "DEFENSE EVASION"
+            ],
+            "tactic": [
+                "TA0005"
+            ],
+            "technique_name": "REFLECTIVE CODE LOADING",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Using advanced techniques to reflexively load code into memory by hashing out function names",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "017",
+                "019"
+            ]
+        }
+    },
+    {
+        "context": "downloads the next stage shellcode directly into memory from the C2",
+        "technique": "T1105",
+        "metadata": {
+            "page_number": 6,
+            "id": "019",
+            "source": "TEXT",
+            "tactic_name": [
+                "COMMAND AND CONTROL"
+            ],
+            "tactic": [
+                "TA0011"
+            ],
+            "technique_name": "INGRESS TOOL TRANSFER",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Downloading the payload of the next stage directly into memory from the command and control servers (C2)",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "018"
+            ]
+        }
+    },
+    {
+        "context": "2 types",
+        "technique": null,
+        "metadata": {
+            "page_number": 7,
+            "id": "020",
+            "source": null,
+            "tactic_name": [],
+            "tactic": [],
+            "technique_name": null,
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": null,
+            "tool_name": [],
+            "tool": [],
+            "note": "FIN6 uses two types of beacons",
+            "link": [
+                "T01 OR T02"
+            ]
+        }
+    },
+    {
+        "context": "regular direct reflective loaded Cobalt Strike DLL beacon, usually XOR encoded",
+        "technique": "T1620",
+        "metadata": {
+            "page_number": 7,
+            "id": "021",
+            "source": "TEXT",
+            "tactic_name": [
+                "DEFENSE EVASION"
+            ],
+            "tactic": [
+                "TA0005"
+            ],
+            "technique_name": "REFLECTIVE CODE LOADING",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Direct reflexive loading of a DLL, a technique often used to inject code into memory without touching the disk",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "022"
+            ]
+        }
+    },
+    {
+        "context": "regular direct reflective loaded Cobalt Strike DLL beacon, usually XOR encoded",
+        "technique": "T1027",
+        "metadata": {
+            "page_number": 7,
+            "id": "022",
+            "source": "TEXT",
+            "tactic_name": [
+                "DEFENSE EVASION"
+            ],
+            "tactic": [
+                "TA0005"
+            ],
+            "technique_name": "OBFUSCATED FILES OR INFORMATION",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Using XOR encoding to obfuscate the beacon",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "021"
+            ]
+        }
+    },
+    {
+        "context": "the first one",
+        "technique": null,
+        "metadata": {
+            "page_number": 7,
+            "id": "T01",
+            "source": null,
+            "tactic_name": [],
+            "tactic": [],
+            "technique_name": null,
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": null,
+            "tool_name": [],
+            "tool": [],
+            "note": null,
+            "link": [
+                "021",
+                "022"
+            ]
+        }
+    },
+    {
+        "context": "The second type",
+        "technique": null,
+        "metadata": {
+            "page_number": 7,
+            "id": "T02",
+            "source": null,
+            "tactic_name": [],
+            "tactic": [],
+            "technique_name": null,
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": null,
+            "tool_name": [],
+            "tool": [],
+            "note": null,
+            "link": [
+                "023",
+                "024"
+            ]
+        }
+    },
+    {
+        "context": "shellcode backdoor beacon with PowerShell and Mimikatz functionality",
+        "technique": "T1059",
+        "metadata": {
+            "page_number": 7,
+            "id": "023",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXECUTION"
+            ],
+            "tactic": [
+                "TA0002"
+            ],
+            "technique_name": "COMMAND AND SCRIPTING INTERPRETER",
+            "sub_technique_name": "POWERSHELL",
+            "sub_technique": "T1059.001",
+            "description": "Using PowerShell to execute malicious commands and scripts",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "shellcode backdoor beacon with PowerShell and Mimikatz functionality",
+        "technique": "T10003",
+        "metadata": {
+            "page_number": 7,
+            "id": "024",
+            "source": "TEXT",
+            "tactic_name": [
+                "CREDENTIAL ACCESS"
+            ],
+            "tactic": [
+                "TA0006"
+            ],
+            "technique_name": "OS CREDENTIAL DUMPING",
+            "sub_technique_name": "LSASS MEMORY",
+            "sub_technique": "T1003.001",
+            "description": "Using Mimikatz to collect credentials from the memory of the LSASS process.",
+            "tool_name": [
+                "MIMIKATZ"
+            ],
+            "tool": [
+                "S0002"
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "install \"WindowsHelpAssistant\" task in the task scheduler",
+        "technique": "T1053",
+        "metadata": {
+            "page_number": 7,
+            "id": "025",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXECUTION",
+                "PERSISTENCE",
+                "PRIVILEGE ESCALATION"
+            ],
+            "tactic": [
+                "TA0002",
+                "TA0003",
+                "TA0004"
+            ],
+            "technique_name": "SCHEDULED TASK/JOB",
+            "sub_technique_name": "SCHEDULED TASK",
+            "sub_technique": "T1053.005",
+            "description": "Using the Windows task scheduler to maintain persistence.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "uses rundll32.exe with System privileges to execute and export function \"workerInstance\"",
+        "technique": "T1218",
+        "metadata": {
+            "page_number": 7,
+            "id": "026",
+            "source": "TEXT",
+            "tactic_name": [
+                "DEFENSE EVASION"
+            ],
+            "tactic": [
+                "TA0005"
+            ],
+            "technique_name": "SYSTEM BINARY PROXY EXECUTION",
+            "sub_technique_name": "RUNDLL32",
+            "sub_technique": "T1218.011",
+            "description": "Uses rundll32.exe with System privileges to execute and export function \"workerInstance\" from a downloaded binary DLL \"Assistant32.dll\"",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "similar command execution as part of the HKLM Run key",
+        "technique": "T1547",
+        "metadata": {
+            "page_number": 8,
+            "id": "027",
+            "source": "TEXT",
+            "tactic_name": [
+                "PERSISTENCE",
+                "PRIVILEGE ESCALATION"
+            ],
+            "tactic": [
+                "TA0003",
+                "TA0004"
+            ],
+            "technique_name": "BOOT OR LOGON AUTOSTART EXECUTION",
+            "sub_technique_name": "REGISTRY RUN KEYS / STARTUP FOLDER",
+            "sub_technique": "T1547.001",
+            "description": "Using Run registry keys to maintain persistence",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "The malware XOR's (xor 0xAA) the credit card information before exfiltration through DNS tunneling.",
+        "technique": "T1027",
+        "metadata": {
+            "page_number": 8,
+            "id": "028",
+            "source": "TEXT",
+            "tactic_name": [
+                "DEFENSE EVASION"
+            ],
+            "tactic": [
+                "TA0005"
+            ],
+            "technique_name": "OBFUSCATED FILES OR INFORMATION",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Obfuscation of information (XOR) before exfiltration",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "029"
+            ]
+        }
+    },
+    {
+        "context": "The malware XOR's (xor 0xAA) the credit card information before exfiltration through DNS tunneling.",
+        "technique": "T1071",
+        "metadata": {
+            "page_number": 8,
+            "id": "029",
+            "source": "TEXT",
+            "tactic_name": [
+                "COMMAND AND CONTROL"
+            ],
+            "tactic": [
+                "TA0011"
+            ],
+            "technique_name": "APPLICAITON LAYER PROTOCOL",
+            "sub_technique_name": "DNS",
+            "sub_technique": "1071.004",
+            "description": "Using DNS tunneling to exfiltrate data.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "028"
+            ]
+        }
+    }
+]

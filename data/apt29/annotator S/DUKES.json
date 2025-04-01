@@ -1,0 +1,1642 @@
+[
+    {
+        "context": "These campaigns utilized specially-crafted malicious Microsoft Word documents and PDF files, which were sent as e-mail attachments to various personnel in an attempt to infiltrate the targeted organizations.",
+        "technique": "T1566",
+        "metadata": {
+            "page_number": 6,
+            "id": "001",
+            "source": "TEXT",
+            "tactic_name": [
+                "INITIAL ACCESS"
+            ],
+            "tactic": [
+                "TA0001"
+            ],
+            "technique_name": "PHISHING",
+            "sub_technique_name": "SPEARPHISHING ATTACHMENT",
+            "sub_technique": "T1566.001",
+            "description": "Adversaries may send spearphishing emails with a malicious attachment in an attempt to gain access to victim systems.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "CosmicDuke would often embed PinchDuke so that, upon execution, CosmicDuke would write to disk and execute PinchDuke",
+        "technique": "T1059",
+        "metadata": {
+            "page_number": 7,
+            "id": "002",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXECUTION"
+            ],
+            "tactic": [
+                "TA0002"
+            ],
+            "technique_name": "COMMAND AND SCRIPTING INTERPRETER",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may abuse command and script interpreters to execute commands, scripts, or binaries.",
+            "tool_name": [
+                "COSMICDUKE",
+                "PINCHDUKE"
+            ],
+            "tool": [
+                "S0050",
+                "S0048"
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "performing separate information gathering, data exfiltration and communication with a command and control (C&C) server",
+        "technique": "T1005",
+        "metadata": {
+            "page_number": 7,
+            "id": "003",
+            "source": "TEXT",
+            "tactic_name": [
+                "COLLECTION"
+            ],
+            "tactic": [
+                "TA0009"
+            ],
+            "technique_name": "DATA FROM LOCAL SYSTEM",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may search local system sources, such as file systems and configuration files or local databases, to find files of interest and sensitive data prior to Exfiltration.",
+            "tool_name": [
+                "COSMICDUKE",
+                "PINCHDUKE"
+            ],
+            "tool": [
+                "S0050",
+                "S0048"
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "performing separate information gathering, data exfiltration and communication with a command and control (C&C) server",
+        "technique": "T1041",
+        "metadata": {
+            "page_number": 7,
+            "id": "004",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXFILTRATION"
+            ],
+            "tactic": [
+                "TA0010"
+            ],
+            "technique_name": "EXFILTRATION OVER C2 CHANNEL",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may steal data by exfiltrating it over an existing command and control channel.",
+            "tool_name": [
+                "COSMICDUKE",
+                "PINCHDUKE"
+            ],
+            "tool": [
+                "S0050",
+                "S0048"
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "While the Dukes employed both hacked websites and purposely rented servers for their C&C infrastructure, the group rarely registered their own domain names, preferring instead to connect to their self- operated servers via IP addresses.",
+        "technique": "T1583",
+        "metadata": {
+            "page_number": 8,
+            "id": "005",
+            "source": "TEXT",
+            "tactic_name": [
+                "RESOURCE DEVELOPMENT"
+            ],
+            "tactic": [
+                "TA0042"
+            ],
+            "technique_name": "ACQUIRE INFRASTRUCTURE",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may buy, lease, rent, or obtain infrastructure that can be used during targeting.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "While the Dukes employed both hacked websites and purposely rented servers for their C&C infrastructure, the group rarely registered their own domain names, preferring instead to connect to their self- operated servers via IP addresses.",
+        "technique": "T1102",
+        "metadata": {
+            "page_number": 8,
+            "id": "006",
+            "source": "TEXT",
+            "tactic_name": [
+                "COMMAND AND CONTROL"
+            ],
+            "tactic": [
+                "TA0011"
+            ],
+            "technique_name": "WEB SERVICE",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may use an existing, legitimate external Web service as a means for relaying data to/from a compromised system.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "a large grouping of domain names was registered by the Dukes in two batches",
+        "technique": "T1583",
+        "metadata": {
+            "page_number": 8,
+            "id": "007",
+            "source": "TEXT",
+            "tactic_name": [
+                "RESOURCE DEVELOPMENT"
+            ],
+            "tactic": [
+                "TA0042"
+            ],
+            "technique_name": "ACQUIRE INFRASTRUCTURE",
+            "sub_technique_name": "DOMAINS",
+            "sub_technique": "T1583.001",
+            "description": "Adversaries may acquire domains that can be used during targeting.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "MiniDuke is centered on a simplistic backdoor component whose purpose is to enable the remote execution of commands on the compromised system.",
+        "technique": "T1059",
+        "metadata": {
+            "page_number": 8,
+            "id": "008",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXECUTION"
+            ],
+            "tactic": [
+                "TA0002"
+            ],
+            "technique_name": "COMMAND AND SCRIPTING INTERPRETER",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may abuse command and script interpreters to execute commands, scripts, or binaries.",
+            "tool_name": [
+                "MINIDUKE"
+            ],
+            "tool": [
+                "S0051"
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "MiniDuke is centered on a simplistic backdoor component whose purpose is to enable the remote execution of commands on the compromised system.",
+        "technique": "T1219",
+        "metadata": {
+            "page_number": 8,
+            "id": "009",
+            "source": "TEXT",
+            "tactic_name": [
+                "COMMAND AND CONTROL"
+            ],
+            "tactic": [
+                "TA0011"
+            ],
+            "technique_name": "REMOTE ACCESS SOFTWARE",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "An adversary may use legitimate desktop support and remote access software to establish an interactive command and control channel to target systems within networks.",
+            "tool_name": [
+                "MINIDUKE"
+            ],
+            "tool": [
+                "S0051"
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "CozyDuke is a highly versatile, modular, malware \"platform\" whose functionality lies not in a single core component but in an array of modules that it may be instructed to download from its C&C server. These modules are used to selectively provide CozyDuke with just the functionality deemed necessary for the mission at hand.",
+        "technique": "T1105",
+        "metadata": {
+            "page_number": 9,
+            "id": "010",
+            "source": "TEXT",
+            "tactic_name": [
+                "COMMAND AND CONTROL"
+            ],
+            "tactic": [
+                "TA0011"
+            ],
+            "technique_name": "INGRESS TOOL TRANSFER",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may transfer tools or other files from an external system into a compromised environment.",
+            "tool_name": [
+                "COZYDUKE"
+            ],
+            "tool": [
+                "S0046"
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "even the earliest known GeminiDuke samples encrypted any strings that might have given away the malware's true nature.",
+        "technique": "T1027",
+        "metadata": {
+            "page_number": 9,
+            "id": "011",
+            "source": "TEXT",
+            "tactic_name": [
+                "DEFENSE EVASION"
+            ],
+            "tactic": [
+                "TA0005"
+            ],
+            "technique_name": "OBFUSCATED FILES OR INFORMATION",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may attempt to make an executable or file difficult to discover or analyze by encrypting, encoding, or otherwise obfuscating its contents on the system or in transit.",
+            "tool_name": [
+                "GEMINIDUKE"
+            ],
+            "tool": [
+                "S0049"
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "the MiniDuke campaigns from February 2013 employed spear-phishing emails with malicious PDF file attachments. These PDFs would attempt to silently infect the recipient with MiniDuke, while distracting them by displaying a decoy document.",
+        "technique": "T1566",
+        "metadata": {
+            "page_number": 11,
+            "id": "012",
+            "source": "TEXT",
+            "tactic_name": [
+                "INITIAL ACCESS"
+            ],
+            "tactic": [
+                "TA0001"
+            ],
+            "technique_name": "PHISHING",
+            "sub_technique_name": "SPEARPHISHING ATTACHMENT",
+            "sub_technique": "T1566.001",
+            "description": "Adversaries may send spearphishing emails with a malicious attachment in an attempt to gain access to victim systems.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "the MiniDuke campaigns from February 2013 employed spear-phishing emails with malicious PDF file attachments. These PDFs would attempt to silently infect the recipient with MiniDuke, while distracting them by displaying a decoy document.",
+        "technique": "T1204",
+        "metadata": {
+            "page_number": 11,
+            "id": "013",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXECUTION"
+            ],
+            "tactic": [
+                "TA0002"
+            ],
+            "technique_name": "MALICIOUS FILE",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "An adversary may rely upon a user opening a malicious file in order to gain execution.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "password stealing, information gathering",
+        "technique": "T1003",
+        "metadata": {
+            "page_number": 12,
+            "id": "014",
+            "source": "TEXT",
+            "tactic_name": [
+                "CREDENTIAL ACCESS"
+            ],
+            "tactic": [
+                "TA0006"
+            ],
+            "technique_name": "OS CREDENTIAL DUMPING",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may attempt to dump credentials to obtain account login and credential material, normally in the form of a hash or a clear text password.",
+            "tool_name": [
+                "ONIONDUKE"
+            ],
+            "tool": [
+                "S0052"
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "denial of service (DoS) attacks",
+        "technique": "T1499",
+        "metadata": {
+            "page_number": 12,
+            "id": "015",
+            "source": "TEXT",
+            "tactic_name": [
+                "IMPACT"
+            ],
+            "tactic": [
+                "TA0040"
+            ],
+            "technique_name": "ENDPOINT DENIAL OF SERVICE",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may perform Endpoint Denial of Service (DoS) attacks to degrade or block the availability of services to users.",
+            "tool_name": [
+                "ONIONDUKE"
+            ],
+            "tool": [
+                "S0052"
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "This campaign, like later CozyDuke campaigns, began with spear-phishing emails that tried to impersonate commonly seen spam emails. These spear-phishing emails would contain links that eventually lead the victim to becoming infected with CozyDuke.",
+        "technique": "T1566",
+        "metadata": {
+            "page_number": 15,
+            "id": "016",
+            "source": "TEXT",
+            "tactic_name": [
+                "INITIAL ACCESS"
+            ],
+            "tactic": [
+                "TA0001"
+            ],
+            "technique_name": "PHISHING",
+            "sub_technique_name": "SPEARPHISHING LINK",
+            "sub_technique": "T1566.002",
+            "description": "Adversaries may send spearphishing emails with a malicious link in an attempt to gain access to victim systems.",
+            "tool_name": [
+                "COZYDUKE"
+            ],
+            "tool": [
+                "S0046"
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "a malicious Tor exit node",
+        "technique": "T1584",
+        "metadata": {
+            "page_number": 16,
+            "id": "017",
+            "source": "TEXT",
+            "tactic_name": [
+                "RESOURCE DEVELOPMENT"
+            ],
+            "tactic": [
+                "TA0042"
+            ],
+            "technique_name": "COMPROMISE INFRASTRUCTURE",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may compromise third-party infrastructure that can be used during targeting.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "Executing the modified applications obtained this way would result in the victim being infected with unidentified malware.",
+        "technique": "T1204",
+        "metadata": {
+            "page_number": 16,
+            "id": "018",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXECUTION"
+            ],
+            "tactic": [
+                "TA0002"
+            ],
+            "technique_name": "USER EXECUTION",
+            "sub_technique_name": "MALICIOUS FILE",
+            "sub_technique": "T1204.002",
+            "description": "An adversary may rely upon specific actions by a user in order to gain execution.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "#017 THEN #018"
+            ]
+        }
+    },
+    {
+        "context": "one of these modules gathers system information",
+        "technique": "T1082",
+        "metadata": {
+            "page_number": 18,
+            "id": "019",
+            "source": "TEXT",
+            "tactic_name": [
+                "DISCOVERY"
+            ],
+            "tactic": [
+                "TA0007"
+            ],
+            "technique_name": "SYSTEM INFORMATION DISCOVERY",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "An adversary may attempt to get detailed information about the operating system and hardware, including version, patches, hotfixes, service packs, and architecture.",
+            "tool_name": [
+                "ONIONDUKE"
+            ],
+            "tool": [
+                "S0052"
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "another attempts to steal the victim's usernames and passwords",
+        "technique": "T1003",
+        "metadata": {
+            "page_number": 18,
+            "id": "020",
+            "source": "TEXT",
+            "tactic_name": [
+                "CREDENTIAL ACCESS"
+            ],
+            "tactic": [
+                "TA0006"
+            ],
+            "technique_name": "OS CREDENTIAL DUMPING",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may attempt to dump credentials to obtain account login and credential material, normally in the form of a hash or a clear text password.",
+            "tool_name": [
+                "ONIONDUKE"
+            ],
+            "tool": [
+                "S0052"
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "one is designed for use in DoS attacks",
+        "technique": "T1499",
+        "metadata": {
+            "page_number": 18,
+            "id": "021",
+            "source": "TEXT",
+            "tactic_name": [
+                "IMPACT"
+            ],
+            "tactic": [
+                "TA0040"
+            ],
+            "technique_name": "ENDPOINT DENIAL OF SERVICE",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may perform Endpoint Denial of Service (DoS) attacks to degrade or block the availability of services to users.",
+            "tool_name": [
+                "ONIONDUKE"
+            ],
+            "tool": [
+                "S0052"
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "thousands of recipients being sent spear-phishing emails that contained links to compromised websites hosting CozyDuke",
+        "technique": "T1566",
+        "metadata": {
+            "page_number": 18,
+            "id": "022",
+            "source": "TEXT",
+            "tactic_name": [
+                "INITIAL ACCESS"
+            ],
+            "tactic": [
+                "TA0001"
+            ],
+            "technique_name": "PHISHING",
+            "sub_technique_name": "SPEARPHISHING LINK",
+            "sub_technique": "T1566.002",
+            "description": "Adversaries may send spearphishing emails with a malicious link in an attempt to gain access to victim systems.",
+            "tool_name": [
+                "COZYDUKE"
+            ],
+            "tool": [
+                "S0046"
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "thousands of recipients being sent spear-phishing emails that contained links to compromised websites hosting CozyDuke",
+        "technique": "T1584",
+        "metadata": {
+            "page_number": 18,
+            "id": "023",
+            "source": "TEXT",
+            "tactic_name": [
+                "RESOURCE DEVELOPMENT"
+            ],
+            "tactic": [
+                "TA0042"
+            ],
+            "technique_name": "COMPROMISE INFRASTRUCTURE",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may compromise third-party infrastructure that can be used during targeting.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "They would then use the toolset to gather initial information on the victims",
+        "technique": "T1082",
+        "metadata": {
+            "page_number": 19,
+            "id": "024",
+            "source": "TEXT",
+            "tactic_name": [
+                "DISCOVERY"
+            ],
+            "tactic": [
+                "TA0007"
+            ],
+            "technique_name": "SYSTEM INFORMATION DISCOVERY",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "An adversary may attempt to get detailed information about the operating system and hardware, including version, patches, hotfixes, service packs, and architecture.",
+            "tool_name": [
+                "COZYDUKE"
+            ],
+            "tool": [
+                "S0046"
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "The simpler one will connect to a hardcoded C&C server over HTTP or HTTPS to download commands to execute.",
+        "technique": "T1071",
+        "metadata": {
+            "page_number": 19,
+            "id": "024",
+            "source": "TEXT",
+            "tactic_name": [
+                "COMMAND AND CONTROL"
+            ],
+            "tactic": [
+                "TA0011"
+            ],
+            "technique_name": "APPLICATION LAYER PROTOCOL",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may communicate using OSI application layer protocols to avoid detection/network filtering by blending in with existing traffic.",
+            "tool_name": [
+                "HAMMERDUKE"
+            ],
+            "tool": [
+                "S0037"
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "The more advanced variant, on the other hand, will use an algorithm to generate a periodically-changing Twitter account name and will then attempt to find tweets from that account containing links to the actual download location of the commands to execute.",
+        "technique": "T1102",
+        "metadata": {
+            "page_number": 19,
+            "id": "025",
+            "source": "TEXT",
+            "tactic_name": [
+                "COMMAND AND CONTROL"
+            ],
+            "tactic": [
+                "TA0011"
+            ],
+            "technique_name": "WEB SERVICE",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may use an existing, legitimate external Web service as a means for relaying data to/from a compromised system.",
+            "tool_name": [
+                "HAMMERDUKE",
+                "MINIDUKE",
+                "ONIONDUKE",
+                "COZYDUKE"
+            ],
+            "tool": [
+                "S0037",
+                "S0051",
+                "S0052",
+                "S0046"
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "Both backdoors (internally referred to by their authors as \"BastionSolution\" and \"OneDriveSolution\") essentially allow the operator to remotely execute commands on the compromised machine.",
+        "technique": "T1059",
+        "metadata": {
+            "page_number": 20,
+            "id": "026",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXECUTION"
+            ],
+            "tactic": [
+                "TA0002"
+            ],
+            "technique_name": "COMMAND AND SCRIPTING INTERPRETER",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may abuse command and script interpreters to execute commands, scripts, or binaries.",
+            "tool_name": [
+                "CLOUDDUKE"
+            ],
+            "tool": [
+                "S0054"
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "the BastionSolution variant simply retrieves commands from a hard-coded C&C server controlled by the Dukes",
+        "technique": "T1071",
+        "metadata": {
+            "page_number": 20,
+            "id": "027",
+            "source": "TEXT",
+            "tactic_name": [
+                "COMMAND AND CONTROL"
+            ],
+            "tactic": [
+                "TA0011"
+            ],
+            "technique_name": "APPLICATION LAYER PROTOCOL",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may communicate using OSI application layer protocols to avoid detection/network filtering by blending in with existing traffic.",
+            "tool_name": [
+                "CLOUDDUKE"
+            ],
+            "tool": [
+                "S0054"
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "the OneDriveSolution utilizes Microsoft's OneDrive cloud storage service for communicating with its masters",
+        "technique": "T1102",
+        "metadata": {
+            "page_number": 20,
+            "id": "028",
+            "source": "TEXT",
+            "tactic_name": [
+                "COMMAND AND CONTROL"
+            ],
+            "tactic": [
+                "TA0011"
+            ],
+            "technique_name": "WEB SERVICE",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may use an existing, legitimate external Web service as a means for relaying data to/from a compromised system.",
+            "tool_name": [
+                "CLOUDDUKE"
+            ],
+            "tool": [
+                "S0054"
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "spear- phishing emails containing malicious attachments",
+        "technique": "T1566",
+        "metadata": {
+            "page_number": 21,
+            "id": "029",
+            "source": "TEXT",
+            "tactic_name": [
+                "INITIAL ACCESS"
+            ],
+            "tactic": [
+                "TA0001"
+            ],
+            "technique_name": "PHISHING",
+            "sub_technique_name": "SPEARPHISHING ATTACHMENT",
+            "sub_technique": "T1566.001",
+            "description": "Adversaries may send spearphishing emails with a malicious attachment in an attempt to gain access to victim systems.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "The PinchDuke information stealer gathers system configuration information, steals user credentials, and collects user files from the compromised host transferring these via HTTP(S) to a C&C server.",
+        "technique": "T1005",
+        "metadata": {
+            "page_number": 22,
+            "id": "030",
+            "source": "TEXT",
+            "tactic_name": [
+                "COLLECTION"
+            ],
+            "tactic": [
+                "TA0009"
+            ],
+            "technique_name": "DATA FROM LOCAL SYSTEM",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may search local system sources, such as file systems and configuration files or local databases, to find files of interest and sensitive data prior to Exfiltration.",
+            "tool_name": [
+                "PINCHDUKE"
+            ],
+            "tool": [
+                "S0048"
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "The PinchDuke information stealer gathers system configuration information, steals user credentials, and collects user files from the compromised host transferring these via HTTP(S) to a C&C server.",
+        "technique": "T1003",
+        "metadata": {
+            "page_number": 22,
+            "id": "031",
+            "source": "TEXT",
+            "tactic_name": [
+                "CREDENTIAL ACCESS"
+            ],
+            "tactic": [
+                "TA0006"
+            ],
+            "technique_name": "OS CREDENTIAL DUMPING",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may attempt to dump credentials to obtain account login and credential material, normally in the form of a hash or a clear text password.",
+            "tool_name": [
+                "PINCHDUKE"
+            ],
+            "tool": [
+                "S0048"
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "The PinchDuke information stealer gathers system configuration information, steals user credentials, and collects user files from the compromised host transferring these via HTTP(S) to a C&C server.",
+        "technique": "T1071",
+        "metadata": {
+            "page_number": 22,
+            "id": "032",
+            "source": "TEXT",
+            "tactic_name": [
+                "COMMAND AND CONTROL"
+            ],
+            "tactic": [
+                "TA0011"
+            ],
+            "technique_name": "APPLICATION LAYER PROTOCOL",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may communicate using OSI application layer protocols to avoid detection/network filtering by blending in with existing traffic.",
+            "tool_name": [
+                "PINCHDUKE"
+            ],
+            "tool": [
+                "S0048"
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "Unlike CosmicDuke and PinchDuke, GeminiDuke primarily collects information on the victim computer's configuration. The collected details include: \u2022Local user accounts \u2022Network settings Internet proxy settings \u2022 Installed drivers \u2022 \u2022Running processes \u2022Programs previously executed by users \u2022Programs and services configured to automatically run at startup \u2022Values of environment variables \u2022Files and folders present in any users home folder \u2022Files and folders present in any users My Documents \u2022Programs installed to the Program Files folder \u2022Recently accessed files, folders and programs",
+        "technique": "T1082",
+        "metadata": {
+            "page_number": 23,
+            "id": "033",
+            "source": "TEXT",
+            "tactic_name": [
+                "DISCOVERY"
+            ],
+            "tactic": [
+                "TA0007"
+            ],
+            "technique_name": "SYSTEM INFORMATION DISCOVERY",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may collect detailed information about the victim's system, such as local user accounts, network settings, installed drivers, environment variables, and recently accessed files.",
+            "tool_name": [
+                "GEMINIDUKE"
+            ],
+            "tool": [
+                "S0049"
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "Unlike CosmicDuke and PinchDuke, GeminiDuke primarily collects information on the victim computer's configuration. The collected details include: \u2022Local user accounts \u2022Network settings Internet proxy settings \u2022 Installed drivers \u2022 \u2022Running processes \u2022Programs previously executed by users \u2022Programs and services configured to automatically run at startup \u2022Values of environment variables \u2022Files and folders present in any users home folder \u2022Files and folders present in any users My Documents \u2022Programs installed to the Program Files folder \u2022Recently accessed files, folders and programs",
+        "technique": "T1087",
+        "metadata": {
+            "page_number": 23,
+            "id": "034",
+            "source": "TEXT",
+            "tactic_name": [
+                "DISCOVERY"
+            ],
+            "tactic": [
+                "TA0007"
+            ],
+            "technique_name": "ACCOUNT DISCOVERY",
+            "sub_technique_name": "LOCAL ACCOUNTS",
+            "sub_technique": "T1087.001",
+            "description": "Adversaries may enumerate accounts to learn about user and administrator accounts.",
+            "tool_name": [
+                "GEMINIDUKE"
+            ],
+            "tool": [
+                "S0049"
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "Unlike CosmicDuke and PinchDuke, GeminiDuke primarily collects information on the victim computer's configuration. The collected details include: \u2022Local user accounts \u2022Network settings Internet proxy settings \u2022 Installed drivers \u2022 \u2022Running processes \u2022Programs previously executed by users \u2022Programs and services configured to automatically run at startup \u2022Values of environment variables \u2022Files and folders present in any users home folder \u2022Files and folders present in any users My Documents \u2022Programs installed to the Program Files folder \u2022Recently accessed files, folders and programs",
+        "technique": "T1016",
+        "metadata": {
+            "page_number": 23,
+            "id": "035",
+            "source": "TEXT",
+            "tactic_name": [
+                "DISCOVERY"
+            ],
+            "tactic": [
+                "TA0007"
+            ],
+            "technique_name": "NETWORK CONFIGURATION DISCOVERY",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may look for details about the network configuration and settings.",
+            "tool_name": [
+                "GEMINIDUKE"
+            ],
+            "tool": [
+                "S0049"
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "Unlike CosmicDuke and PinchDuke, GeminiDuke primarily collects information on the victim computer's configuration. The collected details include: \u2022Local user accounts \u2022Network settings Internet proxy settings \u2022 Installed drivers \u2022 \u2022Running processes \u2022Programs previously executed by users \u2022Programs and services configured to automatically run at startup \u2022Values of environment variables \u2022Files and folders present in any users home folder \u2022Files and folders present in any users My Documents \u2022Programs installed to the Program Files folder \u2022Recently accessed files, folders and programs",
+        "technique": "T1057",
+        "metadata": {
+            "page_number": 23,
+            "id": "036",
+            "source": "TEXT",
+            "tactic_name": [
+                "DISCOVERY"
+            ],
+            "tactic": [
+                "TA0007"
+            ],
+            "technique_name": "PROCESS DISCOVERY",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may gather information about the running processes on the system.",
+            "tool_name": [
+                "GEMINIDUKE"
+            ],
+            "tool": [
+                "S0049"
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "Unlike CosmicDuke and PinchDuke, GeminiDuke primarily collects information on the victim computer's configuration. The collected details include: \u2022Local user accounts \u2022Network settings Internet proxy settings \u2022 Installed drivers \u2022 \u2022Running processes \u2022Programs previously executed by users \u2022Programs and services configured to automatically run at startup \u2022Values of environment variables \u2022Files and folders present in any users home folder \u2022Files and folders present in any users My Documents \u2022Programs installed to the Program Files folder \u2022Recently accessed files, folders and programs",
+        "technique": "T1083",
+        "metadata": {
+            "page_number": 23,
+            "id": "037",
+            "source": "TEXT",
+            "tactic_name": [
+                "DISCOVERY"
+            ],
+            "tactic": [
+                "TA0007"
+            ],
+            "technique_name": "FILE AND DIRECTORY DISCOVERY",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may search for files, folders, and directories on local and remote systems.",
+            "tool_name": [
+                "GEMINIDUKE"
+            ],
+            "tool": [
+                "S0049"
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "Unlike CosmicDuke and PinchDuke, GeminiDuke primarily collects information on the victim computer's configuration. The collected details include: \u2022Local user accounts \u2022Network settings Internet proxy settings \u2022 Installed drivers \u2022 \u2022Running processes \u2022Programs previously executed by users \u2022Programs and services configured to automatically run at startup \u2022Values of environment variables \u2022Files and folders present in any users home folder \u2022Files and folders present in any users My Documents \u2022Programs installed to the Program Files folder \u2022Recently accessed files, folders and programs",
+        "technique": "T1005",
+        "metadata": {
+            "page_number": 23,
+            "id": "038",
+            "source": "TEXT",
+            "tactic_name": [
+                "COLLECTION"
+            ],
+            "tactic": [
+                "TA0009"
+            ],
+            "technique_name": "DATA FROM LOCAL SYSTEM",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may search local system sources, such as file systems and configuration files or local databases, to find files of interest and sensitive data prior to Exfiltration.",
+            "tool_name": [
+                "GEMINIDUKE"
+            ],
+            "tool": [
+                "S0049"
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "CosmicDuke's information stealing functionality includes: \u2022Keylogging \u2022Taking screenshots \u2022Stealing clipboard contents \u2022Stealing user files with file extensions that match a predefined list \u2022Exporting the users cryptographic certificates including private keys \u2022Collecting user credentials, including passwords, for a variety of popular chat and email programs as well as from web browsers",
+        "technique": "T1056",
+        "metadata": {
+            "page_number": 25,
+            "id": "039",
+            "source": "TEXT",
+            "tactic_name": [
+                "COLLECTION"
+            ],
+            "tactic": [
+                "TA0009"
+            ],
+            "technique_name": "INPUT CAPTURE",
+            "sub_technique_name": "KEYLOGGING",
+            "sub_technique": "T1056.001",
+            "description": "Adversaries may use keylogging to capture user input, including passwords and other sensitive information.",
+            "tool_name": [
+                "COSMICDUKE"
+            ],
+            "tool": [
+                "S0050"
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "CosmicDuke's information stealing functionality includes: \u2022Keylogging \u2022Taking screenshots \u2022Stealing clipboard contents \u2022Stealing user files with file extensions that match a predefined list \u2022Exporting the users cryptographic certificates including private keys \u2022Collecting user credentials, including passwords, for a variety of popular chat and email programs as well as from web browsers",
+        "technique": "T1113",
+        "metadata": {
+            "page_number": 25,
+            "id": "040",
+            "source": "TEXT",
+            "tactic_name": [
+                "COLLECTION"
+            ],
+            "tactic": [
+                "TA0009"
+            ],
+            "technique_name": "SCREEN CAPTURE",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may capture screenshots of the victim's desktop to gather information.",
+            "tool_name": [
+                "COSMICDUKE"
+            ],
+            "tool": [
+                "S0050"
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "CosmicDuke's information stealing functionality includes: \u2022Keylogging \u2022Taking screenshots \u2022Stealing clipboard contents \u2022Stealing user files with file extensions that match a predefined list \u2022Exporting the users cryptographic certificates including private keys \u2022Collecting user credentials, including passwords, for a variety of popular chat and email programs as well as from web browsers",
+        "technique": "T1115",
+        "metadata": {
+            "page_number": 25,
+            "id": "041",
+            "source": "TEXT",
+            "tactic_name": [
+                "COLLECTION"
+            ],
+            "tactic": [
+                "TA0009"
+            ],
+            "technique_name": "CLIPBOARD DATA",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may capture data stored in the clipboard, potentially revealing sensitive information.",
+            "tool_name": [
+                "COSMICDUKE"
+            ],
+            "tool": [
+                "S0050"
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "CosmicDuke's information stealing functionality includes: \u2022Keylogging \u2022Taking screenshots \u2022Stealing clipboard contents \u2022Stealing user files with file extensions that match a predefined list \u2022Exporting the users cryptographic certificates including private keys \u2022Collecting user credentials, including passwords, for a variety of popular chat and email programs as well as from web browsers",
+        "technique": "T1005",
+        "metadata": {
+            "page_number": 25,
+            "id": "042",
+            "source": "TEXT",
+            "tactic_name": [
+                "COLLECTION"
+            ],
+            "tactic": [
+                "TA0009"
+            ],
+            "technique_name": "DATA FROM LOCAL SYSTEM",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may search for and collect files from a local system, including those with specific file extensions.",
+            "tool_name": [
+                "COSMICDUKE"
+            ],
+            "tool": [
+                "S0050"
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "CosmicDuke's information stealing functionality includes: \u2022Keylogging \u2022Taking screenshots \u2022Stealing clipboard contents \u2022Stealing user files with file extensions that match a predefined list \u2022Exporting the users cryptographic certificates including private keys \u2022Collecting user credentials, including passwords, for a variety of popular chat and email programs as well as from web browsers",
+        "technique": "T1003",
+        "metadata": {
+            "page_number": 25,
+            "id": "043",
+            "source": "TEXT",
+            "tactic_name": [
+                "CREDENTIAL ACCESS"
+            ],
+            "tactic": [
+                "TA0006"
+            ],
+            "technique_name": "OS CREDENTIAL DUMPING",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may attempt to dump credentials to obtain account login and credential material, normally in the form of a hash or a clear text password.",
+            "tool_name": [
+                "COSMICDUKE"
+            ],
+            "tool": [
+                "S0050"
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "CosmicDuke may use HTTP, HTTPS, FTP or WebDav to exfiltrate the collected data to a hardcoded C&C server.",
+        "technique": "T1041",
+        "metadata": {
+            "page_number": 25,
+            "id": "044",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXFILTRATION"
+            ],
+            "tactic": [
+                "TA0010"
+            ],
+            "technique_name": "EXFILTRATION OVER C2 CHANNEL",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may steal data by exfiltrating it over an existing command and control channel. Stolen data is encoded into the normal communications channel using the same protocol as command and control communications.",
+            "tool_name": [
+                "COSMICDUKE"
+            ],
+            "tool": [
+                "S0050"
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "obtain the address of a current C&C server via Twitter",
+        "technique": "T1102",
+        "metadata": {
+            "page_number": 27,
+            "id": "045",
+            "source": "TEXT",
+            "tactic_name": [
+                "COMMAND AND CONTROL"
+            ],
+            "tactic": [
+                "TA0011"
+            ],
+            "technique_name": "WEB SERVICE",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may use an existing, legitimate external Web service as a means for relaying data to/from a compromised system.",
+            "tool_name": [
+                "MINIDUKE"
+            ],
+            "tool": [
+                "S0051"
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "This component can be instructed by the C&C server to download and execute arbitrary modules",
+        "technique": "T1105",
+        "metadata": {
+            "page_number": 28,
+            "id": "046",
+            "source": "TEXT",
+            "tactic_name": [
+                "COMMAND AND CONTROL"
+            ],
+            "tactic": [
+                "TA0011"
+            ],
+            "technique_name": "INGRESS TOOL TRANSFER",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may transfer tools or other files from an external system into a compromised environment.",
+            "tool_name": [
+                "COZYDUKE"
+            ],
+            "tool": [
+                "S0046"
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "This component can be instructed by the C&C server to download and execute arbitrary modules",
+        "technique": "T1059",
+        "metadata": {
+            "page_number": 28,
+            "id": "047",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXECUTION"
+            ],
+            "tactic": [
+                "TA0002"
+            ],
+            "technique_name": "COMMAND AND SCRIPTING INTERPRETER",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may abuse command and script interpreters to execute commands and scripts.",
+            "tool_name": [
+                "COZYDUKE"
+            ],
+            "tool": [
+                "S0046"
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "Known CozyDuke modules include: \u2022Command execution module for executing arbitrary Windows Command Prompt commands \u2022Password stealer module \u2022NT LAN Manager (NTLM) hash stealer module \u2022System information gathering module \u2022Screenshot module",
+        "technique": "T1059",
+        "metadata": {
+            "page_number": 28,
+            "id": "048",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXECUTION"
+            ],
+            "tactic": [
+                "TA0002"
+            ],
+            "technique_name": "COMMAND AND SCRIPTING INTERPRETER",
+            "sub_technique_name": "WINDOWS COMMAND SHELL",
+            "sub_technique": "T1059.003",
+            "description": "Adversaries may abuse command and script interpreters to execute commands and scripts.",
+            "tool_name": [
+                "COZYDUKE"
+            ],
+            "tool": [
+                "S0046"
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "Known CozyDuke modules include: \u2022Command execution module for executing arbitrary Windows Command Prompt commands \u2022Password stealer module \u2022NT LAN Manager (NTLM) hash stealer module \u2022System information gathering module \u2022Screenshot module",
+        "technique": "T1003",
+        "metadata": {
+            "page_number": 28,
+            "id": "049",
+            "source": "TEXT",
+            "tactic_name": [
+                "CREDENTIAL ACCESS"
+            ],
+            "tactic": [
+                "TA0006"
+            ],
+            "technique_name": "OS CREDENTIAL DUMPING",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may attempt to dump credentials to obtain account login and credential material, normally in the form of a hash or a clear text password.",
+            "tool_name": [
+                "COZYDUKE"
+            ],
+            "tool": [
+                "S0046"
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "Known CozyDuke modules include: \u2022Command execution module for executing arbitrary Windows Command Prompt commands \u2022Password stealer module \u2022NT LAN Manager (NTLM) hash stealer module \u2022System information gathering module \u2022Screenshot module",
+        "technique": "T1082",
+        "metadata": {
+            "page_number": 28,
+            "id": "050",
+            "source": "TEXT",
+            "tactic_name": [
+                "DISCOVERY"
+            ],
+            "tactic": [
+                "TA0007"
+            ],
+            "technique_name": "SYSTEM INFORMATION DISCOVERY",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may gather information about the system's configurations and settings.",
+            "tool_name": [
+                "COZYDUKE"
+            ],
+            "tool": [
+                "S0046"
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "Known CozyDuke modules include: \u2022Command execution module for executing arbitrary Windows Command Prompt commands \u2022Password stealer module \u2022NT LAN Manager (NTLM) hash stealer module \u2022System information gathering module \u2022Screenshot module",
+        "technique": "T1113",
+        "metadata": {
+            "page_number": 28,
+            "id": "051",
+            "source": "TEXT",
+            "tactic_name": [
+                "COLLECTION"
+            ],
+            "tactic": [
+                "TA0009"
+            ],
+            "technique_name": "SCREEN CAPTURE",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may capture screenshots to gather information about the victim's system.",
+            "tool_name": [
+                "COZYDUKE"
+            ],
+            "tool": [
+                "S0046"
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "The Tor node would intercept any unencrypted executable files being downloaded and modify those executables by adding a malicious wrapper contained an embedded OnionDuke",
+        "technique": "T1584",
+        "metadata": {
+            "page_number": 29,
+            "id": "052",
+            "source": "TEXT",
+            "tactic_name": [
+                "RESOURCE DEVELOPMENT"
+            ],
+            "tactic": [
+                "TA0042"
+            ],
+            "technique_name": "COMPROMISE INFRASTRUCTURE",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may compromise third-party infrastructure that can be used during targeting.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "The Tor node would intercept any unencrypted executable files being downloaded and modify those executables by adding a malicious wrapper contained an embedded OnionDuke",
+        "technique": "T1204",
+        "metadata": {
+            "page_number": 29,
+            "id": "053",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXECUTION"
+            ],
+            "tactic": [
+                "TA0002"
+            ],
+            "technique_name": "USER EXECUTION",
+            "sub_technique_name": "MALICIOUS FILE",
+            "sub_technique": "T1204.002",
+            "description": "An adversary may rely upon specific actions by a user in order to gain execution.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "SeaDuke is a simple backdoor that focuses on executing commands retrieved from its C&C server, such as uploading and downloading files, executing system commands and evaluating additional Python code.",
+        "technique": "T1105",
+        "metadata": {
+            "page_number": 30,
+            "id": "054",
+            "source": "TEXT",
+            "tactic_name": [
+                "COMMAND AND CONTROL"
+            ],
+            "tactic": [
+                "TA0011"
+            ],
+            "technique_name": "INGRESS TOOL TRANSFER",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may transfer tools or other files from an external system into a compromised environment.",
+            "tool_name": [
+                "SEADUKE"
+            ],
+            "tool": [
+                "S0053"
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "SeaDuke is a simple backdoor that focuses on executing commands retrieved from its C&C server, such as uploading and downloading files, executing system commands and evaluating additional Python code.",
+        "technique": "T1059",
+        "metadata": {
+            "page_number": 30,
+            "id": "055",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXECUTION"
+            ],
+            "tactic": [
+                "TA0002"
+            ],
+            "technique_name": "COMMAND AND SCRIPTING INTERPRETER",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may abuse command and script interpreters to execute commands and scripts.",
+            "tool_name": [
+                "SEADUKE"
+            ],
+            "tool": [
+                "S0053"
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "Some HammerDuke variants only contain a hardcoded C&C server address from which they will retrieve commands,",
+        "technique": "T1071",
+        "metadata": {
+            "page_number": 31,
+            "id": "057",
+            "source": "TEXT",
+            "tactic_name": [
+                "COMMAND AND CONTROL"
+            ],
+            "tactic": [
+                "TA0011"
+            ],
+            "technique_name": "APPLICATION LAYER PROTOCOL",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may communicate using OSI application layer protocols to avoid detection/network filtering by blending in with existing traffic.",
+            "tool_name": [
+                "HAMMERDUKE"
+            ],
+            "tool": [
+                "S0037"
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "its occasional use of Twitter as a C&C communication channel",
+        "technique": "T1102",
+        "metadata": {
+            "page_number": 31,
+            "id": "056",
+            "source": "TEXT",
+            "tactic_name": [
+                "COMMAND AND CONTROL"
+            ],
+            "tactic": [
+                "TA0011"
+            ],
+            "technique_name": "WEB SERVICE",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may use an existing, legitimate external Web service as a means for relaying data to/from a compromised system.",
+            "tool_name": [
+                "HAMMERDUKE"
+            ],
+            "tool": [
+                "S0037"
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "The CloudDuke downloader will download and execute additional malware from a preconfigured location. Interestingly, that location may be either a web address or a Microsoft OneDrive account.",
+        "technique": "T1105",
+        "metadata": {
+            "page_number": 32,
+            "id": "057",
+            "source": "TEXT",
+            "tactic_name": [
+                "COMMAND AND CONTROL"
+            ],
+            "tactic": [
+                "TA0011"
+            ],
+            "technique_name": "INGRESS TOOL TRANSFER",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may transfer tools or other files from an external system into a compromised environment.",
+            "tool_name": [
+                "CLOUDDUKE"
+            ],
+            "tool": [
+                "S0054"
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "The CloudDuke downloader will download and execute additional malware from a preconfigured location. Interestingly, that location may be either a web address or a Microsoft OneDrive account.",
+        "technique": "T1059",
+        "metadata": {
+            "page_number": 32,
+            "id": "058",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXECUTION"
+            ],
+            "tactic": [
+                "TA0002"
+            ],
+            "technique_name": "COMMAND AND SCRIPTING INTERPRETER",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may abuse command and script interpreters to execute commands and scripts.",
+            "tool_name": [
+                "CLOUDDUKE"
+            ],
+            "tool": [
+                "S0054"
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "The CloudDuke downloader will download and execute additional malware from a preconfigured location. Interestingly, that location may be either a web address or a Microsoft OneDrive account.",
+        "technique": "T1102",
+        "metadata": {
+            "page_number": 32,
+            "id": "059",
+            "source": "TEXT",
+            "tactic_name": [
+                "COMMAND AND CONTROL"
+            ],
+            "tactic": [
+                "TA0011"
+            ],
+            "technique_name": "WEB SERVICE",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may use an existing, legitimate external Web service as a means for relaying data to/from a compromised system.",
+            "tool_name": [
+                "CLOUDDUKE"
+            ],
+            "tool": [
+                "S0054"
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "one variant will use a preconfigured C&C server over HTTP or HTTPS",
+        "technique": "T1071",
+        "metadata": {
+            "page_number": 32,
+            "id": "060",
+            "source": "TEXT",
+            "tactic_name": [
+                "COMMAND AND CONTROL"
+            ],
+            "tactic": [
+                "TA0011"
+            ],
+            "technique_name": "APPLICATION LAYER PROTOCOL",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may communicate using OSI application layer protocols to avoid detection/network filtering by blending in with existing traffic.",
+            "tool_name": [
+                "HAMMERDUKE"
+            ],
+            "tool": [
+                "S0037"
+            ],
+            "note": null,
+            "link": null
+        }
+    }
+]

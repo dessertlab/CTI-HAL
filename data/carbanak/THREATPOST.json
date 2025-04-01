@@ -1,0 +1,259 @@
+[
+    {
+        "context": "The crime group would send out bank employees spear phishing emails, impersonating legitimate companies, which harbored a malicious attachment",
+        "technique": "T1566",
+        "metadata": {
+            "page_number": 1,
+            "id": "001",
+            "source": "TEXT",
+            "tactic_name": [
+                "INITIAL ACCESS"
+            ],
+            "tactic": [
+                "TA0001"
+            ],
+            "technique_name": "PHISHING",
+            "sub_technique_name": "SPEARPHISHING ATTACHMENT",
+            "sub_technique": "T1566.001",
+            "description": "Sending spear phishing emails with malicious attachments.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "002"
+            ]
+        }
+    },
+    {
+        "context": "the criminals would use their malware to remotely control the victims' machines",
+        "technique": "T1219",
+        "metadata": {
+            "page_number": 1,
+            "id": "003",
+            "source": "TEXT",
+            "tactic_name": [
+                "COMMAND AND CONTROL"
+            ],
+            "tactic": [
+                "TA0011"
+            ],
+            "technique_name": "REMOTE ACCESS SOFTWARE",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Use of remote access software to control victims' machines.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "002"
+            ]
+        }
+    },
+    {
+        "context": "If the attachments were executed",
+        "technique": "T1204",
+        "metadata": {
+            "page_number": 1,
+            "id": "002",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXECUTION"
+            ],
+            "tactic": [
+                "TA0002"
+            ],
+            "technique_name": "USER EXECUTION",
+            "sub_technique_name": "MALICIOUS FILE",
+            "sub_technique": "T1204.002",
+            "description": "If the attachments are executed, the malware is activated.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "001",
+                "003"
+            ]
+        }
+    },
+    {
+        "context": "The group first launched a campaign in 2013 using malware known as Anunak to target financial transfers and ATM networks of financial institutions, but by the following year that malware had been improved into a more sophisticated version known as Carbanak.",
+        "technique": "T1587",
+        "metadata": {
+            "page_number": 2,
+            "id": "004",
+            "source": "TEXT",
+            "tactic_name": [
+                "RESOURCE DEVELOPMENT"
+            ],
+            "tactic": [
+                "TA0042"
+            ],
+            "technique_name": "DEVELOP CAPABILITIES",
+            "sub_technique_name": "MALWARE",
+            "sub_technique": "T1587.001",
+            "description": "the attackers use Anunak",
+            "tool_name": [
+                "CARBANAK"
+            ],
+            "tool": [
+                "S0030"
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "From then onwards, the crime syndicate focused their efforts into developing an even more sophisticated wave of attacks by using tailormade malware based on the Cobalt Strike penetration testing software,\"",
+        "technique": "T1587",
+        "metadata": {
+            "page_number": 2,
+            "id": "009",
+            "source": "TEXT",
+            "tactic_name": [
+                "RESOURCE DEVELOPMENT"
+            ],
+            "tactic": [
+                "TA0042"
+            ],
+            "technique_name": "DEVELOP CAPABITILITES",
+            "sub_technique_name": "MALWARE",
+            "sub_technique": "T1587.001",
+            "description": "use of a malware based on the Cobalt Strike penetration testing sofware",
+            "tool_name": [
+                "COBALT STRIKE"
+            ],
+            "tool": [
+                "S0154"
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "The spear-phishing emails contain attachments",
+        "technique": "T1566",
+        "metadata": {
+            "page_number": 3,
+            "id": "005",
+            "source": "TEXT",
+            "tactic_name": [
+                "INITIAL ACCESS"
+            ],
+            "tactic": [
+                "TA0001"
+            ],
+            "technique_name": "PHISHING",
+            "sub_technique_name": "SPEARPHISHING ATTACHMENT",
+            "sub_technique": "T1566.001",
+            "description": "Sending spear phishing emails with malicious attachments.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "006"
+            ]
+        }
+    },
+    {
+        "context": "that eventually download and execute a dropper",
+        "technique": "T1204",
+        "metadata": {
+            "page_number": 3,
+            "id": "006",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXECUTION"
+            ],
+            "tactic": [
+                "TA0002"
+            ],
+            "technique_name": "USER EXECUTION",
+            "sub_technique_name": "MALICIOUS FILE",
+            "sub_technique": "T1204.002",
+            "description": "If the attachments are executed, the malware is activated.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "005",
+                "007"
+            ]
+        }
+    },
+    {
+        "context": "The backdoor is used to send system information and execute malicious code",
+        "technique": null,
+        "metadata": {
+            "page_number": 3,
+            "id": "007",
+            "source": null,
+            "tactic_name": [],
+            "tactic": [],
+            "technique_name": null,
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": null,
+            "tool_name": [
+                "CARBANAK"
+            ],
+            "tool": [
+                "S0030"
+            ],
+            "note": "The backdoor is used to send system information and execute malicious code",
+            "link": [
+                "008",
+                "009"
+            ]
+        }
+    },
+    {
+        "context": "screen recording",
+        "technique": "T1113",
+        "metadata": {
+            "page_number": 3,
+            "id": "009",
+            "source": "TEXT",
+            "tactic_name": [
+                "COLLECTION"
+            ],
+            "tactic": [
+                "TA0009"
+            ],
+            "technique_name": "SCREEN CAPTURE",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Capture of compromised system screenshots.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "007"
+            ]
+        }
+    },
+    {
+        "context": "steals credentials",
+        "technique": "T1555",
+        "metadata": {
+            "page_number": 3,
+            "id": "008",
+            "source": "TEXT",
+            "tactic_name": [
+                "CREDENTIAL ACCESS"
+            ],
+            "tactic": [
+                "TA0006"
+            ],
+            "technique_name": "CREDENTIALS FROM PASSWORD STORES",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Access to stored credentials",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "007"
+            ]
+        }
+    }
+]

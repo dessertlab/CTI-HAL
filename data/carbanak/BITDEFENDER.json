@@ -1,0 +1,868 @@
+[
+    {
+        "context": "spear-phishing  emails  with  malicious  URLs",
+        "technique": "T1566",
+        "metadata": {
+            "page_number": 2,
+            "id": "001",
+            "source": "TEXT",
+            "tactic_name": [
+                "INITIAL ACCESS"
+            ],
+            "tactic": [
+                "TA0001"
+            ],
+            "technique_name": "PHISHING",
+            "sub_technique_name": "SPEARPHISHING LINK",
+            "sub_technique": "T1566.002",
+            "description": "Use of spear-phishing emails with malicious URLs",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "tainted documents",
+        "technique": "T1566",
+        "metadata": {
+            "page_number": 2,
+            "id": "002",
+            "source": "TEXT",
+            "tactic_name": [
+                "INITIAL ACCESS"
+            ],
+            "tactic": [
+                "TA0001"
+            ],
+            "technique_name": "PHISHING",
+            "sub_technique_name": "SPEARPHISHING ATTACHMENT",
+            "sub_technique": "T1566.001",
+            "description": "Use of contaminated documents to download a Cobalt Strike beacon component.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "003"
+            ]
+        }
+    },
+    {
+        "context": "Cobalt Strike",
+        "technique": null,
+        "metadata": {
+            "page_number": 2,
+            "id": "003",
+            "source": null,
+            "tactic_name": [],
+            "tactic": [],
+            "technique_name": null,
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": null,
+            "tool_name": [
+                "COBALT STRIKE"
+            ],
+            "tool": [
+                "S0154"
+            ],
+            "note": "download of a Cobalt Strike beacon from the email attachment",
+            "link": [
+                "002"
+            ]
+        }
+    },
+    {
+        "context": "identify critical documents",
+        "technique": "T1083",
+        "metadata": {
+            "page_number": 2,
+            "id": "004",
+            "source": "TEXT",
+            "tactic_name": [
+                "DISCOVERY"
+            ],
+            "tactic": [
+                "TA0007"
+            ],
+            "technique_name": "FILE AND DIRECTORY DISCOVERY",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Discovery activities to identify and locate sensitive information and files within the compromised infrastructure.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "005"
+            ]
+        }
+    },
+    {
+        "context": "prepare them for exfiltration",
+        "technique": "T1041",
+        "metadata": {
+            "page_number": 2,
+            "id": "005",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXFILTRATION"
+            ],
+            "tactic": [
+                "TA0010"
+            ],
+            "technique_name": "EXFILTRATION OVER C2 CHANNEL",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Attackers prepare data to be exfiltrated from the compromised network to a location controlled by them.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "004"
+            ]
+        }
+    },
+    {
+        "context": "malicious URLs",
+        "technique": "T1566",
+        "metadata": {
+            "page_number": 3,
+            "id": "006",
+            "source": "TEXT",
+            "tactic_name": [
+                "INITIAL ACCESS"
+            ],
+            "tactic": [
+                "TA0001"
+            ],
+            "technique_name": "PHISHING",
+            "sub_technique_name": "SPEARPHISHING LINK",
+            "sub_technique": "T1566.002",
+            "description": "Use of spear-phishing emails with malicious URLs",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "booby-trapped documents",
+        "technique": "T1566",
+        "metadata": {
+            "page_number": 3,
+            "id": "007",
+            "source": "TEXT",
+            "tactic_name": [
+                "INITIAL ACCESS"
+            ],
+            "tactic": [
+                "TA0001"
+            ],
+            "technique_name": "PHISHING",
+            "sub_technique_name": "SPEARPHISHING ATTACHMENT",
+            "sub_technique": "T1566.001",
+            "description": "Use of contaminated documents.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "Cobalt  Strike",
+        "technique": null,
+        "metadata": {
+            "page_number": 3,
+            "id": "008",
+            "source": null,
+            "tactic_name": [],
+            "tactic": [],
+            "technique_name": null,
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": null,
+            "tool_name": [
+                "COBALT STRIKE"
+            ],
+            "tool": [
+                "S0154"
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "The spear-phishing emails sent to the financial institutions either end up with victims downloading a tampered document",
+        "technique": "T1566",
+        "metadata": {
+            "page_number": 4,
+            "id": "009",
+            "source": "TEXT",
+            "tactic_name": [
+                "INITIAL ACCESS"
+            ],
+            "tactic": [
+                "TA0001"
+            ],
+            "technique_name": "PHISHING",
+            "sub_technique_name": "SPEARPHISHING ATTACHMENT",
+            "sub_technique": "T1566.001",
+            "description": "Use of contaminated documents to download a Cobalt Strike beacon component.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "010 OR 011",
+                "012"
+            ]
+        }
+    },
+    {
+        "context": "download the Cobalt Strike beacon",
+        "technique": null,
+        "metadata": {
+            "page_number": 4,
+            "id": "010",
+            "source": null,
+            "tactic_name": [],
+            "tactic": [],
+            "technique_name": null,
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": null,
+            "tool_name": [
+                "COBALT STRIKE"
+            ],
+            "tool": [
+                "S0154"
+            ],
+            "note": "a tampered document meant to download the Cobalt Strike beacon",
+            "link": [
+                "009"
+            ]
+        }
+    },
+    {
+        "context": "to exploit several unpatched Remote Code Execution Vulnerabilities and deploy a backdoor",
+        "technique": "T1210",
+        "metadata": {
+            "page_number": 4,
+            "id": "011",
+            "source": "TEXT",
+            "tactic_name": [
+                "LATERAL MOVEMENT"
+            ],
+            "tactic": [
+                "TA0008"
+            ],
+            "technique_name": "EXPLOITATION OF REMOTE SERVICES",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Exploitation of vulnerabilities to execute remote code.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "009"
+            ]
+        }
+    },
+    {
+        "context": "Once the user attempts to open the attached documents,",
+        "technique": "T1204",
+        "metadata": {
+            "page_number": 4,
+            "id": "012",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXECUTION"
+            ],
+            "tactic": [
+                "TA0002"
+            ],
+            "technique_name": "USER EXECUTION",
+            "sub_technique_name": "MALICIOUS FILE",
+            "sub_technique": "T1204.002",
+            "description": "Execution of malicious files by the user.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "009",
+                "013"
+            ]
+        }
+    },
+    {
+        "context": "scripts (Fig. 1) embedded within the files are dropped on the disk and automatically executed in the background.",
+        "technique": "T1059",
+        "metadata": {
+            "page_number": 4,
+            "id": "013",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXECUTION"
+            ],
+            "tactic": [
+                "TA0002"
+            ],
+            "technique_name": "COMMAND AND SCRIPTING INTERPRETER",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Scripts are embedded in the attached files and run automatically when the files are opened.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "012",
+                "014"
+            ]
+        }
+    },
+    {
+        "context": "the attacks use reconnaissance tools designed to assess the state of the victim's workstation and determine what tools should be downloaded next",
+        "technique": "T1082",
+        "metadata": {
+            "page_number": 4,
+            "id": "014",
+            "source": "TEXT",
+            "tactic_name": [
+                "DISCOVERY"
+            ],
+            "tactic": [
+                "TA0007"
+            ],
+            "technique_name": "SYSTEM INFORMATION DISCOVERY",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Gather information about the system to evaluate the configuration and installed applications.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "013"
+            ]
+        }
+    },
+    {
+        "context": "spear-phishing attachment",
+        "technique": "T1566",
+        "metadata": {
+            "page_number": 5,
+            "id": "015",
+            "source": "TEXT",
+            "tactic_name": [
+                "INITIAL ACCESS"
+            ],
+            "tactic": [
+                "TA0001"
+            ],
+            "technique_name": "PHISHING",
+            "sub_technique_name": "SPEARPHISHING ATTACHMENT",
+            "sub_technique": "T1566.001",
+            "description": "Use of contaminated documents to download a Cobalt Strike beacon component.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "016"
+            ]
+        }
+    },
+    {
+        "context": "16:48 \u2013 one of the employees opened the document within the spear-phishing email 16:49 \u2013 a second employee opened the same tainted document",
+        "technique": "T1204",
+        "metadata": {
+            "page_number": 5,
+            "id": "016",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXECUTION"
+            ],
+            "tactic": [
+                "TA0002"
+            ],
+            "technique_name": "USER EXECUTION",
+            "sub_technique_name": "MALICIOUS FILE",
+            "sub_technique": "T1204.002",
+            "description": "Execution of compromised documents by users.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "015",
+                "017"
+            ]
+        }
+    },
+    {
+        "context": "Finally, a backdoor from the Command and Control Server was used to establish persistence in the infrastructure",
+        "technique": null,
+        "metadata": {
+            "page_number": 5,
+            "id": "017",
+            "source": null,
+            "tactic_name": [],
+            "tactic": [],
+            "technique_name": null,
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": null,
+            "tool_name": [],
+            "tool": [],
+            "note": "a backdoor from the Command and Control Server was used to estabilish. persistence in the infrastructure",
+            "link": [
+                "018",
+                "019",
+                "020",
+                "021"
+            ]
+        }
+    },
+    {
+        "context": "run shell commands to move laterally in the infrastructure,",
+        "technique": "T1059",
+        "metadata": {
+            "page_number": 5,
+            "id": "019",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXECUTION"
+            ],
+            "tactic": [
+                "TA0002"
+            ],
+            "technique_name": "COMMAND AND SCRIPTING INTERPRETER",
+            "sub_technique_name": "POWERSHELL",
+            "sub_technique": "T1059.001",
+            "description": "The attacker executes commands to interact with the system and move laterally.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "download additional scripts",
+        "technique": "T1059",
+        "metadata": {
+            "page_number": 5,
+            "id": "018",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXECUTION"
+            ],
+            "tactic": [
+                "TA0002"
+            ],
+            "technique_name": "COMMAND AND SCRIPTING INTERPRETER",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Downloading additional scripts.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "delete files from the system",
+        "technique": "T1485",
+        "metadata": {
+            "page_number": 5,
+            "id": "020",
+            "source": "TEXT",
+            "tactic_name": [
+                "IMPACT"
+            ],
+            "tactic": [
+                "TA0040"
+            ],
+            "technique_name": "DATA DESTRUCTION",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Deleting files from the system.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "cleaning registry keys to leave fewer forensics traces",
+        "technique": "T1070",
+        "metadata": {
+            "page_number": 5,
+            "id": "021",
+            "source": "TEXT",
+            "tactic_name": [
+                "DEFENSE EVASION"
+            ],
+            "tactic": [
+                "TA0005"
+            ],
+            "technique_name": "INDICATOR REMOVAL",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Attackers clean the logs to reduce the signs of their activities.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "Credentials for one Domain Administrator were compromised and used throughout the duration of the attack",
+        "technique": "T1078",
+        "metadata": {
+            "page_number": 6,
+            "id": "022",
+            "source": "TEXT",
+            "tactic_name": [
+                "INITIAL ACCESS"
+            ],
+            "tactic": [
+                "TA0001"
+            ],
+            "technique_name": "VALID ACCOUNTS",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Compromising the credentials of a domain administrator.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "The\"swift-fraud[.]com/documents/94563784.doc\"URL  was  opened  from  the  body  of  an  email  received  in  a spearphishing campaign targeting financial institutions.",
+        "technique": "T1566",
+        "metadata": {
+            "page_number": 8,
+            "id": "023",
+            "source": "TEXT",
+            "tactic_name": [
+                "INITIAL ACCESS"
+            ],
+            "tactic": [
+                "TA0001"
+            ],
+            "technique_name": "PHISHING",
+            "sub_technique_name": "SPEARPHISHING LINK",
+            "sub_technique": "T1566.002",
+            "description": "Use of spear-phishing emails with malicious URLs",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "024"
+            ]
+        }
+    },
+    {
+        "context": "The attack flow leaves behind a temporary file",
+        "technique": "T1105",
+        "metadata": {
+            "page_number": 8,
+            "id": "025",
+            "source": "TEXT",
+            "tactic_name": [
+                "COMMAND AND CONTROL"
+            ],
+            "tactic": [
+                "TA0011"
+            ],
+            "technique_name": "INGRESS TOOL TRANSFER",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "The document downloaded from the malicious URL introduces files into the victim's system.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "The attack flow leaves behind a temporary file",
+        "technique": null,
+        "metadata": {
+            "page_number": 8,
+            "id": "024",
+            "source": null,
+            "tactic_name": [],
+            "tactic": [],
+            "technique_name": null,
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": null,
+            "tool_name": [],
+            "tool": [],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "after the opening of the original document file, downloaded from the malicious URL mentioned above",
+        "technique": "T1204",
+        "metadata": {
+            "page_number": 8,
+            "id": "024",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXECUTION"
+            ],
+            "tactic": [
+                "TA0002"
+            ],
+            "technique_name": "USER EXECUTION",
+            "sub_technique_name": "MALICIOUS FILE",
+            "sub_technique": "T1204.002",
+            "description": "Opening the original document downloaded from the malicious URL triggers the creation of the temporary file.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "023",
+                "025"
+            ]
+        }
+    },
+    {
+        "context": "KbhpQIcahFCuZwq.sct - (bb784d55895db10b67b1b4f1f5b0be16) This object was not found on disk, it was deleted after running by \"MGsCOxPSNK.txt\".",
+        "technique": "T1070",
+        "metadata": {
+            "page_number": 8,
+            "id": "026",
+            "source": "TEXT",
+            "tactic_name": [
+                "DEFENSE EVASION"
+            ],
+            "tactic": [
+                "TA0005"
+            ],
+            "technique_name": "INDICATOR REMOVAL",
+            "sub_technique_name": "FILE DELETION",
+            "sub_technique": "T1070.004",
+            "description": "The file \"MGsCOxPSNK.txt\" was deleted after execution to avoid detection and forensic analysis.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "cqHfjCkTtMwG.doc (c2a9443aac258a60d8cace43e839cf9f) This file can be found at the path: C:\\Users\\[redacted]\\AppData\\Local\\Temp\\cqHfjCkTtMwG.doc. It is a decoy file, because it acts as a normal document file",
+        "technique": "T1036",
+        "metadata": {
+            "page_number": 8,
+            "id": "027",
+            "source": "TEXT",
+            "tactic_name": [
+                "DEFENSE EVASION"
+            ],
+            "tactic": [
+                "TA0005"
+            ],
+            "technique_name": "MASQUERADING",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Use of decoy files that look like normal documents.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "028"
+            ]
+        }
+    },
+    {
+        "context": "executed on the system",
+        "technique": "T1204",
+        "metadata": {
+            "page_number": 8,
+            "id": "029",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXECUTION"
+            ],
+            "tactic": [
+                "TA0002"
+            ],
+            "technique_name": "USER EXECUTION",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Execution of the malicious payload through user interaction.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "the malicious payload is being dropped",
+        "technique": "T1105",
+        "metadata": {
+            "page_number": 8,
+            "id": "028",
+            "source": "TEXT",
+            "tactic_name": [
+                "COMMAND AND CONTROL"
+            ],
+            "tactic": [
+                "TA0011"
+            ],
+            "technique_name": "INGRESS TOOL TRANSFER",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Transfer and placement of the malicious payload on the system.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "029"
+            ]
+        }
+    },
+    {
+        "context": "tCrrDqBQoCcEkbnK.txt (581c2a76b382deedb48d1df077e5bdf1) This object can be found at the path: C:\\Users\\[redacted]\\AppData\\Local\\Temp\\tCrrDqBQoCcEkbnK.txt. It is a configuration file for cmstp.exe. It downloads a DLL dropper from \"cloud[.]yourdocument[.]biz/robots.txt\"",
+        "technique": "T1105",
+        "metadata": {
+            "page_number": 8,
+            "id": "030",
+            "source": "TEXT",
+            "tactic_name": [
+                "COMMAND AND CONTROL"
+            ],
+            "tactic": [
+                "TA0011"
+            ],
+            "technique_name": "INGRESS TOOL TRANSFER",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Transfer of malicious tools or files into the target system.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "031"
+            ]
+        }
+    },
+    {
+        "context": "the role of decrypting and dropping yet another JavaScript Dropper on the system",
+        "technique": "T1027",
+        "metadata": {
+            "page_number": 9,
+            "id": "031",
+            "source": "TEXT",
+            "tactic_name": [
+                "DEFENSE EVASION"
+            ],
+            "tactic": [
+                "TA0005"
+            ],
+            "technique_name": "OBFUSCATED FILES OR INFORMATION",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Obfuscation or encryption of files to avoid detection.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "030"
+            ]
+        }
+    },
+    {
+        "context": "the  DLL  will self-delete.",
+        "technique": "T1070",
+        "metadata": {
+            "page_number": 9,
+            "id": "032",
+            "source": "TEXT",
+            "tactic_name": [
+                "DEFENSE EVASION"
+            ],
+            "tactic": [
+                "TA0005"
+            ],
+            "technique_name": "INDICATOR REMOVAL",
+            "sub_technique_name": "FILE DELETION",
+            "sub_technique": "T1070.004",
+            "description": "Deleting the DLL from the system to avoid detection.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "the binary tried to download a JavaScript backdoor from the Command and Control server (C&C)\"nl[.][redacted][.]kz/robots.txt\"and saved the file to\"%APPDATA%\\9D01CA.txt\"",
+        "technique": "T1105",
+        "metadata": {
+            "page_number": 9,
+            "id": "034",
+            "source": "TEXT",
+            "tactic_name": [
+                "COMMAND AND CONTROL"
+            ],
+            "tactic": [
+                "TA0011"
+            ],
+            "technique_name": "INGRESS TOOL TRANSFER",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "File transfer from a command and control (C2) server.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "the file was obfuscated and encrypted with RC4",
+        "technique": "T1027",
+        "metadata": {
+            "page_number": 9,
+            "id": "033",
+            "source": "TEXT",
+            "tactic_name": [
+                "DEFENSE EVASION"
+            ],
+            "tactic": [
+                "TA0005"
+            ],
+            "technique_name": "OBFUSCATED FILES OR INFORMATION",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Obfuscation of files to avoid detection.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "The file \"9D01CA.txt\"sent an initial fingerprint of the system compromised which contained the name of the antivirus solution installed on the system, the local IP address, username, computername and OS version",
+        "technique": "T1082",
+        "metadata": {
+            "page_number": 9,
+            "id": "035",
+            "source": "TEXT",
+            "tactic_name": [
+                "DISCOVERY"
+            ],
+            "tactic": [
+                "TA0007"
+            ],
+            "technique_name": "SYSTEM INFORMATION DISCOVERY",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "The file \"9D01CA.txt\" collects and sends basic information about the compromised system, including computer name and operating system version.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    }
+]

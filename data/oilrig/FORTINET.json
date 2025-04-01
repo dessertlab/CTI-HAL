@@ -1,0 +1,427 @@
+[
+    {
+        "context": "This spearphishing attack targeted a Jordanian diplomat, with the sender pretending to be a colleague from the IT department of the same governmental organization",
+        "technique": "T1566",
+        "metadata": {
+            "page_number": 1,
+            "id": "001",
+            "source": "TEXT",
+            "tactic_name": [
+                "INITIAL ACCESS"
+            ],
+            "tactic": [
+                "TA0001"
+            ],
+            "technique_name": "PHISHING",
+            "sub_technique_name": "SPEARPHISHING ATTACHMENT",
+            "sub_technique": "T1566.001",
+            "description": "The attacker pretends to be a colleague from the IT department of the same governmental organization to deliver the phishing email.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "002"
+            ]
+        }
+    },
+    {
+        "context": "the attached Excel file contained a confirmation form for the targeted diplomat to fill out",
+        "technique": "T1204",
+        "metadata": {
+            "page_number": 2,
+            "id": "002",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXECUTION"
+            ],
+            "tactic": [
+                "TA0002"
+            ],
+            "technique_name": "USER EXECUTION",
+            "sub_technique_name": "MALICIOUS FILE",
+            "sub_technique": "T1204.002",
+            "description": "The user is tricked into executing the malicious content by filling out and interacting with the confirmation form in the Excel file.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "001"
+            ]
+        }
+    },
+    {
+        "context": "The attached Excel file contains a malicious VBA ]Visual Basic Application) macro",
+        "technique": "T1059",
+        "metadata": {
+            "page_number": 2,
+            "id": "003",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXECUTION"
+            ],
+            "tactic": [
+                "TA0002"
+            ],
+            "technique_name": "COMMAND AND SCRIPTING INTERPRETER",
+            "sub_technique_name": "VISUAL BASIC",
+            "sub_technique": "T1059.005",
+            "description": "The malicious VBA macro within the Excel file is executed when the document is opened and macros are enabled.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "004",
+                "005"
+            ]
+        }
+    },
+    {
+        "context": "Cobalt Strike",
+        "technique": null,
+        "metadata": {
+            "page_number": 2,
+            "id": "004",
+            "source": null,
+            "tactic_name": [],
+            "tactic": [],
+            "technique_name": null,
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": null,
+            "tool_name": [
+                "COBALT STRIKE"
+            ],
+            "tool": [
+                "S0154"
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "Metasploit.",
+        "technique": null,
+        "metadata": {
+            "page_number": 2,
+            "id": "005",
+            "source": null,
+            "tactic_name": [],
+            "tactic": [],
+            "technique_name": null,
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": null,
+            "tool_name": [
+                "METASPLOIT"
+            ],
+            "tool": [
+                null
+            ],
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "this one uses WMI ]Windows Management Instrumentation) to ping the C2 server instead of a more commonly used tool, such as PowerShell or CMD",
+        "technique": "T1047",
+        "metadata": {
+            "page_number": 2,
+            "id": "006",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXECUTION"
+            ],
+            "tactic": [
+                "TA0002"
+            ],
+            "technique_name": "WINDOWS MANAGEMENT INSTRUMENTATION",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "The macro uses WMI to ping the C2 server, which is an uncommon choice compared to PowerShell or CMD.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "A malicious PE file was created as\u00a0%LocalAppData%\\MicrosoftUpdate\\update.exe. A configuration file was created as\u00a0%LocalAppData%\\MicrosoftUpdate\\update.exe.config.",
+        "technique": "T1543",
+        "metadata": {
+            "page_number": 3,
+            "id": "007",
+            "source": "TEXT",
+            "tactic_name": [
+                "PERSISTENCE"
+            ],
+            "tactic": [
+                "TA0003"
+            ],
+            "technique_name": "CREATE OR MODIFY SYSTEM PROCESS",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "The creation of %LocalAppData%\\MicrosoftUpdate\\update.exe and %LocalAppData%\\MicrosoftUpdate\\update.exe.config may contribute to persistence.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "base64 encoded data",
+        "technique": "T1027",
+        "metadata": {
+            "page_number": 4,
+            "id": "014",
+            "source": "TEXT",
+            "tactic_name": [
+                "DEFENSE EVASION"
+            ],
+            "tactic": [
+                "TA0005"
+            ],
+            "technique_name": "OBFUSCATED FILES OR INFORMATION",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Adversaries may attempt to make an executable or file difficult to discover or analyze by encrypting, encoding, or otherwise obfuscating its contents on the system or in transit.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "The malware authors also used the Excel macro to create a persistence method for their update.exe file. They accomplished this by setting a scheduled task",
+        "technique": "T1053",
+        "metadata": {
+            "page_number": 4,
+            "id": "008",
+            "source": "TEXT",
+            "tactic_name": [
+                "PERSISTENCE"
+            ],
+            "tactic": [
+                "TA0003"
+            ],
+            "technique_name": "SCHEDULED TASK/JOB",
+            "sub_technique_name": "SCHEDULED TASK",
+            "sub_technique": "T1053.005",
+            "description": "The scheduled task created by the macro to run the update.exe file ensures persistence.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "a second technique was also seen in this macro to possibly avoid automated analysis. This macro does this by checking for the existence of a mouse.",
+        "technique": "T1497",
+        "metadata": {
+            "page_number": 4,
+            "id": "016",
+            "source": "TEXT",
+            "tactic_name": [
+                "DEFENSE EVASION"
+            ],
+            "tactic": [
+                "TA0005"
+            ],
+            "technique_name": "VIRTUALIZATION/SANDBOX EVASION",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Checking for mouse presence to avoid automated analysis.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "other program states require it to contact the C2 server.",
+        "technique": "T1071",
+        "metadata": {
+            "page_number": 5,
+            "id": "009",
+            "source": "TEXT",
+            "tactic_name": [
+                "COMMAND AND CONTROL"
+            ],
+            "tactic": [
+                "TA0011"
+            ],
+            "technique_name": "APPLICATION LAYER PROTOCOL",
+            "sub_technique_name": "HTTP",
+            "sub_technique": "T1071.001",
+            "description": "The malware uses a DGA to generate domain names for contacting its C2 server.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "010"
+            ]
+        }
+    },
+    {
+        "context": "it uses a\u00a0domain generation algorithm ]DGAk\u00a0to calculate a subdomain",
+        "technique": "T1568",
+        "metadata": {
+            "page_number": 5,
+            "id": "010",
+            "source": "TEXT",
+            "tactic_name": [
+                "COMMAND AND CONTROL"
+            ],
+            "tactic": [
+                "TA0011"
+            ],
+            "technique_name": "DYNAMIC RESOLUTION",
+            "sub_technique_name": "DOMANI GENERATION ALGORITHM",
+            "sub_technique": "T1568.002",
+            "description": "DGA is a technique where malware generates a list of domain names based on a specific algorithm. The malware uses these generated domains to contact its C2 server, which can be effective in evading domain blacklists and takedown efforts.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": [
+                "009"
+            ]
+        }
+    },
+    {
+        "context": "it uses a\u00a0domain generation algorithm ]DGAk\u00a0to calculate a subdomain",
+        "technique": "T1008",
+        "metadata": {
+            "page_number": 5,
+            "id": "016",
+            "source": "TEXT",
+            "tactic_name": [
+                "COMMAND AND CONTROL"
+            ],
+            "tactic": [
+                "TA0011"
+            ],
+            "technique_name": "FALLBACK CHANNEL",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Using multiple C2 domains with domain generation algorithm.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "This malware has the ability to take a DNS response and create an arbitrary file on the infected machine if that was the task the malware authors wanted to perform.\u00a0File\u00a0and\u00a0CompressedFile\u00a0are task types used to create a file",
+        "technique": "T1105",
+        "metadata": {
+            "page_number": 7,
+            "id": "011",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXECUTION"
+            ],
+            "tactic": [
+                "TA0002"
+            ],
+            "technique_name": "INGRESS TOOL TRANSFER",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "The malware can create arbitrary files on the infected machine as dictated by tasks received through DNS responses.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "executed through PowerShell",
+        "technique": "T1059",
+        "metadata": {
+            "page_number": 7,
+            "id": "012",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXECUTION"
+            ],
+            "tactic": [
+                "TA0002"
+            ],
+            "technique_name": "COMMAND AND SCRIPTING INTERPRETER",
+            "sub_technique_name": "POWERSHELL",
+            "sub_technique": "T1059.001",
+            "description": "The malware can execute commands via PowerShell.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "through the Windows CMD interpreter",
+        "technique": "T1059",
+        "metadata": {
+            "page_number": 7,
+            "id": "013",
+            "source": "TEXT",
+            "tactic_name": [
+                "EXECUTION"
+            ],
+            "tactic": [
+                "TA0002"
+            ],
+            "technique_name": "COMMAND AND SCRIPTING INTERPRETER",
+            "sub_technique_name": "WINDOWS COMMAND SHELL",
+            "sub_technique": "T1059.003",
+            "description": "",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "it relies on the Excel macro to create persistence by way of a scheduled task.",
+        "technique": "T1547",
+        "metadata": {
+            "page_number": 9,
+            "id": "017",
+            "source": "TEXT",
+            "tactic_name": [
+                "PERSISTENCE"
+            ],
+            "tactic": [
+                "TA0003"
+            ],
+            "technique_name": "BOOT OR LOGON AUTOSTART EXECUTION",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Creating scheduled task for persistent execution.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    },
+    {
+        "context": "Since Excel is a signed binary, maintaining persistence in this way may be missed by some behavioral detection engines.",
+        "technique": "T1218",
+        "metadata": {
+            "page_number": 9,
+            "id": "015",
+            "source": "TEXT",
+            "tactic_name": [
+                "DEFENSE EVASION"
+            ],
+            "tactic": [
+                "TA0005"
+            ],
+            "technique_name": "SYSTEM BINARY PROXY EXECUTION",
+            "sub_technique_name": null,
+            "sub_technique": null,
+            "description": "Leveraging Excel as a signed binary for executing malicious macro.",
+            "tool_name": null,
+            "tool": null,
+            "note": null,
+            "link": null
+        }
+    }
+]
